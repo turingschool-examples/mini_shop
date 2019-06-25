@@ -186,8 +186,17 @@
       "/Users/sarahlee/turing/2module/mini_shop/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/sarahlee/turing/2module/mini_shop/app/models/merchant.rb": [
+        1,
+        null
+      ],
+      "/Users/sarahlee/turing/2module/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1561423435
+    "timestamp": 1561424801
   }
 }
