@@ -1,0 +1,30 @@
+<%= form_with(model: @merchant) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, id: :merchant_name %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address, id: :merchant_address %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, id: :merchant_city %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state, id: :merchant_state %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.label :zip %>
+    <%= f.text_field :zip, id: :merchant_zip %>
+  </div><br/>
+
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>
