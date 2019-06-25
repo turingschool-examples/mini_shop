@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: set_list_development
+  database: mini_shop_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: set_list
+  #username: mini_shop
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: set_list_test
+  database: mini_shop_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: set_list_production
-  username: set_list
-  password: <%= ENV['SET_LIST_DATABASE_PASSWORD'] %>
+  database: mini_shop_production
+  username: mini_shop
+  password: <%= ENV['MINI_SHOP_DATABASE_PASSWORD'] %>
