@@ -188,6 +188,33 @@
         1,
         null
       ],
+      "/Users/sarahlee/turing/2module/mini_shop/spec/features/merchant/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/sarahlee/turing/2module/mini_shop/app/models/merchant.rb": [
         1,
         null
@@ -211,6 +238,6 @@
         null
       ]
     },
-    "timestamp": 1561425755
+    "timestamp": 1561429301
   }
 }
