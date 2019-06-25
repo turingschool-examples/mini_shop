@@ -181,13 +181,42 @@
       "/Users/paul/turing/mod2/projects/mini_shop/config/routes.rb": [
         1,
         null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/paul/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/paul/turing/mod2/projects/mini_shop/app/models/merchant.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/paul/turing/mod2/projects/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/paul/turing/mod2/projects/mini_shop/app/controllers/merchants_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/paul/turing/mod2/projects/mini_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1561427438
+    "timestamp": 1561428115
   }
 }
