@@ -183,11 +183,30 @@
         null,
         null,
         1,
+        1,
         null,
         null
       ],
       "/Users/paul/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/paul/turing/mod2/projects/mini_shop/spec/features/merchants/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/paul/turing/mod2/projects/mini_shop/app/models/merchant.rb": [
@@ -204,9 +223,11 @@
         1,
         null,
         1,
-        null,
         1,
         null,
+        null,
+        1,
+        1,
         null,
         null,
         null
@@ -217,6 +238,6 @@
         null
       ]
     },
-    "timestamp": 1561428115
+    "timestamp": 1561429497
   }
 }
