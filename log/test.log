@@ -1,0 +1,159 @@
+  [1m[35m (197.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (404.1ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (206.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (298.7ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (197.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (405.0ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (135.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (409.3ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (187.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (403.5ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "merchants" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "merchants" ("id" bigserial primary key, "name" character varying, "address" character varying, "city" character varying, "state" character varying, "zip" integer)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190625015428)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-06-25 01:55:45.839830"], ["updated_at", "2019-06-25 01:55:45.839830"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 19:55:45 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 19:58:02 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 19:58:42 -0600
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 19:58:57 -0600
+Processing by MerchantsController#index as HTML
+Completed 406 Not Acceptable in 40ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 19:59:20 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  Rendered merchants/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 198ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 20:01:30 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  Rendered merchants/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-24 20:01:55 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 118ms (Views: 115.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
