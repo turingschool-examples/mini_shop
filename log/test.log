@@ -1,0 +1,4 @@
+  [1m[35m (197.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mini_shop_test"[0m
+  [1m[35m (404.1ms)[0m  [1m[35mCREATE DATABASE "mini_shop_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
