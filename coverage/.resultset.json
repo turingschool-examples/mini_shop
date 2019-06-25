@@ -196,8 +196,21 @@
         1,
         1,
         null
+      ],
+      "/Users/sarahlee/turing/2module/mini_shop/app/controllers/merchants_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/sarahlee/turing/2module/mini_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1561424988
+    "timestamp": 1561425186
   }
 }
