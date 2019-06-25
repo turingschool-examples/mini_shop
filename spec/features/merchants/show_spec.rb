@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Merchants Show" do
   describe "As a visitor" do
     it "I see the merchant with that ID and their info" do
-      merchant = Merchant.create(name: "Carl's Cyclery", address: "123 Puma Drive", city: "Denver", state: "CO", zip: "80210"),
+      merchant = Merchant.create(name: "Carl's Cyclery", address: "123 Puma Drive", city: "Denver", state: "CO", zip: "80210")
 
       visit "/merchants/#{merchant.id}"
 
