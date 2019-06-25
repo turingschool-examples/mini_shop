@@ -4,7 +4,7 @@ RSpec.describe 'Merchant Index' do
   describe "As a Visitor" do
     it "I see a list of all Merchants" do
       merchant_1 = Merchant.create(name: 'bobs burgers')
-      merchant_2 = Merchant.create(name: 'sallys fries')
+      merchant_2 = Merchant.create(name: 'harrys hula hoops')
 
       visit '/merchants'
 
