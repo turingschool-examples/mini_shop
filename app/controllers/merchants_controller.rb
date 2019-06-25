@@ -1,12 +1,11 @@
 class MerchantsController < ApplicationController
-  #before_action :set_merchant, only: [:show, :destroy, :edit, :update]
+  before_action :set_merchant, only: [:show, :destroy, :edit, :update]
 
   def index
     @merchants = Merchant.all
   end
 
   def show
-    @merchant = Merchant.find(params[:id])
   end
 
   def new
@@ -14,8 +13,8 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    @merchant = Merchant.new(merchant_params)
-    @merchant.save!
+    @merchant = Merchant.create!(merchant_params)
+    flash.notice = "Article #{@merchant.name} Created!"
     redirect_to merchants_path
   end
 
@@ -23,5 +22,9 @@ class MerchantsController < ApplicationController
 
   def merchant_params
     params.require(:merchant).permit(:name, :address, :city, :state, :zip)
+  end
+
+  def set_merchant
+    @merchant = Merchant.find(params[:id])
   end
 end

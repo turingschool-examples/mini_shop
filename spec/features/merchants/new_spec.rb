@@ -16,6 +16,7 @@ RSpec.describe 'merchants new entry', type: :feature do
       click_on "Create Merchant"
 
       expect(current_path).to eq(merchants_path)
+      expect(page).to have_content("All Merchants")
       expect(page).to have_content("Jon")
     end
   end
