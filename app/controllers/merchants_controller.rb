@@ -1,5 +1,5 @@
 class MerchantsController < ApplicationController
-  before_action :set_merchant, only: [:show, :destroy, :edit, :update]
+  before_action :set_merchant, only: [:show, :edit, :update]
 
   def index
     @merchants = Merchant.all
@@ -14,8 +14,15 @@ class MerchantsController < ApplicationController
 
   def create
     @merchant = Merchant.create!(merchant_params)
-    flash.notice = "Article #{@merchant.name} Created!"
     redirect_to merchants_path
+  end
+
+  def edit
+  end
+
+  def update
+    @merchant.update(merchant_params)
+    redirect_to merchant_path(@merchant)
   end
 
   private
