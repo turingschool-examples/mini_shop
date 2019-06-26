@@ -10,6 +10,7 @@ require "rails_helper"
         state: "Hawaii", zip: 11111)
 
         visit "/merchants/#{merch_1.id}"
+        save_and_open_page
 
         click_on "Update Merchant"
 

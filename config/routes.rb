@@ -7,6 +7,7 @@ post '/merchants', to: "merchants#create"
 patch '/merchants/:id', to: "merchants#update"
 get '/merchants/:id/edit', to: "merchants#edit"
 get '/merchants/:id', to: "merchants#show"
+delete '/merchants/:id', to: "merchants#destroy"
 
 
 end
