@@ -8,11 +8,11 @@ RSpec.describe 'merchants new entry', type: :feature do
 
       expect(current_path).to eq(new_merchant_path)
 
-      fill_in "merchant[name]", with: "Jon"
-      fill_in "merchant[address]", with: "200 E 10th"
-      fill_in "merchant[city]", with: "Denver"
-      fill_in "merchant[state]", with: "CO"
-      fill_in "merchant[zip]", with: "80211"
+      fill_in "name", with: "Jon"
+      fill_in "address", with: "200 E 10th"
+      fill_in "city", with: "Denver"
+      fill_in "state", with: "CO"
+      fill_in "zip", with: "80211"
       click_on "Create Merchant"
 
       expect(current_path).to eq(merchants_path)
