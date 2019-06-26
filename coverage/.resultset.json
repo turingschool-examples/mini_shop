@@ -295,8 +295,9 @@
         1,
         null,
         null,
-        0,
+        1,
         null,
+        0,
         0,
         0,
         0,
@@ -316,6 +317,7 @@
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/models/merchant.rb": [
         1,
+        null,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/models/application_record.rb": [
@@ -336,6 +338,6 @@
         null
       ]
     },
-    "timestamp": 1561517957
+    "timestamp": 1561560440
   }
 }

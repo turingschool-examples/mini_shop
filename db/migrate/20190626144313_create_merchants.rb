@@ -7,6 +7,7 @@ class CreateMerchants < ActiveRecord::Migration[5.1]
       t.string :state
       t.integer :zip
 
+
       t.timestamps
     end
   end
