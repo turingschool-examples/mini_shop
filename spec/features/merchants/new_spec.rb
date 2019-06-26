@@ -6,7 +6,6 @@
 #       it "creates a new article" do
 #         visit "/merchants"
 #         click_link "Create New Merchant"
-#
 #         expect(current_path).to eq(new_article_path)
 #
 #         fill_in "article[title]", with: "New Title!"
