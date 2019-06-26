@@ -28,7 +28,12 @@ class MerchantsController < ApplicationController
        else
          render 'edit'
        end
+  end
 
+  def destroy
+    @merchant = Merchant.find(params[:id])
+    @merchant.destroy
+    redirect_to "/merchants"
   end
 
   private
