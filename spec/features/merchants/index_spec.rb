@@ -16,6 +16,7 @@ RSpec.describe "Merchants Index" do
 
     it "I see a link to create a new merchant with info" do
       visit '/merchants'
+
       click_on 'New Merchant'
 
       fill_in 'Name', with: "Carl's Cyclery"
@@ -24,7 +25,7 @@ RSpec.describe "Merchants Index" do
       fill_in 'State', with: "CO"
       fill_in 'Zip', with: "80210"
 
-      click_button("Submit")
+      click_button("Create Merchant")
 
       expect(page).to have_content("Carl's Cyclery")
     end
