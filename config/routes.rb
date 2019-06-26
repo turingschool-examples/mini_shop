@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   get '/merchants', to: 'merchants#index', as: :merchants
   get '/merchants/new', to: 'merchants#new', as: :new_merchant
   get '/merchants/:id', to: 'merchants#show', as: :merchant
+  get '/merchants/:id/edit', to: 'merchants#show', as: :edit_merchants
   post '/merchants/new', to: 'merchants#create'
+  patch '/merchants/:id', to: 'merchants#update'
 end
