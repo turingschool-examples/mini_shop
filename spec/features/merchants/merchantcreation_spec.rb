@@ -8,14 +8,12 @@ RSpec.describe "merchants index page", type: :feature do
 
     click_on "New Merchant"
 
-# save_and_open_page
 
     fill_in 'Name', with: 'Billy'
     fill_in 'Address', with: '123 Ya moms house Circle'
     fill_in 'City', with: 'Chicago'
     fill_in 'State', with: 'Illinois'
     fill_in 'Zip', with: '78047'
-
 
 
     click_on "Create Merchant"
