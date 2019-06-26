@@ -3,3 +3,5 @@
   <h2>City: <%= @merchant.city  %></h2>
   <h2>State: <%= @merchant.state %></h2>
   <h2>Zip Code: <%= @merchant.zip %></h2>
+
+  <%= link_to "Update Merchant", "/merchants/#{@merchant.id}/edit" %>

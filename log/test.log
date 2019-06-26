@@ -2931,3 +2931,1994 @@ Processing by MerchantsController#show as HTML
   Rendered merchants/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.4ms)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.6ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/363" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"363"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 363], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/364" for 127.0.0.1 at 2019-06-25 20:15:35 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"364"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 364], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/370" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"370"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 370], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (2.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/371" for 127.0.0.1 at 2019-06-25 20:21:25 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"371"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 371], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/377" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"377"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 377], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/:id/edit" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/378" for 127.0.0.1 at 2019-06-25 20:23:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"378"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 378], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 129ms (Views: 127.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/384" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"384"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 384], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/:id/edit" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/385" for 127.0.0.1 at 2019-06-25 20:24:32 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"385"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 385], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 106ms (Views: 104.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/391" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"391"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 391], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/392" for 127.0.0.1 at 2019-06-25 20:25:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"392"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 392], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (20.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 124ms (Views: 122.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/398" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"398"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 398], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/399" for 127.0.0.1 at 2019-06-25 20:26:22 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"399"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 399], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/405" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"405"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 405], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/merchant/405/edit" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/406" for 127.0.0.1 at 2019-06-25 20:26:57 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"406"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 406], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/412" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"412"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 412], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/412/edit" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"412"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 412], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 50ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/413" for 127.0.0.1 at 2019-06-25 20:27:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"413"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 413], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.6ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/419" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"419"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 419], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/419/edit" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"419"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 419], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/420" for 127.0.0.1 at 2019-06-25 20:27:51 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"420"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 420], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 97ms (Views: 94.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/426" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"426"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 426], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/426/edit" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"426"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 426], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/427" for 127.0.0.1 at 2019-06-25 20:33:28 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"427"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 427], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/433" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"433"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 433], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/433/edit" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"433"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 433], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/434" for 127.0.0.1 at 2019-06-25 20:34:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"434"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 434], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/440" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"440"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 440], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/440/edit" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"440"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 440], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/441" for 127.0.0.1 at 2019-06-25 20:34:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"441"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 441], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/447" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"447"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 447], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/447/edit" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"447"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 447], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/448" for 127.0.0.1 at 2019-06-25 20:34:54 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"448"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 448], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:36:20 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 111ms (Views: 108.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/454" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"454"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 454], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/454/edit" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"454"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 454], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/455" for 127.0.0.1 at 2019-06-25 20:36:21 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"455"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 455], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+  [1m[36mMerchant Load (1.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/461" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"461"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 461], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/461/edit" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"461"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 461], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/462" for 127.0.0.1 at 2019-06-25 20:37:17 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"462"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 462], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 107ms (Views: 105.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/468" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"468"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 468], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/468/edit" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"468"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 468], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/469" for 127.0.0.1 at 2019-06-25 20:39:53 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"469"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 469], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 107ms (Views: 104.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/475" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"475"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 475], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/475/edit" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"475"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 475], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/476" for 127.0.0.1 at 2019-06-25 20:42:03 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"476"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 476], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 106ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/482" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"482"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 482], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/482/edit" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"482"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 482], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/483" for 127.0.0.1 at 2019-06-25 20:45:27 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"483"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 483], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 130ms (Views: 127.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/489" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"489"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 489], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/489/edit" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"489"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 489], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/490" for 127.0.0.1 at 2019-06-25 20:46:02 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"490"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 490], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/496" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"496"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 496], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/496/edit" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"496"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 496], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/497" for 127.0.0.1 at 2019-06-25 20:46:50 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"497"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 497], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 126ms (Views: 124.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/503" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"503"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 503], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/503/edit" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"503"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 503], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/504" for 127.0.0.1 at 2019-06-25 20:47:26 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"504"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 504], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/510" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"510"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 510], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/510/edit" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"510"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 510], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/511" for 127.0.0.1 at 2019-06-25 20:47:42 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"511"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 511], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/517" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"517"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 517], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/517/edit" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"517"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 517], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/518" for 127.0.0.1 at 2019-06-25 20:47:53 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"518"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 518], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/524" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"524"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 524], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/524/edit" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"524"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 524], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+Started PATCH "/merchants/524" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/526" for 127.0.0.1 at 2019-06-25 20:53:43 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"526"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 526], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penny Pinchin' Paul"], ["address", "345 10th St"], ["city", "Denver"], ["state", "Colorado"], ["zip", 80204]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Money Mike"], ["address", "$$ Money Drive"], ["city", "Cashville"], ["state", "New York"], ["zip", 90876]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 106ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Billy", "address"=>"123 Ya moms house Circle", "city"=>"Chicago", "state"=>"Illinois", "zip"=>"78047", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" ORDER BY "merchants"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Guy"], ["address", "1 big ole' Drive"], ["city", "Honolulu"], ["state", "Hawaii"], ["zip", 11111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/532" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"532"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 532], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/532/edit" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"532"}
+  [1m[36mMerchant Load (3.6ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 532], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 3.6ms)
+Started PATCH "/merchants/532" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Billy"], ["address", "123 Ya moms house Circle"], ["city", "Chicago"], ["state", "Illinois"], ["zip", 78047]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/534" for 127.0.0.1 at 2019-06-25 20:54:41 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"534"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 534], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
