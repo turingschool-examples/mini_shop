@@ -22,6 +22,12 @@ class MerchantsController < ApplicationController
   end
 
   def update
+    @merchant = Merchant.find(params[:id])
+       if @merchant.update_attributes(merchant_params)
+         redirect_to "/merchants/#{@merchant.id}"
+       else
+         render 'edit'
+       end
 
   end
 
