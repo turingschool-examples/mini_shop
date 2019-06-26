@@ -1,16 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe Merchant, type: :model do
+RSpec.describe Item, type: :model do
   describe "validations" do
     it { should validate_presence_of :name }
-    it { should validate_presence_of :address }
-    it { should validate_presence_of :city }
-    it { should validate_presence_of :state }
-    it { should validate_presence_of :zip }
+    it { should validate_presence_of :descripton }
+    it { should validate_presence_of :price }
+    it { should validate_presence_of :image }
+    it { should validate_presence_of :active }
+    it { should validate_presence_of :inventory }
   end
 
   # describe 'relationships' do
-  #   it { should have_many :items }
+  #   it { should belong_to :merchants }
   # end
 
   # describe 'class methods' do
