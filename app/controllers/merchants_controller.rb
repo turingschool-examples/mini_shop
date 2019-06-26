@@ -1,5 +1,5 @@
 class MerchantsController < ApplicationController
-  before_action :set_merchant, only: [:show, :edit, :update]
+  before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 
   def index
     @merchants = Merchant.all
@@ -23,6 +23,11 @@ class MerchantsController < ApplicationController
   def update
     @merchant.update(merchant_params)
     redirect_to merchant_path(@merchant)
+  end
+
+  def destroy
+    @merchant.destroy
+    redirect_to merchants_path
   end
 
   private

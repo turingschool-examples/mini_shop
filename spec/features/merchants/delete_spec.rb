@@ -10,7 +10,7 @@ RSpec.describe 'merchants edit page', type: :feature do
 
       click_link "Delete"
 
-      expect(current_path).to eq(edit_merchants_path)
+      expect(current_path).to eq(merchants_path)
 
       expect(page).to_not have_content(merchant_1.name)
       expect(page).to have_content(merchant_2.name)
