@@ -1,6 +1,16 @@
 <h1>New Merchant</h1>
 
-<%= button_to "New", '/merchants/new' %>
-# => "<form method="post" action="/articles/new" class="button_to">
-#      <input value="New" type="submit" />
-#    </form>"
+<%= form_tag '/merchants' do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :address %>
+  <%= text_field_tag :address %>
+  <%= label_tag :city %>
+  <%= text_field_tag :city %>
+  <%= label_tag :state %>
+  <%= text_field_tag :state %>
+  <%= label_tag :zipcode %>
+  <%= text_field_tag :zipcode %>
+
+  <%= submit_tag 'Create Merchant' %>
+<% end %>
