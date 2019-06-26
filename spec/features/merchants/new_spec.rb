@@ -13,7 +13,7 @@ RSpec.describe 'merchants new entry', type: :feature do
       fill_in "city", with: "Denver"
       fill_in "state", with: "CO"
       fill_in "zip", with: "80211"
-      click_on "Create Merchant"
+      click_on "Submit"
 
       expect(current_path).to eq(merchants_path)
       expect(page).to have_content("All Merchants")
