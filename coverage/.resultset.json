@@ -185,10 +185,28 @@
         1,
         1,
         1,
+        1,
+        1,
         null
       ],
       "/Users/sarahlee/turing/2module/mini_shop-1/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/sarahlee/turing/2module/mini_shop-1/mini_shop/spec/features/merchant/index_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/sarahlee/turing/2module/mini_shop-1/mini_shop/spec/features/merchant/new_spec.rb": [
@@ -207,7 +225,6 @@
         null,
         1,
         1,
-        null,
         null,
         1,
         1,
@@ -274,7 +291,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -287,7 +304,7 @@
         null,
         null,
         1,
-        0,
+        null,
         null,
         null,
         1,
@@ -304,6 +321,6 @@
         null
       ]
     },
-    "timestamp": 1561581467
+    "timestamp": 1561585523
   }
 }

@@ -16,8 +16,8 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.new
   end
 
-  def set_merchant
-    @merchant = Merchant.find(params[:id])
+  def edit
+    
   end
 
 private
