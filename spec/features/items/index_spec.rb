@@ -9,7 +9,7 @@ RSpec.describe 'items index page', type: :feature do
       item_2 = merchant_2.items.create!(name: 'Snuggie', description: 'Not a blanket', price: 4.99, image: 'snuggie.jpg', active: true, inventory: 7)
 
       visit items_path
-
+      
       expect(page).to have_content(item_1.name)
       expect(page).to have_content(item_1.description)
       expect(page).to have_content(merchant_1.name)
