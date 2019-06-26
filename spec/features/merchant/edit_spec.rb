@@ -13,7 +13,7 @@ RSpec.describe 'As a visitor' do
     fill_in "City", with: 'burger city'
     fill_in "State", with: 'burgerana'
     fill_in "Zipcode", with: 12345
-    click_on "Update"
+    click_on "Submit"
 
     visit "/merchants/#{merchant_1.id}"
 

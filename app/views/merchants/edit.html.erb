@@ -1,9 +1,9 @@
 <h2>Edit a Merchant</h2>
 
-<%= form_tag '/merchants/:id' do %>
+<%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %>
-  <%# <%= value="name" %> %>
+  <%= value="name" %>
   <%= label_tag :address %>
   <%= text_field_tag :address %>
   <%= label_tag :city %>
@@ -13,5 +13,5 @@
   <%= label_tag :zipcode %>
   <%= text_field_tag :zipcode %>
 
-  <%= submit_tag 'Update' %>
+  <%= submit_tag 'Submit' %>
 <% end %>
