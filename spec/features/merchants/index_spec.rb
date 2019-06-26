@@ -13,5 +13,21 @@ RSpec.describe "Merchants Index" do
       expect(page).to have_content(merchant_2.name)
       expect(page).to have_content(merchant_3.name)
     end
+
+    it "I see a link to create a new merchant with info" do
+      visit '/merchants'
+      click_on 'New Merchant'
+
+      fill_in 'Name', with: "Carl's Cyclery"
+      fill_in 'Address', with: "123 Puma Drive"
+      fill_in 'City', with: "Denver"
+      fill_in 'State', with: "CO"
+      fill_in 'Zip', with: "80210"
+
+      click_button("Submit")
+
+      expect(page).to have_content("Carl's Cyclery")
+    end
+
   end
 end
