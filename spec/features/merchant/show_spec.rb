@@ -14,6 +14,9 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content(merchant_1.city)
       expect(page).to have_content(merchant_1.state)
       expect(page).to have_content(merchant_1.zipcode)
+
+      visit "/merchants/#{merchant_2.id}"
+      
       expect(page).to have_content(merchant_2.name)
       expect(page).to have_content(merchant_2.address)
       expect(page).to have_content(merchant_2.city)
