@@ -16,7 +16,7 @@ require "rails_helper"
 
         visit "/merchants/#{merch_3.id}"
 
-        save_and_open_page
+
 
         click_link "Delete Merchant"
 
