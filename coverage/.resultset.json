@@ -280,6 +280,7 @@
         1,
         null,
         1,
+        1,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/helpers/application_helper.rb": [
@@ -297,11 +298,11 @@
         null,
         1,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -330,6 +331,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/controllers/application_controller.rb": [
@@ -338,6 +343,6 @@
         null
       ]
     },
-    "timestamp": 1561560440
+    "timestamp": 1561586244
   }
 }
