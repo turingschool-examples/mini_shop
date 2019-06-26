@@ -30,7 +30,9 @@ class MerchantsController < ApplicationController
 
   def destroy
     @merchant = Merchant.find(params[:id])
+
     @merchant.destroy
+
     redirect_to "/merchants"
   end
 

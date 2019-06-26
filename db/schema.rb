@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20190626174510) do
     t.string "image_url"
     t.integer "status"
     t.integer "inventory"
-    t.string "merchant_name"
     t.bigint "merchant_id"
     t.index ["merchant_id"], name: "index_items_on_merchant_id"
   end

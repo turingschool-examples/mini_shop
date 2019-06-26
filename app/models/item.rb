@@ -7,7 +7,15 @@ class Item < ApplicationRecord
   validates_presence_of :image_url
   validates_presence_of :status
   validates_presence_of :inventory
-  validates_presence_of :merchant_name
+
+  def self.status(value)
+    if value == 0
+       "Active"
+    else
+       "Inactive"
+    end
+  end
+
 
 
 end
