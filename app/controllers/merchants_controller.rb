@@ -14,15 +14,13 @@ class MerchantsController < ApplicationController
 
   def create
     Merchant.create(merchant_params)
+
+    redirect_to '/merchants'
   end
 
   private
   def merchant_params
-    params.permit(:name)
-    params.permit(:address)
-    params.permit(:city)
-    params.permit(:state)
-    params.permit(:zip)
+    params.permit(:name, :address, :city, :state, :zip)
   end
 
 end
