@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+ .ul-details { list-style: none; }

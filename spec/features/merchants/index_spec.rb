@@ -10,10 +10,10 @@ RSpec.describe 'merchants index page', type: :feature do
 
       within('.title') { expect(page).to have_content("All Merchants") }
       within("#merchant-#{merchant_1.id}") do
-        expect(page).to have_content(merchant_1.name)
+        expect(page).to have_link(merchant_1.name)
       end
       within("#merchant-#{merchant_2.id}") do
-        expect(page).to have_content(merchant_2.name)
+        expect(page).to have_link(merchant_2.name)
       end
     end
 

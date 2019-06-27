@@ -2,7 +2,7 @@
 
 <% @merchants.each do |merchant| %>
   <section id='merchant-<%= merchant.id %>' class='merchant'>
-    <h2><%= merchant.name %></h2>
+    <h2><%= link_to merchant.name, merchant_path(merchant) %></h2>
   </section>
 <% end %><br/>
 
