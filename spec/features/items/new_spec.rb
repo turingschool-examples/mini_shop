@@ -2,13 +2,15 @@ require 'rails_helper'
 
 RSpec.describe 'Items new entry', type: :feature do
   describe 'when a user visits a merchant items index page' do
-    it 'user clicks to create a new item' do
-      merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
+    before(:each) do
+      @merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
+    end
 
-      visit merchant_items_path(merchant)
+    it 'user clicks to create a new item' do
+      visit merchant_items_path(@merchant)
       click_link "New Item"
 
-      expect(current_path).to eq(new_item_path(merchant))
+      expect(current_path).to eq(new_item_path(@merchant))
       within('.title') { expect(page).to have_content("New Item") }
 
       fill_in :name, with: "iPhone"
@@ -19,8 +21,8 @@ RSpec.describe 'Items new entry', type: :feature do
       fill_in :inventory, with: 1000
       click_on "Submit"
 
-      expect(current_path).to eq(merchant_items_path(merchant))
-      within('.title') { expect(page).to have_content("All Items for #{merchant.name}") }
+      expect(current_path).to eq(merchant_items_path(@merchant))
+      within('.title') { expect(page).to have_content("All Items for #{@merchant.name}") }
       within("#item-#{Item.last.id}") do
         expect(page).to have_content("iPhone")
         expect(page).to have_content("A phone")
@@ -28,6 +30,15 @@ RSpec.describe 'Items new entry', type: :feature do
         expect(page).to have_content("iphone.jpg")
         expect(page).to have_content(true)
         expect(page).to have_content(1000)
+      end
+    end
+
+    it 'user can see nav bar' do
+      visit new_item_path(@merchant)
+
+      within('.nav') do
+        expect(page).to have_link("Merchants")
+        expect(page).to have_link("Items")
       end
     end
   end

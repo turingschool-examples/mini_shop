@@ -24,5 +24,14 @@ RSpec.describe 'merchants index page', type: :feature do
         expect(page).to have_link("New Merchant")
       end
     end
+
+    it 'user can see nav bar' do
+      visit merchants_path
+
+      within('.nav') do
+        expect(page).to have_link("Merchants")
+        expect(page).to have_link("Items")
+      end
+    end
   end
 end

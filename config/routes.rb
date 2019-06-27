@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get '/items', to: 'items#index', as: :items
   get '/items/:id', to: 'items#show', as: :item
+  get '/items/:id/edit', to: 'items#edit', as: :edit_item
+  patch '/items/:id', to: 'items#update', as: :update_item
+  delete '/items/:id/delete', to: 'items#destroy', as: :delete_item
 
   get '/merchants/:merchant_id/items', to: 'items#index', as: :merchant_items
   get '/merchants/:merchant_id/items/new', to: 'items#new', as: :new_item
