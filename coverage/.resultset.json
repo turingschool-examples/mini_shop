@@ -222,10 +222,51 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/Jori/turing/2module/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/Jori/turing/2module/mini_shop/spec/features/items/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Jori/turing/2module/mini_shop/spec/features/merchants/delete_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Jori/turing/2module/mini_shop/spec/features/merchants/edit_spec.rb": [
@@ -260,12 +301,17 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         1,
         null,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
-        null,
-        1,
         null,
         null,
         null
@@ -314,6 +360,31 @@
         null,
         null
       ],
+      "/Users/Jori/turing/2module/mini_shop/spec/models/item_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Jori/turing/2module/mini_shop/app/models/item.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Jori/turing/2module/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/Jori/turing/2module/mini_shop/spec/models/merchant_spec.rb": [
         1,
         null,
@@ -322,8 +393,8 @@
         2,
         null,
         null,
-        null,
-        null,
+        1,
+        2,
         null,
         null,
         null,
@@ -340,21 +411,34 @@
       "/Users/Jori/turing/2module/mini_shop/app/models/merchant.rb": [
         1,
         1,
+        null,
+        1,
         null
       ],
-      "/Users/Jori/turing/2module/mini_shop/app/models/application_record.rb": [
+      "/Users/Jori/turing/2module/mini_shop/app/controllers/items_controller.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Jori/turing/2module/mini_shop/app/controllers/application_controller.rb": [
         1,
         null
       ],
       "/Users/Jori/turing/2module/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         1,
-        4,
+        3,
         null,
         null,
         1,
-        4,
+        5,
         null,
         null,
         1,
@@ -387,12 +471,8 @@
         null,
         null,
         null
-      ],
-      "/Users/Jori/turing/2module/mini_shop/app/controllers/application_controller.rb": [
-        1,
-        null
       ]
     },
-    "timestamp": 1561595590
+    "timestamp": 1561605193
   }
 }
