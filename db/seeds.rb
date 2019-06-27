@@ -25,3 +25,5 @@ item_3 = merch_3.items.create(name: "A real fake mustache!", description: "An ac
   price: 0.99 ,  image_url: "third lengthy link", status: 0, inventory: 689)
 item_4 = merch_4.items.create(name: "Air holding Box", description: "Our lightest box yet.",
   price: 3.99, image_url: "last lengthy link", status: 0, inventory: 0)
+item_5 = merch_1.items.create(name: "Sunglass is", description: "You can't see at night.",
+  price: 14.99, image_url: "last lengthy link", status: 0, inventory: 5)
