@@ -7,6 +7,7 @@ RSpec.describe 'merchants new entry', type: :feature do
       click_link "New Merchant"
 
       expect(current_path).to eq(new_merchant_path)
+      within('.title') { expect(page).to have_content("New Merchant") }
 
       fill_in "name", with: "Jon"
       fill_in "address", with: "200 E 10th"
@@ -16,8 +17,10 @@ RSpec.describe 'merchants new entry', type: :feature do
       click_on "Submit"
 
       expect(current_path).to eq(merchants_path)
-      expect(page).to have_content("All Merchants")
-      expect(page).to have_content("Jon")
+      within('.title') { expect(page).to have_content("All Merchants") }
+      within("#merchant-#{Merchant.last.id}") do
+        expect(page).to have_content("Jon")
+      end
     end
   end
 end

@@ -11,11 +11,21 @@ RSpec.describe 'Merchant Items page', type: :feature do
 
       visit merchant_items_path(merchant_1)
 
-      expect(page).to have_content("All Items for #{merchant_1.name}")
-      expect(page).to have_content(item_1.description)
-      expect(page).to have_content(merchant_1.name)
-      expect(page).to_not have_content(item_2.name)
-      expect(page).to_not have_content(item_2.description)
+      within('.title') do
+        expect(page).to have_content("All Items for #{merchant_1.name}")
+      end
+      within("#merchant-item-#{item_1.id}") do
+        expect(page).to have_content(item_1.description)
+        expect(page).to have_content(merchant_1.name)
+        expect(page).to_not have_content(item_2.name)
+        expect(page).to_not have_content(item_2.description)
+      end
+      within("#merchant-item-#{item_3.id}") do
+        expect(page).to have_content(item_3.description)
+        expect(page).to have_content(merchant_1.name)
+        expect(page).to_not have_content(item_1.name)
+        expect(page).to_not have_content(item_1.description)
+      end
       expect(page).to_not have_content(merchant_2.name)
     end
   end

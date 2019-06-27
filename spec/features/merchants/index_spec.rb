@@ -8,14 +8,21 @@ RSpec.describe 'merchants index page', type: :feature do
 
       visit merchants_path
 
-      expect(page).to have_content(merchant_1.name)
-      expect(page).to have_content(merchant_2.name)
+      within('.title') { expect(page).to have_content("All Merchants") }
+      within("#merchant-#{merchant_1.id}") do
+        expect(page).to have_content(merchant_1.name)
+      end
+      within("#merchant-#{merchant_2.id}") do
+        expect(page).to have_content(merchant_2.name)
+      end
     end
 
     it 'user can see new merchant link' do
       visit merchants_path
 
-      expect(page).to have_link("New Merchant")
+      within('.bottom_link') do
+        expect(page).to have_link("New Merchant")
+      end
     end
   end
 end

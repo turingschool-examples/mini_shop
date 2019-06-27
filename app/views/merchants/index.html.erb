@@ -1,7 +1,9 @@
-<h1>All Merchants</h1>
+<h1 class='title'>All Merchants</h1>
 
 <% @merchants.each do |merchant| %>
-  <h2><%= merchant.name %></h2>
-<% end %>
+  <section id='merchant-<%= merchant.id %>' class='merchant'>
+    <h2><%= merchant.name %></h2>
+  </section>
+<% end %><br/>
 
-<p><%= link_to 'New Merchant', new_merchant_path %></p>
+<p class='bottom_link'><%= link_to 'New Merchant', new_merchant_path %></p>

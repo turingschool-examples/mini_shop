@@ -10,7 +10,7 @@ RSpec.describe 'merchants edit page', type: :feature do
       click_link "Edit"
 
       expect(current_path).to eq(edit_merchant_path(merchant))
-      expect(page).to have_content("Edit Merchant")
+      within(".title") { expect(page).to have_content("Edit Merchant") }
       expect(find_field(:name).value).to eq(merchant.name)
       expect(find_field(:address).value).to eq(merchant.address)
       expect(find_field(:city).value).to eq(merchant.city)
@@ -22,11 +22,11 @@ RSpec.describe 'merchants edit page', type: :feature do
       click_on "Submit"
 
       expect(current_path).to eq(merchant_path(merchant))
-      expect(page).to have_content("Jonathan")
-      expect(page).to have_content(merchant.address)
-      expect(page).to have_content(merchant.city)
-      expect(page).to have_content(merchant.state)
-      expect(page).to have_content("80222")
+      within('.title') { expect(page).to have_content("Jonathan") }
+      within('#address') { expect(page).to have_content(merchant.address) }
+      within('#city') { expect(page).to have_content(merchant.city) }
+      within('#state') { expect(page).to have_content(merchant.state) }
+      within('#zip') { expect(page).to have_content("80222") }
     end
   end
 end

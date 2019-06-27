@@ -1,8 +1,11 @@
-<h1><%= @merchant.name %></h1><br/>
-<p><%= @merchant.address %></p>
-<p><%= @merchant.city %></p>
-<p><%= @merchant.state %></p>
-<p><%= @merchant.zip %></p>
+<h1 class='title'><%= @merchant.name %></h1>
 
-<p><%= link_to 'Edit', edit_merchant_path(@merchant) %></p>
-<p><%= link_to 'Delete', delete_merchant_path(@merchant), method: :delete %></p>
+<p id='address' class='info'><%= "Address: #{@merchant.address}" %></p>
+<p id='city' class='info'><%= "City: #{@merchant.city}" %></p>
+<p id='state' class='info'><%= "State: #{@merchant.state}" %></p>
+<p id='zip' class='info'><%= "Zip: #{@merchant.zip}" %></p>
+
+<p>
+  <%= link_to 'Edit', edit_merchant_path(@merchant) %>
+  <%= link_to 'Delete', delete_merchant_path(@merchant), method: :delete %>
+</p>
