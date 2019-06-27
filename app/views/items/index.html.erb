@@ -1,10 +1,18 @@
-<% if @merchant.nil? %>
-  <h1 class='title'>All Items</h1>
-<% else %>
-  <h1 class='title'>All Items for <%= @merchant.name %></h1>
-<% end %>
+<h1 class='title'>
+  All Items <%= "for #{@merchant.name}" unless @merchant.nil? %>
+</h1>
 
-<%= render 'index' %>
+<% @items.each do |item| %>
+  <section id='item-<%= item.id %>' class='item'>
+    <h2><%= item.name %></h2>
+    <h3><%= item.description %></h3>
+    <h3><%= item.price %></h3>
+    <h3><%= item.image %></h3>
+    <h3><%= item.active %></h3>
+    <h3><%= item.inventory %></h3>
+    <h3><%= item.merchant.name if @merchant.nil? %></h3>
+  </section>
+<% end %>
 
 <% unless @merchant.nil? %>
   <p class='bottom_link'><%= link_to 'New Item', new_item_path %></p>
