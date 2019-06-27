@@ -11,12 +11,12 @@ RSpec.describe 'Items new entry', type: :feature do
       expect(current_path).to eq(new_item_path(merchant))
       within('.title') { expect(page).to have_content("New Item") }
 
-      fill_in "name", with: "iPhone"
-      fill_in "description", with: "A phone"
-      fill_in "price", with: 999.99
-      fill_in "image", with: "iphone.jpg"
-      fill_in "active", with: true
-      fill_in "inventory", with: 1000
+      fill_in :name, with: "iPhone"
+      fill_in :description, with: "A phone"
+      fill_in :price, with: 999.99
+      fill_in :image, with: "iphone.jpg"
+      fill_in :active, with: true
+      fill_in :inventory, with: 1000
       click_on "Submit"
 
       expect(current_path).to eq(merchant_items_path(merchant))
