@@ -7,7 +7,7 @@ RSpec.describe 'Items index page', type: :feature do
       merchant_2 = Merchant.create!(name: 'Roy', address: '601 W 11th', city: 'Chicago', state: 'IL', zip: '50291')
       item_1 = merchant_1.items.create!(name: 'iPhone', description: 'A phone', price: 999.99, image: 'iphone.jpg', active: true, inventory: 1000)
       item_2 = merchant_2.items.create!(name: 'Snuggie', description: 'Not a blanket', price: 4.99, image: 'snuggie.jpg', active: true, inventory: 7)
-
+      
       visit items_path
 
       within('.title') { expect(page).to have_content("All Items") }

@@ -1,7 +1,7 @@
 <h1 class='title'>All Items for <%= @merchant.name %></h1>
 
 <% @items.each do |item| %>
-  <section id='merchant-item-<%= item.id %>' class='item'>
+  <section id='item-<%= item.id %>' class='item'>
     <h2><%= item.name %></h2>
     <h3><%= item.description %></h3>
     <h3><%= item.price %></h3>
@@ -11,3 +11,5 @@
     <h3><%= item.merchant.name %></h3>
   </section>
 <% end %>
+
+<p class='bottom_link'><%= link_to 'New Item', new_item_path %></p>
