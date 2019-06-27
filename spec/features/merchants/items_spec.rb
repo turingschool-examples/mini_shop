@@ -14,13 +14,13 @@ RSpec.describe 'Merchant Items page', type: :feature do
       within('.title') do
         expect(page).to have_content("All Items for #{merchant_1.name}")
       end
-      within("#merchant-item-#{item_1.id}") do
+      within("#item-#{item_1.id}") do
         expect(page).to have_content(item_1.description)
         expect(page).to have_content(merchant_1.name)
         expect(page).to_not have_content(item_2.name)
         expect(page).to_not have_content(item_2.description)
       end
-      within("#merchant-item-#{item_3.id}") do
+      within("#item-#{item_3.id}") do
         expect(page).to have_content(item_3.description)
         expect(page).to have_content(merchant_1.name)
         expect(page).to_not have_content(item_1.name)
