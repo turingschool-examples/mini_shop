@@ -24,6 +24,17 @@ class ItemsController < ApplicationController
       redirect_to "/merchants/#{item.merchant_id}/items"
     end
 
+    def edit
+      @item = Item.find(params[:id])
+    end
+
+    def update
+      @item = Item.find(params[:id])
+        if @item.update_attributes(items_params)
+          redirect_to "/items/#{@item.id}"
+        end
+    end
+
     private
 
     def items_params

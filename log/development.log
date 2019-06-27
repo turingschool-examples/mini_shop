@@ -2419,3 +2419,77 @@ Processing by MerchantsController#show as HTML
 Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2019-06-27 11:22:35 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paul/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paul/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2019-06-27 11:22:38 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Merchant Load (0.0ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 200ms (Views: 172.0ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/items/4" for ::1 at 2019-06-27 11:23:07 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mMerchant Load (1.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered items/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items/4/edit" for ::1 at 2019-06-27 11:23:12 -0600
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/items/4" for ::1 at 2019-06-27 11:23:20 -0600
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vc6eCC12PpKJPoA2VlyEkWUmMW7f+fPGVXS99752xxmPZofp4eF/4v2dLGW6YaEhU0IilVAuUBqMCyNHUXvpYA==", "name"=>"Air holding Box for Air", "price"=>"3.99", "description"=>"Our lightest box yet.", "image_url"=>"last lengthy link", "inventory"=>"0", "commit"=>"Update Item Info", "id"=>"4"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :authenticity_token, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "items" SET "name" = $1 WHERE "items"."id" = $2[0m  [["name", "Air holding Box for Air"], ["id", 4]]
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/items/4
+Completed 302 Found in 46ms (ActiveRecord: 40.9ms)
+
+
+Started GET "/items/4" for ::1 at 2019-06-27 11:23:20 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered items/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/" for ::1 at 2019-06-27 11:23:26 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Merchant Load (0.0ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 1.1ms)
+
+
