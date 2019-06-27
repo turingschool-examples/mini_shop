@@ -1,4 +1,4 @@
-<%= form_tag("/merchants/:merchant_id/items", method: "post") do %>
+<%= form_tag("/merchants/#{@merchant_id}/items", method: "post") do %>
   <%= label_tag(:name, "Name ") %>
   <%= text_field_tag(:name) %>
 
