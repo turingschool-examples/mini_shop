@@ -8,12 +8,17 @@ RSpec.describe "As a visitor" do
           merchant_1 = Merchant.create!(name: 'bobs burgers', address: '123 burger lane', city: 'burger city', state: 'burgerana', zipcode: 12345)
 
           visit "/merchants/#{merchant_1.id}"
+          # save_and_open_page
+
           click_button "Delete"
 
           # visit "/merchants"
-
           expect(current_path).to eq('/merchants')
           expect(page).to_not have_content(merchant_1.name)
+          expect(page).to_not have_content(merchant_1.address)
+          expect(page).to_not have_content(merchant_1.city)
+          expect(page).to_not have_content(merchant_1.state)
+          expect(page).to_not have_content(merchant_1.zipcode)
           expect(page).to_not have_button('Delete')
         end
       end
