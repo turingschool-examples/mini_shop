@@ -1,16 +1,24 @@
 <h1 class='title'>
-  All Items <%= "for #{@merchant.name}" unless @merchant.nil? %>
+  All Items
+  <% unless @merchant.nil? %>
+    for
+    <%= link_to @merchant.name, merchant_path(@merchant) %>
+  <% end %>
 </h1>
 
 <% @items.each do |item| %>
   <section id='item-<%= item.id %>' class='item'>
     <h2><%= item.name %></h2>
-    <h3><%= item.description %></h3>
-    <h3><%= item.price %></h3>
-    <h3><%= item.image %></h3>
-    <h3><%= item.active %></h3>
-    <h3><%= item.inventory %></h3>
-    <h3><%= item.merchant.name if @merchant.nil? %></h3>
+    <ul class='ul-details'>
+      <li><%= item.description %></li>
+      <li><%= item.price %></li>
+      <li><%= item.image %></li>
+      <li><%= item.active %></li>
+      <li><%= item.inventory %></li>
+      <li><% if @merchant.nil? %>
+        <%= link_to item.merchant.name, merchant_path(item.merchant) %>
+      <% end %></li>
+    </ul>
   </section>
 <% end %>
 
