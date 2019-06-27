@@ -6,4 +6,5 @@
 <p><%= @merchant.zipcode %></p>
 
 <a href="/merchants/<%= @merchant.id %>/edit">Update</a>
+<%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
 <%= link_to "<< Back to Merchants", '/merchants' %>

@@ -2,7 +2,7 @@
 
 <%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
   <%= label_tag :name %>
-  <%= text_area_tag(:message, "bobs burgers") %>
+  <%= text_area_tag(:name, :message, "bobs burgers") %>
   <%= label_tag :address %>
   <%= text_area_tag(:message, "123 burger lane") %>
   <%= label_tag :city %>
