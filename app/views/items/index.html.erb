@@ -1,7 +1,13 @@
 <h1>Items</h1>
-
+<br>
 <% @items.each do |item| %>
   <section class="song">
     <h2><%= item.name %></h2>
+    <p><%= item.description %></p>
+    <p>$<%= item.price %></p>
+    <%= image_tag ("images/#{item.image}") %>
+    <p>Available: <%= item.active %></p>
+    <p>Inventory: <%= item.inventory %></p>
+    <p>Merchant: <%= item.merchant_name %></p>
   </section>
 <% end %>
