@@ -39,5 +39,21 @@ RSpec.describe "Merchant Show Page", type: :feature do
         expect(page).to have_content(@merchant_3.zip)
       end
     end
+
+    it "I see a link to delete the merchant" do
+      visit "/merchants/#{@merchant_2.id}"
+
+      expect(page).to have_link("Delete")
+
+      click_link "Delete"
+
+      expect(current_path).to eq("/merchants")
+
+      expect(page).to_not have_content(@merchant_2.name)
+      expect(page).to_not have_content(@merchant_2.address)
+      expect(page).to_not have_content(@merchant_2.city)
+      expect(page).to_not have_content(@merchant_2.state)
+      expect(page).to_not have_content(@merchant_2.zip)
+    end
   end
 end

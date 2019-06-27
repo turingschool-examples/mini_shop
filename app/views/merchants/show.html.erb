@@ -6,4 +6,5 @@
   <h3><%= @merchant.zip %></h3>
 </section>
 
-<%= link_to "Edit Info", "/merchants/#{@merchant.id}/edit" %>
+<p><%= link_to "Edit Info", "/merchants/#{@merchant.id}/edit" %></p>
+<p><%= link_to "Delete", "/merchants/#{@merchant.id}", confirm: "Are you sure?", method: :delete %></p>
