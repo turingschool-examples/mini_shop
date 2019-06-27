@@ -394,6 +394,35 @@
         null,
         null
       ],
+      "/Users/paul/turing/mod2/projects/mini_shop/spec/features/merchant_links_spec.rb": [
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/paul/turing/mod2/projects/mini_shop/spec/features/merchants/can_delete_a_merchant_spec.rb": [
         null,
         1,
@@ -421,10 +450,7 @@
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
+        null,
         null,
         null,
         null,
@@ -797,11 +823,11 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null,
         1,
-        4,
+        5,
         null,
         null,
         1,
@@ -843,6 +869,6 @@
         null
       ]
     },
-    "timestamp": 1561656107
+    "timestamp": 1561658253
   }
 }

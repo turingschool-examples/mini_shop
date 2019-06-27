@@ -24,10 +24,7 @@ require "rails_helper"
 
 
         expect(page).to_not have_content(merch_3.name)
-        expect(page).to_not have_content(merch_3.address)
-        expect(page).to_not have_content(merch_3.city)
-        expect(page).to_not have_content(merch_3.state)
-        expect(page).to_not have_content(merch_3.zip)
+        
 
 
     end
