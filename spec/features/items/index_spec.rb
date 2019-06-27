@@ -10,7 +10,7 @@ RSpec.describe 'Items index page', type: :feature do
 
       visit items_path
 
-      within("#title") { expect(page).to have_content("All Items") }
+      within('.title') { expect(page).to have_content("All Items") }
       within("#item-#{item_1.id}") do
         expect(page).to have_content(item_1.name)
         expect(page).to have_content(item_1.description)

@@ -32,7 +32,6 @@ class MerchantsController < ApplicationController
 
   def items
     @items = @merchant.items
-    #redirect_to merchant_items_path
   end
 
   private

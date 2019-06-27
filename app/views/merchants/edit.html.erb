@@ -1,18 +1,14 @@
-<h1>Edit Merchant</h1>
+<h1 class='title'>Edit Merchant</h1>
 
 <%= form_tag(update_merchant_path, method: :patch) do %>
   <%= label_tag :name %>
   <%= text_field_tag :name, @merchant.name %><br/>
-  <br/>
   <%= label_tag :address %>
   <%= text_field_tag :address, @merchant.address %><br/>
-  <br/>
   <%= label_tag :city %>
   <%= text_field_tag :city, @merchant.city %><br/>
-  <br/>
   <%= label_tag :state %>
   <%= text_field_tag :state, @merchant.state %><br/>
-  <br/>
   <%= label_tag :zip %>
   <%= text_field_tag :zip, @merchant.zip %><br/>
   <br/>

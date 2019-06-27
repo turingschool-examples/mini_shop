@@ -13,7 +13,9 @@ RSpec.describe 'merchants edit page', type: :feature do
       expect(current_path).to eq(merchants_path)
 
       expect(page).to_not have_content(merchant_1.name)
-      expect(page).to have_content(merchant_2.name)
+      within("#merchant-#{merchant_2.id}") do
+        expect(page).to have_content(merchant_2.name)
+      end
     end
   end
 end
