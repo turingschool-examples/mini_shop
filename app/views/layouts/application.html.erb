@@ -9,7 +9,9 @@
   </head>
 
   <body>
-    <h1><%= link_to "Items Index", "/items" %></h1>
+    <nav>
+    <h1><%= link_to "Items Index", "/items" %>  <%= link_to "Merchant Index", "/merchants" %></h1>
+    </nav>
     <%= yield %>
   </body>
 </html>
