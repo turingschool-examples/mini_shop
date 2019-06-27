@@ -1,4 +1,5 @@
 class MerchantsController < ApplicationController
+
   def index
     @merchants = Merchant.all
   end
@@ -29,6 +30,11 @@ class MerchantsController < ApplicationController
   def destroy
     Merchant.destroy(params[:id])
     redirect_to '/merchants'
+  end
+
+  def items
+    @merchant = Merchant.find(params[:merchant_id])
+    @items = @merchant.items
   end
 
   private
