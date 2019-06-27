@@ -15,6 +15,8 @@ get '/merchants/:merchant_id/items/new', to: "items#new"
 
 delete '/merchants/:id', to: "merchants#destroy"
 
+patch '/items/:id', to: "items#update"
+get '/items/:id/edit', to: "items#edit"
 get '/items', to: "items#index"
 get '/items/:id', to: "items#show"
 

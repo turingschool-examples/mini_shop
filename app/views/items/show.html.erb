@@ -8,3 +8,5 @@
   <li>Inventory Count: <%= @item.inventory %></li>
   <li>Merchant Name: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}"%></li>
   </ul>
+  
+  <%= link_to "Update Item", "/items/#{@item.id}/edit"  %>
