@@ -22,7 +22,7 @@ RSpec.describe "Merchant items update page", type: :feature do
     item_4 = merch_4.items.create(name: "Air holding Box", description: "Our lightest box yet.",
       price: 3.99, image_url: "fourth lengthy link", status: 0, inventory: 0)
     # item_5 = Items.create(name: "Sunglass is", description: "You can't see at night.",
-      #price: 14.99, image_url: "last lengthy link", status: 0, inventory: 5)
+      # price: 14.99, image_url: "last lengthy link", status: 0, inventory: 5)
 
 
     visit "/items/#{item_1.id}"
