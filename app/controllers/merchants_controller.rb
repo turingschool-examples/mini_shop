@@ -16,8 +16,15 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.new
   end
 
-  def set_merchant
+  def edit
     @merchant = Merchant.find(params[:id])
+  end
+
+  def update
+    @merchant = Merchant.find(params[:id])
+    @merchant.update(merchant_params)
+    @merchant.save
+    redirect_to "/merchants/#{@merchant.id}"
   end
 
 private
