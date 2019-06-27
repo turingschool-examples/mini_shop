@@ -5,7 +5,7 @@ RSpec.describe 'Items new entry', type: :feature do
     it 'user clicks to create a new item' do
       merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
 
-      visit merchant_items_path
+      visit merchant_items_path(merchant)
       click_link "New Item"
 
       expect(current_path).to eq(new_item_path)
@@ -19,8 +19,8 @@ RSpec.describe 'Items new entry', type: :feature do
       fill_in "inventory", with: 1000
       click_on "Submit"
 
-      expect(current_path).to eq(merchant_items_path)
-      within('.title') { expect(page).to have_content("All Items") }
+      expect(current_path).to eq(merchant_items_path(merchant))
+      within('.title') { expect(page).to have_content("All Items for #{merchant.name}") }
       within("#item-#{Item.last.id}") do
         expect(page).to have_content("iPhone")
         expect(page).to have_content("A phone")
