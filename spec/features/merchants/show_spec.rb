@@ -13,6 +13,7 @@ RSpec.describe "Merchants Show" do
       expect(page).to have_content(merchant.state)
       expect(page).to have_content(merchant.zip)
     end
+
   it "I see a link to edit merchant info and the forms are prepopulated with current info" do
       merchant = Merchant.create(name: "Carl's Cyclery", address: "123 Puma Drive", city: "Denver", state: "CO", zip: "80210")
 
@@ -33,5 +34,16 @@ RSpec.describe "Merchants Show" do
       expect(current_path).to eq("/merchants/#{merchant.id}")
       expect(page).to have_content("Bob's Cyclery")
     end
+
+    it "I see a link to delete the merchant" do
+      merchant = Merchant.create(name: "Carl's Cyclery", address: "123 Puma Drive", city: "Denver", state: "CO", zip: "80210")
+
+      visit "/merchants/#{merchant.id}"
+      click_on 'Delete Merchant'
+
+      expect(current_path).to eq("/merchants")
+      expect(page).to_not have_content("Carl's Cyclery")
+    end
+
   end
 end
