@@ -1,4 +1,4 @@
-<h1>Editing Item: <%= @item.name %></h1>
+<h1>Editing Item: <%= link_to @item.name, "/items/#{@item.id}" %></h1>
 
 <%= form_tag("/items/#{@item.id}", method: "patch") do %>
   <%= label_tag(:name, "Name ") %>
