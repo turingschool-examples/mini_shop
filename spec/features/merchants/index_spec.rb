@@ -2,14 +2,19 @@ require 'rails_helper'
 
 RSpec.describe "Merchants Index" do
   describe "As a Visitor" do
-    it "I see the name of each merchant in the system" do
-      merchant_1 = Merchant.create!(name: "She Sells Seashells", address: "1234 Market St", city: "Denver", state: "CO", zipcode: "80220")
+    describe "When I visit a Merchant's items page" do
+      it "I see each item that belongs to that merchant with the following" do
+        merchant = Merchant.create!(name: "She Sells Seashells", address: "1234 Market St", city: "Denver", state: "CO", zipcode: "80220")
+        item = Item.create!(name: "Necklace", description: "Shell on chain", price: 30, image: "xx", status: "Active", inventory: 3, merchant_id: merchant.id)
 
-      visit "/merchants"
+        visit "/merchants/#{merchant.id}/items"
 
-      # save_and_open_page
-
-      expect(page).to have_content(merchant_1.name)
+        expect(page).to have_content(item.name)
+        expect(page).to have_content(item.price)
+        expect(page).to have_content(item.image)
+        expect(page).to have_content(item.status)
+        expect(page).to have_content(item.inventory)
+      end
     end
   end
 end

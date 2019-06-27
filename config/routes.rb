@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   patch '/merchants/:id', to: 'merchants#update'
   delete '/merchants/:id', to: 'merchants#destroy'
 
+  get '/merchants/:merchant_id/items', to: 'items#show'
+
   get '/items', to: 'items#index'
 end
