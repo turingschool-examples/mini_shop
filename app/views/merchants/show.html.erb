@@ -4,3 +4,7 @@
 <h2><%= @merchant.state %></h2>
 <h2><%= @merchant.zip %></h2>
 <%= link_to 'Update Info', "/merchants/#{@merchant.id}/edit" %>
+
+<%= form_tag "/merchants/#{@merchant.id}", method: :delete do %>
+  <%= submit_tag 'Delete' %>
+<% end %>
