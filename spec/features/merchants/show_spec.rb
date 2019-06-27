@@ -7,27 +7,22 @@ RSpec.describe 'merchants show page', type: :feature do
 
       visit merchant_path(merchant)
 
-      expect(page).to have_content(merchant.name)
-      expect(page).to have_content(merchant.address)
-      expect(page).to have_content(merchant.city)
-      expect(page).to have_content(merchant.state)
-      expect(page).to have_content(merchant.zip)
+      within('.title') { expect(page).to have_content(merchant.name) }
+      within('#address') { expect(page).to have_content(merchant.address) }
+      within('#city') { expect(page).to have_content(merchant.city) }
+      within('#state') { expect(page).to have_content(merchant.state) }
+      within('#zip') { expect(page).to have_content(merchant.zip) }
     end
 
-    it 'user can see edit link' do
+    it 'user can see links' do
       merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
 
       visit merchant_path(merchant)
 
-      expect(page).to have_link("Edit")
-    end
-
-    it 'user can see delete link' do
-      merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
-
-      visit merchant_path(merchant)
-
-      expect(page).to have_link("Delete")
+      within('.bottom_link') do
+        expect(page).to have_link("Edit")
+        expect(page).to have_link("Delete")
+      end
     end
   end
 end

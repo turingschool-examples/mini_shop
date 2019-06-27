@@ -5,7 +5,7 @@
 <p id='state' class='info'><%= "State: #{@merchant.state}" %></p>
 <p id='zip' class='info'><%= "Zip: #{@merchant.zip}" %></p>
 
-<p>
+<p class='bottom_link'>
   <%= link_to 'Edit', edit_merchant_path(@merchant) %>
   <%= link_to 'Delete', delete_merchant_path(@merchant), method: :delete %>
 </p>
