@@ -39,7 +39,7 @@ RSpec.describe "Merchants Show" do
       merchant = Merchant.create(name: "Carl's Cyclery", address: "123 Puma Drive", city: "Denver", state: "CO", zip: "80210")
 
       visit "/merchants/#{merchant.id}"
-      click_on 'Delete Merchant'
+      click_button 'Delete'
 
       expect(current_path).to eq("/merchants")
       expect(page).to_not have_content("Carl's Cyclery")
