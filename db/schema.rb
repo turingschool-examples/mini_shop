@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20190627180437) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "price"
+    t.float "price"
     t.string "image"
     t.boolean "active"
     t.integer "inventory"
