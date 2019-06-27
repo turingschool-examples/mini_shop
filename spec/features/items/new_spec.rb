@@ -8,7 +8,7 @@ RSpec.describe 'Items new entry', type: :feature do
       visit merchant_items_path(merchant)
       click_link "New Item"
 
-      expect(current_path).to eq(new_item_path)
+      expect(current_path).to eq(new_item_path(merchant))
       within('.title') { expect(page).to have_content("New Item") }
 
       fill_in "name", with: "iPhone"

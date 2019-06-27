@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create!(item_params)
-    redirect_to items_path
+    redirect_to merchant_items_path
   end
 
   def edit
@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.permit(:name, :address, :city, :state, :zip)
+    params.permit(:name, :description, :price, :image, :active, :inventory)
   end
 
   def set_item
