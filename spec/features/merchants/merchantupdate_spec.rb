@@ -10,7 +10,7 @@ require "rails_helper"
         state: "Hawaii", zip: 11111)
 
         visit "/merchants/#{merch_1.id}"
-        
+
 
         click_on "Update Merchant"
 
@@ -21,6 +21,7 @@ require "rails_helper"
         fill_in 'City', with: 'Honolulu'
         fill_in 'State', with: 'Hawaii'
         fill_in 'Zip', with: '11111'
+        
 
         click_on "Update Merchant Info"
 
