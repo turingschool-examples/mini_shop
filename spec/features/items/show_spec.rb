@@ -14,6 +14,7 @@ RSpec.describe 'Items Show page', type: :feature do
       within('#image') { expect(page).to have_content(item.image) }
       within('#active') { expect(page).to have_content(item.active) }
       within('#inventory') { expect(page).to have_content(item.inventory) }
+      within('#merchant') { expect(page).to have_content(merchant.name) }
     end
 
     # it 'user can see links' do
