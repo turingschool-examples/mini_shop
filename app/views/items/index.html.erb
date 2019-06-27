@@ -10,4 +10,5 @@
   <li>Inventory Count: <%= item.inventory %></li>
   <li>Merchant Name: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}"%></li>
   </ul>
+  <%= link_to "Add new Item for this Merchant", "/merchants/#{item.merchant.id}/items/new"  %>
 <% end %>
