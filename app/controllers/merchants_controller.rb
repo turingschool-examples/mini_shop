@@ -28,6 +28,12 @@ class MerchantsController < ApplicationController
     end
   end
 
+  def destroy
+    merchant = Merchant.destroy(params[:id])
+    flash[:success] = "#{merchant.name} has been deleted."
+    redirect_to "/merchants"
+  end
+
   private
 
   def merchant_params
