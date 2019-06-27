@@ -9,7 +9,9 @@ get '/merchants/:id/edit', to: "merchants#edit"
 get '/merchants/:id', to: "merchants#show"
 get '/merchants/:merchant_id/items', to: "items#index"
 delete '/merchants/:id', to: "merchants#destroy"
+
 get '/items', to: "items#index"
+get '/items/:id', to: "items#show"
 
 
 

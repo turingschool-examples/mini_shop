@@ -1,13 +1,17 @@
 class ItemsController < ApplicationController
 
-def index
+    def index
 
-  if params[:merchant_id]
-      @items = Merchant.find(params[:merchant_id]).items
-    else
-      @items = Item.all
-  end
+      if params[:merchant_id]
+          @items = Merchant.find(params[:merchant_id]).items
+        else
+          @items = Item.all
+      end
 
-end
+    end
+
+    def show
+      @item = Item.find(params[:id])
+    end
 
 end
