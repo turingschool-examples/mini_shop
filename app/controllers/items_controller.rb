@@ -2,7 +2,12 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    if params[:merchant_id].nil?
+      @items = Item.all
+    else
+      @merchant = Merchant.find(params[:merchant_id])
+      @items = @merchant.items
+    end
   end
 
   def show
@@ -13,7 +18,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    merchant = Merchant.find(params[:id])
+    merchant = Merchant.find(params[:merchant_id])
     @item = merchant.items.create!(item_params)
     redirect_to merchant_items_path(merchant)
   end

@@ -17,8 +17,8 @@ RSpec.describe 'merchants edit page', type: :feature do
       expect(find_field(:state).value).to eq(merchant.state)
       expect(find_field(:zip).value).to eq(merchant.zip)
 
-      fill_in "name", with: "Jonathan"
-      fill_in "zip", with: "80222"
+      fill_in :name, with: "Jonathan"
+      fill_in :zip, with: "80222"
       click_on "Submit"
 
       expect(current_path).to eq(merchant_path(merchant))

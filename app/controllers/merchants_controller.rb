@@ -30,10 +30,6 @@ class MerchantsController < ApplicationController
     redirect_to merchants_path
   end
 
-  def items
-    @items = @merchant.items
-  end
-
   private
 
   def merchant_params
