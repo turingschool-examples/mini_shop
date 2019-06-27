@@ -7,7 +7,6 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :image
       t.boolean :active_status
       t.integer :inventory
-      t.integer :merchant_id
     end
   end
 end
