@@ -16,10 +16,3 @@ RSpec.describe "Merchants Items Index" do
 
   end
 end
-
-# Then I see each Item that belongs to the Merchant with that merchant_id including the Item's:
-# - name
-# - price
-# - image
-# - active/inactive status
-# - inventory
