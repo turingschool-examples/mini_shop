@@ -1,11 +1,9 @@
-<h1>Items Index</h1>
+<h1>Items</h1>
 
 <% @items.each do |item| %>
-  <p><%= item.name %></p>
-  <p><%= item.description %></p>
+  <h1><%= item.name %></h1>
   <p><%= item.price %></p>
   <p><%= item.image %></p>
   <p><%= item.active_status %></p>
   <p><%= item.inventory %></p>
-  <p><%= item.merchant.name %></p>
 <% end %>
