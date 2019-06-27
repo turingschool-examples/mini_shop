@@ -8,22 +8,24 @@ RSpec.describe 'Items Show page', type: :feature do
 
       visit item_path(item)
 
-      within('.title') { expect(page).to have_content(merchant.name) }
-      within('#address') { expect(page).to have_content(merchant.address) }
-      within('#city') { expect(page).to have_content(merchant.city) }
-      within('#state') { expect(page).to have_content(merchant.state) }
-      within('#zip') { expect(page).to have_content(merchant.zip) }
+      within('.title') { expect(page).to have_content(item.name) }
+      within('#description') { expect(page).to have_content(item.description) }
+      within('#price') { expect(page).to have_content(item.price) }
+      within('#image') { expect(page).to have_content(item.image) }
+      within('#active') { expect(page).to have_content(item.active) }
+      within('#inventory') { expect(page).to have_content(item.inventory) }
     end
 
-    it 'user can see links' do
-      merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
-
-      visit merchant_path(merchant)
-
-      within('.bottom_link') do
-        expect(page).to have_link("Edit")
-        expect(page).to have_link("Delete")
-      end
-    end
+    # it 'user can see links' do
+    #   merchant = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
+    #   item = merchant.items.create!(name: 'iPhone', description: 'A phone', price: 999.99, image: 'iphone.jpg', active: true, inventory: 1000)
+    #
+    #   visit item_path(item)
+    #
+    #   within('.bottom_link') do
+    #     expect(page).to have_link("Edit")
+    #     expect(page).to have_link("Delete")
+    #   end
+    # end
   end
 end
