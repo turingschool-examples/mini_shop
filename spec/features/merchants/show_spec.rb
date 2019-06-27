@@ -19,7 +19,7 @@ RSpec.describe "Merchants Show" do
       visit "/merchants/#{merchant.id}"
       click_on 'Update Info'
 
-      expect(current_path).to eq('/merchants/#{merchant.id}/edit')
+      expect(current_path).to eq("/merchants/#{merchant.id}/edit")
 
       expect(find_field('Name').value).to eq "Carl's Cyclery"
       expect(find_field('Address').value).to eq "123 Puma Drive"
@@ -30,7 +30,7 @@ RSpec.describe "Merchants Show" do
       fill_in 'Name', with: "Bob's Cyclery"
       click_on 'Submit'
 
-      expect(current_path).to eq('/merchants/#{merchant.id}')
+      expect(current_path).to eq("/merchants/#{merchant.id}")
       expect(page).to have_content("Bob's Cyclery")
     end
   end
