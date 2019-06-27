@@ -1,0 +1,18 @@
+<%= form_tag "/merchants" do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag "merchant[name]" %>
+
+  <%= label_tag "Address" %>
+  <%= text_field_tag "merchant[address]" %>
+
+  <%= label_tag "City" %>
+  <%= text_field_tag "merchant[city]" %>
+
+  <%= label_tag "State" %>
+  <%= text_field_tag "merchant[state]" %>
+
+  <%= label_tag "ZIP" %>
+  <%= number_field_tag "merchant[zip]" %>
+
+  <%= submit_tag "Create Merchant" %>
+<% end %>
