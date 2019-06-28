@@ -10,4 +10,7 @@
       <li> merchant:  <%= item.merchant_name %> </li>
       <%= image_tag item.image %>
     </ul>
+    <% if @merchant %>
+      <h3><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></h3>
+    <% end %>
 <% end %>
