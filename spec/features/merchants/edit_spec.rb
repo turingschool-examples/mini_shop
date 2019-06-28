@@ -35,8 +35,8 @@ RSpec.describe 'merchants edit page', type: :feature do
       visit edit_merchant_path(@merchant)
 
       within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
       end
     end
   end

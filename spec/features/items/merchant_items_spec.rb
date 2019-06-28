@@ -38,8 +38,8 @@ RSpec.describe 'Merchant Items page', type: :feature do
       visit merchant_items_path(@merchant_1)
 
       within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
       end
     end
   end

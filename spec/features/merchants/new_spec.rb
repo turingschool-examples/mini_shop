@@ -27,8 +27,8 @@ RSpec.describe 'merchants new entry', type: :feature do
       visit new_merchant_path
 
       within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
       end
     end
   end

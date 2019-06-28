@@ -27,8 +27,8 @@ RSpec.describe 'Items index page', type: :feature do
       visit items_path
 
       within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
       end
     end
   end

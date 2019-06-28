@@ -9,10 +9,14 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <!-- <nav class="nav">
       <a class="nav-link active" href= <%= merchants_path %>>Merchants</a>
       <a class="nav-link active" href= <%= items_path %>>Items</a>
-    </nav>
+    </nav> -->
+    <section class="nav" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Merchants</button>
+      <button type="button" class="btn btn-secondary">Items</button>
+    </section>
     <%= yield %>
   </body>
 </html>
