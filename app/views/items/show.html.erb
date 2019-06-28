@@ -7,3 +7,4 @@
     <li> merchant:  <%= @item.merchant_name %> </li>
     <%= image_tag @item.image %>
   </ul>
+  <%= button_to 'Edit', "/items/#{@item.id}/edit", method: :get %>
