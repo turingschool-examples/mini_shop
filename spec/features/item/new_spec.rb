@@ -16,7 +16,6 @@ RSpec.describe 'As a visitor' do
       fill_in "Active", with: true
       fill_in "Inventory", with: 50
       fill_in "Merchant name", with: "bobs burgers"
-      # save_and_open_page
       click_on "Create Item"
 
       new_item = Item.last

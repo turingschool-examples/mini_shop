@@ -13,12 +13,10 @@ class ItemsController < ApplicationController
   end
 
   def new
-    # binding.pry
     @merchant_id = params[:merchant_id]
   end
 
   def create
-    # binding.pry
     merchant = Merchant.find(params[:merchant_id])
     item = Item.create!(item_params)
     item.save!
