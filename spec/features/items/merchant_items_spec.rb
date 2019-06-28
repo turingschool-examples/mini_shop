@@ -18,14 +18,14 @@ RSpec.describe 'Merchant Items page', type: :feature do
         expect(page).to have_content("All Items for #{@merchant_1.name}")
       end
       within("#item-#{item_1.id}") do
-        expect(page).to have_content(item_1.name)
+        expect(page).to have_link(item_1.name)
         expect(page).to have_content(item_1.description)
         expect(page).to_not have_content(@merchant_1.name)
         expect(page).to_not have_content(item_2.name)
         expect(page).to_not have_content(item_2.description)
       end
       within("#item-#{item_3.id}") do
-        expect(page).to have_content(item_3.name)
+        expect(page).to have_link(item_3.name)
         expect(page).to have_content(item_3.description)
         expect(page).to_not have_content(@merchant_1.name)
         expect(page).to_not have_content(item_1.name)

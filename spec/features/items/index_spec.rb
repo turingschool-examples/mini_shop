@@ -12,14 +12,14 @@ RSpec.describe 'Items index page', type: :feature do
 
       within('.title') { expect(page).to have_content("All Items") }
       within("#item-#{item_1.id}") do
-        expect(page).to have_content(item_1.name)
+        expect(page).to have_link(item_1.name)
         expect(page).to have_content(item_1.description)
-        expect(page).to have_content(merchant_1.name)
+        expect(page).to have_link(merchant_1.name)
       end
       within("#item-#{item_2.id}") do
-        expect(page).to have_content(item_2.name)
+        expect(page).to have_link(item_2.name)
         expect(page).to have_content(item_2.description)
-        expect(page).to have_content(merchant_2.name)
+        expect(page).to have_link(merchant_2.name)
       end
     end
 
