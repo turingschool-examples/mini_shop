@@ -8,7 +8,7 @@
 
 <% @items.each do |item| %>
   <section id='item-<%= item.id %>' class='item'>
-    <h2><%= item.name %></h2>
+    <h2><%= link_to item.name, item_path(item) %></h2>
     <ul class='ul-details'>
       <li><%= item.description %></li>
       <li><%= item.price %></li>
