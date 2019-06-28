@@ -1,0 +1,23 @@
+<h1 class='title'>Edit Item</h1>
+
+<%= form_tag(update_item_path, method: :patch) do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @item.name %><br/>
+  <br/>
+  <%= label_tag :description %>
+  <%= text_field_tag :description, @item.description %><br/>
+  <br/>
+  <%= label_tag :price %>
+  <%= number_field_tag :price, @item.price %><br/>
+  <br/>
+  <%= label_tag :image %>
+  <%= text_field_tag :image, @item.image %><br/>
+  <br/>
+  <%= label_tag :active %>
+  <%= text_field_tag :active, @item.active %></br>
+  <br/>
+  <%= label_tag :inventory %>
+  <%= number_field_tag :inventory, @item.inventory %></br>
+  <br/>
+  <%= submit_tag("Submit") %>
+<% end %>
