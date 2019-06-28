@@ -13,10 +13,10 @@
       <a class="nav-link active" href= <%= merchants_path %>>Merchants</a>
       <a class="nav-link active" href= <%= items_path %>>Items</a>
     </nav> -->
-    <section class="nav" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary">Merchants</button>
-      <button type="button" class="btn btn-secondary">Items</button>
-    </section>
+    <nav class="nav">
+      <%= button_to "Merchants", merchants_path, method: :get %>
+      <%= button_to "Items", items_path, method: :get %>
+    </nav>
     <%= yield %>
   </body>
 </html>
