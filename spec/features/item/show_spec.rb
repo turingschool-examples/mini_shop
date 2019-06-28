@@ -14,6 +14,7 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_css("img[src*='#{burger.image}']")
       expect(page).to have_content(burger.active)
       expect(page).to have_content(burger.inventory)
+      expect(page).to have_content(burger.merchant_name)
     end
   end
 end
