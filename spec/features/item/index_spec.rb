@@ -20,15 +20,17 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content(burger.name)
       expect(page).to have_content(burger.description)
       expect(page).to have_content(burger.price)
-      expect(page).to have_content(burger.image)
+      expect(page).to have_css("img[src*='#{burger.image}']")
       expect(page).to have_content(burger.active)
       expect(page).to have_content(burger.inventory)
+      expect(page).to have_content(burger.merchant_name)
       expect(page).to have_content(hula_hoop.name)
       expect(page).to have_content(hula_hoop.description)
       expect(page).to have_content(hula_hoop.price)
-      expect(page).to have_content(hula_hoop.image)
+      expect(page).to have_css("img[src*='#{hula_hoop.image}']")
       expect(page).to have_content(hula_hoop.active)
       expect(page).to have_content(hula_hoop.inventory)
+      expect(page).to have_content(hula_hoop.merchant_name)
     end
   end
 end
