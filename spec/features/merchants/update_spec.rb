@@ -3,26 +3,29 @@ require 'rails_helper'
 RSpec.describe 'Update Merchant' do
   describe 'As a visitor' do
     describe 'When I visit the merchant show page' do
-      it 'I can update a merchant' do
-        merchant_1 = Merchant.create(name: "Thai Tanic", address: "12600 Feet Under the Sea", city: "North Atlantic Ocean", state: "SOS", zip: 1912)
+      describe 'I see a link to update a merchant' do
+        it 'When I click the link I am taken to' do
 
-        visit "/merchants/#{merchant_1.id}"
+          merchant_1 = Merchant.create(name: "Thai Tanic", address: "12600 Feet Under the Sea", city: "North Atlantic Ocean", state: "SOS", zip: 1912)
 
-        click_link 'Update Merchant'
+          visit "/merchants/#{merchant_1.id}"
 
-        expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
+          click_link 'Update Merchant'
 
-        #there is a form here
+          expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
 
-        fill_in 'Name', with: 'The Codfather'
-        fill_in 'Address', with: 'Paramount Pictures Ave.'
-        fill_in 'City', with: 'NY'
-        fill_in 'State', with: 'NY'
-        fill_in 'Zipcode', with: 1972
+          #there is a form here
 
-        click_on 'Update Merchant'
+          fill_in 'Name', with: 'The Codfather'
+          fill_in 'Address', with: 'Paramount Pictures Ave.'
+          fill_in 'City', with: 'NY'
+          fill_in 'State', with: 'NY'
+          fill_in 'Zipcode', with: 1972
 
-        expect(current_path).to eq("/merchants/#{merchant_1.id}")
+          click_on 'Submit'
+
+          expect(current_path).to eq("/merchants")
+        end
       end
     end
   end

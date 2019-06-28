@@ -4,4 +4,5 @@
 
 <% @merchants.each do |merchant| %>
   <h2>Name: <%= merchant.name %></h2>
+  <%= link_to 'Edit', "/merchants/#{merchant.id}" %>
 <% end %>
