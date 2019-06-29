@@ -4,6 +4,7 @@ RSpec.describe 'New Merchant' do
   describe 'As a visitor' do
     describe 'When I visit the new merchant form' do
       it 'I can create a new merchant' do
+
         visit '/merchants'
 
         click_link 'New Merchant'
