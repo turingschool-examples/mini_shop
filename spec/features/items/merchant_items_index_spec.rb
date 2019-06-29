@@ -1,15 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Items Index" do
+RSpec.describe "Merchant Items Index" do
   describe "As a visitor" do
-    it "I see each item in the system including the items\n
+    it "I see each Item that belongs to the Merchant with that merchant_id including the Item's\n
     -name\n
-    -description\n
     -price\n
     -image\n
-    -active/inactive status\n
-    -inventory\n
-    -name of merchant that sells the item" do
+    -active status\n
+    -inventory" do
 
     merchant_1 = Merchant.create!(
       name: "Knees Weak",
@@ -45,18 +43,22 @@ RSpec.describe "Items Index" do
       inventory: 30
     )
 
-    visit items_path
+    visit merchant_items_path(merchant_1)
+
+    expect(current_path).to eq("/merchants/#{merchant_1.id}/items")
 
     within(".item-#{item_1.id}") do
       expect(page).to have_content(item_1.name)
       expect(page).to have_content("Description: #{item_1.description}")
-      expect(page).to have_content("Merchant: #{merchant_1.name}")
     end
+
+    visit merchant_items_path(merchant_2)
+
+    expect(current_path).to eq("/merchants/#{merchant_2.id}/items")
 
     within(".item-#{item_2.id}") do
       expect(page).to have_content(item_2.name)
       expect(page).to have_content("Description: #{item_2.description}")
-      expect(page).to have_content("Merchant: #{merchant_2.name}")
     end
 
     end
