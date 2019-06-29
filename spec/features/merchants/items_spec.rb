@@ -30,8 +30,6 @@ RSpec.describe "Merchants Items" do
 
       click_on 'Create Item'
 
-      save_and_open_page
-
       expect(current_path).to eq("/merchants/#{merchant.id}/items")
       expect(page).to have_content("Cashmere Hops")
       expect(page).to have_content("21.99")
