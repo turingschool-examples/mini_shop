@@ -1,15 +1,25 @@
-<h2>Items Index</h2>
+<style>
+.items-list {
+  color: green;
+  background-color: grey;
+  color: wheat; --darkreader-inline-color:#f5deb3;"
+}
+</style>
 
-<% @items.each do |item| %>
-  <h3><%= item.name %></h3>
-    <ul>
-      <li> description: <%= item.description %> </li>
-      <li> price: <%= item.price %> </li>
-      <li> active: <%= item.active %> </li>
-      <li> inventory: <%= item.inventory %> </li>
-      <%= image_tag item.image %>
-    </ul>
-    <% if @merchant %>
+<div class="items-list">
+  <h2>Items Index</h2>
+
+  <% @items.each do |item| %>
+    <h3><%= item.name %></h3>
+      <ul>
+        <li> description: <%= item.description %> </li>
+        <li> price: <%= item.price %> </li>
+        <li> active: <%= item.active %> </li>
+        <li> inventory: <%= item.inventory %> </li>
+        <%= image_tag item.image %>
+      </ul>
+      <% if @merchant %>
       <h3><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></h3>
-    <% end %>
-<% end %>
+      <% end %>
+  <% end %>
+</div>
