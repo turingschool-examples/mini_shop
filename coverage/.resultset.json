@@ -253,6 +253,40 @@
         null,
         null
       ],
+      "/Users/Jori/turing/2module/mini_shop/spec/features/items/link_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Jori/turing/2module/mini_shop/spec/features/items/new_spec.rb": [
         1,
         null,
@@ -557,11 +591,11 @@
         1,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
-        4,
+        6,
         null,
         null,
         1,
@@ -632,8 +666,8 @@
         null,
         null,
         1,
-        4,
-        4,
+        5,
+        5,
         null,
         null,
         1,
@@ -644,6 +678,6 @@
         null
       ]
     },
-    "timestamp": 1561848866
+    "timestamp": 1561849593
   }
 }

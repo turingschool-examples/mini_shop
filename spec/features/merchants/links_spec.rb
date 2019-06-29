@@ -27,8 +27,8 @@ RSpec.describe "Merchant Links" do
         expect(current_path).to eq(merchant_path(merchant_1))
       end
     end
-    describe "When I am on the merchant's items page" do
-      it "The merchant link takes me to that Merchant's show page" do
+    describe "When I am on the item's show page" do
+      it "The merchant link then takes me to that Merchant's show page" do
 
         merchant_3 = Merchant.create(name: "Healing Horses", address: "4344 Market St", city: "Denver", state: "CO", zipcode: "80220")
         item = Item.create!(name: "Horse", description: "Stuffed animal", price: 20, image: "file_path", active_status: true, inventory: 3, merchant_id: merchant_3.id)
@@ -39,6 +39,6 @@ RSpec.describe "Merchant Links" do
 
         expect(current_path).to eq(merchant_path(merchant_3))
       end
-    end    
+    end
   end
 end
