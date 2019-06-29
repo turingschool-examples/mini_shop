@@ -10,7 +10,6 @@ RSpec.describe "Merchant's Items" do
 
         visit "/merchants/#{merchant_1.id}/items"
 
-
         expect(page).to have_content(item.name)
         expect(page).to have_content(item.price)
         expect(page).to have_content(item.image)
