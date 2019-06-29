@@ -1,7 +1,9 @@
 <%= link_to "<< Back to Merchants Index", '/merchants' %>
 <%= link_to "<< Back to Items Index", '/items' %>
 
-<%= form_tag("/merchants/#{@merchant_id}/items", method: :post) do %>
+<h2>Update Item</h2>
+
+<%= form_tag "/items/#{@item.id}", method: :patch do %>
 
   <%= label_tag :name %>
   <%= text_field_tag :name %>
@@ -16,5 +18,5 @@
   <%= label_tag :inventory %>
   <%= text_field_tag :inventory %>
 
-  <%= submit_tag 'Create Item' %>
+  <%= submit_tag 'Submit' %>
 <% end %>
