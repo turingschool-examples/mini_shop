@@ -6,3 +6,5 @@
 <p> Image: <%= @item.image %></p>
 <p> In Stock: <%= @item.inventory %></p>
 <p> Merchant: <%= @item.merchant.name %></p>
+
+<%= link_to 'Update Item', "/items/#{@item.id}/edit" %>
