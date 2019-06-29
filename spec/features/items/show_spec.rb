@@ -34,7 +34,7 @@ RSpec.describe "Items Show" do
 
       click_on 'Update Item'
 
-      expect(current_path).to eq("/merchants/#{merchant.id}/items")
+      expect(current_path).to eq("/items/#{item.id}")
       expect(page).to have_content("Cashmere Hops")
       expect(page).to have_content("21.99")
       expect(page).to have_content("Hops that add an herbal, slightly spicy aroma with notes of lemon, lime, melon and stone fruit.")
