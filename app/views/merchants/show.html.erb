@@ -4,4 +4,6 @@
   <p>City: <%= @merchant.city %></p>
   <p>State: <%= @merchant.state %></p>
   <p>Zip: <%= @merchant.zip %></p>
+  <%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %>
+  <%= link_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
 </section>
