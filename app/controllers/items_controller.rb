@@ -2,11 +2,18 @@ class ItemsController < ApplicationController
 
     def index
 
-      if params[:merchant_id]
-          @items = Merchant.find(params[:merchant_id]).items
-        else
+      if params[:merchant_id] && params[:status] == "0"
+          @items = Merchant.find(params[:merchant_id]).items.where("status = 0")
+      elsif params[:merchant_id] && params[:status] != "0"
+          @items = Merchant.find(params[:merchant_id]).items.where("status > 0")
+      elsif params[:status] == "0"
+          @items = Item.where("status = 0")
+      elsif params[:status] != "0"
+          @items = Item.where("status > 0")
+      else
           @items = Item.all
       end
+
 
     end
 
@@ -32,6 +39,8 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
         if @item.update_attributes(items_params)
           redirect_to "/items/#{@item.id}"
+        else
+          render "edit"
         end
     end
 
