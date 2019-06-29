@@ -8,8 +8,4 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def new
-    @merchant = Merchant.find(params[:id])
-  end
-
 end
