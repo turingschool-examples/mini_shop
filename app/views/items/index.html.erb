@@ -7,5 +7,5 @@
   <p> Image: <%= item.image %></p>
   <p> Active Status: <%= item.active_status %></p>
   <p> In Stock: <%= item.inventory %></p>
-  <p> Merchant: <%= item.merchant.name %></p>
+  <p> Merchant: <%= link_to item.merchant.name, merchant_path(item.merchant) %></p>
 <% end %>
