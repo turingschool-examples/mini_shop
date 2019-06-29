@@ -1,0 +1,14 @@
+<h1>All Items</h1>
+
+<% @items.each do |item| %>
+  <section id="item-id-<%= item.id %>">
+
+    <%= image_tag item.image, alt: "image of #{item.name}" %>
+    <h2>Name: <%= item.name %></h2>
+    <h3>Description: <%= item.description %></h3>
+    <h3>Price: <%= item.price %></h3>
+    <h3>Active: <%= item.active %></h3>
+    <h3>Inventory: <%= item.inventory %></h3>
+    <h3>Merchant: <%= item.merchant.name %></h3>
+  </section>
+<% end %>
