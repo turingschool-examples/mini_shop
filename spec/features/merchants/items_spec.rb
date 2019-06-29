@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Merchants Items Index" do
+RSpec.describe "Merchants Items" do
   describe "As a visitor" do
     it "When I visit a merchants page I see a list of their items including item info" do
       merchant = Merchant.create(name: "What Ales You")
@@ -12,6 +12,32 @@ RSpec.describe "Merchants Items Index" do
       expect(page).to have_content(item.price)
       expect(page).to have_content(item.active)
       expect(page).to have_content(item.inventory)
+    end
+
+    it "When I visit a merchants page I see a link to add a new item which takes me to a new item form" do
+      merchant = Merchant.create(name: "What Ales You")
+
+      visit "/merchants/#{merchant.id}/items"
+      click_on 'New Item'
+
+      expect(current_path).to eq("/merchants/#{merchant.id}/items/new")
+
+      fill_in 'Name', with: "Cashmere Hops"
+      fill_in 'Price', with: "21.99"
+      fill_in 'Description', with: "Hops that add an herbal, slightly spicy aroma with notes of lemon, lime, melon and stone fruit."
+      fill_in 'Image', with: "https://morebeer-web-8-pavinthewaysoftw.netdna-ssl.com/product_image/morebeer/500x500/31983.png"
+      fill_in 'Inventory', with: "38"
+
+      click_on 'Create Item'
+
+      save_and_open_page
+
+      expect(current_path).to eq("/merchants/#{merchant.id}/items")
+      expect(page).to have_content("Cashmere Hops")
+      expect(page).to have_content("21.99")
+      expect(page).to have_content("Hops that add an herbal, slightly spicy aroma with notes of lemon, lime, melon and stone fruit.")
+      expect(page).to have_css("img[src*='https://morebeer-web-8-pavinthewaysoftw.netdna-ssl.com/product_image/morebeer/500x500/31983.png']")
+      expect(page).to have_content("38")
     end
 
   end
