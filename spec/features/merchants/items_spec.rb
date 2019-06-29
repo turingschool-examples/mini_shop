@@ -30,14 +30,14 @@ RSpec.describe "Merchants Items" do
 
       click_on 'Create Item'
 
+      save_and_open_page
+
       expect(current_path).to eq("/merchants/#{merchant.id}/items")
-      expect(page).to have_content(item_1.name)
-      expect(page).to have_content(item_1.description)
-      expect(page).to have_content(item_1.price)
-      expect(page).to have_css("img[src*='#{item_1.image}']")
-      expect(page).to have_content("In Stock")
-      expect(page).to have_content(item_1.inventory)
-      expect(page).to have_content(item_1.merchant.name)
+      expect(page).to have_content("Cashmere Hops")
+      expect(page).to have_content("21.99")
+      expect(page).to have_content("Hops that add an herbal, slightly spicy aroma with notes of lemon, lime, melon and stone fruit.")
+      expect(page).to have_css("img[src*='https://morebeer-web-8-pavinthewaysoftw.netdna-ssl.com/product_image/morebeer/500x500/31983.png']")
+      expect(page).to have_content("38")
     end
 
   end
