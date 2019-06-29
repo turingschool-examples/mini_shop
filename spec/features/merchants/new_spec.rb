@@ -1,5 +1,5 @@
-# require 'rails_helper'
-#
+require 'rails_helper'
+
 RSpec.describe 'New Merchant' do
   describe 'As a visitor' do
     describe 'When I visit the new merchant form' do
