@@ -1,3 +1,6 @@
+<%= link_to "<< Back to Merchants Index", '/merchants' %>
+<%= link_to "<< Back to Items Index", '/items' %>
+
 <%= form_tag("/merchants/#{@merchant_id}/items", method: :post) do %>
 
   <%= label_tag :name %>
@@ -12,8 +15,6 @@
   <%= text_field_tag :active %>
   <%= label_tag :inventory %>
   <%= text_field_tag :inventory %>
-  <%= label_tag :merchant_name %>
-  <%= text_field_tag :merchant_name %>
 
   <%= submit_tag 'Create Item' %>
 <% end %>

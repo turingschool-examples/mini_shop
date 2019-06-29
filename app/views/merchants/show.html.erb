@@ -1,3 +1,6 @@
+<%= link_to "<< Back to Merchants Index", '/merchants' %>
+<%= link_to "<< Back to Items Index", '/items' %>
+
 <h2><%= @merchant.name %></h2>
 
 <p><%= @merchant.address %></p>
@@ -7,4 +10,3 @@
 
 <a href="/merchants/<%= @merchant.id %>/edit">Update</a>
 <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
-<%= link_to "<< Back to Merchants", '/merchants' %>

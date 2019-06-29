@@ -28,16 +28,19 @@ class ItemsController < ApplicationController
   end
 
   def update
+    # merchant = Merchant.find(params[:name])
+    # @item = merchant.items.find(params[:id])
+    # @item.merchant_id = params[:merchant_id]
     @item = Item.find(params[:id])
-    @item.update(item_params)
-    @item.save
-    redirect_to "/items/#{@item.id}"
+      if @item.update_attributes(item_params)
+        redirect_to "/items/#{@item.id}"
+      end
   end
 
   private
 
   def item_params
-    params.permit(:name, :description, :price, :image, :active, :inventory, :merchant_id, :merchant_name)
+    params.permit(:name, :description, :price, :image, :active, :inventory, :merchant_id)
   end
 
 end
