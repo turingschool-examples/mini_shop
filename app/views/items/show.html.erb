@@ -1,7 +1,10 @@
 <% item = @item %>
-<h1 class='title'><%= @item.name %></h1>
+<h1 class='title'><%= item.name %></h1>
 
 <%= render partial: 'item_details', locals: {item: item} %>
+<section class='image'>
+  <%= image_tag(item.image, size: "600x450") %>
+</section>
 <p id='merchant' class='info'>
   Merchant: <%= link_to "#{item.merchant.name}", merchant_path(item.merchant) %>
 </p>
