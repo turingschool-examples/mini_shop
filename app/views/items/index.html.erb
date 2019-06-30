@@ -2,7 +2,7 @@
 <br>
 <% @items.each do |item| %>
   <section class="item">
-    <%= link_to item.name, "/items/#{item.id}" %><br>
+    <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
     <%= image_tag ("#{item.image}") %>
     <p><%= item.description %></p>
     <p>$<%= item.price %></p>
