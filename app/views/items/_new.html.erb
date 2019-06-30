@@ -1,19 +1,20 @@
 <%= label_tag :name %>
-<%= text_field_tag :name, @item.name %><br/>
-<br/>
+<%= text_field_tag :name, @item.nil? ? '' : @item.name %><br/>
+
 <%= label_tag :description %>
-<%= text_field_tag :description, @item.description %><br/>
-<br/>
+<%= text_field_tag :description, @item.nil? ? '' : @item.description %><br/>
+
 <%= label_tag :price %>
-<%= number_field_tag :price, @item.price %><br/>
-<br/>
+<%= number_field_tag :price, @item.nil? ? '' : @item.price %><br/>
+
 <%= label_tag :image %>
-<%= text_field_tag :image, @item.image %><br/>
-<br/>
+<%= text_field_tag :image, @item.nil? ? '' : @item.image %><br/>
+
 <%= label_tag :active %>
-<%= text_field_tag :active, @item.active %></br>
-<br/>
+<%= text_field_tag :active, @item.nil? ? '' : @item.active %></br>
+
 <%= label_tag :inventory %>
-<%= number_field_tag :inventory, @item.inventory %></br>
+<%= number_field_tag :inventory, @item.nil? ? '' : @item.inventory %></br>
 <br/>
-<%= submit_tag("Submit") %>
+
+<%= submit_tag("Submit", class: 'nav-btn') %>

@@ -1,12 +1,12 @@
 <%= label_tag :name %>
-<%= text_field_tag :name, @merchant.name %><br/>
+<%= text_field_tag :name, @merchant.nil? ? '' : @merchant.name %><br/>
 <%= label_tag :address %>
-<%= text_field_tag :address, @merchant.address %><br/>
+<%= text_field_tag :address, @merchant.nil? ? '' : @merchant.address %><br/>
 <%= label_tag :city %>
-<%= text_field_tag :city, @merchant.city %><br/>
+<%= text_field_tag :city, @merchant.nil? ? '' : @merchant.city %><br/>
 <%= label_tag :state %>
-<%= text_field_tag :state, @merchant.state %><br/>
+<%= text_field_tag :state, @merchant.nil? ? '' : @merchant.state %><br/>
 <%= label_tag :zip %>
-<%= text_field_tag :zip, @merchant.zip %><br/>
+<%= text_field_tag :zip, @merchant.nil? ? '' : @merchant.zip %><br/>
 <br/>
-<%= submit_tag("Submit") %>
+<%= submit_tag("Submit", class: 'nav-btn') %>

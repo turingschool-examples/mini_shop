@@ -1,5 +1,7 @@
 <h1 class='title'>Edit Item</h1>
 
-<%= form_tag(update_item_path, method: :patch) do %>
-  <%= render 'new' %>
-<% end %>
+<section class='detail-form'>
+  <%= form_tag(update_item_path, method: :patch) do %>
+    <%= render 'new' %>
+  <% end %>
+</section>

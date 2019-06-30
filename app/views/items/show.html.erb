@@ -1,13 +1,21 @@
-<h1 class='title'><%= @item.name %></h1>
+<% item = @item %>
+<h1 class='title'><%= item.name %></h1>
 
-<p id='description' class='info'><%= "Description: #{@item.description}" %></p>
-<p id='price' class='info'><%= "Price: #{@item.price}" %></p>
-<p id='image' class='info'><%= "Image: #{@item.image}" %></p>
-<p id='active' class='info'><%= "Active: #{@item.active}" %></p>
-<p id='inventory' class='info'><%= "Inventory: #{@item.inventory}" %></p>
-<p id='merchant' class='info'><%= "Merchant: #{@item.merchant.name}" %></p>
-
-<p class='bottom_link'>
-  <%= link_to 'Edit', edit_item_path(@item) %>
-  <%= link_to 'Delete', delete_item_path(@item), method: :delete %>
+<%= render partial: 'item_details', locals: {item: item} %>
+<section class='image'>
+  <%= image_tag(item.image, size: "600x450") %>
+</section>
+<p id='merchant' class='info'>
+  Merchant: <%= link_to "#{item.merchant.name}", merchant_path(item.merchant) %>
 </p>
+
+<section class='nav-2'>
+  <section class='nav-group'>
+    <section role="group" class="btn-group">
+      <%= button_to 'Edit', edit_item_path, method: :get, class: 'nav-btn' %>
+    </section>
+    <section role="group" class="btn-group">
+      <%= button_to 'Delete', delete_item_path, method: :delete, class: 'nav-btn' %>
+    </section>
+  </section>
+</section>

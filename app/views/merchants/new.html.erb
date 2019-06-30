@@ -1,5 +1,7 @@
 <h1 class='title'>New Merchant</h1>
 
-<%= form_tag(new_merchant_path) do %>
-  <%= render 'new' %>
-<% end %>
+<section class='detail-form'>
+  <%= form_tag(merchants_path) do %>
+    <%= render 'new' %>
+  <% end %>
+</section>

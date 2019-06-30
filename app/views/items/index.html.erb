@@ -9,19 +9,19 @@
 <% @items.each do |item| %>
   <section id='item-<%= item.id %>' class='item'>
     <h2><%= link_to item.name, item_path(item) %></h2>
-    <ul class='ul-details'>
-      <li><%= item.description %></li>
-      <li><%= item.price %></li>
-      <li><%= item.image %></li>
-      <li><%= item.active %></li>
-      <li><%= item.inventory %></li>
-      <li><% if @merchant.nil? %>
-        <%= link_to item.merchant.name, merchant_path(item.merchant) %>
-      <% end %></li>
-    </ul>
+    <%= render partial: 'item_details', locals: {item: item} %>
+    <p id='merchant'><% if @merchant.nil? %>
+      Merchant: <%= link_to "#{item.merchant.name}", merchant_path(item.merchant) %>
+    <% end %></p>
   </section>
 <% end %>
 
-<% unless @merchant.nil? %>
-  <p class='bottom_link'><%= link_to 'New Item', new_item_path %></p>
-<% end %>
+<section class='nav-2'>
+  <section class='nav-group'>
+    <section role="group" class="btn-group">
+      <% unless @merchant.nil? %>
+        <%= button_to 'Add Item', new_item_path, method: :get, class: 'nav-btn' %>
+      <% end %>
+    </section>
+  </section>
+</section>

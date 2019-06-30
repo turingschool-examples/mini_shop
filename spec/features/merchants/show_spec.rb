@@ -19,19 +19,37 @@ RSpec.describe 'merchants show page', type: :feature do
     it 'user can see links' do
       visit merchant_path(@merchant)
 
-      within('.bottom_link') do
-        expect(page).to have_link("Add Item")
-        expect(page).to have_link("Edit")
-        expect(page).to have_link("Delete")
+      within('.nav-2') do
+        expect(page).to have_button("View Items")
+        expect(page).to have_button("Add Item")
+        expect(page).to have_button("Edit")
+        expect(page).to have_button("Delete")
       end
     end
 
     it 'user can see nav bar' do
       visit merchant_path(@merchant)
 
-      within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+      within('.nav-1') do
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
+
+        click_on "Merchants"
+
+        expect(current_path).to eq(merchants_path)
+      end
+    end
+
+    it 'user can see nav bar' do
+      visit merchant_path(@merchant)
+
+      within('.nav-1') do
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
+
+        click_on "Items"
+
+        expect(current_path).to eq(items_path)
       end
     end
   end

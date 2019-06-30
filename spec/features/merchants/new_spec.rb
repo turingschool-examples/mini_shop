@@ -4,7 +4,7 @@ RSpec.describe 'merchants new entry', type: :feature do
   describe 'when a user visits the index page' do
     it 'user clicks to create a new merchant' do
       visit merchants_path
-      click_link "New Merchant"
+      click_button "New Merchant"
 
       expect(current_path).to eq(new_merchant_path)
       within('.title') { expect(page).to have_content("New Merchant") }
@@ -26,9 +26,26 @@ RSpec.describe 'merchants new entry', type: :feature do
     it 'user can see nav bar' do
       visit new_merchant_path
 
-      within('.nav') do
-        expect(page).to have_link("Merchants")
-        expect(page).to have_link("Items")
+      within('.nav-1') do
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
+
+        click_on "Merchants"
+
+        expect(current_path).to eq(merchants_path)
+      end
+    end
+
+    it 'user can see nav bar' do
+      visit new_merchant_path
+
+      within('.nav-1') do
+        expect(page).to have_button("Merchants")
+        expect(page).to have_button("Items")
+
+        click_on "Items"
+
+        expect(current_path).to eq(items_path)
       end
     end
   end
