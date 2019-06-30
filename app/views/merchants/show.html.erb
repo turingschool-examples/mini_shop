@@ -7,7 +7,7 @@
 
 <p class='bottom_link'>
   <%= link_to 'View Items', merchant_items_path(@merchant) %>
-  <%= link_to 'Add Item', new_item_path(@merchant) %>
+  <%= link_to 'Add Item', new_item_path(@merchant), method: :get %>
   <%= link_to 'Edit', edit_merchant_path %>
   <%= link_to 'Delete', delete_merchant_path, method: :delete %>
 </p>

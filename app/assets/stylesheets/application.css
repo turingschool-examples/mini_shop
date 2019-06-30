@@ -14,8 +14,6 @@
  *= require_self
  */
 
- .ul-details { list-style: none; }
-
  .nav-btn:hover {
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
  }
@@ -29,8 +27,16 @@
    text-transform: uppercase;
  }
 
+ .button-group {
+
+ }
+
 .nav-group {
   margin: 0 auto;
+}
+
+h1, h2, p, .detail-form, .bottom_link {
+  text-align: center;
 }
 
 body {

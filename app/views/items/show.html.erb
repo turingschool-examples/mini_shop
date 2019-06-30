@@ -1,10 +1,7 @@
+<% item = @item %>
 <h1 class='title'><%= @item.name %></h1>
 
-<p id='description' class='info'><%= "Description: #{@item.description}" %></p>
-<p id='price' class='info'><%= "Price: #{@item.price}" %></p>
-<p id='image' class='info'><%= "Image: #{@item.image}" %></p>
-<p id='active' class='info'><%= "Active: #{@item.active}" %></p>
-<p id='inventory' class='info'><%= "Inventory: #{@item.inventory}" %></p>
+<%= render partial: 'item_details', locals: {item: item} %>
 <p id='merchant' class='info'><%= "Merchant: #{@item.merchant.name}" %></p>
 
 <p class='bottom_link'>

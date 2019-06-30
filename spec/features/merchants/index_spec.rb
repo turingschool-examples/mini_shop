@@ -21,7 +21,7 @@ RSpec.describe 'merchants index page', type: :feature do
       visit merchants_path
 
       within('.bottom_link') do
-        expect(page).to have_link("New Merchant")
+        expect(page).to have_button('New Merchant')
       end
     end
 
@@ -29,10 +29,10 @@ RSpec.describe 'merchants index page', type: :feature do
       visit merchants_path
 
       within('.nav') do
-        expect(page).to have_button("Merchants")
-        expect(page).to have_button("Items")
+        expect(page).to have_button('Merchants')
+        expect(page).to have_button('Items')
 
-        click_on "Merchants"
+        click_on 'Merchants'
 
         expect(current_path).to eq(merchants_path)
       end

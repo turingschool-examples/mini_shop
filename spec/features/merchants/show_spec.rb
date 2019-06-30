@@ -20,6 +20,7 @@ RSpec.describe 'merchants show page', type: :feature do
       visit merchant_path(@merchant)
 
       within('.bottom_link') do
+        expect(page).to have_link("View Items")
         expect(page).to have_link("Add Item")
         expect(page).to have_link("Edit")
         expect(page).to have_link("Delete")
