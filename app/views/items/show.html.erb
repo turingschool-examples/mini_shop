@@ -7,3 +7,5 @@
   <h3>Merchant: <%= @item.merchant.name %></h3>
   <%= image_tag @item.image, alt: "image of @item.name" %>
 </section>
+
+<%= link_to "Update Item", "/items/#{@item.id}/edit" %>
