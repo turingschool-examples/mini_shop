@@ -8,7 +8,7 @@ RSpec.describe 'merchants edit page', type: :feature do
 
       visit merchant_path(merchant_1)
 
-      click_link "Delete"
+      click_button "Delete"
 
       expect(current_path).to eq(merchants_path)
 

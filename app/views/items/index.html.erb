@@ -16,8 +16,12 @@
   </section>
 <% end %>
 
-<section class='bottom_link'>
-  <% unless @merchant.nil? %>
-    <%= button_to 'Add Item', new_item_path, method: :get %>
-  <% end %>
+<section class='nav'>
+  <section class='nav-group'>
+    <section role="group" class="btn-group">
+      <% unless @merchant.nil? %>
+        <%= button_to 'Add Item', new_item_path, method: :get, class: 'nav-btn' %>
+      <% end %>
+    </section>
+  </section>
 </section>

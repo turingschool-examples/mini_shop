@@ -27,15 +27,11 @@
    text-transform: uppercase;
  }
 
- .button-group {
-
- }
-
 .nav-group {
   margin: 0 auto;
 }
 
-h1, h2, p, .detail-form, .bottom_link {
+h1, h2, p, .detail-form, .nav-1, .nav-2 {
   text-align: center;
 }
 

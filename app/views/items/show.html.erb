@@ -4,7 +4,13 @@
 <%= render partial: 'item_details', locals: {item: item} %>
 <p id='merchant' class='info'><%= "Merchant: #{@item.merchant.name}" %></p>
 
-<p class='bottom_link'>
-  <%= link_to 'Edit', edit_item_path %>
-  <%= link_to 'Delete', delete_item_path, method: :delete %>
-</p>
+<section class='nav-2'>
+  <section class='nav-group'>
+    <section role="group" class="btn-group">
+      <%= button_to 'Edit', edit_item_path, method: :get, class: 'nav-btn' %>
+    </section>
+    <section role="group" class="btn-group">
+      <%= button_to 'Delete', delete_item_path, method: :delete, class: 'nav-btn' %>
+    </section>
+  </section>
+</section>

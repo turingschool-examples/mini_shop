@@ -9,7 +9,7 @@ RSpec.describe 'merchants edit page', type: :feature do
     it 'user clicks to edit the merchant details' do
       visit merchant_path(@merchant)
 
-      click_link "Edit"
+      click_button "Edit"
 
       expect(current_path).to eq(edit_merchant_path(@merchant))
       within(".title") { expect(page).to have_content("Edit Merchant") }
@@ -34,7 +34,7 @@ RSpec.describe 'merchants edit page', type: :feature do
     it 'user can see nav bar' do
       visit edit_merchant_path(@merchant)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 
@@ -47,7 +47,7 @@ RSpec.describe 'merchants edit page', type: :feature do
     it 'user can see nav bar' do
       visit edit_merchant_path(@merchant)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 

@@ -8,7 +8,7 @@ RSpec.describe 'Items new entry', type: :feature do
 
     it 'user clicks to create a new item' do
       visit merchant_path(@merchant)
-      click_link "Add Item"
+      click_button "Add Item"
 
       expect(current_path).to eq(new_item_path(@merchant))
       within('.title') { expect(page).to have_content("New Item") }
@@ -35,7 +35,7 @@ RSpec.describe 'Items new entry', type: :feature do
 
     it 'user clicks to create a new item' do
       visit merchant_path(@merchant)
-      click_link "View Items"
+      click_button "View Items"
       click_button "Add Item"
 
       expect(current_path).to eq(new_item_path(@merchant))
@@ -64,7 +64,7 @@ RSpec.describe 'Items new entry', type: :feature do
     it 'user can see nav bar' do
       visit new_item_path(@merchant)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 
@@ -77,7 +77,7 @@ RSpec.describe 'Items new entry', type: :feature do
     it 'user can see nav bar' do
       visit new_item_path(@merchant)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 

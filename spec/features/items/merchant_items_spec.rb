@@ -37,7 +37,7 @@ RSpec.describe 'Merchant Items page', type: :feature do
     it 'user can see nav bar' do
       visit merchant_items_path(@merchant_1)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 
@@ -50,7 +50,7 @@ RSpec.describe 'Merchant Items page', type: :feature do
     it 'user can see nav bar' do
       visit merchant_items_path(@merchant_1)
 
-      within('.nav') do
+      within('.nav-1') do
         expect(page).to have_button("Merchants")
         expect(page).to have_button("Items")
 
