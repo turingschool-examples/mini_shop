@@ -317,22 +317,38 @@
         null,
         1,
         null,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
+        null
+      ],
+      "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/spec/features/items/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
         null,
         1,
         null,
         1,
         null,
-        null,
-        null,
-        null,
         1,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -500,6 +516,8 @@
         null,
         null,
         null,
+        1,
+        1,
         null,
         null,
         null,
@@ -557,6 +575,6 @@
         null
       ]
     },
-    "timestamp": 1561932878
+    "timestamp": 1561936800
   }
 }
