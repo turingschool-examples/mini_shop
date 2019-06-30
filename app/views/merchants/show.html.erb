@@ -1,12 +1,11 @@
-<%= link_to "<< Back to Merchants Index", '/merchants' %>
-<%= link_to "<< Back to Items Index", '/items' %>
+<section class="box" style=text-align:center;>
+  <h2><%= @merchant.name %></h2>
 
-<h2><%= @merchant.name %></h2>
+  <p>Address: <%= @merchant.address %></p>
+  <p>City: <%= @merchant.city %></p>
+  <p>State: <%= @merchant.state %></p>
+  <p>Zipcode: <%= @merchant.zipcode %></p>
 
-<p><%= @merchant.address %></p>
-<p><%= @merchant.city %></p>
-<p><%= @merchant.state %></p>
-<p><%= @merchant.zipcode %></p>
-
-<a href="/merchants/<%= @merchant.id %>/edit">Update</a>
-<%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
+  <%= button_to 'Edit', "/merchants/#{@merchant.id}/edit", method: :get %>
+  <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
+</section>

@@ -1,12 +1,12 @@
-<%= link_to "<< Back to Merchants Index", '/merchants' %>
-<%= link_to "<< Back to Items Index", '/items' %>
-
-<h2><%= @item.name %></h2>
-  <ul>
-    <li> description: <%= @item.description %> </li>
-    <li> price: <%= @item.price %> </li>
-    <li> active: <%= @item.active %> </li>
-    <li> inventory: <%= @item.inventory %> </li>
-    <%= image_tag @item.image %>
-  </ul>
-  <%= button_to 'Edit', "/items/#{@item.id}/edit", method: :get %>
+<section class="box">
+  <h2><%= @item.name %></h2>
+    <ul>
+      <li> description: <%= @item.description %> </li>
+      <li> price: <%= @item.price %> </li>
+      <li> active: <%= @item.active %> </li>
+      <li> inventory: <%= @item.inventory %> </li>
+      <%= image_tag @item.image %>
+    </ul>
+    <%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
+    <%= button_to 'Edit', "/items/#{@item.id}/edit", method: :get %>
+</section>
