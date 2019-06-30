@@ -1,0 +1,18 @@
+<%= form_tag(item_path(@item), method: :patch) do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag "Price" %>
+  <%= number_field_tag :price %>
+
+  <%= label_tag "Description" %>
+  <%= text_field_tag :description %>
+
+  <%= label_tag "Image" %>
+  <%= text_field_tag :image %>
+
+  <%= label_tag "inventory" %>
+  <%= number_field_tag :inventory %>
+
+  <%= submit_tag "Update Item" %>
+<% end %>

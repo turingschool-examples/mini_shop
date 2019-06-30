@@ -33,7 +33,7 @@ class MerchantsController < ApplicationController
   private
 
   def merchant_params
-    params.require(:merchant).permit(
+    params.permit(
       :name,
       :address,
       :city,

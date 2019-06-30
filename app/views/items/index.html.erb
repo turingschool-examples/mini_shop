@@ -1,12 +1,16 @@
 <h1>Items</h1>
 
+<% if !@merchant_id.nil? %>
+  <%= link_to 'New Item', new_merchant_item_path(@merchant_id) %>
+<% end %>
+
   <% @items.each do |item| %>
     <section class="item-<%= item.id %> ">
       <h2><%= item.name %></h2>
       <p>Description: <%= item.description %></p>
       <p>Price: <%= item.price %></p>
       <p><%= item.image %></p>
-      <p>Active: <%= item.active %></p>
+      <p>Active: <%= item.active ? "False" : "True" %></p>
       <p>Inventory: <%= item.inventory %></p>
       <p>Merchant: <%= item.merchant.name %></p>
     </section>
