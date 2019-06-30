@@ -6,7 +6,7 @@ RSpec.describe "items index page", type: :feature do
 
       merchant_1 = Merchant.create!(name: "Lost Outpost", address: "Lost", city: "Beekman", state: "LA", zip: 71220)
 
-      item_1 = Item.create!(name: "Tomahawk", description: "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition.", price: 19.99, image: "<image of tomahawk here>", status: "IN STOCK", inventory: 3, merchant_id: merchant_1.id )
+      item_1 = Item.create!(name: "Tomahawk", description: "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition.", price: 19.99, image: "<image of tomahawk here>", status: "active", inventory: 3, merchant_id: merchant_1.id )
 
       visit "/items"
 
