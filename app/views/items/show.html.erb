@@ -1,6 +1,6 @@
 <section class="item">
   <h2><%= @item.name %></h2>
-  <%= image_tag ("#{@item.image}") %>
+  <%= image_tag "#{@item.image}", class:"img-thumbnail" %>
   <p><%= @item.description %></p>
   <p>$<%= @item.price %></p>
   <% if @item.active %>
@@ -9,7 +9,7 @@
     <p>Out of Stock </p>
   <% end %>
   <p>Inventory: <%= @item.inventory %></p>
-  <p>Merchant: <%= @item.merchant.name %></p>
+  <p>Merchant: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
   <br>
   <%= link_to 'Update Item Info', "/items/#{@item.id}/edit" %>
 </section>

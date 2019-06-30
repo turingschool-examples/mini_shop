@@ -12,6 +12,6 @@
       <p>Out of Stock </p>
     <% end %>
     <p>Inventory: <%= item.inventory %></p>
-    <p>Merchant: <%= item.merchant.name %></p>
+    <p>Merchant: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
   </section>
 <% end %>
