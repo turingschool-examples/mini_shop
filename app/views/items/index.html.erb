@@ -3,9 +3,9 @@
 <% @items.each do |item| %>
   <section class="item">
     <%= link_to item.name, "/items/#{item.id}" %>
+    <%= image_tag ("#{item.image}") %>
     <p><%= item.description %></p>
     <p>$<%= item.price %></p>
-    <%= image_tag ("#{item.image}") %>
     <% if item.active %>
       <p>In Stock</p>
     <% else %>
