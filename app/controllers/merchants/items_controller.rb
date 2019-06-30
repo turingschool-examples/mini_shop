@@ -3,4 +3,24 @@ class Merchants::ItemsController < ApplicationController
     @merchant = Merchant.find(params[:merchant_id])
     @items = @merchant.items
   end
+
+  def new
+    @merchant_id = params[:merchant_id]
+  end
+
+  def create
+    merchant = Merchant.find(params[:merchant_id])
+    item = merchant.items.new(item_params)
+    if item.save
+      redirect_to "/merchants/#{item.merchant_id}/items"
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def item_params
+    params.permit(:name, :description, :price, :inventory, :active, :image)
+  end
 end
