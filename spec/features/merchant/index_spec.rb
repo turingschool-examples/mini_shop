@@ -7,8 +7,9 @@ RSpec.describe 'Merchant Index' do
       merchant_2 = Merchant.create(name: 'harrys hula hoops')
       visit '/merchants'
 
-      # expect(page).to have_content(merchant_1.name)
-      # expect(page).to have_content(merchant_2.name)
+      expect(current_path).to eq("/merchants")
+      expect(page).to have_content(merchant_1.name)
+      expect(page).to have_content(merchant_2.name)
     end
   end
 end

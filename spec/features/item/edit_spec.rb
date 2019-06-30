@@ -12,18 +12,18 @@ RSpec.describe 'As a visitor' do
       fill_in "Name", with: "burger"
       fill_in "Description", with: "juicy and delish"
       fill_in "Price", with: 5.00
-      # fill_in "Image", with: burger.image
+      fill_in "Image", with: burger.image
       fill_in "Inventory", with: 50
       fill_in "Active", with: true
       click_on "Submit"
 
       visit "/items/#{burger.id}"
 
-      save_and_open_page
+      expect(current_path).to eq("/items/#{burger.id}")
       expect(page).to have_content(burger.name)
       expect(page).to have_content(burger.description)
       expect(page).to have_content(burger.price)
-      # expect(page).to have_css("img[src*='#{burger.image}']")
+      expect(page).to have_css("img[src*='#{burger.image}']")
       expect(page).to have_content(burger.active)
       expect(page).to have_content(burger.inventory)
     end
