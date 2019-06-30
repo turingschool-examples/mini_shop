@@ -9,10 +9,16 @@
   </head>
 
   <body>
-    <nav class="nav">
-      <%= button_to "Merchants", merchants_path, method: :get %>
-      <%= button_to "Items", items_path, method: :get %>
-    </nav>
+    <section class='nav'>
+      <section class='nav-group'>
+        <section role="group" class="btn-group">
+          <%= button_to "Merchants", merchants_path, method: :get, class: 'nav-btn' %>
+        </section>
+        <section role="group" class="btn-group">
+          <%= button_to "Items", items_path, method: :get, class: 'nav-btn' %>
+        </section>
+      </section>
+    </section>
     <%= yield %>
   </body>
 </html>

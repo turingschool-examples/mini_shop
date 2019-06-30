@@ -15,3 +15,24 @@
  */
 
  .ul-details { list-style: none; }
+
+ .nav-btn:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ .nav-btn {
+   background-color: LightGray;
+   border-radius: 10px;
+   width: 150px;
+   height: 45px;
+   color: black;
+   text-transform: uppercase;
+ }
+
+.nav-group {
+  margin: 0 auto;
+}
+
+body {
+  background-color: LightBlue
+}
