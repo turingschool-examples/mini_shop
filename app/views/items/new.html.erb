@@ -1,0 +1,19 @@
+<%# <% binding.pry %> %>
+<%= form_tag(merchant_items_path(@merchant_id)) do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag "Price" %>
+  <%= number_field_tag :price %>
+
+  <%= label_tag "Description" %>
+  <%= text_field_tag :description %>
+
+  <%= label_tag "Image" %>
+  <%= text_field_tag :image %>
+
+  <%= label_tag "inventory" %>
+  <%= number_field_tag :inventory %>
+
+  <%= submit_tag "Create Item" %>
+<% end %>
