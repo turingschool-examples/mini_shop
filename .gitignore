@@ -85,4 +85,4 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-coverage
+/coverage
