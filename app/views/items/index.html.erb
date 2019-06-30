@@ -1,13 +1,24 @@
-<h1>All Items</h1>
 
 
-<% @items.each do |item| %>
-  <h2>Name: <%= item.name %></h2>
+<% if params[:merchant_id].nil? %>
+  <h1>All Items</h1>
+    <% @items.each do |item| %>
+      <h2>Name: <%= item.name %></h2>
+      <p>Description: <%= item.description %></p>
+      <p>Price: <%= item.price %></p>
+      <p>Image: <%= item.image %></p>
+      <p>Status: <%= item.status %></p>
+      <p>Inventory: <%= item.inventory %></p>
+      <p>Merchant Name: <%= item.merchant.name %></p>
+    <% end %>
+  <%else %>
 
-  <p>Description: <%= item.description %></p>
-  <p>Price: <%= item.price %></p>
-  <p>Image: <%= item.image %></p>
-  <p>Status: <%= item.status %></p>
-  <p>Inventory: <%= item.inventory %></p>
-  <p>Merchant Name: <%= item.merchant.name %></p>
+  <% @items.each do |item| %>
+      <h1>Merchant: <%= item.merchant.name %></h1>
+      <h2>Name: <%= item.name %></h2>
+      <p>Price: <%= item.price %></p>
+      <p>Image: <%= item.image %></p>
+      <p>Status: <%= item.status %></p>
+      <p>Inventory: <%= item.inventory %></p>
+  <% end %>
 <% end %>
