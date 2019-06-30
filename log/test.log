@@ -17830,3 +17830,2067 @@ Processing by MerchantsController#index as HTML
   Rendered merchants/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (9.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:09:06.701379"], ["updated_at", "2019-06-30 06:09:06.701379"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:09:06.743915"], ["updated_at", "2019-06-30 06:09:06.743915"], ["merchant_id", 49]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 133ms (Views: 129.3ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:09:06.908663"], ["updated_at", "2019-06-30 06:09:06.908663"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/50" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+Started DELETE "/merchants/50" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 06:09:06.951049"], ["updated_at", "2019-06-30 06:09:06.951049"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 06:09:06.953399"], ["updated_at", "2019-06-30 06:09:06.953399"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 06:09:06.955364"], ["updated_at", "2019-06-30 06:09:06.955364"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 00:09:06 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 06:09:07.003023"], ["updated_at", "2019-06-30 06:09:07.003023"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:09:07.014130"], ["updated_at", "2019-06-30 06:09:07.014130"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/55" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:09:07.027481"], ["updated_at", "2019-06-30 06:09:07.027481"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/56" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/56/edit" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/56" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"56"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 06:09:07.072790"], ["id", 56]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:09:07 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:17:04.232438"], ["updated_at", "2019-06-30 06:17:04.232438"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:17:04.261408"], ["updated_at", "2019-06-30 06:17:04.261408"], ["merchant_id", 57]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.1ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 134ms (Views: 131.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:17:04.442663"], ["updated_at", "2019-06-30 06:17:04.442663"]]
+  [1m[35m (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:17:04.448373"], ["updated_at", "2019-06-30 06:17:04.448373"], ["merchant_id", 58]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/58/items" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:17:04.456055"], ["updated_at", "2019-06-30 06:17:04.456055"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/59" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+Started DELETE "/merchants/59" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 59]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 06:17:04.493255"], ["updated_at", "2019-06-30 06:17:04.493255"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 06:17:04.494647"], ["updated_at", "2019-06-30 06:17:04.494647"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 06:17:04.498109"], ["updated_at", "2019-06-30 06:17:04.498109"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 06:17:04.546351"], ["updated_at", "2019-06-30 06:17:04.546351"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:17:04.554715"], ["updated_at", "2019-06-30 06:17:04.554715"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/64" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:17:04.566505"], ["updated_at", "2019-06-30 06:17:04.566505"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/65" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/65/edit" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/65" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"65"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 06:17:04.590374"], ["id", 65]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:17:04 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:41:38.624316"], ["updated_at", "2019-06-30 06:41:38.624316"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:41:38.651186"], ["updated_at", "2019-06-30 06:41:38.651186"], ["merchant_id", 66]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 141ms (Views: 138.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:41:38.840110"], ["updated_at", "2019-06-30 06:41:38.840110"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/67" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/67" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mMerchant Load (0.6ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 67]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 06:41:38.898920"], ["updated_at", "2019-06-30 06:41:38.898920"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 06:41:38.900636"], ["updated_at", "2019-06-30 06:41:38.900636"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 06:41:38.901969"], ["updated_at", "2019-06-30 06:41:38.901969"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 06:41:38.959534"], ["updated_at", "2019-06-30 06:41:38.959534"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:41:38.967151"], ["updated_at", "2019-06-30 06:41:38.967151"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/72" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:41:38.985446"], ["updated_at", "2019-06-30 06:41:38.985446"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/73" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/73/edit" for 127.0.0.1 at 2019-06-30 00:41:38 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+Started PATCH "/merchants/73" for 127.0.0.1 at 2019-06-30 00:41:39 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"73"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 06:41:39.013441"], ["id", 73]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:41:39 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:42:44.195851"], ["updated_at", "2019-06-30 06:42:44.195851"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:42:44.216765"], ["updated_at", "2019-06-30 06:42:44.216765"], ["merchant_id", 74]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.1ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 129ms (Views: 126.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 06:42:44.388430"], ["updated_at", "2019-06-30 06:42:44.388430"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 06:42:44.390449"], ["updated_at", "2019-06-30 06:42:44.390449"], ["merchant_id", 75]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/75/items" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"75"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:42:44.397936"], ["updated_at", "2019-06-30 06:42:44.397936"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/76" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+Started DELETE "/merchants/76" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 76]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 06:42:44.452597"], ["updated_at", "2019-06-30 06:42:44.452597"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 06:42:44.453991"], ["updated_at", "2019-06-30 06:42:44.453991"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 06:42:44.455184"], ["updated_at", "2019-06-30 06:42:44.455184"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 06:42:44.498409"], ["updated_at", "2019-06-30 06:42:44.498409"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:42:44.508214"], ["updated_at", "2019-06-30 06:42:44.508214"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/81" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 06:42:44.521082"], ["updated_at", "2019-06-30 06:42:44.521082"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/82" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/82/edit" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/82" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"82"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 06:42:44.549391"], ["id", 82]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 00:42:44 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:01:19.428823"], ["updated_at", "2019-06-30 15:01:19.428823"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:01:19.471276"], ["updated_at", "2019-06-30 15:01:19.471276"], ["merchant_id", 83]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 147ms (Views: 142.5ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:01:19.652294"], ["updated_at", "2019-06-30 15:01:19.652294"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:01:19.654919"], ["updated_at", "2019-06-30 15:01:19.654919"], ["merchant_id", 84]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/84/items" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"84"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:01:19.661853"], ["updated_at", "2019-06-30 15:01:19.661853"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/85" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mMerchant Load (0.8ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+Started DELETE "/merchants/85" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 85]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 8ms (ActiveRecord: 4.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:01:19.971811"], ["updated_at", "2019-06-30 15:01:19.971811"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:01:19.974198"], ["updated_at", "2019-06-30 15:01:19.974198"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:01:19.976129"], ["updated_at", "2019-06-30 15:01:19.976129"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:01:19 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:01:20.044823"], ["updated_at", "2019-06-30 15:01:20.044823"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:01:20.053649"], ["updated_at", "2019-06-30 15:01:20.053649"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/90" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:01:20.069423"], ["updated_at", "2019-06-30 15:01:20.069423"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/91" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/91/edit" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/91" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"91"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:01:20.103655"], ["id", 91]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:01:20 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:10:34.444860"], ["updated_at", "2019-06-30 15:10:34.444860"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:10:34.465761"], ["updated_at", "2019-06-30 15:10:34.465761"], ["merchant_id", 92]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 139ms (Views: 135.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:10:34.637492"], ["updated_at", "2019-06-30 15:10:34.637492"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:10:34.640419"], ["updated_at", "2019-06-30 15:10:34.640419"], ["merchant_id", 93]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/93/items" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"93"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (27.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:10:34.678420"], ["updated_at", "2019-06-30 15:10:34.678420"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/94" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/94" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 94]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:10:34.731709"], ["updated_at", "2019-06-30 15:10:34.731709"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:10:34.733185"], ["updated_at", "2019-06-30 15:10:34.733185"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:10:34.734489"], ["updated_at", "2019-06-30 15:10:34.734489"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:10:34.765762"], ["updated_at", "2019-06-30 15:10:34.765762"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:10:34.774192"], ["updated_at", "2019-06-30 15:10:34.774192"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/99" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:10:34.787591"], ["updated_at", "2019-06-30 15:10:34.787591"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/100" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/100/edit" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/100" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"100"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:10:34.813627"], ["id", 100]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:10:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:11:33.534479"], ["updated_at", "2019-06-30 15:11:33.534479"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:11:33.555701"], ["updated_at", "2019-06-30 15:11:33.555701"], ["merchant_id", 101]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 138ms (Views: 135.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:11:33.729223"], ["updated_at", "2019-06-30 15:11:33.729223"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:11:33.739089"], ["updated_at", "2019-06-30 15:11:33.739089"], ["merchant_id", 102]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/102/items" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"102"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:33.756449"], ["updated_at", "2019-06-30 15:11:33.756449"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/103" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+Started DELETE "/merchants/103" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 103]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:11:33.796446"], ["updated_at", "2019-06-30 15:11:33.796446"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:11:33.797767"], ["updated_at", "2019-06-30 15:11:33.797767"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:11:33.799019"], ["updated_at", "2019-06-30 15:11:33.799019"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:11:33.845160"], ["updated_at", "2019-06-30 15:11:33.845160"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:33.852622"], ["updated_at", "2019-06-30 15:11:33.852622"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/108" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:33.862652"], ["updated_at", "2019-06-30 15:11:33.862652"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/109" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+Started GET "/merchants/109/edit" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+Started PATCH "/merchants/109" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"109"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 109], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:11:33.890735"], ["id", 109]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:33 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:11:55.714047"], ["updated_at", "2019-06-30 15:11:55.714047"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:11:55.735817"], ["updated_at", "2019-06-30 15:11:55.735817"], ["merchant_id", 110]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:11:55 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 143ms (Views: 140.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:11:55.903228"], ["updated_at", "2019-06-30 15:11:55.903228"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:11:55.906848"], ["updated_at", "2019-06-30 15:11:55.906848"], ["merchant_id", 111]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/111/items" for 127.0.0.1 at 2019-06-30 09:11:55 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"111"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (27.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:55.946739"], ["updated_at", "2019-06-30 15:11:55.946739"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/112" for 127.0.0.1 at 2019-06-30 09:11:55 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+Started DELETE "/merchants/112" for 127.0.0.1 at 2019-06-30 09:11:55 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mMerchant Load (1.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  [1m[35m (5.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 112]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 11ms (ActiveRecord: 7.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:11:56.043485"], ["updated_at", "2019-06-30 15:11:56.043485"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:11:56.046455"], ["updated_at", "2019-06-30 15:11:56.046455"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:11:56.048608"], ["updated_at", "2019-06-30 15:11:56.048608"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (6.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.8ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:11:56.108656"], ["updated_at", "2019-06-30 15:11:56.108656"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 12ms (ActiveRecord: 6.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (1.4ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:56.136595"], ["updated_at", "2019-06-30 15:11:56.136595"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/117" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"117"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 117], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:11:56.154226"], ["updated_at", "2019-06-30 15:11:56.154226"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/118" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/118/edit" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"118"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+Started PATCH "/merchants/118" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"118"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:11:56.193698"], ["id", 118]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:11:56 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:12:11.229896"], ["updated_at", "2019-06-30 15:12:11.229896"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:12:11.253589"], ["updated_at", "2019-06-30 15:12:11.253589"], ["merchant_id", 119]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 135ms (Views: 132.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:12:11.414753"], ["updated_at", "2019-06-30 15:12:11.414753"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:12:11.417555"], ["updated_at", "2019-06-30 15:12:11.417555"], ["merchant_id", 120]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/120/items" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"120"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:12:11.431785"], ["updated_at", "2019-06-30 15:12:11.431785"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/121" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"121"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/121" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"121"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 121]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:12:11.468276"], ["updated_at", "2019-06-30 15:12:11.468276"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:12:11.470189"], ["updated_at", "2019-06-30 15:12:11.470189"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:12:11.471951"], ["updated_at", "2019-06-30 15:12:11.471951"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.6ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:12:11.517229"], ["updated_at", "2019-06-30 15:12:11.517229"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:12:11.524556"], ["updated_at", "2019-06-30 15:12:11.524556"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/126" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"126"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:12:11.535325"], ["updated_at", "2019-06-30 15:12:11.535325"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/127" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"127"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/127/edit" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"127"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+Started PATCH "/merchants/127" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"127"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:12:11.558587"], ["id", 127]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:12:11 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:16:47.415483"], ["updated_at", "2019-06-30 15:16:47.415483"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:16:47.436395"], ["updated_at", "2019-06-30 15:16:47.436395"], ["merchant_id", 128]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 129ms (Views: 126.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:16:47.608074"], ["updated_at", "2019-06-30 15:16:47.608074"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:16:47.611854"], ["updated_at", "2019-06-30 15:16:47.611854"], ["merchant_id", 129]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/129/items" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by ItemsController#index as HTML
+  Parameters: {"merchant_id"=>"129"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:16:47.629549"], ["updated_at", "2019-06-30 15:16:47.629549"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/130" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/130" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 130]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:16:47.667287"], ["updated_at", "2019-06-30 15:16:47.667287"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:16:47.669004"], ["updated_at", "2019-06-30 15:16:47.669004"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:16:47.672361"], ["updated_at", "2019-06-30 15:16:47.672361"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:16:47.719518"], ["updated_at", "2019-06-30 15:16:47.719518"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:16:47.726937"], ["updated_at", "2019-06-30 15:16:47.726937"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/135" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"135"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:16:47.739379"], ["updated_at", "2019-06-30 15:16:47.739379"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/136" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"136"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/136/edit" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"136"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/136" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"136"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:16:47.762459"], ["id", 136]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:16:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:33:08.715681"], ["updated_at", "2019-06-30 15:33:08.715681"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:33:08.739141"], ["updated_at", "2019-06-30 15:33:08.739141"], ["merchant_id", 137]]
+  [1m[35m (1.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:33:08 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 206ms (Views: 203.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:33:08.989224"], ["updated_at", "2019-06-30 15:33:08.989224"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:33:08.991159"], ["updated_at", "2019-06-30 15:33:08.991159"], ["merchant_id", 138]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/138/items" for 127.0.0.1 at 2019-06-30 09:33:08 -0600
+Processing by ItemsController#index as HTML
+  Parameters: {"merchant_id"=>"138"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."merchant_id" = $1[0m  [["merchant_id", 138]]
+  Rendered items/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:33:09.006716"], ["updated_at", "2019-06-30 15:33:09.006716"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/139" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"139"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+Started DELETE "/merchants/139" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"139"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 139]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:33:09.085440"], ["updated_at", "2019-06-30 15:33:09.085440"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:33:09.087143"], ["updated_at", "2019-06-30 15:33:09.087143"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:33:09.088471"], ["updated_at", "2019-06-30 15:33:09.088471"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:33:09.121472"], ["updated_at", "2019-06-30 15:33:09.121472"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:33:09.131923"], ["updated_at", "2019-06-30 15:33:09.131923"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/144" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"144"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 144], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:33:09.144532"], ["updated_at", "2019-06-30 15:33:09.144532"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/145" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"145"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 145], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/145/edit" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"145"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 145], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/145" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"145"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 145], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:33:09.169743"], ["id", 145]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:33:09 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:43:33.910733"], ["updated_at", "2019-06-30 15:43:33.910733"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:43:33.933295"], ["updated_at", "2019-06-30 15:43:33.933295"], ["merchant_id", 146]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:43:33 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:43:34.104399"], ["updated_at", "2019-06-30 15:43:34.104399"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:43:34.106356"], ["updated_at", "2019-06-30 15:43:34.106356"], ["merchant_id", 147]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/147/items" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by ItemsController#index as HTML
+  Parameters: {"merchant_id"=>"147"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 147], ["LIMIT", 1]]
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."merchant_id" = $1[0m  [["merchant_id", 147]]
+  Rendered items/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:43:34.128358"], ["updated_at", "2019-06-30 15:43:34.128358"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/148" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/148" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"148"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 148]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:43:34.183971"], ["updated_at", "2019-06-30 15:43:34.183971"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:43:34.185395"], ["updated_at", "2019-06-30 15:43:34.185395"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:43:34.186803"], ["updated_at", "2019-06-30 15:43:34.186803"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:43:34.220471"], ["updated_at", "2019-06-30 15:43:34.220471"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:43:34.230630"], ["updated_at", "2019-06-30 15:43:34.230630"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/153" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"153"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 153], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:43:34.240546"], ["updated_at", "2019-06-30 15:43:34.240546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/154" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/154/edit" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/154" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"154"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:43:34.265653"], ["id", 154]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:43:34 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:44:47.451623"], ["updated_at", "2019-06-30 15:44:47.451623"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:44:47.472565"], ["updated_at", "2019-06-30 15:44:47.472565"], ["merchant_id", 155]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.1ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 155], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:44:47.603040"], ["updated_at", "2019-06-30 15:44:47.603040"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:44:47.606081"], ["updated_at", "2019-06-30 15:44:47.606081"], ["merchant_id", 156]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/156/items" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by ItemsController#index as HTML
+  Parameters: {"merchant_id"=>"156"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 156], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:44:47.616807"], ["updated_at", "2019-06-30 15:44:47.616807"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/157" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"157"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/157" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"157"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 157]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:44:47.648141"], ["updated_at", "2019-06-30 15:44:47.648141"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:44:47.649416"], ["updated_at", "2019-06-30 15:44:47.649416"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:44:47.650586"], ["updated_at", "2019-06-30 15:44:47.650586"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:44:47.697190"], ["updated_at", "2019-06-30 15:44:47.697190"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.8ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:44:47.708509"], ["updated_at", "2019-06-30 15:44:47.708509"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/162" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"162"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 162], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:44:47.720381"], ["updated_at", "2019-06-30 15:44:47.720381"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/163" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"163"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 163], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/163/edit" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"163"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 163], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/163" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"163"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 163], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:44:47.744299"], ["id", 163]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:44:47 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:45:28.710297"], ["updated_at", "2019-06-30 15:45:28.710297"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:45:28.730550"], ["updated_at", "2019-06-30 15:45:28.730550"], ["merchant_id", 164]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 164], ["LIMIT", 1]]
+  Rendered items/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 110ms (Views: 107.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lost Outpost"], ["address", "Lost"], ["city", "Beekman"], ["state", "LA"], ["zip", 71220], ["created_at", "2019-06-30 15:45:28.863497"], ["updated_at", "2019-06-30 15:45:28.863497"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "price", "image", "status", "inventory", "created_at", "updated_at", "merchant_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tomahawk"], ["description", "A hardened, high-carbon steel head makes this Tomahawk a great camp tool. The handle is hickory and 19 inches in length. This Tomahawk has great heft and balance great for target practice or competition."], ["price", 19], ["image", "<image of tomahawk here>"], ["status", "active"], ["inventory", 3], ["created_at", "2019-06-30 15:45:28.866944"], ["updated_at", "2019-06-30 15:45:28.866944"], ["merchant_id", 165]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/165/items" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"merchant_id"=>"165"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:45:28.881009"], ["updated_at", "2019-06-30 15:45:28.881009"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/166" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"166"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/merchants/166" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#delete as HTML
+  Parameters: {"id"=>"166"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "merchants" WHERE "merchants"."id" = $1[0m  [["id", 166]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thai Tanic"], ["created_at", "2019-06-30 15:45:28.911749"], ["updated_at", "2019-06-30 15:45:28.911749"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lord Of The Rinse"], ["created_at", "2019-06-30 15:45:28.913242"], ["updated_at", "2019-06-30 15:45:28.913242"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pita Pan"], ["created_at", "2019-06-30 15:45:28.914451"], ["updated_at", "2019-06-30 15:45:28.914451"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started GET "/merchants/new" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#new as HTML
+  Rendering merchants/new.html.erb within layouts/application
+  Rendered merchants/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/merchants" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Pita Pan", "address"=>"Neverland", "city"=>"Neverland", "state"=>"Forever Young", "zip"=>"1904", "commit"=>"Create Merchant"}
+Unpermitted parameters: :utf8, :commit
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pita Pan"], ["address", "Neverland"], ["city", "Neverland"], ["state", "Forever Young"], ["zip", 1904], ["created_at", "2019-06-30 15:45:28.956346"], ["updated_at", "2019-06-30 15:45:28.956346"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:45:28.970363"], ["updated_at", "2019-06-30 15:45:28.970363"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/171" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"171"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 171], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merchants" ("name", "address", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Thai Tanic"], ["address", "12600 Feet Under the Sea"], ["city", "North Atlantic Ocean"], ["state", "SOS"], ["zip", 1912], ["created_at", "2019-06-30 15:45:28.983022"], ["updated_at", "2019-06-30 15:45:28.983022"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merchants/172" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"172"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  Rendering merchants/show.html.erb within layouts/application
+  Rendered merchants/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+Started GET "/merchants/172/edit" for 127.0.0.1 at 2019-06-30 09:45:28 -0600
+Processing by MerchantsController#edit as HTML
+  Parameters: {"id"=>"172"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+  Rendering merchants/edit.html.erb within layouts/application
+  Rendered merchants/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+Started PATCH "/merchants/172" for 127.0.0.1 at 2019-06-30 09:45:29 -0600
+Processing by MerchantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"The Codfather", "address"=>"Paramount Pictures Ave.", "city"=>"NY", "state"=>"NY", "zip"=>"1972", "commit"=>"Submit", "id"=>"172"}
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 172], ["LIMIT", 1]]
+Unpermitted parameters: :utf8, :_method, :commit, :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "merchants" SET "name" = $1, "address" = $2, "city" = $3, "state" = $4, "zip" = $5, "updated_at" = $6 WHERE "merchants"."id" = $7[0m  [["name", "The Codfather"], ["address", "Paramount Pictures Ave."], ["city", "NY"], ["state", "NY"], ["zip", 1972], ["updated_at", "2019-06-30 15:45:29.005797"], ["id", 172]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/merchants
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+Started GET "/merchants" for 127.0.0.1 at 2019-06-30 09:45:29 -0600
+Processing by MerchantsController#index as HTML
+  Rendering merchants/index.html.erb within layouts/application
+  [1m[36mMerchant Load (0.2ms)[0m  [1m[34mSELECT "merchants".* FROM "merchants"[0m
+  Rendered merchants/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

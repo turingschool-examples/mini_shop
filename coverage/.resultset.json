@@ -294,10 +294,35 @@
         1,
         1,
         null,
+        1,
+        null,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/spec/features/items/merchant_items_show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/spec/features/merchants/delete_spec.rb": [
@@ -460,7 +485,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         null
@@ -512,6 +537,6 @@
         null
       ]
     },
-    "timestamp": 1561868220
+    "timestamp": 1561909529
   }
 }
