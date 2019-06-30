@@ -8,7 +8,7 @@ RSpec.describe "Merchants Show" do
         merchant_1 = Merchant.create(name: "She Sells Seashells", address: "1234 Market St", city: "Denver", state: "CO", zipcode: "80220")
         item = Item.create!(name: "Necklace", description: "Shell on chain", price: 30, image: "file_path", active_status: true, inventory: 3, merchant_id: merchant_1.id)
 
-        visit "/items/#{item.id}"
+        visit item_path(item)
 
         expect(page).to have_content(item.name)
         expect(page).to have_content(item.active_status)
