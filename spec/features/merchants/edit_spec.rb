@@ -4,6 +4,7 @@ RSpec.describe "Update Merchants" do
   describe "As a visitor" do
     describe "When I visit the merchant show page" do
       it "I can update a Merchant" do
+
         merchant_1 = Merchant.create(
           name: "Knees Weak",
           address: "1 Oppurtunity Way",
@@ -18,11 +19,11 @@ RSpec.describe "Update Merchants" do
 
         expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
 
-        fill_in "merchant[name]", with: "Mom's Spaghetti"
-        fill_in "merchant[address]", with: "1 Moment Way"
-        fill_in "merchant[city]", with: "Las Vegas"
-        fill_in "merchant[state]", with: "Nevada"
-        fill_in "merchant[zip]", with: 80003
+        fill_in :name, with: "Mom's Spaghetti"
+        fill_in :address, with: "1 Moment Way"
+        fill_in :city, with: "Las Vegas"
+        fill_in :state, with: "Nevada"
+        fill_in :zip, with: 80003
         click_on 'Update Merchant'
 
         expect(current_path).to eq("/merchants/#{merchant_1.id}")
