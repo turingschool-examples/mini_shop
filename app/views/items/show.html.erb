@@ -1,8 +1,6 @@
-<h1><%= @item.merchant.name %></h1>
+<h1><%= @item.name %></h1>
 
-<h2><%= "Item: #{item.name}" %></h2>
-<p><%= "Price: #{item_1.price}" %></p>
-<p><%= item_1.image %></p>
-<p><%= "Status: #{item_1.status}" %></p>
-<p><%= "Inventory: #{item_1.inventory}" %></p>
-<p><%= "Price: #{item_1.price}" %></p>
+<p>Price: <%= @item.price %></p>
+<p><%= @item.image %></p>
+<p>Status: <%= @item.status %></p>
+<p>Inventory: <%= @item.inventory %></p>
