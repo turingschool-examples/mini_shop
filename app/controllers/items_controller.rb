@@ -1,11 +1,20 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
-  end
+      if params[:merchant_id].nil?
+        @items = Item.all
+      else
+        @merchant = Merchant.find(params[:merchant_id])
+        @items = @merchant.items
+      end
+    end
 
-  def show
-    @item = Item.find_by_id(params[:id])
-  end
+
+
+  # private
+  #
+  # def item_params
+  #   params.require(:item).permit(:name, :price, :image, :status, :inventory)
+  # end
 
 end
