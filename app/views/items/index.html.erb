@@ -1,7 +1,7 @@
-<h1>Items Index</h1>
+<h2>Items Index</h2>
 
 <% @items.each do |item| %>
-  <h2> Item Name: <%= link_to item.name, item_path(item) %></h2>
+  <h4> Item Name: <%= link_to item.name, item_path(item) %></h4>
   <p> Description: <%= item.description %></p>
   <p> Price: <%= item.price %></p>
   <p> Image: <%= item.image %></p>
