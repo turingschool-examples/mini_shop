@@ -439,8 +439,6 @@
         1,
         1,
         null,
-        1,
-        null,
         null
       ],
       "/Users/nathanthomas/turing/2module/week1/projects/mini_shop/app/models/application_record.rb": [
@@ -514,6 +512,6 @@
         null
       ]
     },
-    "timestamp": 1561857710
+    "timestamp": 1561868220
   }
 }
