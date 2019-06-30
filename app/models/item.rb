@@ -10,11 +10,13 @@ class Item < ApplicationRecord
 
   def self.status(value)
     if value == 0
-       "Active"
+      "Active"
     else
        "Inactive"
     end
   end
+
+
 
 
 
