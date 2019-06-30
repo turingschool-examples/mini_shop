@@ -1,4 +1,6 @@
 <h1>All Items</h1>
+<h3><%= link_to "Active Items", "/items?status=0" %></h3>
+<h3><%= link_to "Inactive Items", "/items" %></h3>
 
 <% @items.each do |item| %>
   <ul>

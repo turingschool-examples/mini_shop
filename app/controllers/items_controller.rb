@@ -44,6 +44,18 @@ class ItemsController < ApplicationController
         end
     end
 
+    def activate
+      @item = Item.find(params[:id])
+      @item.update_attributes(status: 0)
+      render "show"
+    end
+
+    def deactivate
+      @item = Item.find(params[:id])
+      @item.update_attributes(status: 1)
+      render "show"
+    end
+
     private
 
     def items_params

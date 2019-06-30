@@ -8,5 +8,11 @@
   <li>Inventory Count: <%= @item.inventory %></li>
   <li>Merchant Name: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}"%></li>
   </ul>
-  
+  <% if Item.status(@item.status) == "Active" %>
+  <%=    link_to "Deactivate", "/items/#{@item.id}/deactivate", method: :patch %>
+  <% else %>
+  <%=    link_to "Activate", "/items/#{@item.id}/activate", method: :patch %>
+  <% end %>
+
+
   <%= link_to "Update Item", "/items/#{@item.id}/edit"  %>
