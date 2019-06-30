@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'merchants edit page', type: :feature do
+RSpec.describe 'Merchants Delete page', type: :feature do
   describe 'a user visits a merchant page' do
     it 'user clicks to delete the merchant' do
       merchant_1 = Merchant.create!(name: 'Bob', address: '400 W 10th', city: 'Denver', state: 'CO', zip: '80204')
