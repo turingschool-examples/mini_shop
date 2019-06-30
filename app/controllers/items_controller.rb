@@ -28,13 +28,15 @@ class ItemsController < ApplicationController
   end
 
   def update
-    # merchant = Merchant.find(params[:name])
-    # @item = merchant.items.find(params[:id])
-    # @item.merchant_id = params[:merchant_id]
     @item = Item.find(params[:id])
       if @item.update_attributes(item_params)
         redirect_to "/items/#{@item.id}"
       end
+  end
+
+  def destroy
+    Item.destroy(params[:id])
+    redirect_to '/items'
   end
 
   private

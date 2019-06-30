@@ -1,6 +1,9 @@
-<h2>Merchants</h2>
+<section class="box" >
+  <h3>Merchants</h3>
 
-<% @merchants.each do |merchant| %>
-   <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s"> <%= link_to merchant.name, "/merchants/#{merchant.id}" %></a>
+  <% @merchants.each do |merchant| %>
+    <!-- <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s"> <%= link_to merchant.name, "/merchants/#{merchant.id}" %></a> -->
+   <h4 style=text-align: center;><%= link_to merchant.name, "/merchants/#{merchant.id}" %></h4>
   <% end %>
-  <h3><%= link_to "Create a new merchant!", "/merchants/new" %></h3>
+  <%= link_to "Create a new merchant!", "/merchants/new" %>
+</section>

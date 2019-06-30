@@ -6,7 +6,7 @@ RSpec.describe 'As a visitor' do
     merchant_1 = Merchant.create!(name: 'bobs burgers', address: '123 burger lane', city: 'burger city', state: 'burgerana', zipcode: 12345)
 
     visit "/merchants/#{merchant_1.id}"
-    click_link 'Update'
+    click_button 'Edit'
 
     fill_in "Name", with: "bobs burgers"
     fill_in "Address", with: '123 burger lane'
