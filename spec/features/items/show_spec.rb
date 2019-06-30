@@ -42,5 +42,16 @@ RSpec.describe "Items Show" do
       expect(page).to have_content("38")
     end
 
+    it "On an item page I see a link to the merchants page" do
+      merchant = Merchant.create(name: "What Ales You")
+      item = merchant.items.create(name: "Galaxy Hops", description: "Huge hop oil content with pungent citrus and passion fruit flavors.", price: 36.99, image: "https://morebeer-web-8-pavinthewaysoftw.netdna-ssl.com/product_image/morebeer/500x500/22454.png", active: true, inventory: 28)
+
+      visit "/items/#{item.id}"
+
+      click_on "What Ales You"
+
+      expect(current_path).to eq("/merchants/#{merchant.id}")
+    end
+
   end
 end
