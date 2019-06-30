@@ -1,7 +1,9 @@
 <h2>Merchants</h2>
 
 <% @merchants.each do |merchant| %>
+<div class="element">
   <h4><%= link_to merchant.name, merchant_path(merchant) %></h4>
+</div>
 <% end %>
 
-<%= link_to 'New Merchant', new_merchant_path %>
+<a class="btn btn-primary" style="margin-left: 15px"<%=  link_to "New Merchant", new_merchant_path %>
