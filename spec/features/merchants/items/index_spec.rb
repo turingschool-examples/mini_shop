@@ -17,6 +17,7 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
 
     it "I see each Item that belongs to the Merchant with that merchant_id and all the Item's info" do
       visit "/merchants/#{@merchant_1.id}/items"
+      
       expect(page).to_not have_content(@item_4.name)
       expect(page).to_not have_content(@item_5.name)
 
