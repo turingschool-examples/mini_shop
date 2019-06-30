@@ -11,12 +11,12 @@
     <h2><%= link_to item.name, item_path(item) %></h2>
     <%= render partial: 'item_details', locals: {item: item} %>
     <p id='merchant'><% if @merchant.nil? %>
-      <%= link_to "Merchant: #{item.merchant.name}", merchant_path(item.merchant) %>
+      Merchant: <%= link_to "#{item.merchant.name}", merchant_path(item.merchant) %>
     <% end %></p>
   </section>
 <% end %>
 
-<section class='nav'>
+<section class='nav-2'>
   <section class='nav-group'>
     <section role="group" class="btn-group">
       <% unless @merchant.nil? %>

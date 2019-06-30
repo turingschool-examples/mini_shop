@@ -16,4 +16,5 @@
 <%= label_tag :inventory %>
 <%= number_field_tag :inventory, @item.nil? ? '' : @item.inventory %></br>
 <br/>
-<%= submit_tag("Submit") %>
+
+<%= submit_tag("Submit", class: 'nav-btn') %>
