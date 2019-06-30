@@ -14,7 +14,6 @@ RSpec.describe "Merchants Show" do
         expect(page).to have_content(item.active_status)
         expect(page).to have_content(item.price)
         expect(page).to have_content(item.description)
-        expect(page).to have_content(item.image)
         expect(page).to have_content(item.inventory)
         expect(page).to have_content(item.merchant.name)
       end

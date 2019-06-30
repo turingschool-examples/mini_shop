@@ -27,7 +27,6 @@ RSpec.describe "Creating New Items" do
 
         expect(page).to have_content(new_item.name)
         expect(page).to have_content(new_item.price)
-        expect(page).to have_content(new_item.image)
         expect(page).to have_content(new_item.active_status)
         expect(page).to have_content(new_item.inventory)
       end
