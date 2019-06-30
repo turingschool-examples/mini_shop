@@ -13,7 +13,7 @@ RSpec.describe "Creating New Items" do
 
         expect(current_path).to eq("/merchants/#{merchant.id}/items/new")
 
-        fill_in :name, with: "Wine" #"song[title]"
+        fill_in :name, with: "Wine" 
         fill_in :price, with: 35
         fill_in :description, with: "Petite Sirah"
         fill_in :image, with: "link_to_image"
@@ -27,7 +27,6 @@ RSpec.describe "Creating New Items" do
 
         expect(page).to have_content(new_item.name)
         expect(page).to have_content(new_item.price)
-        expect(page).to have_content(new_item.image)
         expect(page).to have_content(new_item.active_status)
         expect(page).to have_content(new_item.inventory)
       end

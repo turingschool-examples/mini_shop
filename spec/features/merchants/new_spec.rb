@@ -12,6 +12,11 @@ RSpec.describe 'New Merchant' do
         expect(current_path).to eq('/merchants/new')
 
         fill_in 'Name', with: 'Jeffrey'
+        fill_in 'Address', with: "1235"
+        fill_in 'City', with: "Denver"
+        fill_in 'State', with: "Colorado"
+        fill_in 'Zipcode', with: "80021"
+
         click_on 'Create Merchant'
 
         expect(current_path).to eq("/merchants")
