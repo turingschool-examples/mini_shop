@@ -17,7 +17,7 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
 
     it "I see each Item that belongs to the Merchant with that merchant_id and all the Item's info" do
       visit "/merchants/#{@merchant_1.id}/items"
-      
+
       expect(page).to_not have_content(@item_4.name)
       expect(page).to_not have_content(@item_5.name)
 
@@ -66,6 +66,20 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
         expect(page).to have_content(@item_5.inventory)
         expect(page).to have_css("img[src*='#{@item_5.image}']")
       end
+    end
+
+    it "When I click on the Merchant's name, it takes me to that Merchant's show page" do
+      visit "/merchants/#{@merchant_1.id}/items"
+
+      expect(page).to have_link(@merchant_1.name)
+      click_on "#{@merchant_1.name}"
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+
+      visit "/merchants/#{@merchant_2.id}/items"
+
+      expect(page).to have_link(@merchant_2.name)
+      click_on "#{@merchant_2.name}"
+      expect(current_path).to eq("/merchants/#{@merchant_2.id}")
     end
   end
 end

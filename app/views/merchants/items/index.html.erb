@@ -1,4 +1,4 @@
-<h1><%= @merchant.name %>'s Items</h1>
+<h1><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %>'s Items</h1>
 
 <main>
   <% @items.each do |item| %>
