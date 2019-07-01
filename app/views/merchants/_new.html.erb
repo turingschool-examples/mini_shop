@@ -7,6 +7,6 @@
 <%= label_tag :state %>
 <%= text_field_tag :state, @merchant.nil? ? '' : @merchant.state %><br/>
 <%= label_tag :zip %>
-<%= text_field_tag :zip, @merchant.nil? ? '' : @merchant.zip %><br/>
+<%= number_field_tag :zip, @merchant.nil? ? '' : @merchant.zip %><br/>
 <br/>
 <%= submit_tag("Submit", class: 'nav-btn') %>

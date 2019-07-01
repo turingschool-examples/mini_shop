@@ -2,11 +2,18 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
+    #handle this logic with a case calling model methods
     if params[:merchant_id].nil?
       @items = Item.all
     else
       @merchant = Merchant.find(params[:merchant_id])
-      @items = @merchant.items
+      if params[:active] == "true"
+        @items = @merchant.items.select {|item| item.active}
+      elsif params[:active] == "false"
+        @items = @merchant.items.select {|item| !item.active}
+      elsif params[:active].nil?
+        @items = @merchant.items
+      end
     end
   end
 
