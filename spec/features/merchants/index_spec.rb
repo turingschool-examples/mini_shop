@@ -9,7 +9,7 @@ RSpec.describe "Merchant Index Page", type: :feature do
     end
 
     it "I see the name of each merchant in the system" do
-      visit '/merchants'
+      visit "/merchants"
 
       within "#merchant-id-#{@merchant_1.id}" do
         expect(page).to have_content(@merchant_1.name)
@@ -21,6 +21,35 @@ RSpec.describe "Merchant Index Page", type: :feature do
 
       within "#merchant-id-#{@merchant_3.id}" do
         expect(page).to have_content(@merchant_3.name)
+      end
+    end
+
+    it "When I click on the Merchant's name, it takes me to that Merchant's show page" do
+      visit "/merchants"
+
+      within "#merchant-id-#{@merchant_1.id}" do
+        expect(page).to have_link(@merchant_1.name)
+
+        click_on "#{@merchant_1.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      end
+
+      visit "/merchants"
+
+      within "#merchant-id-#{@merchant_2.id}" do
+        expect(page).to have_link(@merchant_2.name)
+
+        click_on "#{@merchant_2.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_2.id}")
+      end
+
+      visit "/merchants"
+
+      within "#merchant-id-#{@merchant_3.id}" do
+        expect(page).to have_link(@merchant_3.name)
+
+        click_on "#{@merchant_3.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_3.id}")
       end
     end
   end
