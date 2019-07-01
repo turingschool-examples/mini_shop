@@ -13,11 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+/* Navigation */
+
+ .nav-button {
+   background-color: lightgrey;
+   border-radius: 2.5px;
+   display: inline;
+   font-size: 1.2em;
+   height: 50px;
+   margin: auto;
+   padding: 5px;
+   width: 200px;
+ }
+
+ /* Forms */
+
  * {
    box-sizing: border-box;
  }
-
-/* Forms */
 
  body {
    background-color: lightblue;
