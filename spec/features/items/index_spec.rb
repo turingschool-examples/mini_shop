@@ -48,29 +48,52 @@ RSpec.describe "Items Index Page", type: :feature do
       visit "/items"
 
       within "#item-id-#{@item_1.id}" do
-        expect(page).to have_link(@item_1.name)
+        expect(page).to have_link(@item_1.merchant.name)
+        click_on "#{@item_1.merchant.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_1.id}")
       end
 
-      click_on "#{@item_1.name}"
-      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      visit "/items"
+
+      within "#item-id-#{@item_2.id}" do
+        expect(page).to have_link(@item_2.merchant.name)
+        click_on "#{@item_2.merchant.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      end
+
+      visit "/items"
+
+      within "#item-id-#{@item_3.id}" do
+        expect(page).to have_link(@item_3.merchant.name)
+        click_on "#{@item_3.merchant.name}"
+        expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      end
+    end
+
+    it "When I click on the Item name, it takes me to that Item's show page" do
+      visit "/items"
+
+      within "#item-id-#{@item_1.id}" do
+        expect(page).to have_link(@item_1.name)
+        click_on "#{@item_1.name}"
+        expect(current_path).to eq("/items/#{@item_1.id}")
+      end
 
       visit "/items"
 
       within "#item-id-#{@item_2.id}" do
         expect(page).to have_link(@item_2.name)
+        click_on "#{@item_2.name}"
+        expect(current_path).to eq("/items/#{@item_2.id}")
       end
-
-      click_on "#{@item_2.name}"
-      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
 
       visit "/items"
 
       within "#item-id-#{@item_3.id}" do
         expect(page).to have_link(@item_3.name)
+        click_on "#{@item_3.name}"
+        expect(current_path).to eq("/items/#{@item_3.id}")
       end
-
-      click_on "#{@item_3.name}"
-      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
     end
   end
 end
