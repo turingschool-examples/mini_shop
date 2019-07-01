@@ -34,6 +34,12 @@ class ItemsController < ApplicationController
 
   def update
     @item.update(item_params)
+    if params[:activate] == "true"
+      @item.active = true
+    elsif params[:activate] == "false"
+      @item.active = false
+    end
+    @item.save
     redirect_to item_path(@item)
   end
 
