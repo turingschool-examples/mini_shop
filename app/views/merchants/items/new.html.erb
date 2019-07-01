@@ -1,18 +1,18 @@
 <%= form_tag("/merchants/#{@merchant_id}/items") do %>
   <%= label_tag :name %>
-  <%= text_field_tag :name %><br>
+  <%= text_field_tag :name, class: "new-input" %><br>
 
   <%= label_tag :description %>
-  <%= text_area_tag :description %><br>
+  <%= text_area_tag :description, class: "new-input" %><br>
 
   <%= label_tag :price %>
-  <%= number_field_tag :price, "Price in USD" %><br>
+  <%= number_field_tag :price, nil, placeholder: "Price in USD", class: "new-input" %><br>
 
   <%= label_tag :inventory %>
-  <%= number_field_tag :inventory %><br>
+  <%= number_field_tag :inventory, class: "new-input" %><br>
 
   <%= label_tag :image %>
-  <%= text_field_tag :image, "Thumbnail URL" %><br>
+  <%= text_field_tag :image, nil, placeholder: "Thumbnail URL", class: "new-input" %><br>
 
-  <%= submit_tag "Create Item" %><br>
+  <%= submit_tag "Create Item", class: "button" %><br>
 <% end %>
