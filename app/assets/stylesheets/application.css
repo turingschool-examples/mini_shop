@@ -13,3 +13,99 @@
  *= require_tree .
  *= require_self
  */
+ * {
+   box-sizing: border-box;
+ }
+
+/* Forms */
+
+ body {
+   background-color: lightblue;
+ }
+
+form {
+  background-color: #F5F5F5;
+  border: 2px solid black;
+  margin: 50px auto;
+  padding: 40px;
+  width: 700px;
+ }
+
+.new-input {
+  border-radius: 2.5px;
+  display: block;
+  font-size: .8em;
+  height: 50px;
+  margin: auto;
+  width: 500px;
+}
+
+.label-name {
+  margin-right: 20px;
+}
+
+.button {
+  background-color: lightgrey;
+  border-radius: 2.5px;
+  display: block;
+  font-size: 1.3em;
+  height: 50px;
+  margin: auto;
+  width: 500px;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
+/* Index Pages: Merchant, Items, Merchant Items */
+
+h1 {
+  border-bottom: 2px solid black;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+section {
+  background-color: #F5F5F5;
+  border: 2px solid;
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 2.5px;
+  color: black;
+  display: block;
+  font-size: 2em;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: grey;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 720px) {
+  form {
+    width:310px;
+  }
+
+  .new-input,
+  .button {
+    width: 200px;
+  }
+}
