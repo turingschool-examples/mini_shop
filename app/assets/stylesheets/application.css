@@ -27,6 +27,14 @@
    width: 200px;
  }
 
+ .photo {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 290px;
+   width: 95%;
+ }
+
  /* Forms */
 
  * {
@@ -65,7 +73,7 @@ form {
   font-size: 1.3em;
   height: 50px;
   margin: auto;
-  width: 500px;
+  width: 270px;
 }
 
 .button:hover {
@@ -100,7 +108,7 @@ a {
   border-radius: 2.5px;
   color: black;
   display: block;
-  font-size: 2em;
+  font-size: 1.2em;
   margin: 20px;
   padding: 10px;
   text-align: center;
