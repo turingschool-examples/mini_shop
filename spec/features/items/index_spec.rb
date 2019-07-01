@@ -43,5 +43,34 @@ RSpec.describe "Items Index Page", type: :feature do
         expect(page).to have_css("img[src*='#{@item_3.image}']")
       end
     end
+
+    it "When I click on the Merchant's name, it takes me to that Merchant's show page" do
+      visit "/items"
+
+      within "#item-id-#{@item_1.id}" do
+        expect(page).to have_link(@item_1.name)
+      end
+
+      click_on "#{@item_1.name}"
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+
+      visit "/items"
+
+      within "#item-id-#{@item_2.id}" do
+        expect(page).to have_link(@item_2.name)
+      end
+
+      click_on "#{@item_2.name}"
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+
+      visit "/items"
+
+      within "#item-id-#{@item_3.id}" do
+        expect(page).to have_link(@item_3.name)
+      end
+
+      click_on "#{@item_3.name}"
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+    end
   end
 end
