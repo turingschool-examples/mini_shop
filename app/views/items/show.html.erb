@@ -1,5 +1,5 @@
 <section id="item-id-<%= @item.id %>">
-  <%= image_tag @item.image, alt: "image of @item.name" %>
+  <%= image_tag @item.image, alt: "image of @item.name", class: "photo" %>
   <h1>Name: <%= @item.name %></h1>
   <h3>Price: <%= number_to_currency(@item.price) %></h3>
   <h3>Description: <%= @item.description %></h3>
