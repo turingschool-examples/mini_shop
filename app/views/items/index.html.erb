@@ -2,10 +2,10 @@
 <br>
 <% @items.each do |item| %>
   <section class="item">
-    <h2><%= item.name %></h2>
+    <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
+    <%= image_tag ("#{item.image}") %>
     <p><%= item.description %></p>
     <p>$<%= item.price %></p>
-    <%= image_tag ("#{item.image}") %>
     <% if item.active %>
       <p>In Stock</p>
     <% else %>

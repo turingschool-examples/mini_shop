@@ -1,9 +1,13 @@
 <% @items.each do |item| %>
-  <h2><%= item.name %></h2>
-  <p><%= item.price %></p>
+  <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
+  <p>$<%= item.price %></p>
   <%= image_tag "#{item.image}", class:"img-thumbnail" %>
   <p><%= item.description %></p>
-  <p><%= item.active %></p>
+  <% if item.active %>
+    <p>In Stock</p>
+  <% else %>
+    <p>Out of Stock </p>
+  <% end %>
   <p><%= item.inventory %></p>
 <% end %>
 <br>

@@ -10,7 +10,7 @@ RSpec.describe "Merchants Items" do
 
       expect(page).to have_content(item.name)
       expect(page).to have_content(item.price)
-      expect(page).to have_content(item.active)
+      expect(page).to have_content("In Stock")
       expect(page).to have_content(item.inventory)
     end
 
