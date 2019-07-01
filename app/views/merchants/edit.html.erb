@@ -2,21 +2,26 @@
   <h2>Edit a Merchant</h2>
 
   <%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
-    <%= label_tag :name %>
-    <%= text_area_tag(:name, "bobs burgers") %>
-
-    <%= label_tag :address %>
-    <%= text_area_tag(:address, "123 burger lane") %>
-
-    <%= label_tag :city %>
-    <%= text_area_tag(:city, "burger city") %>
-
-    <%= label_tag :state %>
-    <%= text_area_tag(:state, "burgerana") %>
-
-    <%= label_tag :zipcode %>
-    <%= text_area_tag(:zipcode, "12345") %>
-
+      <section class="form-input">
+        <%= label_tag :name %>
+        <%= text_area_tag(:name, "bobs burgers") %>
+      </section>
+      <section class="form-input">
+        <%= label_tag :address %>
+        <%= text_area_tag(:address, "123 burger lane") %>
+      </section>
+      <section class="form-input">
+        <%= label_tag :city %>
+        <%= text_area_tag(:city, "burger city") %>
+      </section>
+      <section class="form-input">
+        <%= label_tag :state %>
+        <%= text_area_tag(:state, "burgerana") %>
+      </section>
+      <section class="form-input">
+        <%= label_tag :zipcode %>
+        <%= text_area_tag(:zipcode, "12345") %>
+      </section>
     <%= submit_tag 'Submit' %>
   <% end %>
 </section>

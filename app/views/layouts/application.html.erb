@@ -57,7 +57,8 @@
           background-color: grey;
           color: wheat; --darkreader-inline-color:#f5deb3;
           margin: auto;
-          width: 50%;
+          width: 550px;
+          /* min-width: 550px; */
           border: 3px solid beige;
           padding: 10px;
           /* text-align: center; */
@@ -65,18 +66,21 @@
         }
 
         img {
-        height:200px;
-        width: 250px;
-        /* float:left; */
+          height:200px;
+          width: 250px;
         }
 
-        .item_box, .gfg {
+        .item-info-list, .item-img {
           display: inline-block;
           vertical-align: top;
         }
 
+        .item-info-list {
+          width: 290px;
+        }
+
         .item_box {
-          width: 500px;
+          width: 600px;
         }
         /* general page styles */
 
@@ -85,6 +89,19 @@
           text-align: center;
         }
         /* Page Titles */
+        .form-input {
+          margin-bottom: 25px;
+        }
+
+        .form-input label {
+          margin-left: 75px;
+          width: 100px;
+        }
+
+        .form-input label,
+        .form-input textarea {
+          vertical-align: top;
+        }
 
     </style>
     <%= stylesheet_link_tag    'application', media: 'all' %>
