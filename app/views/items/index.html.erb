@@ -11,9 +11,12 @@
     <% end %>
   <%else %>
 
+  <%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %>
+
   <% @items.each do |item| %>
       <h1>Merchant: <%= item.merchant.name %></h1>
       <h2>Item: <%= item.name %></h2>
+      <p>Description: <%= item.description %></p>
       <p>Price: <%= item.price %></p>
       <p>Image: <%= item.image %></p>
       <p>Status: <%= item.status %></p>
