@@ -1,18 +1,18 @@
 <%= form_tag("/merchants") do  %>
   <%= label_tag :name %>
-  <%= text_field_tag :name %><br>
+  <%= text_field_tag :name, nil, placeholder: "Ex. Jane Doe", class: "new-input" %><br>
 
   <%= label_tag :address %>
-  <%= text_field_tag :address %><br>
+  <%= text_field_tag :address, nil, placeholder: "Ex. 1331 17th St.", class: "new-input" %><br>
 
   <%= label_tag :city %>
-  <%= text_field_tag :city %><br>
+  <%= text_field_tag :city, nil, placeholder: "Ex. Denver", class: "new-input" %><br>
 
   <%= label_tag :state %>
-  <%= text_field_tag :state %><br>
+  <%= text_field_tag :state, nil, placeholder: "Ex. CO", class: "new-input" %><br>
 
   <%= label_tag :zip %>
-  <%= text_field_tag :zip %><br>
+  <%= text_field_tag :zip, nil, placeholder: "Ex. 80202", class: "new-input" %><br>
 
-  <%= submit_tag "Create Merchant" %>
+  <%= submit_tag "Create Merchant", class: "button" %>
 <% end %>
