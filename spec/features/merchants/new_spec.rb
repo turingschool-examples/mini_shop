@@ -24,10 +24,6 @@ RSpec.describe "New Merchant Form/Creation", type: :feature do
 
         expect(current_path).to eq("/merchants")
         expect(page).to have_content(new_merchant.name)
-        expect(page).to have_content(new_merchant.address)
-        expect(page).to have_content(new_merchant.city)
-        expect(page).to have_content(new_merchant.state)
-        expect(page).to have_content(new_merchant.zip)
       end
     end
   end
