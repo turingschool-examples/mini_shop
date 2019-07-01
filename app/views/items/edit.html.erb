@@ -1,3 +1,6 @@
+<%= link_to 'Items', items_path %>
+<%= link_to 'Merchants', merchants_path %>
+
 <%= form_tag(item_path(@item), method: :patch) do %>
   <%= label_tag "Name" %>
   <%= text_field_tag :name %>

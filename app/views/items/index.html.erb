@@ -1,3 +1,5 @@
+<%= link_to 'Merchants', merchants_path %>
+
 <h1>Items</h1>
 
 <% if !@merchant_id.nil? %>
@@ -6,12 +8,12 @@
 
   <% @items.each do |item| %>
     <section class="item-<%= item.id %> ">
-      <h2><%= item.name %></h2>
+      <h2><%= link_to item.name, item_path(item) %></h2>
       <p>Description: <%= item.description %></p>
       <p>Price: <%= item.price %></p>
       <p><%= item.image %></p>
       <p>Active: <%= item.active ? "False" : "True" %></p>
       <p>Inventory: <%= item.inventory %></p>
-      <p>Merchant: <%= item.merchant.name %></p>
+      <p>Merchant: <%= link_to item.merchant.name, merchant_path(item.merchant) %></p>
     </section>
   <% end %>
