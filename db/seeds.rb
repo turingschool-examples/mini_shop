@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 @merchant1 = Merchant.create!(name: 'Kaiju', address: '1531 Madison Ave', city: 'New York', state: 'NY', zip: '10005',  image: 'https://cdn.shopify.com/s/files/1/0584/3841/products/vinyl-kaiju-dunny-battle-3-mini-figure-series-by-kidrobot-x-clutter-18_1200x.gif?v=1550786302')
 @merchant2 = Merchant.create!(name: 'Donk', address: '321 Rodeo', city: 'Beverly Hills', state: 'CA', zip: '90210', image: 'https://cdn.shopify.com/s/files/1/0584/3841/products/vinyl-kaiju-dunny-battle-3-mini-figure-series-by-kidrobot-x-clutter-17_1200x.gif?v=1550786302')
 @merchant3 = Merchant.create!(name: 'Julius', address: '1156 Berry Loop', city: 'Austin', state: 'TX', zip:'73301', image: 'https://cdn.shopify.com/s/files/1/0584/3841/products/vinyl-kidrobot-x-dcon-designer-con-dunny-art-figure-series-19_1200x.jpg?v=1550786306')
@@ -44,3 +38,4 @@ item22 = @merchant4.items.create!(name: 'Yuppie', description: 'Totaly 80s', pri
 item23 = @merchant5.items.create!(name: 'Groot', description: 'No description needed', price: 2.55, status: true, inventory: 24, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRutqwDY_ybucGynavVfHGDgwsu8lpE2odGjPoN2teshuyO7hQ2g')
 item24 = @merchant6.items.create!(name: 'Sherry Scratchen', description: 'Cat lady galore', price: 3.68, status: true, inventory: 19 , image: 'https://lc-imageresizer-live-s.legocdn.com/resize/71023-10?width=744&ratio=2&imageUrl=https%3a%2f%2fwww.lego.com%2fr%2fwww%2fr%2fcatalogs%2f-%2fmedia%2fcatalogs%2fcharacters%2fminifigures%2f2019%2f71023-10.jpg%3fl.r%3d-192025609')
 item25 = @merchant6.items.create!(name: 'Surfer Dude', description: 'Where is the beach?', price: 4.11,  status: true, inventory: 13, image: 'http://minifigpriceguide.com/wordpress/wp-content/uploads/2017/04/lego-cmf17-figure1.jpg')
+
