@@ -17,5 +17,14 @@
     <section role="group" class="btn-group">
       <%= button_to 'Delete', delete_item_path, method: :delete, class: 'nav-btn' %>
     </section>
+    <% if item.active %>
+      <section role="group" class="btn-group">
+        <%= button_to 'Deactivate', activate_item_path, method: :patch, class: 'nav-btn', params: {:activate => "false"} %>
+      </section>
+    <% else %>
+      <section role="group" class="btn-group">
+        <%= button_to 'Activate', deactivate_item_path, method: :patch, class: 'nav-btn', params: {:activate => "true"} %>
+      </section>
+    <% end %>
   </section>
 </section>
