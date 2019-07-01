@@ -81,5 +81,47 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
       click_on "#{@merchant_2.name}"
       expect(current_path).to eq("/merchants/#{@merchant_2.id}")
     end
+
+    it "When I click on the Item name, it takes me to that Item's show page" do
+      visit "/merchants/#{@merchant_1.id}/items"
+
+      within "#merchant-item-id-#{@item_1.id}" do
+        expect(page).to have_link(@item_1.name)
+        click_on "#{@item_1.name}"
+        expect(current_path).to eq("/items/#{@item_1.id}")
+      end
+
+      visit "/merchants/#{@merchant_1.id}/items"
+
+      within "#merchant-item-id-#{@item_2.id}" do
+        expect(page).to have_link(@item_2.name)
+        click_on "#{@item_2.name}"
+        expect(current_path).to eq("/items/#{@item_2.id}")
+      end
+
+      visit "/merchants/#{@merchant_1.id}/items"
+
+      within "#merchant-item-id-#{@item_3.id}" do
+        expect(page).to have_link(@item_3.name)
+        click_on "#{@item_3.name}"
+        expect(current_path).to eq("/items/#{@item_3.id}")
+      end
+
+      visit "/merchants/#{@merchant_2.id}/items"
+
+      within "#merchant-item-id-#{@item_4.id}" do
+        expect(page).to have_link(@item_4.name)
+        click_on "#{@item_4.name}"
+        expect(current_path).to eq("/items/#{@item_4.id}")
+      end
+
+      visit "/merchants/#{@merchant_2.id}/items"
+
+      within "#merchant-item-id-#{@item_5.id}" do
+        expect(page).to have_link(@item_5.name)
+        click_on "#{@item_5.name}"
+        expect(current_path).to eq("/items/#{@item_5.id}")
+      end
+    end
   end
 end
