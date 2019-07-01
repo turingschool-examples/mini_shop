@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete '/items/:id', to: 'items#destroy', as: :delete_item
 
   get '/merchants/:merchant_id/items', to: 'items#index', as: :merchant_items
+  get '/merchants/:merchant_id/items', to: 'items#index', as: :active_merchant_items
+  get '/merchants/:merchant_id/items', to: 'items#index', as: :inactive_merchant_items
   get '/merchants/:merchant_id/items/new', to: 'items#new', as: :new_item
   post '/merchants/:merchant_id/items', to: 'items#create', as: :new_merchant_item
 end
