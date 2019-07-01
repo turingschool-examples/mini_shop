@@ -3,11 +3,7 @@
 <main>
   <% @merchants.each do |merchant| %>
     <section id="merchant-id-<%= merchant.id %>">
-      <h3>Name: <%= merchant.name %></h3>
-      <h3>Address: <%= merchant.address %></h3>
-      <h3>City: <%= merchant.city %></h3>
-      <h3>State: <%= merchant.state %></h3>
-      <h3>Zip: <%= merchant.zip %></h3>
+      <h3>Name: <%= link_to merchant.name, "/merchants/#{merchant.id}" %></h3>
     </section>
   <% end %>
 </main>
