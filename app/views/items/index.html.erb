@@ -1,52 +1,54 @@
 <style>
-.box {
+/* .box {
   color: green;
   background-color: grey;
   color: wheat; --darkreader-inline-color:#f5deb3;
   margin: auto;
   width: 50%;
-  border: 3px solid green;
+  border: 3px dark yellow;
   padding: 10px;
-}
+} */
 
-img {
+/* img {
     height:200px;
     width: 250px;
     /* float:left; */
-    }
+    /* } */
 
-.item_box, .gfg {
+/* .item_box, .gfg {
   display: inline-block;
   vertical-align: top;
-}
+} */
 
-.item_box {
+/* .item_box {
   width: 500px;
-}
+} */
 
-.item-info {
-  /* float:right; */
-}
+/* .item-info {
+  /* float:right;
+} */
 
 </style>
 
 <section class="box">
-  <h2>Items Index</h2>
+  <h2>Items</h2>
 
   <% @items.each do |item| %>
-    <h3><%= item.name %></h3>
+    <section>
+      <h3><%= item.name %></h3>
+      <!-- <section> -->
       <section class="item_box">
-        <ul>
+        <section class="item-img"><%= image_tag item.image %></section>
+        <ul class="item-info-list">
           <li class="item-info"> description: <%= item.description %> </li>
           <li class="item-info"> price: <%= item.price %> </li>
           <li class="item-info"> active: <%= item.active %> </li>
           <li class="item-info"> inventory: <%= item.inventory %> </li>
         </ul>
       </section>
-      <section class="gfg"><%= image_tag item.image %></section>
-</section>
       <% if @merchant %>
-      <h3><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></h3>
+        <h3><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></h3>
       <% end %>
+    </section>
   <% end %>
 </section>

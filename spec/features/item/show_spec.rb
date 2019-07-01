@@ -7,6 +7,7 @@ RSpec.describe 'As a visitor' do
       burger = m1.items.create(name: "burger", description: "juicy and delish", price: 5.00, image: "https://media.gettyimages.com/photos/burger-for-4th-of-july-picture-id683734168?s=2048x2048", active: true, inventory: 50)
       visit "/items/#{burger.id}"
 
+      expect(current_path).to eq("/items/#{burger.id}")
       expect(page).to have_content(burger.name)
       expect(page).to have_content(burger.description)
       expect(page).to have_content(burger.price)

@@ -11,7 +11,7 @@ RSpec.describe "As a visitor" do
           click_button "Delete"
 
           expect(current_path).to eq('/merchants')
-          # expect(page).to_not have_content(merchant_1.name)
+          expect(page).to_not have_content(merchant_1.name)
           expect(page).to_not have_button('Delete')
         end
       end

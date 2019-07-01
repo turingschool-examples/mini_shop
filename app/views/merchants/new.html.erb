@@ -2,16 +2,27 @@
   <h2>New Merchant</h2>
 
   <%= form_tag '/merchants' do %>
-    <%= label_tag :name %>
-    <%= text_field_tag :name %>
-    <%= label_tag :address %>
-    <%= text_field_tag :address %>
-    <%= label_tag :city %>
-    <%= text_field_tag :city %>
-    <%= label_tag :state %>
-    <%= text_field_tag :state %>
-    <%= label_tag :zipcode %>
-    <%= text_field_tag :zipcode %>
+
+    <section class="form-input">
+      <%= label_tag :name %>
+      <%= text_field_tag :name %>
+    </section>
+    <section class="form-input">
+      <%= label_tag :address %>
+      <%= text_field_tag :address %>
+    </section>
+    <section class="form-input">
+      <%= label_tag :city %>
+      <%= text_field_tag :city %>
+    </section>
+    <section class="form-input">
+      <%= label_tag :state %>
+      <%= text_field_tag :state %>
+    </section>
+    <section class="form-input">
+      <%= label_tag :zipcode %>
+      <%= text_field_tag :zipcode %>
+    </section>
 
     <%= submit_tag 'Create Merchant' %>
   <% end %>

@@ -17,6 +17,7 @@ RSpec.describe 'As a visitor' do
 
       visit '/items'
 
+      expect(current_path).to eq("/items")
       expect(page).to have_content(burger.name)
       expect(page).to have_content(burger.description)
       expect(page).to have_content(burger.price)

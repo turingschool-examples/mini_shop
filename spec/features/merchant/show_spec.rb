@@ -8,7 +8,7 @@ RSpec.describe 'As a visitor' do
 
       visit "/merchants/#{merchant_1.id}"
 
-      # expect(current_path).to eq("/merchants/:id")
+      expect(current_path).to eq("/merchants/#{merchant_1.id}")
       expect(page).to have_content(merchant_1.name)
       expect(page).to have_content(merchant_1.address)
       expect(page).to have_content(merchant_1.city)
@@ -16,7 +16,8 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content(merchant_1.zipcode)
 
       visit "/merchants/#{merchant_2.id}"
-      
+
+      expect(current_path).to eq("/merchants/#{merchant_2.id}")
       expect(page).to have_content(merchant_2.name)
       expect(page).to have_content(merchant_2.address)
       expect(page).to have_content(merchant_2.city)
