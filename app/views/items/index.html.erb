@@ -31,6 +31,9 @@
 </style>
 
 <section class="box">
+  <% if @merchant != nil %>
+  <p><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></p>
+  <% end %>
   <h2>Items</h2>
 
   <% @items.each do |item| %>
@@ -46,9 +49,6 @@
           <li class="item-info"> inventory: <%= item.inventory %> </li>
         </ul>
       </section>
-      <% if @merchant %>
-        <h3><%= link_to "Create a new item!", "/merchants/#{@merchant.id}/items/new" %></h3>
-      <% end %>
     </section>
   <% end %>
 </section>
