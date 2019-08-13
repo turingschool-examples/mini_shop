@@ -5,7 +5,7 @@ class MerchantsController < ApplicationController
   end
 
   def show
-
+    @merchant = Merchant.find(params[:id])
   end
 
   def create
@@ -27,5 +27,8 @@ class MerchantsController < ApplicationController
   def destroy
 
   end
+
+  private
+
 
 end
