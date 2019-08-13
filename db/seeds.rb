@@ -9,4 +9,4 @@
 Merchant.destroy_all
 
 @merchant_1 = Merchant.create(name: "merchant_1", address: "123 Main", city: "Denver", state:"CO", zip:"80204")
-@merchant_2 = Merchant.create(name: "merchant_2")
+@merchant_2 = Merchant.create(name: "merchant_2", address: "789 Pacific", city: "Lakewood", state:"CO", zip:"80214")

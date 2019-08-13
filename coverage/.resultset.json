@@ -183,6 +183,8 @@
         null,
         1,
         1,
+        1,
+        1,
         null
       ],
       "/Users/alecwells/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
@@ -222,12 +224,16 @@
       "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        null,
         2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -237,6 +243,6 @@
         null
       ]
     },
-    "timestamp": 1565722514
+    "timestamp": 1565736773
   }
 }
