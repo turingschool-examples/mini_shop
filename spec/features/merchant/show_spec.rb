@@ -6,7 +6,7 @@ RSpec.describe "Merchant Show Page", type: :feature do
       @meg = Merchant.create!(name: "Meg", address: "24 Bike Spoke Lane", city: "Denver", state: "CO", zip: "80237")
     end
     it "When I visit '/merchants/:id', I see the merchant with that id including the merchant's attributes" do
-      visit merchant_path
+      visit merchant_path(@meg)
 
       expect(page).to have_content("Meg")
       expect(page).to have_content("24 Bike Spoke Lane")
