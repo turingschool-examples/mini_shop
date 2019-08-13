@@ -1,5 +1,3 @@
-# the item's data is updated,
-# and I am redirected to the Item Show page where I see the Item's updated information
 require 'rails_helper'
 
 RSpec.describe "Item Update" do
