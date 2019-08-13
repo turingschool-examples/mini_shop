@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/merchants', to: 'merchants#index', as: :merchants
   get '/merchants/:id', to: 'merchants#show', as: :merchant
   get '/merchants/new', to: 'merchants#new', as: :new_merchant
-
-
+  post '/merchants', to: 'merchants#create'
+  
 end
