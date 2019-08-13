@@ -85,7 +85,7 @@ BE Mod 2 Week 1 Solo Project
 Merchants are organizations/companies who sell items on our site (as opposed to individual people/users)
 
 ```
-[ ] done
+[x] done
 
 User Story 1, Merchant Index
 
