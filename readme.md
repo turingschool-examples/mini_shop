@@ -95,7 +95,7 @@ Then I see the name of each merchant in the system
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 2, Merchant Show
 
