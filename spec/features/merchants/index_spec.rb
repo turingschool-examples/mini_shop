@@ -15,7 +15,7 @@ describe 'merchants index page' do
 
     visit '/merchants'
 
-    expect(page).to have_content('Bob Ross Paints')
-    expect(page).to have_content('Yum Yum Snacks')
+    expect(page).to have_link('Bob Ross Paints')
+    expect(page).to have_link('Yum Yum Snacks')
   end
 end
