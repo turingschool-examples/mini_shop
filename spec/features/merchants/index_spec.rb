@@ -16,7 +16,11 @@ end
 
   describe "when I visit '/merchants/:id'" do
     it "Then I see the merchant with that id including" do
-      visit "/merchants/:id"
+      visit "/merchants/#{@merchant_1.id}"
+      expect(page).to have_content(@merchant_1.address)
+      expect(page).to have_content(@merchant_1.city)
+      expect(page).to have_content(@merchant_1.state)
+      expect(page).to have_content(@merchant_1.zip)
     end
   end
 end
