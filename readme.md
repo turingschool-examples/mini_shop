@@ -6,7 +6,7 @@ BE Mod 2 Week 1 Solo Project
 ### Rails
 
 * Implement CRUD functionality for a resource using forms (form_tag or form_for), buttons, and links
-* Use MVC to organize code effectively, limiting the amount of logic included in views 
+* Use MVC to organize code effectively, limiting the amount of logic included in views
 * Create routes for
 * standalone resources
 * nested resources
