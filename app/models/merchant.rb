@@ -1,7 +1,7 @@
 class Merchant < ApplicationRecord
 
   def index
-
+    @merchants = Merchant.all
   end
 
   def show
@@ -13,7 +13,7 @@ class Merchant < ApplicationRecord
   end
 
   def edit
-    
+
   end
 
   def update
