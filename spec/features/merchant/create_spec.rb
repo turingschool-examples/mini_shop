@@ -18,10 +18,11 @@ RSpec.describe "Merchant Index Page", type: :feature do
       expect(current_path).to eq(new_merchant_path)
       expect(page).to have_content("New Merchant Form")
     end
-    
+
     it "When I fill out the form with a new merchant's attributes, and click the
         button to submit the form, a new merchant is created and I am redirected
         to the Merchant Index page where I see the new Merchant listed" do
+
       name = "Nicholas"
       address = "123 EBITDA Drive"
       city = "Danvers"
