@@ -13,9 +13,9 @@ RSpec.describe "Merchant Creation", type: :feature do
     end
     it "When I click the link, I am taken to '/merchants/:id/edit' where I  see a prepopulated form to edit the merchant's data" do
       visit merchant_path(@meg)
-
+      
       click_link "Update Merchant"
-      expect(current_path).to eq(merchant_update_path)
+      expect(current_path).to eq(edit_merchant_path)
 
       expect(page).to have_content("Edit Merchant Form")
       expect(page).to have_content("Name")
