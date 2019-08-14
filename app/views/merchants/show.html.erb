@@ -7,3 +7,5 @@
   <li>State: <%= @merchant.state %></li>
   <li>Zip Code: <%= @merchant.zip %></li>
   </ul>
+
+  <%= link_to "Update Merchant", "/merchants/#{@merchant.id}/edit" %>
