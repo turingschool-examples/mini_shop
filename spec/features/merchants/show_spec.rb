@@ -1,17 +1,17 @@
 require 'rails_helper'
 
-describe 'Merchant Show Page', type: :feature do
+describe 'merchant show page', type: :feature do
   before :each do
-    @merchant = Merchant.create(name: 'Some Store', address: '123 Merchant Lane', city: 'Spend City', state: 'NY', zip: 00011)
+    @merchant_1 = Merchant.create(name: 'Some Store', address: '123 Merchant Lane', city: 'Spend City', state: 'NY', zip: 00011)
   end
 
-  it 'should show merchant with address' do
-    visit "/merchants/#{@merchant.id}"
+  it 'show merchant details' do
+    visit "/merchants/#{@merchant_1.id}"
 
-    expect(page).to have_content(@merchant.name)
-    expect(page).to have_content(@merchant.address)
-    expect(page).to have_content(@merchant.city)
-    expect(page).to have_content(@merchant.state)
-    expect(page).to have_content(@merchant.zip)
+    expect(page).to have_content(@merchant_1.name)
+    expect(page).to have_content(@merchant_1.address)
+    expect(page).to have_content(@merchant_1.city)
+    expect(page).to have_content(@merchant_1.state)
+    expect(page).to have_content(@merchant_1.zip)
   end
 end
