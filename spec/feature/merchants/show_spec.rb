@@ -7,13 +7,13 @@ RSpec.describe 'As a visitor' do
             merchant_1 = Merchant.create(name: "Merchant 1")
             merchant_2 = Merchant.create(name: "Merchant 2")
 
-       visit "/merchants/#{@merchant_1.id}"
+       visit '/merchants/#{merchant_1.id}'
 
-         expect(page).to have_content(@merchant_1.name)
-         expect(page).to have_content(@merchant_1.address)
-         expect(page).to have_content(@merchant_1.city)
-         expect(page).to have_content(@merchant_1.state)
-         expect(page).to have_content(@merchant_1.zip)
+         expect(page).to have_content(merchant_1.name)
+         expect(page).to have_content(merchant_1.address)
+         expect(page).to have_content(merchant_1.city)
+         expect(page).to have_content(merchant_1.state)
+         expect(page).to have_content(merchant_1.zip)
     end
   end
 end
