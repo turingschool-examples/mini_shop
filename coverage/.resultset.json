@@ -184,6 +184,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
@@ -268,7 +270,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -281,7 +283,25 @@
         null,
         1,
         1,
+        null,
+        null,
         1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -291,6 +311,6 @@
         null
       ]
     },
-    "timestamp": 1565815794
+    "timestamp": 1565823203
   }
 }
