@@ -1,0 +1,14 @@
+<form action="/merchants" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Merchant name:</p>
+  <input type='text' name='merchant[name]'/><br/>
+  <p>Merchant address:</p>
+  <input type='text' name='merchant[address]'/><br/>
+  <p>Merchant city:</p>
+  <input type='text' name='merchant[city]'/><br/>
+  <p>Merchant state:</p>
+  <input type='text' name='merchant[state]'/><br/>
+  <p>Merchant zip code:</p>
+  <input type='text' name='merchant[zip]'/><br/>
+  <input type='submit'/>
+</form>
