@@ -14,11 +14,11 @@ describe 'User visits a merchant show page' do
 
         expect(current_path).to eq("/merchants/#{merchant.id}/edit")
 
-        fill_in 'merchant[name]', with: 'Bob Ross Paints'
-        fill_in 'merchant[address]', with: '3456 Lonely Cloud Road'
-        fill_in 'merchant[city]', with: 'Petaluma'
-        fill_in 'merchant[state]', with: 'CA'
-        fill_in 'merchant[zip]', with: '94000'
+        fill_in :name, with: 'Bob Ross Paints'
+        fill_in :address, with: '3456 Lonely Cloud Road'
+        fill_in :city, with: 'Petaluma'
+        fill_in :state, with: 'CA'
+        fill_in :zip, with: '94000'
         click_on 'Submit'
 
         expect(current_path).to eq("/merchants/#{merchant.id}")
