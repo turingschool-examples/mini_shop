@@ -1,10 +1,9 @@
 <h2>Add a New Merchant</h2>
-
 <%= form_tag '/merchants', method: :post do %>
-  <%= text_field_tag :name %>
-  <%= text_field_tag :address %>
-  <%= text_field_tag :city %>
-  <%= text_field_tag :state %>
-  <%= text_field_tag :zip %>
-  <%= submit_tag 'Submit' %>
+<p>Name:    <%= text_field_tag :name %></p>
+<p>Address: <%= text_field_tag :address %></p>
+<p>City:    <%= text_field_tag :city %></p>
+<p>State:   <%= text_field_tag :state %></p>
+<p>Zip:     <%= text_field_tag :zip %></p>
+<p><%= submit_tag 'Submit' %></p>
 <% end %>
