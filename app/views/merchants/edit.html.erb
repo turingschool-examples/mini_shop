@@ -1,0 +1,11 @@
+<h2>Edit Info for <%= @merchant.name %></h2>
+<form action="/merchants/<%= @merchant.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Merchant name: <input type="text" name='merchant[name]'/></p>
+  <p>Address: <input type="text" name='merchant[address]'/></p>
+  <p>City: <input type="text" name='merchant[city]'/></p>
+  <p>State: <input type="text" name='merchant[state]'/></p>
+  <p>Zip Code: <input type="text" name='merchant[zip]'/></p>
+  <input type="submit" name='Submit'/>
+</form>
