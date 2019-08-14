@@ -15,6 +15,16 @@ end
       click_on("Update")
       expect(current_path).to eq("/merchants/#{@merchant_1.id}/edit")
 
+      fill_in :name, with: "Alec"
+      fill_in :address, with: "835 Osceola"
+      fill_in :city, with: "Denver"
+      fill_in :state, with: "CO"
+      fill_in :zip, with: "80204"
+      click_on "Submit Update"
+
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+      expect(page).to have_content("Alec")
+      expect(page).to have_content("80204")
     end
   end
 end

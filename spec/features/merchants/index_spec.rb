@@ -24,7 +24,7 @@ end
           expect(current_path).to eq("/merchants/new")
           fill_in :name, with: "Alec"
           fill_in :address, with: "835 Osceola"
-          fill_in :city, with: "Denve"
+          fill_in :city, with: "Denver"
           fill_in :state, with: "CO"
           fill_in :zip, with: "80204"
           click_on "Create Merchant"
