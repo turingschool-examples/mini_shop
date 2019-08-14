@@ -1,0 +1,16 @@
+<center>
+
+  <% @merchant_items.each do |item| %>
+<h1>&#x1F436; <a href="/items/<%= item.id %>"><%= item.name %></a> &#x1F436;</h1>
+
+<img src='<%= item.image %>', width=400px><br>
+<ul>Price: <%= item.price %></ul>
+<ul>Description: <%= item.description %></ul>
+<ul>In Stock?: <%= item.active? %></ul>
+<ul>Inventory: <%= item.inventory %></ul>
+<br><br><br><br>
+
+<% end %>
+
+<h3>&#x1F436; <a href="/merchants/<%= @merchant_items.first.merchant.id %>/items/new">Add New Item for <%= @merchant_items.first.merchant.name %></a> | <a href="/merchants/ <%= @merchant_items.first.merchant.id %>">Back to Merchant Page</a>&#x1F436;</h3>
+  </center>

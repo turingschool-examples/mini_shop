@@ -1,0 +1,14 @@
+<center>
+<h1>&#x1F436; Edit <%= @item.name %> &#x1F436;</h1>
+
+<%= form_tag update_item_path(@item), method: :patch do %>
+  <h3>Item Name</h3> <%= text_field_tag :name, @item.name %>
+  <h3>Description</h3> <%= text_field_tag :description, @item.description %>
+  <h3>Price</h3> <%= text_field_tag :price, @item.price %>
+  <h3>Image Link</h3> <%= text_field_tag :image, @item.image %>
+  <h3>Active?</h3><h4>true or false</h4> <%= text_field_tag :active?, @item.active? %>
+  <h3>Inventory</h3> <%= text_field_tag :inventory, @item.inventory %><br>
+  <%= submit_tag %>
+<% end %><br><br>
+<a href="/items">All Items</a>
+</center>

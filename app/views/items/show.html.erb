@@ -1,0 +1,13 @@
+<center>
+<h1>&#x1F436; <%= @item.name %> &#x1F436;</h1>
+<h3>from</h3>
+<h1> <%= Merchant.find(@item.merchant_id).name %></h1><br><br>
+
+<img src='<%= @item.image %>', width=400px><br>
+<ul>Price: <%= @item.price %></ul>
+<ul>Description: <%= @item.description %></ul>
+<ul>In Stock?: <%= @item.active? %></ul>
+<ul>Inventory: <%= @item.inventory %></ul><br><br><br><br>
+
+  <a href="/items/<%= @item.id %>/edit">Edit Item</a> | <a href="/items">All Items</a> |   <a href="/items/<%= @item.id %>/delete">Delete Item</a>
+  </center>

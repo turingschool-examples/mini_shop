@@ -1,5 +1,8 @@
+<center>
 <h1>&#x1F436; <%= @merchant.name %> &#x1F436;</h1>
+<h2><a href= /merchants/<%= @merchant.id%>/items> All Items</a> | <a href="/merchants/<%= @merchant.id%>/items/new">Add Item</a></h2>
 <p>
   <%= @merchant.address %><br> <%= @merchant.city %>, <%= @merchant.state %> <%= @merchant.zip %> </p>
 
   <a href="/merchants/<%= @merchant.id %>/edit">Edit Merchant</a> | <a href="/merchants">All Merchants</a> |   <a href="/merchants/<%= @merchant.id %>/delete">Delete Merchant</a>
+  </center>
