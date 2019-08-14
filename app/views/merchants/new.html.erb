@@ -1,0 +1,19 @@
+<h1>&#x1F436; Add a New Merchant &#x1F436;</h1>
+
+<!-- <form action="/merchants" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h3>Merchant Name</h3><input type='text' name='merchant[:name]'/><br/>
+  <h3>Address</h3><input type='text' name='merchant[:address]'/><br/>
+  <h3>City</h3><input type='text' name='merchant[:city]'/><br/>
+    <h3>State</h3><input type='text' name='merchant[:state]'/><br/>
+    <h3>Zip</h3><input type='text' name='merchant[:zip]'/><br/>
+  <input type='submit'/>
+</form> -->
+<%= form_tag merchants_path do %>
+  <h3>Merchant Name</h3> <%= text_field_tag :name %>
+  <h3>Address</h3> <%= text_field_tag :address %>
+  <h3>City</h3> <%= text_field_tag :city %>
+  <h3>State</h3> <%= text_field_tag :state %>
+  <h3>Zip</h3> <%= text_field_tag :zip %><br>
+  <%= submit_tag %>
+<% end %>
