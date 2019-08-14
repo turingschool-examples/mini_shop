@@ -4,10 +4,10 @@ describe 'user views one merchant,' do
   describe 'they click on the merchant link,' do
     it 'displays that merchant info' do
       merchant = Merchant.create( name: 'Bob Ross Paints',
-                                    address: '2345 Happy Tree Place',
-                                    city: 'Boulder',
-                                    state: 'CO',
-                                    zip: '80303')
+                                  address: '2345 Happy Tree Place',
+                                  city: 'Boulder',
+                                  state: 'CO',
+                                  zip: '80303')
 
       visit '/merchants'
       click_link merchant.name
