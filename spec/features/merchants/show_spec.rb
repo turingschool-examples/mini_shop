@@ -17,6 +17,7 @@ describe 'user views one merchant,' do
       expect(page).to have_content("City: #{merchant.city}")
       expect(page).to have_content("State: #{merchant.state}")
       expect(page).to have_content("Zip Code: #{merchant.zip}")
+      expect(page).to have_link("Edit Merchant Info")
     end
   end
 end

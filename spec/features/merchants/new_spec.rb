@@ -11,7 +11,7 @@ describe 'User creates new merchant' do
         expect(current_path).to eq('/merchants/new')
 
         fill_in 'merchant[name]', with: 'Crunchy Hippy'
-        fill_in 'merchant[address]', with: 'Haight Street'
+        fill_in 'merchant[address]', with: '420 Haight Street'
         fill_in 'merchant[city]', with: 'San Francisco'
         fill_in 'merchant[state]', with: 'CA'
         fill_in 'merchant[zip]', with: '94125'
