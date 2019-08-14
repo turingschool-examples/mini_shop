@@ -3,3 +3,7 @@
 <p>city:<%= @merchant.city %></p>
 <p>state:<%= @merchant.state %></p>
 <p>zip:<%= @merchant.zip %></p>
+
+
+<a href="/merchants/<%= @merchant.id %>/edit">Update</a>
+<%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete %>

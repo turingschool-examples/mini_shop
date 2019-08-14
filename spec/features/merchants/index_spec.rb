@@ -22,11 +22,11 @@ end
           click_link "Create New Merchant"
 
           expect(current_path).to eq("/merchants/new")
-          fill_in "merchant[name]", with: "Alec"
-          fill_in "merchant[address]", with: "835 Osceola"
-          fill_in "merchant[city]", with: "Denve"
-          fill_in "merchant[state]", with: "CO"
-          fill_in "merchant[zip]", with: "80204"
+          fill_in :name, with: "Alec"
+          fill_in :address, with: "835 Osceola"
+          fill_in :city, with: "Denver"
+          fill_in :state, with: "CO"
+          fill_in :zip, with: "80204"
           click_on "Create Merchant"
 
           expect(page).to have_content("Alec")
