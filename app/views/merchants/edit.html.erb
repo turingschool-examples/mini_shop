@@ -1,0 +1,11 @@
+<h1>&#x1F436; Edit Merchant &#x1F436;</h1><br>
+<%= form_tag update_merchant_path(@merchant), method: :patch do %>
+  <h3>Merchant Name</h3> <%= text_field_tag :name, @merchant.name %>
+  <h3>Address</h3> <%= text_field_tag :address, @merchant.address  %>
+  <h3>City</h3> <%= text_field_tag :city, @merchant.city %>
+  <h3>State</h3> <%= text_field_tag :state, @merchant.state %>
+  <h3>Zip</h3> <%= text_field_tag :zip, @merchant.zip %><br>
+  <%= submit_tag %>
+<% end %>
+
+<br><br><a href="/merchants">Back</a>
