@@ -1,7 +1,9 @@
-  <ul id="merchants">
-    <% @merchants.each do |merchant| %>
-    <li>
-      <a href="/merchants/<%= merchant.id%>"><%= merchant.name %></a>
-    </li>
-    <% end %>
-  </ul>
+<h2>Merchants</h2>
+<ul id="merchants">
+  <% @merchants.each do |merchant| %>
+  <li>
+    <a href="/merchants/<%= merchant.id%>"><%= merchant.name %></a>
+  </li>
+  <% end %>
+</ul>
+<a href="merchants/new">Add Merchant</a>

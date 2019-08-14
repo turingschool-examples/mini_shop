@@ -17,5 +17,6 @@ describe 'merchants index page' do
 
     expect(page).to have_link('Bob Ross Paints')
     expect(page).to have_link('Yum Yum Snacks')
+    expect(page).to have_link('Add Merchant')
   end
 end
