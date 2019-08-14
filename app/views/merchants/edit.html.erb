@@ -1,9 +1,9 @@
 <h2>Edit Info for <%= @merchant.name %></h2>
 <%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
-  <p>Name:    <%= text_field_tag :name %></p>
-  <p>Address: <%= text_field_tag :address %></p>
-  <p>City:    <%= text_field_tag :city %></p>
-  <p>State:   <%= text_field_tag :state %></p>
-  <p>Zip:     <%= text_field_tag :zip %></p>
+  <p>Name:    <%= text_field_tag :name, @merchant.name %></p>
+  <p>Address: <%= text_field_tag :address, @merchant.address %></p>
+  <p>City:    <%= text_field_tag :city, @merchant.city %></p>
+  <p>State:   <%= text_field_tag :state, @merchant.state %></p>
+  <p>Zip:     <%= text_field_tag :zip, @merchant.zip %></p>
   <p><%= submit_tag 'Submit' %></p>
 <% end %>
