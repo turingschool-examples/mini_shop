@@ -4,7 +4,7 @@
 # Examples:
  Merchant.destroy_all
 
- Merchant.create(name: "Banana Bazaar")
- Merchant.create(name: "Cherry Corner")
+ merchant_1 = Merchant.create(name: "Banana Bazaar", address: "123 Fruit Lane", city: "Niceville", state: "Florida", zip: 32578)
+ merchant_2 = Merchant.create(name: "Cherry Corner", address: "456 Basket Cir", city: "Limon", state: "Colorado", zip: 80828)
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
