@@ -1,7 +1,9 @@
-<h1>All Merchants</h1>
+<center>
+  <h1>All Merchants</h1>
 
-<% @merchants.each do |merchant| %>
+  <% @merchants.each do |merchant| %>
   <ul>&#x1F436; <a href="/merchants/<%= merchant.id %> "> <%= merchant.name %></a> &#x1F436;</ul>
   <% end %>
 
-  <a href="/merchants/new">Add a New Merchant</a>
+  <a href="/merchants/new">Add a New Merchant</a> | <a href="/items"> View All Items</a>
+</center>

@@ -1,0 +1,14 @@
+<center>
+<h1>&#x1F436; Add a New Item &#x1F436;</h1>
+
+<%= form_tag merchant_items_path, method: :post do %>
+  <h3>Item Name</h3> <%= text_field_tag :name %>
+  <h3>Description</h3> <%= text_field_tag :description %>
+  <h3>Price</h3> <%= text_field_tag :price %>
+  <h3>Image Link</h3> <%= text_field_tag :image %>
+  <h3>Active?</h3><h4>true or false</h4> <%= text_field_tag :active? %>
+  <h3>Inventory</h3> <%= text_field_tag :inventory %><br>
+  <%= submit_tag %>
+<% end %><br><br>
+<a href="/items">All Items</a>
+</center>

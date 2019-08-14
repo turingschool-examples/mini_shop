@@ -1,3 +1,4 @@
+<center>
 <h1>&#x1F436; Edit Merchant &#x1F436;</h1><br>
 <%= form_tag update_merchant_path(@merchant), method: :patch do %>
   <h3>Merchant Name</h3> <%= text_field_tag :name, @merchant.name %>
@@ -9,3 +10,4 @@
 <% end %>
 
 <br><br><a href="/merchants">Back</a>
+</center>
