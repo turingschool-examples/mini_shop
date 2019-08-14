@@ -110,7 +110,7 @@ Then I see the merchant with that id including the merchant's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 3, Merchant Creation
 
