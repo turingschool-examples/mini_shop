@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-13T21:13:07-06:00">2019-08-13T21:13:07-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-14T11:34:10-06:00">2019-08-14T11:34:10-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,7 +31,7 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>19</b> files in total.
+    <b>21</b> files in total.
     <b>68</b> relevant lines. 
     <span class="green"><b>65</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed </span>
@@ -231,6 +231,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#a5e1b5c4a5148a84dc553f34db6355202a09fec8" class="src_link" title="spec/features/merchants/new_spec.rb">spec/features/merchants/new_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#a3c27cb590c9c94076d9806a95da446cb34b1f52" class="src_link" title="spec/features/merchants/show_spec.rb">spec/features/merchants/show_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>17</td>
@@ -238,6 +248,16 @@
         <td>11</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#80894da7b57d35aaab8c79a84dbf5ec898e16343" class="src_link" title="spec/models/new_spec.rb">spec/models/new_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
       </tr>
       
     </tbody>
@@ -1756,6 +1776,25 @@
 </div>
 
       
+        <div class="source_table" id="a5e1b5c4a5148a84dc553f34db6355202a09fec8">
+  <div class="header">
+    <h3>spec/features/merchants/new_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="a3c27cb590c9c94076d9806a95da446cb34b1f52">
   <div class="header">
     <h3>spec/features/merchants/show_spec.rb</h3>
@@ -1785,7 +1824,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &#39;merchant show page&#39;, type: :feature do</code>
+          <code class="ruby">describe &#39;Merchant Show Page&#39;, type: :feature do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -1797,7 +1836,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    @merchant_1 = Merchant.create(name: &#39;Some Store&#39;, address: &#39;123 Merchant Lane&#39;, city: &#39;Spend City&#39;, state: &#39;NY&#39;, zip: 00011)</code>
+          <code class="ruby">    @merchant = Merchant.create(name: &#39;Some Store&#39;, address: &#39;123 Merchant Lane&#39;, city: &#39;Spend City&#39;, state: &#39;NY&#39;, zip: 00011)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -1815,13 +1854,13 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;show merchant details&#39; do</code>
+          <code class="ruby">  it &#39;should show merchant with address&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit &quot;/merchants/#{@merchant_1.id}&quot;</code>
+          <code class="ruby">    visit &quot;/merchants/#{@merchant.id}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -1833,31 +1872,31 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(@merchant_1.name)</code>
+          <code class="ruby">    expect(page).to have_content(@merchant.name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(@merchant_1.address)</code>
+          <code class="ruby">    expect(page).to have_content(@merchant.address)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(@merchant_1.city)</code>
+          <code class="ruby">    expect(page).to have_content(@merchant.city)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(@merchant_1.state)</code>
+          <code class="ruby">    expect(page).to have_content(@merchant.state)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(@merchant_1.zip)</code>
+          <code class="ruby">    expect(page).to have_content(@merchant.zip)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -1871,6 +1910,25 @@
           
           <code class="ruby">end</code>
         </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="80894da7b57d35aaab8c79a84dbf5ec898e16343">
+  <div class="header">
+    <h3>spec/models/new_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
       
     </ol>
   </pre>
