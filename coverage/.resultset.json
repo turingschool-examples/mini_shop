@@ -188,8 +188,24 @@
         1,
         null
       ],
-      "/Users/starperfect/turing/mod2/projects/mini_shop/spec/models/merchant_spec.rb": [
-        1
+      "/Users/starperfect/turing/mod2/projects/mini_shop/spec/features/merchants/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
       ],
       "/Users/starperfect/turing/mod2/projects/mini_shop/app/models/merchant.rb": [
         1,
@@ -213,6 +229,6 @@
         null
       ]
     },
-    "timestamp": 1565731369
+    "timestamp": 1565744485
   }
 }
