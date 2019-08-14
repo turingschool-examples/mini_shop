@@ -8,11 +8,11 @@ class MerchantsController < ApplicationController
 
   def create
     merchant = Merchant.new({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip],
+      name: params[:name],
+      address: params[:address],
+      city: params[:city],
+      state: params[:state],
+      zip: params[:zip],
       })
       merchant.save
       redirect_to '/merchants'
