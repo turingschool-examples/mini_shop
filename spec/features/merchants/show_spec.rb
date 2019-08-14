@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'merchant show page', type: :feature do
   before :each do
-    @merchant_1 = Merchant.create(name: 'Some Store', address: '123 Merchant Lane', city: 'Spend City', state: 'NY', zip: 00011)
+    @merchant_1 = Merchant.create!(name: 'Some Store', address: '123 Merchant Lane', city: 'Spend City', state: 'NY', zip: 00011)
   end
 
   it 'show merchant details' do
