@@ -1,10 +1,10 @@
 <h2>Add a New Merchant</h2>
-<form action="/tasks" method="post">
+<form action="/merchants" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>Merchant name: <input type="text" name='merchant[name]'/></p>
   <p>Address: <input type="text" name='merchant[address]'/></p>
   <p>City: <input type="text" name='merchant[city]'/></p>
   <p>State: <input type="text" name='merchant[state]'/></p>
   <p>Zip Code: <input type="text" name='merchant[zip]'/></p>
-  <input type="submit"/>
+  <input type="submit" name='Submit'/>
 </form>

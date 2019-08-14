@@ -7,8 +7,8 @@ describe 'User creates new merchant' do
 
         visit '/merchants'
         click_link 'Add Merchant'
-        
-        expect(current_path).to eq(new_merchant_path)
+
+        expect(current_path).to eq('/merchants/new')
 
         fill_in 'merchant[name]', with: 'Crunchy Hippy'
         fill_in 'merchant[address]', with: 'Haight Street'
@@ -17,7 +17,6 @@ describe 'User creates new merchant' do
         fill_in 'merchant[zip]', with: '94125'
 
         click_on 'Submit'
-
         expect(page).to have_link('Crunchy Hippy')
       end
     end
