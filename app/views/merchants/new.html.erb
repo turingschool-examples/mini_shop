@@ -1,8 +1,13 @@
 <%= form_tag("/merchants", method: :post) do %>
+  <p>Merchant name:</p>
   <%= text_field_tag :name %>
+  <p>Merchant address:</p>
   <%= text_field_tag :address %>
+  <p>Merchant city:</p>
   <%= text_field_tag :city %>
+  <p>Merchant state:</p>
   <%= text_field_tag :state %>
-  <%= text_field_tag :zip %>
+  <p>Merchant zip code:</p>
+  <%= text_field_tag :zip %><br/>
   <%= submit_tag "Submit" %>
 <% end %>
