@@ -8,8 +8,12 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
   end
 
-  def create
+  def new
+  end
 
+  def create
+    Merchant.create(merchant_params)
+    redirect_to merchants_path
   end
 
   def edit
@@ -20,15 +24,13 @@ class MerchantsController < ApplicationController
 
   end
 
-  def new
-
-  end
-
   def destroy
 
   end
 
   private
 
-
+  def merchant_params
+    params.permit(:name, :address, :city, :state, :zip)
+  end
 end
