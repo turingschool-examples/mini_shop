@@ -17,12 +17,14 @@ class MerchantsController < ApplicationController
   end
 
   def update
+    @merchant = Merchant.find(params[:id])
+
     @merchant.update({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip],
+      name: params[:name],
+      address: params[:address],
+      city: params[:city],
+      state: params[:state],
+      zip: params[:zip],
       })
     redirect_to "/merchants/#{@merchant.id}"
   end

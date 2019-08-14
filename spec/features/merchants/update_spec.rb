@@ -13,7 +13,7 @@ end
       # binding.pry
 
       click_on("Update")
-      # expect(current_path).to eq("/merchants/update")
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}/edit")
 
     end
   end
