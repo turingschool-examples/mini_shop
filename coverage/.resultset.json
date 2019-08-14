@@ -182,14 +182,32 @@
         1,
         null,
         1,
+        1,
+        1,
         null
       ],
       "/Users/starperfect/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/starperfect/turing/mod2/projects/mini_shop/spec/models/merchant_spec.rb": [
-        1
+      "/Users/starperfect/turing/mod2/projects/mini_shop/spec/features/merchants/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
       ],
       "/Users/starperfect/turing/mod2/projects/mini_shop/app/models/merchant.rb": [
         1,
@@ -205,6 +223,25 @@
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/starperfect/turing/mod2/projects/mini_shop/app/controllers/application_controller.rb": [
@@ -213,6 +250,6 @@
         null
       ]
     },
-    "timestamp": 1565731369
+    "timestamp": 1565752387
   }
 }
