@@ -10,6 +10,10 @@ end
     it "Then I see the merchant with that id including" do
       visit "/merchants/#{@merchant_1.id}"
       expect(page).to have_link("Update")
+      # binding.pry
+
+      click_on("Update")
+      # expect(current_path).to eq("/merchants/update")
 
     end
   end

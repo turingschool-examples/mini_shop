@@ -1,8 +1,9 @@
-<%= form_for(@merchant) do |f| %>
-  Name: <%= f.text_field :name %><br/><br/>
-  Address: <%= f.text_field :address %><br/><br/>
-  City : <%= f.text_field :city %><br/><br/>
-  State    : <%= f.text_field :state %><br/><br/>
-  Zip    : <%= f.text_field :zip %><br/><br/>
-  <%= f.submit %>
+<h2>Add a New Merchant</h2>
+<%= form_tag "/merchants", method: :post do %>
+  Name: <%= text_field_tag :name %><br/><br/>
+  Address: <%= text_field_tag :address %><br/><br/>
+  City : <%= text_field_tag :city %><br/><br/>
+  State    : <%= text_field_tag :state %><br/><br/>
+  Zip    : <%= text_field_tag :zip %><br/><br/>
+  <%= submit_tag "Create Merchant" %>
 <% end %>

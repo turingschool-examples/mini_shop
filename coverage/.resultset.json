@@ -185,6 +185,9 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -212,6 +215,28 @@
         null,
         null
       ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/spec/features/merchants/update_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/alecwells/turing/2module/projects/mini_shop/app/models/merchant.rb": [
         1,
         null,
@@ -229,11 +254,27 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
         null,
         null,
         1,
@@ -256,6 +297,6 @@
         null
       ]
     },
-    "timestamp": 1565751513
+    "timestamp": 1565813812
   }
 }
