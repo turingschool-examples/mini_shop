@@ -12,7 +12,7 @@ RSpec.describe "New Merchant Form/Creation", type: :feature do
         fill_in "Address", with: "312 olive st"
         fill_in "City", with: "Denver"
         fill_in "State", with: "CO"
-        fill_in "Zip", with: "08927"
+        fill_in "Zip", with: "80011"
         click_button "Create Merchant"
         new_merchant = Merchant.last #references most recently created merchant
         expect(current_path).to eq("/merchants")
