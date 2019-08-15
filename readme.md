@@ -206,7 +206,7 @@ Then I see each Item that belongs to the Merchant with that merchant_id includin
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 8, Item Show
 
