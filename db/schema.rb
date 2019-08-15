@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20190814021356) do
     t.string "description"
     t.float "price"
     t.string "image"
-    t.boolean "active?"
+    t.boolean "active?", default: true
     t.integer "inventory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -4,9 +4,8 @@
 <%= form_tag update_item_path(@item), method: :patch do %>
   <h3>Item Name</h3> <%= text_field_tag :name, @item.name %>
   <h3>Description</h3> <%= text_field_tag :description, @item.description %>
-  <h3>Price</h3> <%= text_field_tag :price, @item.price %>
+  <h3>Price</h3> <%= text_field_tag :price, @item.convert_price %>
   <h3>Image Link</h3> <%= text_field_tag :image, @item.image %>
-  <h3>Active?</h3><h4>true or false</h4> <%= text_field_tag :active?, @item.active? %>
   <h3>Inventory</h3> <%= text_field_tag :inventory, @item.inventory %><br>
   <%= submit_tag "Submit"%>
 <% end %><br><br>
