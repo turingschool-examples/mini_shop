@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/merchants/:id', to: 'merchants#show', as: :merchant
   get '/merchants/:id/edit', to: 'merchants#edit', as: :edit_merchant
   patch '/merchants/:id', to: 'merchants#update'
-
+  delete '/merchants/:id', to: 'merchants#destroy', as: :delete_merchant
 end
