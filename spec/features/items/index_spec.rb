@@ -12,7 +12,7 @@ require 'rails_helper'
 # - the name of the merchant that sells the item
 
 describe "item index page" do
-  xit "shows all items" do
+  it "shows all items" do
     merchant_1 = Merchant.create!(name: "Football Frenzy", address: "123 14th Circle", city: "Frederick", state: "CO", zip: 80530)
     merchant_2 = Merchant.create!(name: "Gridiron Gear", address: "456 East Drive", city: "Longmont", state: "CO", zip: 80501)
     item_1 = merchant_1.items.create!(name: "Memorabilia Helmet",
@@ -39,21 +39,21 @@ describe "item index page" do
     expect(page).to have_content(item_1.name)
     expect(page).to have_content(item_1.description)
     expect(page).to have_content(item_1.price)
-    expect(page).to have_css("img[src*=#{item_1.image}]")
+    expect(page).to have_xpath("//img[@src='#{item_1.image}']")
     expect(page).to have_content(item_1.status)
     expect(page).to have_content(item_1.inventory)
     expect(page).to have_content(item_1.merchant.name)
     expect(page).to have_content(item_2.name)
     expect(page).to have_content(item_2.description)
     expect(page).to have_content(item_2.price)
-    expect(page).to have_css("img[src*=#{item_2.image}]")
+    expect(page).to have_xpath("//img[@src='#{item_2.image}']")
     expect(page).to have_content(item_2.status)
     expect(page).to have_content(item_2.inventory)
     expect(page).to have_content(item_2.merchant.name)
     expect(page).to have_content(item_3.name)
     expect(page).to have_content(item_3.description)
     expect(page).to have_content(item_3.price)
-    expect(page).to have_css("img[src*=#{item_3.image}]")
+    expect(page).to have_xpath("//img[@src='#{item_3.image}']")
     expect(page).to have_content(item_3.status)
     expect(page).to have_content(item_3.inventory)
     expect(page).to have_content(item_3.merchant.name)
