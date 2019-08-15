@@ -8,7 +8,7 @@ RSpec.describe "New Merchant Form/Creation", type: :feature do
         expect(page).to have_link("Add Merchant")
         click_link "Add Merchant"
         expect(current_path).to eq("/merchants/new")
-        fill_in "Name", with: "Scott"
+        fill_in "Name", with: "Gerbert"
         fill_in "Address", with: "312 olive st"
         fill_in "City", with: "Denver"
         fill_in "State", with: "CO"
@@ -17,10 +17,6 @@ RSpec.describe "New Merchant Form/Creation", type: :feature do
         new_merchant = Merchant.last #references most recently created merchant
         expect(current_path).to eq("/merchants")
         expect(page).to have_content(new_merchant.name)
-        expect(page).to have_content(new_merchant.address)
-        expect(page).to have_content(new_merchant.city)
-        expect(page).to have_content(new_merchant.state)
-        expect(page).to have_content(new_merchant.zip)
       end
     end
   end
