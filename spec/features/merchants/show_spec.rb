@@ -3,8 +3,6 @@ require 'rails_helper'
 describe 'user views one merchant,' do
   describe 'they click on the merchant link,' do
     it 'displays that merchant info' do
-      Item.destroy_all
-      Merchant.destroy_all
       merchant = Merchant.create( name: 'Bob Ross Paints',
                                   address: '2345 Happy Tree Place',
                                   city: 'Boulder',
