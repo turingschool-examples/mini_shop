@@ -10,6 +10,7 @@ RSpec.describe "merchant index page", type: :feature do
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_2.name)
+    expect(page).to have_content(merchant_3.name)
   end
 end
 
