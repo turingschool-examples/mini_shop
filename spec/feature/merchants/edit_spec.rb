@@ -12,16 +12,22 @@ RSpec.describe "Merchant Update", type: :feature do
         expect(page).to have_link("Edit Info")
         click_link "Edit Info"
         expect(current_path).to eq("/merchants/#{@merchant_1.id}/edit")
+        new_name = "polly"
         new_address = "123 sesame st"
         new_city = "denver"
+        new_state = "CO"
         new_zip = "12345"
+        fill_in "Name", with: new_name
         fill_in "Address", with: new_address
         fill_in "City", with: new_city
+        fill_in "State", with: new_state
         fill_in "Zip", with: new_zip
         click_button "Submit Update"
         expect(current_path).to eq("/merchants/#{@merchant_1.id}")
+        expect(page).to have_content(new_name)
         expect(page).to have_content(new_address)
         expect(page).to have_content(new_city)
+        expect(page).to have_content(new_state)
         expect(page).to have_content(new_zip)
       end
     end
