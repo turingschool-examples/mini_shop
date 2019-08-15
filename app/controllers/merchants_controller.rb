@@ -30,11 +30,6 @@ class MerchantsController < ApplicationController
     redirect_to '/merchants'
   end
 
-  def items
-    merchant = Merchant.find(params[:merchant_id])
-    @merchant_items = merchant.items
-  end
-
   private
 
   def merchant_params

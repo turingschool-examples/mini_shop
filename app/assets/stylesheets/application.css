@@ -26,6 +26,10 @@
    width: 400px;
  }
 
+ .solo-item {
+   align-items: center;
+ }
+
  .item-listing {
    display: inline;
  }
@@ -33,7 +37,7 @@
  header {
    background-color: DodgerBlue;
    margin: 0px;
-   padding: 20px 300px 20px 20px;
+   padding: 20px 25% 20px 20px;
    display: flex;
    justify-content: space-between;
  }
