@@ -1,5 +1,5 @@
 <h1>Update <%= @merchant.id %></h1>
-<%= form_tag("/merchants/#{@merchant.id}", method: :post) do %>
+<%= form_tag("/merchants/#{@merchant.id}", method: :patch) do %>
   <p><%= label_tag 'Merchant Name:' %>
   <%= text_field_tag :name %></p>
   <p><%= label_tag 'Address:' %>
