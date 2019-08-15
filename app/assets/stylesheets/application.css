@@ -14,7 +14,41 @@
  *= require_self
  */
 
- .item-image{
+#title {
+  font-size: 36px;
+  color: white;
+  margin: 0px;
+  font-family: Arial Black;
+}
+
+ .item-image {
    height: 300px;
    width: 400px;
+ }
+
+ .item-listing {
+   display: inline;
+ }
+
+ header {
+   background-color: DodgerBlue;
+   margin: 0px;
+   padding: 20px 300px 20px 20px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .header-link {
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+   padding-top: 14px;
+ }
+
+ header a:hover {
+   color: blue;
+ }
+
+ body {
+   font-family: Arial;
  }
