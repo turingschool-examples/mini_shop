@@ -9,4 +9,4 @@
   </ul>
 
   <%= link_to "Update Merchant", "/merchants/#{@merchant.id}/edit" %>
-  <%= link_to "Delete Merchant", "/merchants/#{@merchant.id}/delete" %>
+  <%= link_to "Delete Merchant", "/merchants/#{@merchant.id}", method: :delete %>
