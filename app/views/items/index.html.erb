@@ -1,9 +1,9 @@
 <center>
-  <h1>&#x1F436; All Items &#x1F436;</h1>
+  <h1>&#x1F436; Items &#x1F436;</h1>
 
   <% @items.each do |item| %>
   <h2><img src='<%= item.image %>', width=300px></h2>
-  <h3>&#x1F436; <a href="/items/<%= item.id %> "> <%= item.name %></a> &#x1F436;</h3><br>
+  <h3>&#x1F436; <a href="/items/<%= item.id %> "> <%= item.name %></a> &#x1F436;</h3>
   <h4>$<%= item.price %><br>
   <% end %>
 
