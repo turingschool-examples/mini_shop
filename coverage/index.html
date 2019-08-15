@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-15T12:23:44-06:00">2019-08-15T12:23:44-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-15T14:10:17-06:00">2019-08-15T14:10:17-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.65%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.95
+       <span class="green">
+         1.03
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>20</b> files in total.
-    <b>68</b> relevant lines. 
-    <span class="green"><b>63</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>67</b> relevant lines. 
+    <span class="green"><b>67</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -232,12 +232,12 @@
       
       <tr>
         <td class="strong"><a href="#3ca6cd19ed666da5cce857e10cf3be0004711e54" class="src_link" title="spec/features/merchants/show_spec.rb">spec/features/merchants/show_spec.rb</a></td>
-        <td class="red strong">54.55 %</td>
-        <td>25</td>
-        <td>11</td>
-        <td>6</td>
-        <td>5</td>
-        <td>0.5</td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -473,7 +473,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates_presence_of :name</code>
+          <code class="ruby">  validates_presence_of :name, :address, :city, :state, :zip</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -1703,11 +1703,11 @@
         <div class="source_table" id="3ca6cd19ed666da5cce857e10cf3be0004711e54">
   <div class="header">
     <h3>spec/features/merchants/show_spec.rb</h3>
-    <h4><span class="red">54.55 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1729,136 +1729,118 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;merchants show page&quot; do</code>
+          <code class="ruby">describe &quot;Merchant Show Page&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">  before :each do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    @merchant = Merchant.create(name: &quot;Moose Munchies&quot;)</code>
+          <code class="ruby">  it &#39;shows merchant info&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    merchant = Merchant.create!(name: &quot;Moose Munchies&quot;, address: &quot;306 Meese Ave&quot;, city: &quot;Moose Jaw&quot;, state: &quot;MO&quot;, zip: &quot;50400&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &quot;should show all merchants&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
           <code class="ruby">    # As a visitor</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">    # When I visit &#39;/merchants/:id&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit &quot;/merchants/#{@merchant.id}&quot;</code>
+          <code class="ruby">    visit &quot;/merchants/#{merchant.id}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">    # Then I see the merchant with that id including the merchant&#39;s:</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    # - name</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">    # - address</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    # - city</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">    # - state</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    # - zip</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content(@merchant.name)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Moose Munchies&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content(@merchant.address)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;306 Meese Ave&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content(@merchant.city)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Moose Jaw&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content(@merchant.state)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;MO&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    expect(page).to have_content(@merchant.zip)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;50400&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
