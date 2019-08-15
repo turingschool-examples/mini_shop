@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "merchant creation page" do
-  it "has a form with merchant information" do
+  it "has a form to fill in with merchant information" do
     visit "/merchants/new"
 
     expect(page).to have_content("Merchant name:")
@@ -21,7 +21,6 @@ describe "merchant creation page" do
     expect(current_path).to eq('/merchants')
 
     expect(page).to have_content("Test name")
-
   end
 
 end

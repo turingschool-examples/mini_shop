@@ -1,0 +1,13 @@
+<%= form_tag("/merchants/#{@merchant.id}", method: :patch) do %>
+  <p>Merchant name:</p>
+  <%= text_field_tag :name, "#{@merchant.name}" %>
+  <p>Merchant address:</p>
+  <%= text_field_tag :address, "#{@merchant.address}" %>
+  <p>Merchant city:</p>
+  <%= text_field_tag :city, "#{@merchant.city}" %>
+  <p>Merchant state:</p>
+  <%= text_field_tag :state, "#{@merchant.state}" %>
+  <p>Merchant zip code:</p>
+  <%= text_field_tag :zip, "#{@merchant.zip}" %><br/>
+  <%= submit_tag "Submit" %>
+<% end %>
