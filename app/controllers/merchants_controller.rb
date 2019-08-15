@@ -22,9 +22,15 @@ class MerchantsController < ApplicationController
   end
 
   def update
-    merchant = Merchant.find(params[:id])
-    merchant.update(merchant_params)
-    redirect_to "/merchants/#{merchant.id}"
+    @merchant = Merchant.find(params[:id])
+    @merchant.update(merchant_params)
+    redirect_to "/merchants/#{@merchant.id}"
+  end
+
+  def destroy
+    @merchant = Merchant.find(params[:id])
+    @merchant.destroy
+    redirect_to '/merchants'
   end
 
   private

@@ -4,4 +4,5 @@
 <p>State: <%=  @merchant.state%></p>
 <p>Zip Code: <%=  @merchant.zip%></p>
 <br/>
-<a href="/merchants/<%= @merchant.id %>/edit">Edit Merchant Info</a>
+<%= link_to 'Edit Merchant Info', "/merchants/#{@merchant.id}/edit" %>
+<%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete %>
