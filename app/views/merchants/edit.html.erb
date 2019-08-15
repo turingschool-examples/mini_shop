@@ -1,6 +1,6 @@
 
 <%= form_tag("/merchants/#{@merchant.id}", method: :patch) do  %>
-  <%= label_tag :name %>
+  <%= label_tag :name %>  <!--label for our text field --> 
   <%= text_field_tag :name, @merchant.name %>
   <%= label_tag :address %>
   <%= text_field_tag :address, @merchant.address %>
