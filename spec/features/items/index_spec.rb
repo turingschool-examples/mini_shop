@@ -80,4 +80,16 @@ describe "Merchant Item Index Page" do
     expect(page).to have_content(item_3.status)
     expect(page).to have_content(item_3.inventory)
   end
+
+  it "has a link to create a new item" do
+    merchant_2 = Merchant.create!(name: "Gridiron Gear", address: "456 East Drive", city: "Longmont", state: "CO", zip: 80501)
+
+    visit "/merchants/#{merchant_2.id}/items"
+
+    expect(page).to have_link("Create New Item")
+
+    click_link "Create New Item"
+
+    expect(current_path).to eq("/merchants/#{merchant_2.id}/items/new")
+  end
 end
