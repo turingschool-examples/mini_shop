@@ -81,12 +81,3 @@ describe "Merchant Item Index Page" do
     expect(page).to have_content(item_3.inventory)
   end
 end
-
-# As a visitor
-# When I visit '/merchants/:merchant_id/items'
-# Then I see each Item that belongs to the Merchant with that merchant_id including the Item's:
-# - name
-# - price
-# - image
-# - active/inactive status
-# - inventory
