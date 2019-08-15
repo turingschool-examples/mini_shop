@@ -1,6 +1,6 @@
 class MerchantsController < ApplicationController
   def index
-    @merchants = ['Moose Munchies', 'Eh Plus School Supplies', 'Two-Four Liquors']
+    @merchants = Merchant.all
   end
 
   def new
@@ -13,8 +13,12 @@ class MerchantsController < ApplicationController
 
   def create
     merchant = Merchant.create!(merchant_params)
+    merchant.save
     redirect_to "/merchants"
   end
+
+  def update
+  end 
 
   private
   def merchant_params
