@@ -1,6 +1,6 @@
 <h1>Merchant Show Page</h1>
 
-<%= @merchant.name %>
+<%= link_to @merchant.name, merchant_path(@merchant) %><br>
 <%= @merchant.address %>
 <%= @merchant.city %>
 <%= @merchant.state %>
@@ -9,4 +9,8 @@
 <%= link_to "Update Merchant", edit_merchant_path(@merchant) %>
 <%= link_to "Delete Merchant", delete_merchant_path(@merchant), method: :delete %>
 
-<%= link_to "Items", merchant_items_path(@merchant) %>
+<%= link_to "Merchant Items", merchant_items_path(@merchant) %>
+
+<%= link_to "Merchants", merchants_path%>
+<%= link_to "Items", items_path%>
+<%= link_to "Home", items_path%>
