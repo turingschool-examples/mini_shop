@@ -9,7 +9,7 @@
     <p>Status: <%= item.status %></p>
     <p>Inventory: <%= item.inventory %></p>
     <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}"%></p>
-    <% if @show %>
+    <% if @merchant.nil? %>
       <p><%= link_to 'View Item', "/items/#{item.id}" %></p>
     <% end %>
 <% end %>
