@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Merchant.destroy_all
+
+moose = Merchant.create(name: "Moose Munchies", address: "306 Meese Ave", city: "Moose Jaw", state: "MO", zip: "50400")
+ehplus = Merchant.create(name: "Eh Plus School Supplies")
+twofour = Merchant.create(name: "Two-Four Liquors")
