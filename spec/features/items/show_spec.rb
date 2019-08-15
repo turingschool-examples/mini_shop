@@ -15,7 +15,7 @@ end
       expect(page).to have_content(@item_1.description)
       expect(page).to have_content(@item_1.price)
       # binding.pry
-      expect(page).to have_content(@item_1.image)
+      expect(page).to have_css("img[src*='#{@item_1.image}']")
       expect(page).to have_content(@item_1.active)
       expect(page).to have_content(@item_1.inventory)
       expect(page).to have_content(@merchant_1.name)
