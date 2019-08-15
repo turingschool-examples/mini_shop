@@ -305,7 +305,31 @@
         1,
         null,
         1,
-        0,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/spec/features/merchants/item_index_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -398,23 +422,6 @@
         null,
         null
       ],
-      "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/items_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         1,
@@ -467,14 +474,31 @@
         null,
         null,
         1,
+        2,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/items_controller.rb": [
+        1,
         1,
         1,
         null,
+        null,
+        1,
+        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1565848972
+    "timestamp": 1565849551
   }
 }
