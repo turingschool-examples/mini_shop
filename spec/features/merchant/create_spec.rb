@@ -9,12 +9,14 @@ RSpec.describe "Merchant Index Page", type: :feature do
   describe 'As a visitor' do
     it "When I visit '/merchants', I see a link to create a new merchant" do
       visit merchants_path
+
       expect(page).to have_link("Create Merchant")
     end
 
     it "When I click this link, I am taken to '/merchants/new' where I  see a form for a new merchant" do
       visit merchants_path
       click_link "Create Merchant"
+
       expect(current_path).to eq(new_merchant_path)
       expect(page).to have_content("New Merchant Form")
     end
@@ -22,6 +24,8 @@ RSpec.describe "Merchant Index Page", type: :feature do
     it "When I fill out the form with a new merchant's attributes, and click the
         button to submit the form, a new merchant is created and I am redirected
         to the Merchant Index page where I see the new Merchant listed" do
+      visit merchants_path
+      click_link "Create Merchant"
 
       name = "Nicholas"
       address = "123 EBITDA Drive"

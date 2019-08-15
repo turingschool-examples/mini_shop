@@ -95,7 +95,7 @@ Then I see the name of each merchant in the system
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 2, Merchant Show
 
@@ -110,7 +110,7 @@ Then I see the merchant with that id including the merchant's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 3, Merchant Creation
 

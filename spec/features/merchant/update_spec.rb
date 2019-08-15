@@ -4,7 +4,7 @@ RSpec.describe "Merchant Creation", type: :feature do
   before :each do
     @meg = Merchant.create!(name: "Meg", address: "24 Bike Spoke Lane", city: "Denver", state: "CO", zip: "80237")
     @brian = Merchant.create!(name: "Brian", address: "549 Pike Peak Drive", city: "Greenville", state: "SC", zip: "23674")
-    @Kelly = Merchant.create!(name: "Kelly", address: "1 Lollipop Lane", city: "Candy Cane", state: "AZ", zip: "11265")
+    @kelly = Merchant.create!(name: "Kelly", address: "1 Lollipop Lane", city: "Candy Cane", state: "AZ", zip: "11265")
   end
   describe 'As a visitor, when I visit a merchant show page' do
     it "I see a link to update the merchant" do
@@ -15,7 +15,7 @@ RSpec.describe "Merchant Creation", type: :feature do
       visit merchant_path(@meg)
 
       click_link "Update Merchant"
-      expect(current_path).to eq(merchant_update_path)
+      expect(current_path).to eq(edit_merchant_path(@meg))
 
       expect(page).to have_content("Edit Merchant Form")
       expect(page).to have_content("Name")
@@ -23,12 +23,6 @@ RSpec.describe "Merchant Creation", type: :feature do
       expect(page).to have_content("City")
       expect(page).to have_content("State")
       expect(page).to have_content("Zip")
-
-      expect(page).to have_content("Meg")
-      expect(page).to have_content("24 Bike Spoke Lane")
-      expect(page).to have_content("Denver")
-      expect(page).to have_content("CO")
-      expect(page).to have_content("80237")
     end
     it "When I fill out the form with updated information, and click the button
         to submit the form, the merchant's info is updated, and I am redirected
@@ -42,8 +36,8 @@ RSpec.describe "Merchant Creation", type: :feature do
       fill_in "State", with: "FL"
       fill_in "Zip", with: 34109
 
-      click_button "Submit"
-      expect(current_path).to eq(merchant_path(@meg))
+      click_on "Submit"
+      expect(current_path).to eq(merchant_path@meg)
 
       expect(page).to have_content("Allison")
       expect(page).to have_content("Gator Ave")

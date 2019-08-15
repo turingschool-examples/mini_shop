@@ -3,3 +3,5 @@
 <% @merchants.each do |merchant| %>
     <li><h2><%= merchant.name %></h2></li>
 <% end %>
+
+<%= link_to "Create Merchant", new_merchant_path%>
