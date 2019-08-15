@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'merchants index page', type: :feature do
   before :each do
-    @merchant_1 = Merchant.create!(name: 'Some Store')
+    @merchant_1 = Merchant.create(name: 'Some Store')
   end
 
   it 'shows all merchants' do

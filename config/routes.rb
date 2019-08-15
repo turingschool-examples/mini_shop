@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/merchants/new', to: 'merchants#new'
   get '/merchants/:id', to: 'merchants#show'
   post '/merchants', to: 'merchants#create'
+  get '/merchants/:id/update', to: 'merchants#edit'
+  post '/merchants/:id', to: 'merchants#update'
 end
