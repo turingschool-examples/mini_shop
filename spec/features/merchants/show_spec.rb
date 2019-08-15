@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "merchant show page" do
+describe "Merchant Show Page" do
   it "shows the merchant info" do
     merchant_1 = Merchant.create!(name: "Football Frenzy", address: "123 14th Circle", city: "Frederick", state: "CO", zip: 80530)
 
