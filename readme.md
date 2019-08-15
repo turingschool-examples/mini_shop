@@ -191,7 +191,7 @@ Then I see each Item in the system including the Item's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 7, Merchant Items Index
 
