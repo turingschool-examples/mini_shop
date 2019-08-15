@@ -5,7 +5,7 @@ RSpec.describe "merchant index page", type: :feature do
     merchant_1 = Merchant.create(name: "Nancy")
     merchant_2 = Merchant.create(name: "Mack")
 
-    visit"/merchants"
+    visit "/merchants"
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_2.name)

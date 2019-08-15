@@ -181,13 +181,38 @@
       "/Users/mackenziehalliday/turing/2module/projects/mini_shop/config/routes.rb": [
         1,
         null,
+        null,
+        1,
         null
       ],
       "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/merchant.rb": [
+        1,
+        null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1565890390
+    "timestamp": 1565893018
   }
 }
