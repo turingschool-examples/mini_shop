@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h1>All Items</h1>
+<br />
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 35rem;">
+          <img src = <%= item.image %> class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= item.name %></h5>
+            <p class="card-text"><%= item.description %></p>
+            <p class="card-text">Price: <%= item.price %></p>
+            <p class="card-text">Status: <%= item.status %></p>
+            <p class="card-text">Inventory: <%= item.inventory %></p>
+            <p class="card-text">Merchant: <%= item.merchant %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
