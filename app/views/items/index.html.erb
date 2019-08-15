@@ -3,7 +3,7 @@
 
   <% @items.each do |item| %>
   <h2><img src='<%= item.image %>', width=300px></h2>
-  <h3>&#x1F436; <a href="/items/<%= item.id %> "> <%= item.name %></a> | $<%= item.convert_price %> &#x1F436;</h3><br>
+  <h3>&#x1F436; <a href="/items/<%= item.id %> "> <%= item.name %></a> | <%= number_to_currency(item.price) %> &#x1F436;</h3><br>
   <% end %>
 
   <h2>&#x1F436; <a href="/merchants">Back to Merchants Page</a> &#x1F436;</h2>

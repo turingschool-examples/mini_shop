@@ -25,6 +25,13 @@ class ItemsController < ApplicationController
   def update
     item = Item.find(params[:id])
     item.update(item_params)
+    item.restock
+    redirect_to "/items/#{item.id}"
+  end
+
+  def buy_item
+    item = Item.find(params[:id])
+    item.buy
     redirect_to "/items/#{item.id}"
   end
 
@@ -37,7 +44,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.permit(:name, :description, :price, :image, :active?, :inventory)
+    params.permit(:name, :description, :price, :image, :active, :inventory)
   end
 
 end
