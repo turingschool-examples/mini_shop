@@ -4,11 +4,11 @@ RSpec.describe "Item Update" do
   before :each do
     @meg = Merchant.create!(name: "Meg", address: "24 Bike Spoke Lane", city: "Denver", state: "CO", zip: "80237")
     @brian = Merchant.create!(name: "Brian", address: "549 Pike Peak Drive", city: "Greenville", state: "SC", zip: "23674")
-    @Kelly = Merchant.create!(name: "Kelly", address: "1 Lollipop Lane", city: "Candy Cane", state: "AZ", zip: "11265")
+    @kelly = Merchant.create!(name: "Kelly", address: "1 Lollipop Lane", city: "Candy Cane", state: "AZ", zip: "11265")
 
-    @bike = @meg.item.create!(name: "Bike", description: "It's a bike", price: 4000, image: "https://salsacycles.com/files/bikes/_small_image/2019_Marrakesh_Deore_Blue-uc-3.jpg", status: "active", inventory: 80)
-    @rope = @brian.item.create!(name: "Rope", description: "It's some rope", price: 250, image: "https://www.rei.com/media/product/898355", status: "active", inventory: 50)
-    @gummies = @kelly.item.create!(name: "Gummies", description: "It's a bag of gummies", price: 3, image: "https://sundayscaries.com/app/desktop/images/cbd-gummies-front.png", status: "active", inventory: 2000)
+    @bike = @meg.items.create!(name: "Bike", description: "It's a bike", price: 4000, image: "https://salsacycles.com/files/bikes/_small_image/2019_Marrakesh_Deore_Blue-uc-3.jpg", status: "active", inventory: 80)
+    @rope = @brian.items.create!(name: "Rope", description: "It's some rope", price: 250, image: "https://www.rei.com/media/product/898355", status: "active", inventory: 50)
+    @gummies = @kelly.items.create!(name: "Gummies", description: "It's a bag of gummies", price: 3, image: "https://sundayscaries.com/app/desktop/images/cbd-gummies-front.png", status: "active", inventory: 2000)
   end
   describe "As a visitor, when I visit an Item Show page" do
     it "I see a link to update that Item" do
@@ -23,7 +23,7 @@ RSpec.describe "Item Update" do
 
       click_link "Bike"
       click_link "Update Item"
-      expect(current_path).to eq(item_update_path)
+      expect(current_path).to eq(edit_item_path(@bike))
 
       expect(page).to have_content("Update Item Information")
 
@@ -32,9 +32,11 @@ RSpec.describe "Item Update" do
       expect(page).to have_content("Description")
       expect(page).to have_content("Image")
       expect(page).to have_content("Inventory")
+    end
     it "When I click the button to submit the form, the item's data is updated,
       and I am redirected to the Item Show page where I see the Item's updated information" do
       visit items_path
+
       click_link "Bike"
       click_link "Update Item"
 
@@ -45,12 +47,11 @@ RSpec.describe "Item Update" do
       fill_in "Inventory", with: 1
 
       click_on "Submit"
-      expect(current_path).to eq(item_path)
+      expect(current_path).to eq(item_path(@bike))
 
       expect(page).to have_content("Used Race Bike")
-      expect(page).to have_content("$2000")
+      expect(page).to have_content("$2,000.00")
       expect(page).to have_content("It's a used bike")
-    end
     end
   end
 end

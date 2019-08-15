@@ -16,4 +16,7 @@ Rails.application.routes.draw do
 
   get '/items', to: 'items#index', as: :items
   get '/items/:id', to: 'items#show', as: :item
+  get '/items/:id/edit', to: 'items#edit', as: :edit_item
+  patch '/items/:id', to: 'items#update'
+
 end

@@ -245,7 +245,7 @@ and I am redirected to the Merchant Items Index page where I see the new item
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 10, Item Update
 

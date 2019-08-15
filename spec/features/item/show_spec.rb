@@ -20,7 +20,7 @@ RSpec.describe "Item Show Page", type: :feature do
 
       expect(page).to have_content(@bike.name)
       expect(page).to have_content(@bike.status)
-      expect(page).to have_content(@bike.price)
+      expect(page).to have_content("$4,000.00")
       expect(page).to have_content(@bike.description)
       expect(page).to have_content(@bike.image)
       expect(page).to have_content(@bike.inventory)
