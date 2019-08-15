@@ -1,14 +1,13 @@
-<form action="/merchants" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<%= form_tag("/merchants", method: :post) do %>
   <p>Merchant name:</p>
-  <input type='text' name='merchant[name]'/><br/>
+  <%= text_field_tag :name %>
   <p>Merchant address:</p>
-  <input type='text' name='merchant[address]'/><br/>
+  <%= text_field_tag :address %>
   <p>Merchant city:</p>
-  <input type='text' name='merchant[city]'/><br/>
+  <%= text_field_tag :city %>
   <p>Merchant state:</p>
-  <input type='text' name='merchant[state]'/><br/>
+  <%= text_field_tag :state %>
   <p>Merchant zip code:</p>
-  <input type='text' name='merchant[zip]'/><br/>
-  <input type='submit'/>
-</form>
+  <%= text_field_tag :zip %><br/>
+  <%= submit_tag "Submit" %>
+<% end %>
