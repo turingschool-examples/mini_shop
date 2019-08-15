@@ -1,17 +1,6 @@
 require 'rails_helper'
 
-# As a visitor
-# When I visit '/items'
-# Then I see each Item in the system including the Item's:
-# - name
-# - description
-# - price
-# - image
-# - active/inactive status
-# - inventory
-# - the name of the merchant that sells the item
-
-describe "item index page" do
+describe "Item Index Page" do
   it "shows all items" do
     merchant_1 = Merchant.create!(name: "Football Frenzy", address: "123 14th Circle", city: "Frederick", state: "CO", zip: 80530)
     merchant_2 = Merchant.create!(name: "Gridiron Gear", address: "456 East Drive", city: "Longmont", state: "CO", zip: 80501)
@@ -58,5 +47,46 @@ describe "item index page" do
     expect(page).to have_content(item_3.inventory)
     expect(page).to have_content(item_3.merchant.name)
   end
-
 end
+
+describe "Merchant Item Index Page" do
+  it "shows all items sold by that merchant" do
+    merchant_2 = Merchant.create!(name: "Gridiron Gear", address: "456 East Drive", city: "Longmont", state: "CO", zip: 80501)
+    item_2 = merchant_2.items.create!(name: "Football Cleats",
+              description: "Size 10 football cleats",
+              price: 79,
+              image: "https://i.ebayimg.com/images/g/kp4AAOSw~plc2s04/s-l640.jpg",
+              status: "active",
+              inventory: 12)
+    item_3 =  merchant_2.items.create!(name: "Shoulder Pads",
+              description: "Size large shoulder pads",
+              price: 129,
+              image: "https://boltathletics.com/wp-content/uploads/2016/07/Bolt-Predator-Shoulder-Pad-1.png",
+              status: "inactive",
+              inventory: 0)
+
+    visit "/merchants/#{merchant_2.id}/items"
+
+    expect(page).to have_content(item_2.name)
+    expect(page).to have_content(item_2.description)
+    expect(page).to have_content(item_2.price)
+    expect(page).to have_xpath("//img[@src='#{item_2.image}']")
+    expect(page).to have_content(item_2.status)
+    expect(page).to have_content(item_2.inventory)
+    expect(page).to have_content(item_3.name)
+    expect(page).to have_content(item_3.description)
+    expect(page).to have_content(item_3.price)
+    expect(page).to have_xpath("//img[@src='#{item_3.image}']")
+    expect(page).to have_content(item_3.status)
+    expect(page).to have_content(item_3.inventory)
+  end
+end
+
+# As a visitor
+# When I visit '/merchants/:merchant_id/items'
+# Then I see each Item that belongs to the Merchant with that merchant_id including the Item's:
+# - name
+# - price
+# - image
+# - active/inactive status
+# - inventory

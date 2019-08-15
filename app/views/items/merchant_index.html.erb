@@ -1,0 +1,8 @@
+<% @items.each do |item| %>
+  <%= image_tag("#{item.image}") %>
+  <p><%= item.name %></p>
+  <p><%= item.description %></p>
+  <p>$<%= item.price %></p>
+  <p><%= item.status %></p>
+  <p><%= item.inventory %></p>
+<% end %>
