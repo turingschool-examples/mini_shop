@@ -223,7 +223,7 @@ Then I see the item with that id including the item's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 9, Merchant Item Creation
 
