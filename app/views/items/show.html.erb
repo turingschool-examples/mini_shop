@@ -1,7 +1,8 @@
 <h1>Name:<%= @item.name %></h1>
 <p>description:<%= @item.description %></p>
 <p>price:<%= @item.price %></p>
-<p>image:<%= @item.image %></p>
+<!-- <p>image:<img src="https://cdn.shopify.com/s/files/1/0033/4622/products/2020_Jeffrey116_Preview_165x1000x72px-01_2000x.png?v=1555779770"></p> -->
+<p>image: <%= image_tag @item.image %></p>
 <p>inventory:<%= @item.inventory %></p>
 <p>active:<%= @item.active %></p>
 <p>merchant name:<%= Merchant.find(@item.merchant_id).name %>
