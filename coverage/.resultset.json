@@ -180,7 +180,6 @@
       ],
       "/Users/cjkelling/turing/2mod/projects/mini_shop/config/routes.rb": [
         1,
-        null,
         1,
         1,
         1,
@@ -207,8 +206,8 @@
         null,
         1,
         null,
-        0,
-        0,
+        1,
+        1,
         null,
         null
       ],
@@ -243,7 +242,7 @@
       "/Users/cjkelling/turing/2mod/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -270,6 +269,6 @@
         null
       ]
     },
-    "timestamp": 1565892161
+    "timestamp": 1565896396
   }
 }

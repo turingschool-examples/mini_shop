@@ -12,7 +12,7 @@ class MerchantsController < ApplicationController
 
   def create
     Merchant.create!(merchant_params)
-    redirect_to "/merchant"
+    redirect_to '/merchants'
   end
 
   private

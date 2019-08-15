@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe "New Merchant Page" do
+describe 'New Merchant Page' do
   it 'creates a new merchant and returns to Merchant Index page' do
     visit '/merchants/new'
-    expect(current_path).to eq("/merchants/new")
+    expect(current_path).to eq('/merchants/new')
 
     fill_in :name, with: 'New Merchant'
     fill_in :address, with: '135 Main'
