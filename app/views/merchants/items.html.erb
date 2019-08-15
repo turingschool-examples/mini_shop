@@ -4,9 +4,9 @@
 <h1>&#x1F436; <a href="/items/<%= item.id %>"><%= item.name %></a> &#x1F436;</h1>
 
 <img src='<%= item.image %>', width=400px><br>
-<ul>Price: <%= item.price %></ul>
+<ul>Price: <%= number_to_currency(item.price) %></ul>
 <ul>Description: <%= item.description %></ul>
-<ul>In Stock?: <%= item.active? %></ul>
+<ul>In Stock?: <%= item.active %></ul>
 <ul>Inventory: <%= item.inventory %></ul>
 <br><br><br><br>
 
