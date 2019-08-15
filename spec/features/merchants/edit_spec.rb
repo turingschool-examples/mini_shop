@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "merchant edit page" do
+describe "Merchant Edit Page" do
   it "has a form to update merchant information" do
     merchant_1 = Merchant.create!(name: "Football Frenzy", address: "123 14th Circle", city: "Frederick", state: "CO", zip: 80530)
 

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "merchant creation page" do
+describe "Merchant Creation Page" do
   it "has a form to fill in with merchant information" do
     visit "/merchants/new"
 

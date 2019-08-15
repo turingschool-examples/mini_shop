@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "merchant index page" do
+describe "Merchant Index Page" do
   it "shows all merchants" do
     merchant_1 = Merchant.create!(name: "Football Frenzy", address: "123 14th Circle", city: "Frederick", state: "CO", zip: 80530)
     merchant_2 = Merchant.create!(name: "Gridiron Gear", address: "456 East Drive", city: "Longmont", state: "CO", zip: 80501)
