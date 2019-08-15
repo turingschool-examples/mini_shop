@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'User clicks delete button on merchant show page' do
   it 'Destroys record of merchant' do
-    merchant_1 = Merchant.create!(name: 'Bob Ross Paints',
+    merchant_1 = Merchant.create(name: 'Bob Ross Paints',
                                 address: '2345 Happy Tree Place',
                                 city: 'Boulder',
                                 state: 'CO',

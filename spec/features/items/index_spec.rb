@@ -22,7 +22,10 @@ describe 'When user visits items index page' do
 
     expect(page).to have_content('Bushy Brush')
     expect(page).to have_content('A lovely bushy brush for brushing bushes.')
+    expect(page).to have_link('Bob Ross Paints')
+
     expect(page).to have_content('Chocolate Crunchy Taco Chips')
     expect(page).to have_content('Crunchy corn chips with dark chocolate and chili powder!')
+    expect(page).to have_link('Yum Yum Snacks')
   end
 end
