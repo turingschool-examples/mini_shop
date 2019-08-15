@@ -132,7 +132,7 @@ and I am redirected to the Merchant Index page where I see the new Merchant list
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 4, Merchant Update
 
@@ -155,7 +155,7 @@ and I am redirected to the Merchant's Show page where I see the merchant's updat
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 5, Merchant Delete
 
