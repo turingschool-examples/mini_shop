@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get '/merchants/:merchant_id/items', to: 'items#index'
 
   get '/items', to: 'items#index'
-  get '/items/:id', to: 'items#index'
+  get '/items/:id', to: 'items#show'
 end
