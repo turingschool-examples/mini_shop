@@ -27,6 +27,11 @@ def update
 end
 
 
+  def destroy
+     merchant = Merchant.destroy(params[:id])
+     redirect_to "/merchants"
+   end
+
 private #makes everything blow this private methods
 def merchant_params
   params.permit(:name, :address, :city, :state, :zip)
