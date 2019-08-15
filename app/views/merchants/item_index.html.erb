@@ -1,0 +1,10 @@
+<h1>Items!</h1>
+<% @merchant.items.each do |item| %>
+  <p><%=item.name %></p>
+  <p><%=item.price %></p>
+  <p><%= image_tag item.image %></p>
+  <p><%=item.inventory %></p>
+  <p><%=item.active %></p>
+<% end %>
+
+<%= link_to "Create New Item", "/merchants/#{@merchant.id}/items/new", method: :get %>

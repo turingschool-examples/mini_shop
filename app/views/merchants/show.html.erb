@@ -7,3 +7,4 @@
 
 <a href="/merchants/<%= @merchant.id %>/edit">Update</a>
 <%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete %>
+<%= link_to "View Items", "/merchants/#{@merchant.id}/items", method: :get %>

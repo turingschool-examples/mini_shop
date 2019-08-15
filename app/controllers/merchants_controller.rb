@@ -14,7 +14,7 @@ class MerchantsController < ApplicationController
 
   def destroy
     @merchant = Merchant.find(params[:id])
-    
+
     @merchant.destroy
     redirect_to "/merchants"
   end
@@ -46,6 +46,11 @@ class MerchantsController < ApplicationController
       })
     merchant.save
     redirect_to "/merchants"
+  end
+
+  def item_index
+    @merchant = Merchant.find(params[:id])
+    @merchant.items
   end
 
 
