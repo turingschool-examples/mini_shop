@@ -1,6 +1,6 @@
 <h1>Edit Merchant Form</h1>
 
-<%= form_tag merchant_path do %>
+<%= form_tag merchant_path(@merchant), method: :patch do %>
   <%= label_tag :name %>
   <%= text_field_tag :name, @merchant.name%>
 
