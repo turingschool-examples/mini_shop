@@ -28,7 +28,8 @@ class MerchantsController < ApplicationController
   end
 
   def destroy
-
+    @merchant = Merchant.destroy(params[:id])
+    redirect_to merchants_path
   end
 
   private
