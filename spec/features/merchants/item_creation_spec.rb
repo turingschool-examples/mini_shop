@@ -12,6 +12,17 @@ end
       # binding.pry
       visit "/merchants/#{@merchant_1.id}/items"
       expect(page).to have_link("Create New Item")
+      # binding.pry
+      click_on("Create New Item")
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}/items/new")
+      fill_in :name, with: "Wax"
+      fill_in :price, with: 7
+      fill_in :description, with: "OG chain"
+      fill_in :image, with: "link"
+      fill_in :inventory, with: 22
+      # binding.pry
+      click_on("Add Item")
+
     end
   end
 end

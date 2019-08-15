@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   delete '/merchants/:id', to: 'merchants#destroy'
   get '/merchants/new', to: 'merchants#new'
   post '/merchants', to: 'merchants#create'
-  get '/merchants/:id', to: 'merchants#show'
+  get '/merchants/:id/items/new', to: 'merchants#new_item'
+  post '/merchants/:id/items', to: 'merchants#create_new_item'
   get '/merchants/:id/items', to: 'merchants#item_index'
   get '/merchants/:id/edit', to: 'merchants#edit'
   patch '/merchants/:id', to: 'merchants#update'
   get '/items/:id', to: 'items#show'
+  get '/merchants/:id', to: 'merchants#show'
 
 end

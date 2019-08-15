@@ -53,5 +53,21 @@ class MerchantsController < ApplicationController
     @merchant.items
   end
 
+  def new_item
+  end
+
+  def create_new_item
+
+    item = Item.new({
+      name: params[:name],
+      price: params[:price],
+      description: params[:description],
+      image: params[:image],
+      inventory: params[:inventory],
+      })
+    item.save
+    redirect_to "/merchants/#{item.merchant_id}/items"
+  end
+
 
 end
