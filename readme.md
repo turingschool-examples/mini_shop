@@ -174,7 +174,7 @@ and I am redirected to the merchant index page where I no longer see this mercha
 Items are sold on the site. They belong to a merchant.
 
 ```
-[ ] done
+[x] done
 
 User Story 6, Item Index
 
