@@ -188,10 +188,73 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/alecwells/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/spec/features/items/show_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/spec/features/merchants/delete_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/alecwells/turing/2module/projects/mini_shop/spec/features/merchants/index_spec.rb": [
@@ -311,6 +374,8 @@
       "/Users/alecwells/turing/2module/projects/mini_shop/app/models/merchant.rb": [
         1,
         1,
+        null,
+        1,
         null
       ],
       "/Users/alecwells/turing/2module/projects/mini_shop/app/models/application_record.rb": [
@@ -376,8 +441,26 @@
         1,
         1,
         null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/app/models/item.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/alecwells/turing/2module/projects/mini_shop/app/controllers/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1565822306
+    "timestamp": 1565841075
   }
 }
