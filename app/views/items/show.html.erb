@@ -1,9 +1,13 @@
-<%= @item.name %>
+<%= link_to @item.name, item_path(@item) %><br>
 <%= @item.status %>
 <%= number_to_currency@item.price %>
 <%= @item.description %>
 <%= @item.image %>
 <%= @item.inventory %>
-<%= @item.merchant.name %>
+<%= link_to @item.merchant.name, merchant_path(@item.merchant) %><br>
 
 <%= link_to "Update Item", edit_item_path(@item) %><br>
+
+<%= link_to "Merchants", merchants_path%>
+<%= link_to "Items", items_path%>
+<%= link_to "Home", items_path%>

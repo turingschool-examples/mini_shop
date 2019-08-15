@@ -271,7 +271,7 @@ and I am redirected to the Item Show page where I see the Item's updated informa
 Users should be able to use the site easily. This means making sure there are links/buttons to reach all parts of the site and the styling/layout is sensible.
 
 ```
-[ ] done
+[x] done
 
 User Story 11, Merchant Links
 
@@ -281,7 +281,7 @@ Then that link takes me to that Merchant's show page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 12, Item Links
 
@@ -291,7 +291,7 @@ Then that link takes me to that Item's show page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 13, Item Index Link
 
@@ -301,7 +301,7 @@ Then I see a link at the top of the page that takes me to the Item Index
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 14, Merchant Index Link
 

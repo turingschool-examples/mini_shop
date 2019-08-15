@@ -2,7 +2,7 @@
 
 <% @items.each do |item| %>
   <%= link_to item.name, item_path(item) %><br>
-  <%= item.merchant.name %><br>
+  <%= link_to item.merchant.name, merchant_path(item.merchant) %><br>
   <%= item.description %><br>
   <%= item.image %><br>
   <%= item.price %>
@@ -10,3 +10,5 @@
   <%= item.inventory %><br>
 
 <% end %>
+<%= link_to "Merchants", merchants_path%>
+<%= link_to "Home", welcome_path%>

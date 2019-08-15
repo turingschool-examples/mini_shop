@@ -15,9 +15,9 @@ RSpec.describe "Merchant Item Index Page", type: :feature do
      to the Merchant with that merchant_id including the Item's attributes" do
       visit merchants_path
       click_link "Meg"
-      expect(page).to have_link("Items")
+      expect(page).to have_link("Merchant Items")
 
-      click_link "Items"
+      click_link "Merchant Items"
       expect(current_path).to eq(merchant_items_path(@meg))
 
       expect(page).to have_content(@bike.name)
