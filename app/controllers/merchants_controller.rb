@@ -11,14 +11,23 @@ class MerchantsController < ApplicationController
   end
 
   def create
-   @merchant = Merchant.new(merchant_params)
-   if @merchant.save #if the merchant is saved, go back to merchants index
-     redirect_to "/merchants"
-   end
+   @merchant = Merchant.create(merchant_params)
+   redirect_to "/merchants"
  end
 
-private
+ def edit
+  @merchant = Merchant.find(params[:id])
+end
 
+def update
+  @merchant = Merchant.find(params[:id])
+  @merchant.update(merchant_params) #active record method update
+    # binding.pry
+    redirect_to "/merchants/#{@merchant.id}"
+end
+
+
+private #makes everything blow this private methods
 def merchant_params
   params.permit(:name, :address, :city, :state, :zip)
 end

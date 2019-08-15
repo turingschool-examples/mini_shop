@@ -14,9 +14,10 @@ RSpec.describe "New Merchant Form/Creation", type: :feature do
         fill_in "State", with: "CO"
         fill_in "Zip", with: "80011"
         click_button "Create Merchant"
-        new_merchant = Merchant.last #references most recently created merchant
+        # new_merchant = Merchant.last #references most recently created merchant
         expect(current_path).to eq("/merchants")
-        expect(page).to have_content(new_merchant.name)
+        # expect(page).to have_content(new_merchant.name)
+        expect(page).to have_content("Gerbert")
       end
     end
   end

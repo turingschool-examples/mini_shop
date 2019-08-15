@@ -10,3 +10,4 @@
 Merchant.destroy_all
 
 merchant_1 = Merchant.create(name: "Scott", address: "312 olive st", city: "Denver", state: "CO", zip:"80011")
+merchant_2 = Merchant.create(name: "bob", address: "123 sesame st", city: "linden", state: "NJ", zip:"47238")
