@@ -6,3 +6,4 @@
 <p>Inventory: <%= @item.inventory %></p>
 <p>Merchant: <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant.id}" %></p>
 <p><%= link_to "Edit Item Info", "/items/#{@item.id}/edit" %></p>
+<p><%= link_to "Delete Item", "/items/#{@item.id}", method: :delete %></p>
