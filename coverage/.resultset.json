@@ -189,10 +189,50 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/joshuasherwood/turing/2module/projects/mini_shop/spec/features/items/index_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/spec/features/items/list_spec.rb": [
@@ -462,9 +502,12 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1565925174
+    "timestamp": 1565926142
   }
 }
