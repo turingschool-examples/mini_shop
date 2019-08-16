@@ -7,6 +7,8 @@ RSpec.describe "merchants creation page", type: :feature do
 
     visit "/merchants"
 
+    expect(page).to have_link("New Merchant")
+
     click_on "New Merchant"
 
     expect(current_path).to eq("/merchants/new")

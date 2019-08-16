@@ -7,6 +7,8 @@ RSpec.describe "merchants edit page", type: :feature do
 
     visit "/merchants/#{merchant_1.id}"
 
+    expect(page).to have_link("Update Merchant")
+
     click_on "Update Merchant"
 
     expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
