@@ -1,0 +1,15 @@
+<%= form_tag("/merchants/#{@merchant.id}/items", method: :post) do %>
+  <p>Enter a new item name:</p>
+  <%= text_field_tag :name %>
+  <p>Enter description:</p>
+  <%= text_field_tag :description %>
+  <p>Enter price:</p>
+  <%= text_field_tag :price %>
+  <p>Enter product image url:</p>
+  <%= text_field_tag :image %>
+  <p>Enter inventory amount:</p>
+  <%= text_field_tag :inventory %><br><br>
+  <%= hidden_field_tag :status, "active" %>
+  <%= hidden_field_tag :merchant_id, @merchant.id %>
+  <%= submit_tag "Create Item" %>
+<% end %>
