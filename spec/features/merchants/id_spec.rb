@@ -20,6 +20,8 @@ RSpec.describe "merchants id page", type: :feature do
 
     visit "/merchants/#{merchant_2.id}"
 
+    expect(page).to have_link("Delete Merchant")
+
     click_on "Delete Merchant"
 
     expect(current_path).to eq("/merchants")
