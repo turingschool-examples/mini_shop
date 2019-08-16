@@ -14,12 +14,20 @@ class Item < ApplicationRecord
     if self.inventory <= 0
       self.update(active: false)
     end
-    self.save!
+    self.save
   end
 
   def restock
     if self.inventory > 0
       self.update(active: true)
+    end
+  end
+
+  def in_stock_output
+    if self.active == true
+      return "Woohooooo Yeah!"
+    elsif self.active == false
+      return "nah. sry."
     end
   end
 

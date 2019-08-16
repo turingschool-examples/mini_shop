@@ -36,6 +36,14 @@ class MerchantsController < ApplicationController
     @merchant_items = Merchant.find(params[:id]).items
   end
 
+  def active_items
+    @items = Merchant.find(params[:id]).active_items(true)
+  end
+
+  def inactive_items
+    @items = Merchant.find(params[:id]).active_items(false)
+  end
+
   private
 
   def merchant_params
