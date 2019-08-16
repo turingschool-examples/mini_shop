@@ -5,7 +5,6 @@
   <p>$<%= item.price %></p>
   <p><%= item.status %></p>
   <p><%= item.inventory %></p>
-  <p><%= item.merchant.name %></p>
 <% end %>
 
 <h3><%= link_to("Create New Item", "/merchants/#{params[:merchant_id]}/items/new") %></h3>

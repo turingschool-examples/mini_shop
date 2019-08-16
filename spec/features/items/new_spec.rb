@@ -30,6 +30,5 @@ describe "Item Creation Page" do
     expect(page).to have_xpath("//img[@src='https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjpk5PY-IXkAhWDrZ4KHckSAHUQjRx6BAgBEAQ&url=http%3A%2F%2Ftestcreative.co.uk%2F&psig=AOvVaw3ubvA6c5cMhxXeXiEvzELG&ust=1565995148137904']")
     expect(page).to have_content("active")
     expect(page).to have_content(456)
-    expect(page).to have_content("#{merchant_2.name}")
   end
 end
