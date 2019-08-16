@@ -192,10 +192,35 @@
         1,
         1,
         1,
+        1,
+        1,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/joshuasherwood/turing/2module/projects/mini_shop/spec/features/items/id_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/spec/features/items/index_spec.rb": [
@@ -296,7 +321,7 @@
         1,
         1,
         1,
-        null,
+        1,
         1,
         1,
         null,
@@ -490,6 +515,16 @@
         null,
         null,
         1,
+        3,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -499,6 +534,13 @@
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         1,
         null,
@@ -563,6 +605,6 @@
         null
       ]
     },
-    "timestamp": 1565936319
+    "timestamp": 1565976657
   }
 }
