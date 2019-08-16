@@ -1,18 +1,26 @@
-<nav>
+<section>
   <span class="page-title">Items</span>
   <% unless @merchant.nil? %>
     <span><%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %></span>
   <% end %>
-</nav>
+</section>
 
-<% @items.each do |item| %>
-    <img src="<%= item.image %>" class="item-image">
-    <h3><%= link_to item.name, "/items/#{item.id}", value: 'View Item' %></h3>
-    <% if @merchant.nil? %>
-      <p>Description: <%= item.description %></p>
-    <% end %>
-    <p>Price: <%= "$#{item.price}" %></p>
-    <p>Status: <%= item.status %></p>
-    <p>Inventory: <%= item.inventory %></p>
-    <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}"%></p>
-<% end %>
+<section id="multi-item">
+  <% @items.each do |item| %>
+    <section id="single-item">
+      <div  class="single-item-img">
+        <img src="<%= item.image %>" class="item-image">
+      </div>
+      <div class="single-item-info">
+        <h3><%= link_to item.name, "/items/#{item.id}" %></h3>
+        <% if @merchant.nil? %>
+          <p>Description: <%= item.description %></p>
+        <% end %>
+        <p>Price: <%= "$#{item.price}" %></p>
+        <p>Status: <%= item.status %></p>
+        <p>Inventory: <%= item.inventory %></p>
+        <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}"%></p>
+      </div>
+    </section>
+  <% end %>
+</section>

@@ -21,19 +21,34 @@
   font-family: Arial Black;
 }
 
+#multi-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#single-item {
+  margin: 10px;
+  border-color: LightGrey;
+}
+
+.single-item-img {
+
+}
+
+.single-item-info {
+  background-color: LightBlue;
+  padding: 10px;
+}
+
 .page-title {
   font-size: 24px;
   font-weight: bold;
-  margin: 20px 0px 20px 0px;
+  /* margin: 20px 0px 20px 0px; */
 }
 
 .item-image {
    height: 300px;
    width: 400px;
-}
-
-.solo-item {
-   align-items: center;
 }
 
 .item-listing {
