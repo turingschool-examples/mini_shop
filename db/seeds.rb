@@ -15,8 +15,7 @@ item_1 = Item.create(
   price: 10.99,
   image: "https://d1fywv0iz2cv2w.cloudfront.net/product-image/v201610/cff2fff29dfb318dd3c5fdc2eea96810.jpeg",
   status: TRUE,
-  inventory: 1000,
-  merchant: "Cecilia Chapman"
+  inventory: 1000
 )
 
   item_2 = Item.create(
@@ -25,8 +24,7 @@ item_1 = Item.create(
     price: 15.99,
     image: "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&itemId=53747&recipeName=680",
     status: TRUE,
-    inventory: 200,
-    merchant: "Iris Watson"
+    inventory: 200
   )
 
   item_3 = Item.create(
@@ -35,8 +33,7 @@ item_1 = Item.create(
     price: 9.99,
     image: "https://d1fywv0iz2cv2w.cloudfront.net/pimage/2925a20c743423a12f1be4f348f0013f.jpeg",
     status: FALSE,
-    inventory: 500,
-    merchant: "Iris Watson"
+    inventory: 500
   )
 
 merchant_1 = Merchant.create(name: "Cecilia Chapman", address: "711-2880 Nulla St.", city: "Mankato", state: "MS", zip: 96522)
