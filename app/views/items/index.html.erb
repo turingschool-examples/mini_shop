@@ -1,4 +1,10 @@
-<h2>Items</h2>
+<nav>
+  <span class="page-title">Items</span>
+  <% unless @merchant.nil? %>
+    <span><%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %></span>
+  <% end %>
+</nav>
+
 <% @items.each do |item| %>
     <img src="<%= item.image %>" class="item-image">
     <h3><%= item.name %></h3>
