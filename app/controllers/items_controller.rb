@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
   def index
     if params[:merchant_id]
       @merchant = Merchant.find(params[:merchant_id])
@@ -28,6 +28,11 @@ class ItemsController < ApplicationController
   def update
     @item.update(item_params)
     redirect_to "/items/#{@item.id}"
+  end
+
+  def destroy
+    @item.destroy
+    redirect_to '/items'
   end
 
   private
