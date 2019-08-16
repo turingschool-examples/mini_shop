@@ -1,5 +1,5 @@
 <% if @merchant %>
-  <h1> <%= @merchant.name %> Items</h1>
+  <h1><a href="/merchants/<%=@merchant.id%>"><%= @merchant.name %> Items</h1>
 <% else %>
   <h1>All Items</h1>
 <% end %>
