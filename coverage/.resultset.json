@@ -364,18 +364,6 @@
         null,
         null
       ],
-      "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/items_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         1,
@@ -422,8 +410,20 @@
         null,
         null,
         null
+      ],
+      "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1565910513
+    "timestamp": 1565922361
   }
 }
