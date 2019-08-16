@@ -37,7 +37,7 @@ describe 'User visits item show page' do
         fill_in :inventory, with: new_inventory
         click_on 'Submit'
 
-        expect(current_path).to eq("items/#{snack.id}")
+        expect(current_path).to eq("/items/#{snack.id}")
         expect(page).to have_content(snack.name)
         expect(page).to have_content(snack.description)
         expect(page).to have_content(snack.status)
