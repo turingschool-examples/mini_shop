@@ -43,6 +43,7 @@ class MerchantsController < ApplicationController
     else
       @merchant_items = Merchant.find(params[:id]).items
     end
+    @merchant = Merchant.find(params[:id])
   end
 
   def active_items
