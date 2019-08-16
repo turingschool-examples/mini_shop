@@ -31,7 +31,7 @@ describe "Item Edit Page" do
     expect(page).to have_content("Test update")
     expect(page).to have_content("Test update")
     expect(page).to have_content(234)
-    expect(page).to have_xpath("//img[@src='https://ufcw328.org/wp-content/uploads/2016/01/update.jpg']")
+    expect(page).to have_css("img[src*='https://ufcw328.org/wp-content/uploads/2016/01/update.jpg']")
     expect(page).to have_content("active")
     expect(page).to have_content(567)
   end

@@ -15,7 +15,7 @@ describe "Item Show Page" do
     expect(page).to have_content(item_1.name)
     expect(page).to have_content(item_1.description)
     expect(page).to have_content(item_1.price)
-    expect(page).to have_xpath("//img[@src='#{item_1.image}']")
+    expect(page).to have_css("img[src*='#{item_1.image}']")
     expect(page).to have_content(item_1.status)
     expect(page).to have_content(item_1.inventory)
     expect(page).to have_content(item_1.merchant.name)
