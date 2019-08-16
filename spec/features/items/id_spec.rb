@@ -18,4 +18,21 @@ RSpec.describe "merchants id page", type: :feature do
     expect(page).to have_content(item_1.inventory)
     expect(page).to have_content(item_1.price)
   end
+
+  it "user can delete item" do
+    merchant_1 = Merchant.create(name: "Banana Bazaar", address: "123 Fruit Lane", city: "Niceville", state: "Florida", zip: 32578)
+    item_1 = merchant_1.items.create(name: "Pineapple", description: "very large and very ripe", price: 3.23, image: "https://images-na.ssl-images-amazon.com/images/I/81qIPbnzqCL._SY679_.jpg", status: "active", inventory: 1)
+
+    visit "/items/#{item_1.id}"
+
+    expect(page).to have_link("Delete Item")
+
+    click_on "Delete Item"
+
+    expect(current_path).to eq("/items")
+
+    expect(page).not_to have_content(item_1.name)
+    expect(page).not_to have_css("img[src*='https://images-na.ssl-images-amazon.com/images/I/81qIPbnzqCL._SY679_.jpg']")
+    expect(page).not_to have_content(item_1.price)
+  end
 end
