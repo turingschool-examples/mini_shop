@@ -1,12 +1,14 @@
 <center>
 
+  <h3 align="right"><%= link_to("Available Items", active: true) %> | <%= link_to("Out of Stock", active: false) %> </h3>
+
   <% @merchant_items.each do |item| %>
 <h1>&#x1F436; <a href="/items/<%= item.id %>"><%= item.name %></a> &#x1F436;</h1>
 
 <img src='<%= item.image %>', width=400px><br>
 <ul>Price: <%= number_to_currency(item.price) %></ul>
 <ul>Description: <%= item.description %></ul>
-<ul>In Stock?: <%= item.active %></ul>
+<ul>In Stock? <%= item.in_stock_output %></ul>
 <ul>Inventory: <%= item.inventory %></ul>
 <br><br><br><br>
 
