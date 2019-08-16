@@ -7,3 +7,4 @@
 <p>merchant name:<%= Merchant.find(@item.merchant_id).name %>
 
 <%= link_to "Edit Item", "/items/#{@item.id}/edit", method: :get %>
+<%= link_to "Delete", "/items/#{@item.id}", method: :delete %>
