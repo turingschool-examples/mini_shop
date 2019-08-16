@@ -12,6 +12,26 @@ end
       # binding.pry
       visit "/merchants/#{@merchant_1.id}/items"
       expect(page).to have_link("Create New Item")
+      # binding.pry
+      click_on("Create New Item")
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}/items/new")
+      name = "Wax"
+      price = 7
+      description = "ski wax"
+      image = "https://www.hertelskiwax.com/v/vspfiles/photos/WhiteGold-Ski-2.jpg"
+      inventory = 22
+      fill_in :name, with: name
+      fill_in :price, with: price
+      fill_in :description, with: description
+      fill_in :image, with: image
+      fill_in :inventory, with: inventory
+      # binding.pry
+      click_on("Add Item")
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}/items")
+      expect(page).to have_content(name)
+      expect(page).to have_content(price)
+      expect(page).to have_css("img[src*='#{image}']")
+      expect(page).to have_content(inventory)
     end
   end
 end

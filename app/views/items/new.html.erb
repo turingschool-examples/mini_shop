@@ -1,0 +1,9 @@
+<h1>Create New Item For Merchant</h1>
+<%= form_tag "/merchants/#{@merchant.id}/items", method: :post do %>
+  Name: <%= text_field_tag :name %><br/><br/>
+  Price: <%= text_field_tag :price %><br/><br/>
+  Description : <%= text_field_tag :description %><br/><br/>
+  Image : <%= text_field_tag :image %><br/><br/>
+  Inventory    : <%= text_field_tag :inventory %><br/><br/>
+  <%= submit_tag "Add Item" %>
+<% end %>

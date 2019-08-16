@@ -8,7 +8,7 @@ class MerchantsController < ApplicationController
   end
 
   def new
-    @merchant = Merchant.new
+    # @merchant = Merchant.new
   end
 
 
@@ -26,25 +26,12 @@ class MerchantsController < ApplicationController
   def update
     @merchant = Merchant.find(params[:id])
 
-    @merchant.update({
-      name: params[:name],
-      address: params[:address],
-      city: params[:city],
-      state: params[:state],
-      zip: params[:zip],
-      })
+    @merchant.update(merchant_params)
     redirect_to "/merchants/#{@merchant.id}"
   end
 
   def create
-    merchant = Merchant.new({
-      name: params[:name],
-      address: params[:address],
-      city: params[:city],
-      state: params[:state],
-      zip: params[:zip],
-      })
-    merchant.save
+    merchant = Merchant.create!(merchant_params)
     redirect_to "/merchants"
   end
 
@@ -53,5 +40,9 @@ class MerchantsController < ApplicationController
     @merchant.items
   end
 
+  private
+  def merchant_params
+    params.permit(:name, :address, :city, :state, :zip)
+  end
 
 end
