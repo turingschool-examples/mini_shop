@@ -10,10 +10,7 @@ describe 'User clicks View Item on items index' do
                       active: true,
                       inventory: 32)
 
-    visit '/items'
-    click_link 'View Item'
-
-    expect(current_path).to eq("/items/#{brush.id}")
+    visit "/items/#{brush.id}"
 
     expect(page).to have_content(brush.name)
     expect(page).to have_content(brush.description)

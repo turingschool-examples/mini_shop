@@ -26,7 +26,6 @@ describe 'When user visits items index page' do
     expect(page).to have_content(brush.status)
     expect(page).to have_content(brush.inventory)
     expect(page).to have_link('Bob Ross Paints')
-    expect(page).to have_link('View Item')
 
     expect(page).to have_content(snack.name)
     expect(page).to have_content(snack.description)
@@ -34,6 +33,5 @@ describe 'When user visits items index page' do
     expect(page).to have_content(snack.status)
     expect(page).to have_content(snack.inventory)
     expect(page).to have_link('Yum Yum Snacks')
-    expect(page).to have_link('View Item')
   end
 end
