@@ -11,7 +11,7 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    Merchant.create!(merchant_params)
+    Merchant.create(merchant_params)
     redirect_to '/merchants'
   end
 
@@ -19,22 +19,20 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
   end
 
-  # def update
-  #   task = Task.find(params[:id])
-  #   task.update({
-  #     title: params[:task][:title],
-  #     description: params[:task][:description]
-  #     })
-  #   task.save
-  #   redirect_to "/tasks/#{task.id}"
-  # end
-  #
-  # def destroy
-  #   Task.destroy(params[:id])
-  #   redirect_to '/tasks'
-  # end
+  def update
+    @merchant = Merchant.find(params[:id])
+    @merchant.update(merchant_params)
+    @merchant.save
+    redirect_to "/merchants/#{@merchant.id}"
+  end
+
+  def destroy
+    Merchant.destroy(params[:id])
+    redirect_to '/merchants'
+  end
 
   private
+
   def merchant_params
     params.permit(:name, :address, :city, :state, :zip)
   end

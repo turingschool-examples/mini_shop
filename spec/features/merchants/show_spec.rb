@@ -20,4 +20,11 @@ describe 'Merchant Show Page' do
     click_on 'Edit Merchant'
     expect(current_path).to eq("/merchants/#{@merchant.id}/edit")
   end
+
+  it 'has a link to delete a merchant' do
+    visit "/merchants/#{@merchant.id}"
+    click_on 'Delete Merchant'
+    expect(current_path).to eq('/merchants')
+    page.should have_no_content(@merchant)
+  end
 end

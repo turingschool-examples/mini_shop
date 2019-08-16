@@ -1,4 +1,4 @@
-<%= form_tag("/merchants", method: :post) do %>
+<%= form_tag("/merchants/#{@merchant.id}", method: :patch) do %>
   <p><label> name </label><%= text_field_tag :name %></p>
   <p><label> address </label><%= text_field_tag :address %></p>
   <p><label> city </label><%= text_field_tag :city %></p>
