@@ -1,10 +1,12 @@
 <% @items.each do |item| %>
-  <%= image_tag("#{item.image}", alt: "#{item.name} Image") %>
-  <p><%= item.name %></p>
+  <img class="img" src=<%= "#{item.image}" %>>
+  <h2><%= item.name %></h2>
   <p><%= item.description %></p>
   <p>$<%= item.price %></p>
   <p><%= item.status %></p>
-  <p><%= item.inventory %></p>
+  <p>Number in stock:<%= item.inventory %></p>
+  <br/>
+  <br/>
 <% end %>
 
 <h3><%= link_to("Create New Item", "/merchants/#{params[:merchant_id]}/items/new") %></h3>
