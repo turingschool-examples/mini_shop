@@ -40,4 +40,15 @@ describe "Merchant Show Page" do
     expect(current_path).to eq("/merchants/#{merchant.id}")
     expect(page).to have_content("514 Maple Syrup Dr")
   end
+
+  it 'deletes merchant' do
+    merchant = Merchant.create!(name: "Moose Munchies", address: "306 Meese Ave", city: "Moose Jaw", state: "MO", zip: "50400")
+
+    visit "/merchants/#{merchant.id}"
+    expect(page).to have_link("Delete Merchant")
+
+    click_link "Delete Merchant"
+    expect(current_path).to eq("/merchants")
+    expect(page).not_to have_content("Moose Munchies")
+  end
 end
