@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update]
   def index
     if params[:merchant_id]
       @merchant = Merchant.find(params[:merchant_id])
@@ -9,7 +10,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def new
@@ -23,11 +23,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     @item.update(item_params)
     redirect_to "/items/#{@item.id}"
   end
@@ -36,5 +34,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.permit(:name, :description, :price, :image, :inventory)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
