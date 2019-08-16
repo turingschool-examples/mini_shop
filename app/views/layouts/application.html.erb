@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiniShopGh</title>
+    <title>Football MiniShop</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <ul class="navbar">
+      <li><a id="site_title">Football MiniShop</a></li>
+      <li><a class="navbar_link" href="/merchants">Merchants</a></li>
+      <li><a class="navbar_link" href="/items">Items</a></li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>

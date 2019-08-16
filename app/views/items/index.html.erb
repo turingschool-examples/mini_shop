@@ -1,11 +1,13 @@
-<h2>All Items</h2>
+<h1 class="primary-heading">All Items</h1>
 
 <% @items.each do |item| %>
-  <%= image_tag("#{item.image}") %>
-  <p><%= item.name %></p>
+  <img class="img" src=<%= "#{item.image}" %>>
+  <h2><a href=<%= "/items/#{item.id}" %>><%= item.name %></a></h2>
   <p><%= item.description %></p>
-  <p>$<%= item.price %></p>
-  <p><%= item.status %></p>
-  <p><%= item.inventory %></p>
-  <p><%= item.merchant.name %></p>  
+  <p>Price: $<%= item.price %></p>
+  <p>Item status: <%= item.status %></p>
+  <p>Number in stock: <%= item.inventory %></p>
+  <h3>Merchant: <a href=<%= "/merchants/#{item.merchant.id}" %>><%= item.merchant.name %></a></h3>
+  <br/>
+  <br/>
 <% end %>
