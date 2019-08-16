@@ -3,16 +3,28 @@ class ItemsController < ApplicationController
     if params[:merchant_id]
       @merchant = Merchant.find(params[:merchant_id])
       @items = @merchant.items
-      @show = true
-    elsif params[:id]
-      @items = [ Item.find(params[:id]) ]
     else
       @items = Item.all
-      @show = true
     end
   end
 
   def show
     @item = Item.find(params[:id])
+  end
+
+  def new
+    @merchant = Merchant.find(params[:merchant_id])
+  end
+
+  def create
+    merchant = Merchant.find(params[:merchant_id])
+    merchant.items.create(item_params)
+    redirect_to "/merchants/#{merchant.id}/items"
+  end
+
+  private
+
+  def item_params
+    params.permit(:name, :description, :price, :image, :inventory)
   end
 end
