@@ -18,7 +18,7 @@ describe "Item Show Page" do
     expect(page).to have_css("img[src*='#{item_1.image}']")
     expect(page).to have_content(item_1.status)
     expect(page).to have_content(item_1.inventory)
-    expect(page).to have_content(item_1.merchant.name)
+    expect(page).to have_link(item_1.merchant.name)
   end
 
   it "has a link to to update item info" do
