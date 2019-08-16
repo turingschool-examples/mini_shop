@@ -1,0 +1,14 @@
+<span class="page-title">Add a New Item for <%= @merchant.name %></span>
+<%= form_tag "/merchants/#{@merchant.id}/items", method: :post do %>
+  <p><%= label_tag :name %></p>
+  <p><%= text_field_tag :name%></p>
+  <p><%= label_tag :description %></p>
+  <p><%= text_area_tag :description%></p>
+  <p><%= label_tag :price %></p>
+  <p><%= text_field_tag :price%></p>
+  <p><%= label_tag :image %></p>
+  <p><%= text_field_tag :image%></p>
+  <p><%= label_tag :inventory %></p>
+  <p><%= text_field_tag :inventory%></p>
+  <p><%= submit_tag 'Add Item'%></p>
+<% end %>

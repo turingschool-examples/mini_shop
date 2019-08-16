@@ -41,8 +41,8 @@ describe 'User visits merchant items index page' do
       expect(current_path).to eq("/merchants/#{bob.id}/items")
 
       expect(page).to have_content(title)
-      expect(page).to have_content(description)
       expect(page).to have_content(price)
+      expect(page).to have_content("Active")
       expect(page).to have_content(inventory)
     end
   end
