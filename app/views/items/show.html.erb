@@ -4,4 +4,7 @@
 <p>$<%= @item.price %></p>
 <p><%= @item.status %></p>
 <p><%= @item.inventory %></p>
-<p><%= @item.merchant.name %></p>  
+<p><%= @item.merchant.name %></p>
+
+<h3><%= link_to("Update Item", "/items/#{@item.id}/edit") %></h3>
+<h3><%= link_to("Delete Item", "/items/#{@item.id}", method: :delete) %></h3>

@@ -1,5 +1,5 @@
 <% @items.each do |item| %>
-  <%= image_tag("#{item.image}") %>
+  <%= image_tag("#{item.image}", alt: "#{item.name} Image") %>
   <p><%= item.name %></p>
   <p><%= item.description %></p>
   <p>$<%= item.price %></p>
