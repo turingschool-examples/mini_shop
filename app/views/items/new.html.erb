@@ -1,0 +1,15 @@
+<%= form_tag("/merchants/#{params[:merchant_id]}/items", method: :post) do %>
+  <p>Item name:</p>
+  <%= text_field_tag :name %>
+  <p>Item description:</p>
+  <%= text_field_tag :description %>
+  <p>Item price:</p>
+  <%= text_field_tag :price %>
+  <p>Item image link:</p>
+  <%= text_field_tag :image %>
+  <p>Item status:</p>
+  <%= text_field_tag :status %>
+  <p>Item inventory:</p>
+  <%= text_field_tag :inventory %><br/>
+  <%= submit_tag "Submit" %>
+<% end %>
