@@ -28,12 +28,21 @@ class MerchantsController < ApplicationController
   end
 
   def delete
+    (Merchant.find(params[:id]).items).destroy_all
     Merchant.destroy(params[:id])
     redirect_to '/merchants'
   end
 
   def items
-    @merchant_items = Merchant.find(params[:id]).items
+    if params[:active] == "true"
+      items = Merchant.find(params[:id]).items
+      @merchant_items = items.first.merchant.active_items(true)
+    elsif params[:active] == "false"
+      items = Merchant.find(params[:id]).items
+      @merchant_items = items.first.merchant.active_items(false)
+    else
+      @merchant_items = Merchant.find(params[:id]).items
+    end
   end
 
   def active_items

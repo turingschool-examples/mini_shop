@@ -1,6 +1,6 @@
 <center>
 
-  <h3 align="right"><%= link_to("Available Items", active: true) %> | <%= link_to("Out of Stock", active: false) %> </h3>
+  <h3 align="right"><%= link_to("Available Items", "/merchants/#{@merchant_items.first.merchant.id}/items?active=true") %> | <%= link_to("Out of Stock", active: false) %> </h3>
 
   <% @merchant_items.each do |item| %>
 <h1>&#x1F436; <a href="/items/<%= item.id %>"><%= item.name %></a> &#x1F436;</h1>

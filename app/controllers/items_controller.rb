@@ -1,7 +1,14 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    if params[:active] == "true"
+      items = Item.all
+      @items = items.select {|item| item.active == true}
+    elsif params[:active] == "false"
+      items = Item.all
+      @items = items.select {|item| item.active == false}
+    else @items = Item.all
+    end
   end
 
   def show

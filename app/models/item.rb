@@ -25,7 +25,7 @@ class Item < ApplicationRecord
 
   def in_stock_output
     if self.active == true
-      return "Woohooooo Yeah!"
+      return "Yeah!"
     elsif self.active == false
       return "nah. sry."
     end

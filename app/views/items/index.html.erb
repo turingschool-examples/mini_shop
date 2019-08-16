@@ -1,4 +1,7 @@
 <center>
+
+    <h3 align="right"><%= link_to("Available Items", "/items?active=true") %> | <%= link_to("Out of Stock", active: false) %> </h3>
+
   <h1>&#x1F436; Items &#x1F436;</h1>
 
   <% @items.each do |item| %>
