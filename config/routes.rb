@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   patch '/merchants/:id', to: 'merchants#update'
   delete '/merchants/:id', to: 'merchants#destroy'
   get '/items', to: 'items#index'
-  get '/merchants/:merchant_id/items', to: 'items#merchant_index'
+  get '/merchants/:merchant_id/items', to: 'items#index'
   get '/items/:id', to: 'items#show'
   get '/merchants/:merchant_id/items/new', to: 'items#new'
   post '/merchants/:merchant_id/items', to: 'items#create'

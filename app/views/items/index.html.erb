@@ -1,4 +1,6 @@
-<h1 class="primary-heading">All Items</h1>
+<% if !@merchant %>
+  <h1 class="primary-heading">All Items</h1>
+<% end %>
 
 <% @items.each do |item| %>
   <img class="img" src=<%= "#{item.image}" %>>
@@ -10,4 +12,8 @@
   <h3>Merchant: <a href=<%= "/merchants/#{item.merchant.id}" %>><%= item.merchant.name %></a></h3>
   <br/>
   <br/>
+<% end %>
+
+<% if @merchant %>
+  <h3><%= link_to("Create New Item", "/merchants/#{params[:merchant_id]}/items/new") %></h3>
 <% end %>

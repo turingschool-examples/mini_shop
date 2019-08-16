@@ -28,5 +28,4 @@ describe "Merchant Edit Page" do
     expect(page).to have_content("Test state update")
     expect(page).to have_content(23456)
   end
-
 end
