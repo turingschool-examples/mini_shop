@@ -5,3 +5,5 @@
 <p>inventory:<%= @item.inventory %></p>
 <p>active:<%= @item.active %></p>
 <p>merchant name:<%= Merchant.find(@item.merchant_id).name %>
+
+<%= link_to "Edit Item", "/items/#{@item.id}/edit", method: :get %>
