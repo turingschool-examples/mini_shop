@@ -26,6 +26,11 @@ class ItemsController < ApplicationController
   def new
   end
 
+  def destroy
+    Item.destroy(params[:id])
+    redirect_to '/items'
+  end
+
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
