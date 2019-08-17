@@ -43,10 +43,10 @@ describe "Merchant Show Page" do
 
     visit "/merchants/#{merchant_1.id}"
 
-    expect(page).to have_link("View Items from this Merchant")
+    expect(page).to have_link("View Merchant Items")
 
-    click_link "View Items from this Merchant"
+    click_link "View Merchant Items"
 
     expect(current_path).to eq("/merchants/#{merchant_1.id}/items")
-  end 
+  end
 end
