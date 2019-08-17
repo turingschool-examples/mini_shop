@@ -13,6 +13,66 @@
  *= require_tree .
  *= require_self
  */
+header {
+  background-color: DodgerBlue;
+  margin: 0px;
+  padding: 20px 25% 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header a:hover {
+  color: blue;
+}
+
+body {
+  font-family: Arial;
+}
+
+a:link, a:visited {
+ color: blue;
+}
+
+a:hover {
+ color: purple;
+}
+
+#header-link {
+ color: white;
+ text-decoration: none;
+ font-size: 20px;
+ padding-top: 14px;
+}
+
+.single-item-img {
+ margin: 8px;
+ height: 300px;
+}
+
+.single-item-info {
+ padding: 10px;
+}
+
+.page-title {
+ font-size: 24px;
+ font-weight: bold;
+ /* margin: 20px 0px 20px 0px; */
+}
+
+.item-image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.show-img-container{
+ height: 500px;
+}
+
+.item-show-image {
+  max-width: 100%;
+  max-height: 500px;
+}
 
 #title {
   font-size: 36px;
@@ -29,61 +89,6 @@
 #single-item {
   margin: 10px;
   background-color: LightBlue;
-}
-
-.single-item-img {
-  margin: 8px;
-  height: 300px;
-}
-
-.single-item-info {
-  padding: 10px;
-}
-
-.page-title {
-  font-size: 24px;
-  font-weight: bold;
-  /* margin: 20px 0px 20px 0px; */
-}
-
-.item-image {
-   object-fit: contain;
-   max-width: 100%;
-   max-height: 300px;
-}
-
-.show-img-container{
-  height: 500px;
-}
-.item-show-image {
-   max-width: 100%;
-   max-height: 500px;
-}
-
-.item-listing {
-   display: inline;
-}
-
-.header-link {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding-top: 14px;
-}
-
-header {
-   background-color: DodgerBlue;
-   margin: 0px;
-   padding: 20px 25% 20px 20px;
-   display: flex;
-   justify-content: space-between;
- }
-
-
-header a:hover {
-   color: blue;
-}
-
-body {
-   font-family: Arial;
+  border: 2px solid DarkGrey;
+  border-radius: 10px;
 }
