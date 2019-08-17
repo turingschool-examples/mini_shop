@@ -1,9 +1,20 @@
 <section class="page-wrapper">
   <div class="page-title-bar">
     <span class="page-title">Items</span>
+    <span>
+      <div class="dropdown">
+        <button class="dropbtn">Sort By:</button>
+        <div class="dropdown-content">
+          <a href="#">Price: High - Low</a>
+          <a href="#">Price: Low - High</a>
+          <a href="#">Name: A - Z</a>
+          <a href="#">Name: Z - A</a>
+        </div>
+      </div>
     <% unless @merchant.nil? %>
       <%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new", class: "btn"%>
     <% end %>
+  </span>
   </div>
   <section id="multi-item">
     <% @items.each do |item| %>

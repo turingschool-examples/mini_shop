@@ -1,7 +1,16 @@
 <section class="page-wrapper">
   <div class="page-title-bar">
     <span class="page-title">Merchants</span>
-    <a href="/merchants/new" class="btn">Add Merchant</a>
+    <span>
+      <div class="dropdown">
+        <button class="dropbtn">Sort By:</button>
+        <div class="dropdown-content">
+          <a href="?sort=a-z">A - Z</a>
+          <a href="?sort=z-a">Z - A</a>
+        </div>
+      </div>
+      <a href="/merchants/new" class="btn">Add Merchant</a>
+    </span>
   </div>
   <ul>
     <% @merchants.each do |merchant| %>
