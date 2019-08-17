@@ -12,8 +12,15 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    merchant = Merchant.create(merchant_params)
-    redirect_to "/merchants"
+
+    merchant = Merchant.new(merchant_params)
+
+    if merchant.save
+      redirect_to "/merchants"
+    else
+      flash[:notice] = "Merchant not created: Required information missing."
+      render :new
+    end
   end
 
   private
