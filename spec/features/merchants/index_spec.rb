@@ -20,7 +20,6 @@ describe 'merchants index page' do
     expect(page).to have_link('Add Merchant')
 
     visit '/merchants?sort=a-z'
-
     
   end
 end

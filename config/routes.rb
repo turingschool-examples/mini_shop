@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   delete '/merchants/:id', to: 'merchants#destroy'
   get '/merchants/:merchant_id/items', to: 'items#index'
   get '/merchants/:merchant_id/items/new', to: 'items#new'
-  get 'merchants?*all', :constraints => { :all => /.*/ }, to: 'merchants#index'
+  get '/merchants?*all', :constraints => { :all => /.*/ }, to: 'merchants#index'
+  get '/items?*all', :constraints => { :all => /.*/ }, to: 'items#index'
+  get '/merchants/:merchant_id/items?*all', :constraints => { :all => /.*/ }, to: 'items#index'
 
   get '/items', to: 'items#index'
   get '/items/:id', to: 'items#show'

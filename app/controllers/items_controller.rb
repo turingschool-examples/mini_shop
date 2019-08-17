@@ -7,6 +7,19 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
+    @items = sort_items(@items, params[:sort]) if params[:sort]
+  end
+
+  def sort_items(items, method)
+    if method == 'a-z'
+      items.sort_by { |item| item.name }
+    elsif method == 'z-a'
+      items.sort_by { |item| item.name }.reverse
+    elsif method == 'min-price'
+      items.sort_by { |item| item.price }
+    elsif method == 'max-price'
+      items.sort_by { |item| item.price }.reverse
+    end
   end
 
   def show

@@ -5,10 +5,10 @@
       <div class="dropdown">
         <button class="dropbtn">Sort By:</button>
         <div class="dropdown-content">
-          <a href="#">Price: High - Low</a>
-          <a href="#">Price: Low - High</a>
-          <a href="#">Name: A - Z</a>
-          <a href="#">Name: Z - A</a>
+          <a href="?sort=max-price">Price: High - Low</a>
+          <a href="?sort=min-price">Price: Low - High</a>
+          <a href="?sort=a-z">Name: A - Z</a>
+          <a href="?sort=z-a">Name: Z - A</a>
         </div>
       </div>
     <% unless @merchant.nil? %>
@@ -27,7 +27,7 @@
           <% if @merchant.nil? %>
             <p>Description: <%= item.description %></p>
           <% end %>
-          <p>Price: <%= "$#{item.price}" %></p>
+          <p>Price: <%= number_to_currency(item.price) %></p>
           <p>Status: <%= item.status %></p>
           <p>Inventory: <%= item.inventory %></p>
           <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}"%></p>
