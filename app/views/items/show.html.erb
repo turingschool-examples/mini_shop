@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<h1>All Items</h1>
+<h1>Merchant: <%= @merchant.name %></h1>
 <br />
 <div class="container">
   <div class="row">
@@ -14,7 +14,6 @@
             <p class="card-text">Price: <%= item.price %></p>
             <p class="card-text">Status: <%= item.status %></p>
             <p class="card-text">Inventory: <%= item.inventory %></p>
-            <p class="card-text">Merchant: <%= item.merchant.name %></p>
           </div>
         </div>
       </div>
