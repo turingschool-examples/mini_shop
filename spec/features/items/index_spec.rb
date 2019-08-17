@@ -33,7 +33,5 @@ describe 'When user visits items index page' do
     expect(page).to have_content(snack.status)
     expect(page).to have_content(snack.inventory)
     expect(page).to have_link('Yum Yum Snacks')
-
-    visit '/items/?sort=a-z'
   end
 end
