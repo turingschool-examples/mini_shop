@@ -1,0 +1,20 @@
+<h1>Merchant: <%= @merchant.name %></h1>
+<br />
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 35rem;">
+          <img src = <%= item.image %> class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= item.name %></h5>
+            <p class="card-text"><%= item.description %></p>
+            <p class="card-text">Price: <%= item.price %></p>
+            <p class="card-text">Status: <%= item.status %></p>
+            <p class="card-text">Inventory: <%= item.inventory %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
