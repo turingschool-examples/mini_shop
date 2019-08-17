@@ -3,7 +3,7 @@
     <span class="page-title">Merchants</span>
     <a href="/merchants/new" class="btn">Add Merchant</a>
   </div>
-  <ul id="merchants">
+  <ul>
     <% @merchants.each do |merchant| %>
     <li class="merchant-title">
       <a href="/merchants/<%= merchant.id%>"><%= merchant.name %></a>

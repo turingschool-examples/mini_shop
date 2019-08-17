@@ -1,9 +1,13 @@
-<span class="page-title">Add a New Merchant</span>
-<%= form_tag '/merchants', method: :post do %>
-  <p>Name:    <%= text_field_tag :name %></p>
-  <p>Address: <%= text_field_tag :address %></p>
-  <p>City:    <%= text_field_tag :city %></p>
-  <p>State:   <%= text_field_tag :state %></p>
-  <p>Zip:     <%= text_field_tag :zip %></p>
-  <p><%= submit_tag 'Submit' %></p>
-<% end %>
+<section class="page-wrapper">
+  <div class="page-title-bar">
+    <span class="page-title">Add a New Merchant</span>
+  </div>
+  <%= form_tag '/merchants', method: :post, class: "margin" do %>
+    <p>Name:    <br/><%= text_field_tag :name %></p>
+    <p>Address: <br/><%= text_field_tag :address %></p>
+    <p>City:    <br/><%= text_field_tag :city %></p>
+    <p>State:   <br/><%= text_field_tag :state %></p>
+    <p>Zip:     <br/><%= text_field_tag :zip %></p>
+    <p><%= submit_tag 'Submit' %></p>
+  <% end %>
+</section>
