@@ -1,0 +1,15 @@
+<h1> New Merchant </h1>
+
+<%= form_tag("/merchants", method: :post) do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %>
+  <%= label_tag "Address" %>
+  <%= text_field_tag :address %>
+  <%= label_tag "City" %>
+  <%= text_field_tag :city %>
+  <%= label_tag "Zip" %>
+  <%= text_field_tag :zip %>
+  <%= label_tag "State" %>
+  <%= text_field_tag :state %>
+  <%= submit_tag "Submit" %>
+<% end %>
