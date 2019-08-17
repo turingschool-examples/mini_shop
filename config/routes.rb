@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'merchants#index'
+  root to: 'items#index'
   get '/merchants', to: 'merchants#index'
   get '/merchants/new', to: 'merchants#new'
   post '/merchants', to: 'merchants#create'
