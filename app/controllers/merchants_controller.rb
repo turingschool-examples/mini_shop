@@ -26,6 +26,7 @@ class MerchantsController < ApplicationController
   end
 
   def destroy
+    @merchant.items.destroy_all
     @merchant.destroy
     redirect_to '/merchants'
   end
