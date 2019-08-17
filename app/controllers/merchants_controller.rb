@@ -14,19 +14,12 @@ class MerchantsController < ApplicationController
   def create
     merchant = Merchant.new(merchant_params)
 
-    missing_params = []
-    params.each do |param, value|
-      if value.empty?
-        missing_params << param.titlecase
-      end
-    end
-    missing_params.join(', ')
-
+    check_missing_params
 
     if merchant.save
       redirect_to "/merchants"
     else
-      flash[:notice] = "Merchant not created: The following fields were not entered or entered incorrectly: #{missing_params}"
+      flash[:notice] = "Merchant not created. The following fields were not entered or entered incorrectly: " + check_missing_params + "."
       render :new
     end
   end
@@ -34,5 +27,16 @@ class MerchantsController < ApplicationController
   private
   def merchant_params
     params.permit(:name, :address, :city, :state, :zip)
+  end
+
+  private
+  def check_missing_params
+    missing_params = []
+    params.each do |param, value|
+      if value.empty?
+        missing_params << param.titlecase
+      end
+    end
+    missing_params.join(', ')
   end
 end
