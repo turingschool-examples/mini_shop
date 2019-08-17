@@ -54,15 +54,23 @@ a:hover {
 }
 
 .page-title-bar {
-  padding: 10px 0px 10px 20px;
+  padding: 10px 20px 10px 20px;
   background-color: #ff9933;
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-title {
  font-size: 28px;
  font-weight: bold;
  color: white;
- text-shadow: 2px 2px 0 black;
+ text-shadow: 2px 2px 0 #331a00;
+}
+
+.merchant-title {
+  font-size: 24px;
+  color: blue;
+  margin-bottom: 12px;
 }
 
 .item-image {
@@ -78,6 +86,26 @@ a:hover {
 .item-show-image {
   max-width: 100%;
   max-height: 500px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #6633ff;
+  border-radius: 10px;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.btn:link, .btn:visited {
+  color: white;
+}
+
+.btn:hover {
+  color: snow;
+  background-color: #9933ff;
 }
 
 #header-link {

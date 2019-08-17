@@ -1,11 +1,13 @@
 <section class="page-wrapper">
-  <span class="page-title">Merchants</span>
+  <div class="page-title-bar">
+    <span class="page-title">Merchants</span>
+    <a href="/merchants/new" class="btn">Add Merchant</a>
+  </div>
   <ul id="merchants">
     <% @merchants.each do |merchant| %>
-    <li>
+    <li class="merchant-title">
       <a href="/merchants/<%= merchant.id%>"><%= merchant.name %></a>
     </li>
     <% end %>
   </ul>
-  <a href="/merchants/new">Add Merchant</a>
 </section>
