@@ -20,6 +20,6 @@ RSpec.describe "item show page" do
     expect(page).to have_content(item_1.description)
     expect(page).to have_css("img[src*='#{item_1.image}']")
     expect(page).to have_content(item_1.inventory)
-    expect(page).to have_content(item_1.merchant)
+    expect(page).to have_content(item_1.merchant.name)
   end
 end
