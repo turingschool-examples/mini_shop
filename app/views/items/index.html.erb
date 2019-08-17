@@ -6,5 +6,5 @@
   <p><%= item.image %></p>
   <p><%= item.status %></p>
   <p>Quantity Available: <%= item.inventory %></p>
-  <p>Store: <%= item.merchant_id %></p>
+  <p>Store: <%= Merchant.find(item.merchant_id).name %></p>
 <% end %>
