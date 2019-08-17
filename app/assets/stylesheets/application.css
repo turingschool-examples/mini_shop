@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 header {
   background-color: DodgerBlue;
   margin: 0px;
@@ -37,11 +38,10 @@ a:hover {
  color: purple;
 }
 
-#header-link {
- color: white;
- text-decoration: none;
- font-size: 20px;
- padding-top: 14px;
+.page-wrapper {
+  /* padding-left: 20px; */
+  background-color: BlanchedAlmond;
+  min-height: 100vh;
 }
 
 .single-item-img {
@@ -53,10 +53,16 @@ a:hover {
  padding: 10px;
 }
 
+.page-title-bar {
+  padding: 10px 0px 10px 20px;
+  background-color: #ff9933;
+}
+
 .page-title {
- font-size: 24px;
+ font-size: 28px;
  font-weight: bold;
- /* margin: 20px 0px 20px 0px; */
+ color: white;
+ text-shadow: 2px 2px 0 black;
 }
 
 .item-image {
@@ -74,9 +80,21 @@ a:hover {
   max-height: 500px;
 }
 
+#header-link {
+ color: white;
+ text-decoration: none;
+ font-size: 20px;
+ padding-top: 14px;
+}
+
+#header-link:hover {
+  color: blue;
+}
+
 #title {
   font-size: 36px;
   color: white;
+  text-shadow: 2px 2px 0 black;
   margin: 0px;
   font-family: Arial Black;
 }
