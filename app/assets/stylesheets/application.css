@@ -41,9 +41,17 @@ a:hover {
 input[type=text] {
   width: 50%;
   padding: 8px 10px;
-  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 8px;
 }
 
+textarea {
+  width: 50%;
+  height: 5em;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 8px 10px;
+}
 .page-wrapper {
   background-color: BlanchedAlmond;
   min-height: 100vh;

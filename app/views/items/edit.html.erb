@@ -1,14 +1,13 @@
-<span class="page-title">Edit Item: <%= @item.name %></span>
-<%= form_tag "/items/#{@item.id}", method: :patch do %>
-  <p><%= label_tag :name %></p>
-  <p><%= text_field_tag :name, @item.name %></p>
-  <p><%= label_tag :description %></p>
-  <p><%= text_area_tag :description, @item.description %></p>
-  <p><%= label_tag :price %></p>
-  <p><%= text_field_tag :price, @item.price %></p>
-  <p><%= label_tag :image %></p>
-  <p><%= text_field_tag :image, @item.image %></p>
-  <p><%= label_tag :inventory %></p>
-  <p><%= text_field_tag :inventory, @item.inventory %></p>
-  <p><%= submit_tag 'Submit' %></p>
-<% end %>
+<section class="page-wrapper">
+  <div class="page-title-bar">
+    <span class="page-title">Edit Item: <%= @item.name %></span>
+  </div>
+  <%= form_tag "/items/#{@item.id}", method: :patch, class: "margin" do %>
+    <p>Name:        <br/><%= text_field_tag :name, @item.name %></p>
+    <p>Description: <br/><%= text_area_tag :description, @item.description %></p>
+    <p>Price:       <br/><%= text_field_tag :price, @item.price %></p>
+    <p>Image:       <br/><%= text_field_tag :image, @item.image %></p>
+    <p>Inventory:   <br/><%= text_field_tag :inventory, @item.inventory %></p>
+    <p><%= submit_tag 'Submit' %></p>
+  <% end %>
+</section>
