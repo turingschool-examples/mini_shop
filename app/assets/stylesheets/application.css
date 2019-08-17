@@ -85,12 +85,12 @@ input[type=text] {
 }
 
 .show-img-container{
- height: 500px;
+ height: 50vh;
 }
 
 .item-show-image {
   max-width: 100%;
-  max-height: 500px;
+  max-height: 100%;
 }
 
 .btn {
