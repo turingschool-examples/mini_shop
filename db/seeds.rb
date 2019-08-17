@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# corina = Merchant.create(name: 'Corina', address: '1488 S Kenton', city: 'Aurora', state: 'CO', zip: 80012)
-evette = Merchant.create(name: 'Evette', address: '123 Street', city: 'Aurora', state: 'CO', zip: 80012)
-fenton = Merchant.create(name: 'Fenton', address: '456 Lane', city: 'Aurora', state: 'CO', zip: 80012)
+corina = Merchant.create(name: 'Corina', address: '1488 S Kenton', city: 'Aurora', state: 'CO', zip: 80012)
+pink = Merchant.create(name: 'PINK', address: '3000 E 1st Ave', city: 'Denver', state: 'CO', zip: 80206)
+hoodie = Item.create(name: 'Hoodie', description: 'Black Pull Over Hoodie', price: 25, image: 'https://thenypost.files.wordpress.com/2018/03/shutterstock_450063892.jpg?quality=90&strip=all&w=618&h=410&crop=1', status: true, inventory: 11, merchant_id: @pink.id)
+hoodie = corina.items.create!(name: 'Hoodie', description: 'Black Pull Over Hoodie', price: 25, image: 'https://thenypost.files.wordpress.com/2018/03/shutterstock_450063892.jpg?quality=90&strip=all&w=618&h=410&crop=1', status: true, inventory: 11)
