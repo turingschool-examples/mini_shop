@@ -517,8 +517,6 @@
         1,
         1,
         1,
-        null,
-        null,
         null
       ],
       "/Users/joshuasherwood/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
@@ -558,6 +556,11 @@
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         1,
         null,
@@ -628,6 +631,6 @@
         null
       ]
     },
-    "timestamp": 1565977949
+    "timestamp": 1566015631
   }
 }

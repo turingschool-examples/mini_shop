@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-16T11:52:29-06:00">2019-08-16T11:52:29-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-16T22:20:31-06:00">2019-08-16T22:20:31-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#0756d2cae95f3d7a11fc48f7ad05de78e99afa59" class="src_link" title="app/controllers/merchants_controller.rb">app/controllers/merchants_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
+        <td>51</td>
         <td>23</td>
         <td>23</td>
         <td>0</td>
@@ -113,7 +113,7 @@
       <tr>
         <td class="strong"><a href="#fe7d89d26c3097c04aeb6de2f6174a49edd2d3e6" class="src_link" title="app/models/merchant.rb">app/models/merchant.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
+        <td>8</td>
         <td>7</td>
         <td>7</td>
         <td>0</td>
@@ -958,46 +958,46 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="37">
           
-          <code class="ruby">    Merchant.destroy(params[:id])</code>
+          
+          <code class="ruby">    #Item.destroy(params[:merchant_id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="38">
           
-          <code class="ruby">    redirect_to &#39;/merchants&#39;</code>
+          
+          <code class="ruby">    #Item.where(:merchant_id =&gt; Merchant.find(params[:id]).destroy_all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    #@merchant = Merchant.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    #@items = @merchant.items.find(params[:merchant_id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="41">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby">    #@merchant.items.delete(@items)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">  def merchant_params</code>
+          <code class="ruby">    Merchant.destroy(params[:id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">    params.permit(:name, :address, :city, :state, :zip)</code>
+          <code class="ruby">    redirect_to &#39;/merchants&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
@@ -1012,7 +1012,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def merchant_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.permit(:name, :address, :city, :state, :zip)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">end</code>
@@ -1187,7 +1217,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :items</code>
+          <code class="ruby">  has_many :items, :dependent =&gt; :delete_all</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -1221,18 +1251,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
