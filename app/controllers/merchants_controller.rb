@@ -2,7 +2,13 @@ class MerchantsController < ApplicationController
   before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 
   def index
-    @merchants = Merchant.all
+    if params[:sort] == 'a-z'
+      @merchants = Merchant.order(:name)
+    elsif params[:sort] == 'z-a'
+      @merchants = Merchant.order(name: :desc)
+    else
+      @merchants = Merchant.all
+    end
   end
 
   def show
