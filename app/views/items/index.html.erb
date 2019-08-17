@@ -1,0 +1,10 @@
+<h2>Items</h2>
+<% @items.each do |item| %>
+  <h2><%= item.name %></h2>
+  <p><%= item.description %></p>
+  <p>$<%= item.price %></p>
+  <p><%= item.image %></p>
+  <p><%= item.status %></p>
+  <p>Quantity Available: <%= item.inventory %></p>
+  <p>Store: <%= Merchant.find(item.merchant_id).name %></p>
+<% end %>
