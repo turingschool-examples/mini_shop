@@ -10,7 +10,7 @@
   <p>image: <img src=<%=item.image %>></p>
   <p>inventory:<%= item.inventory %></p>
   <p>active:<%= item.active %></p>
-  <p>merchant name:<%= Merchant.find(item.merchant_id).name %>
+  <p>merchant name:<a href="/merchants/<%=item.merchant_id%>"><%= Merchant.find(item.merchant_id).name %>
 <% end %>
 <% if @merchant %>
   <%= link_to "Create New Item", "/merchants/#{@merchant.id}/items/new", method: :get %>
