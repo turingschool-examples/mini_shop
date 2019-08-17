@@ -2,7 +2,7 @@
   <div class="page-title-bar">
     <span class="page-title">Items</span>
     <% unless @merchant.nil? %>
-      <span><%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %></span>
+      <%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new", class: "btn"%>
     <% end %>
   </div>
   <section id="multi-item">
