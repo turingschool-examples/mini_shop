@@ -24,10 +24,10 @@ bob.items.create( name: 'Starter Paint Set',
                   image: 'https://cdn.dick-blick.com/items/016/37/01637-0249-5-1-2ww-m.jpg',
                   inventory: 17)
 
-bob.items.create ( name: 'Bob Quote Poster',
+bob.items.create( name: 'Bob Quote Poster',
                    description: 'Words to live by. Be reminded of the joy every day.',
                    price: 18.75,
-                   image: => "https://www.bobrosslipsum.com/images/quotes/quote-leaf-gifts.jpg",
+                   image: "https://www.bobrosslipsum.com/images/quotes/quote-leaf-gifts.jpg",
                    inventory: 12)
 
 yum.items.create( name: 'Chocolate Crunchy Taco Chips',
