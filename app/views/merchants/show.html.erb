@@ -1,10 +1,19 @@
-<h2><%= @merchant.name %></h2>
-<p>Address: <%=  @merchant.address%></p>
-<p>City: <%=  @merchant.city%></p>
-<p>State: <%=  @merchant.state%></p>
-<p>Zip Code: <%=  @merchant.zip%></p>
-<br/>
-<%= link_to 'Items', "/merchants/#{@merchant.id}/items" %>
-<br/>
-<%= link_to 'Edit Merchant Info', "/merchants/#{@merchant.id}/edit" %>
-<%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete %>
+<section class="page-wrapper">
+  <div class="page-title-bar">
+    <span class="page-title"><%= @merchant.name %></span>
+    <span>
+      <%= link_to 'Edit Merchant Info', "/merchants/#{@merchant.id}/edit", class: "btn"%>
+      <%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete, class: "btn", id: "delete" %>
+    </span>
+  </div>
+  <section class="margin">
+    <h3>Merchant Info:</h3>
+    <p>Address: <%=  @merchant.address%></p>
+    <p>City: <%=  @merchant.city%></p>
+    <p>State: <%=  @merchant.state%></p>
+    <p>Zip Code: <%=  @merchant.zip%></p>
+    <br/>
+    <%= link_to 'Items', "/merchants/#{@merchant.id}/items", class: "btn" %>
+    <br/>
+  </section>
+</section>

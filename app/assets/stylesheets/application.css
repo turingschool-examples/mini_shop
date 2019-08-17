@@ -14,51 +14,154 @@
  *= require_self
  */
 
+header {
+  background-color: DodgerBlue;
+  border-bottom: 2px solid BlanchedAlmond;
+  margin: 0px;
+  padding: 20px 25% 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header a:hover {
+  color: blue;
+}
+
+body {
+  font-family: Arial;
+}
+
+a:link, a:visited {
+ color: blue;
+}
+
+a:hover {
+ color: purple;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+textarea {
+  width: 50%;
+  height: 5em;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 8px 10px;
+}
+.page-wrapper {
+  background-color: BlanchedAlmond;
+  min-height: 100vh;
+}
+
+.single-item-img {
+ margin: 8px;
+ height: 300px;
+}
+
+.single-item-info {
+ padding: 10px;
+}
+
+.page-title-bar {
+  padding: 10px 20px 10px 20px;
+  background-color: #ff9933;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-title {
+ font-size: 28px;
+ font-weight: bold;
+ color: white;
+ text-shadow: 2px 2px 0 #331a00;
+}
+
+.merchant-title {
+  font-size: 24px;
+  color: blue;
+  margin-bottom: 12px;
+}
+
+.item-image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.show-img-container{
+ height: 50vh;
+}
+
+.item-show-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #6633ff;
+  border-radius: 10px;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.btn:link, .btn:visited {
+  color: white;
+}
+
+.btn:hover {
+  color: snow;
+  background-color: #8000ff;
+}
+
+.margin {
+  margin-left: 20px;
+}
+
+#delete {
+  background-color: #ff3366;
+}
+
+#delete:hover {
+  color: snow;
+  background-color: #ff0040;
+}
+
+#header-link {
+ color: white;
+ text-decoration: none;
+ font-size: 20px;
+ padding-top: 14px;
+}
+
+#header-link:hover {
+  color: blue;
+}
+
 #title {
   font-size: 36px;
   color: white;
+  text-shadow: 2px 2px 0 black;
   margin: 0px;
   font-family: Arial Black;
 }
 
-.page-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 20px 0px 20px 0px;
+#multi-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.item-image {
-   height: 300px;
-   width: 400px;
-}
-
-.solo-item {
-   align-items: center;
-}
-
-.item-listing {
-   display: inline;
-}
-
-header {
-   background-color: DodgerBlue;
-   margin: 0px;
-   padding: 20px 25% 20px 20px;
-   display: flex;
-   justify-content: space-between;
- }
-
-.header-link {
-   color: white;
-   text-decoration: none;
-   font-size: 20px;
-   padding-top: 14px;
- }
-
-header a:hover {
-   color: blue;
-}
-
-body {
-   font-family: Arial;
+#single-item {
+  margin: 10px;
+  background-color: LightBlue;
+  border: 2px solid DarkGrey;
+  border-radius: 10px;
 }
