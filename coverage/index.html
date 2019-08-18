@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-17T21:44:35-06:00">2019-08-17T21:44:35-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-18T13:03:10-06:00">2019-08-18T13:03:10-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>21</b> files in total.
-    <b>106</b> relevant lines. 
-    <span class="green"><b>106</b> lines covered</span> and
+    <b>22</b> files in total.
+    <b>121</b> relevant lines. 
+    <span class="green"><b>121</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#31b8002aba12a4dafb39825e8a95bc58a708c350" class="src_link" title="app/controllers/merchants_controller.rb">app/controllers/merchants_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>35</td>
-        <td>18</td>
-        <td>18</td>
+        <td>41</td>
+        <td>21</td>
+        <td>21</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -223,9 +223,19 @@
       <tr>
         <td class="strong"><a href="#8cac5b7862e826b46bedb89de1aa370c75133c4a" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>7</td>
-        <td>7</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b48e78327e8cbbdd9136c719fb179b93ff168907" class="src_link" title="spec/features/merchants/edit_spec.rb">spec/features/merchants/edit_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>20</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -318,8 +328,8 @@
     <h3>app/controllers/merchants_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -345,8 +355,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">    @merchants = Merchant.all</code>
         </li>
@@ -369,8 +379,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
           
           <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
         </li>
@@ -510,28 +520,64 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">  def merchant_params</code>
+          <code class="ruby">    Merchant.destroy(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="33">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          <code class="ruby">    params.permit(:name, :address, :city, :zip, :state)</code>
+          <code class="ruby">    redirect_to &#39;/merchants&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def merchant_params</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="39">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    params.permit(:name, :address, :city, :zip, :state)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">end</code>
@@ -1798,8 +1844,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1867,13 +1913,164 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  </code>
+          <code class="ruby">  delete &quot;/merchants/:id&quot;, to: &#39;merchants#destroy&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="b48e78327e8cbbdd9136c719fb179b93ff168907">
+  <div class="header">
+    <h3>spec/features/merchants/edit_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;rails_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe &quot;merchant edit page&quot;, type: :feature do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;can edit a merchant&#39;s information&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    merchant_1 = Merchant.create!(name: &quot;Stuff n&#39; Things&quot;, address: &quot;123 North St&quot;, city: &quot;Denver&quot;, zip: 80203, state: &quot;CO&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/merchants/#{merchant_1.id}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &quot;Edit&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(current_path).to eq(&quot;/merchants/#{merchant_1.id}/edit&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in :name, with: &quot;Things n&#39; Stuff&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Update Merchant&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(current_path).to eq(&quot;/merchants/#{merchant_1.id}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&quot;Things n&#39; Stuff&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
