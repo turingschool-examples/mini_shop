@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "merchants show page", type: :feature do
   it "visitor can see the merchant with given id with its attributes" do
-    merchant = Merchant.create(name: "Nancy", address: "17th Blake St", city: "Denver", state: "CO", zip: 80202)
+    merchant = Merchant.create!(name: "Nancy", address: "17th Blake St", city: "Denver", state: "CO", zip: 80202)
 
     visit "/merchants/#{merchant.id}"
 
@@ -11,5 +11,13 @@ RSpec.describe "merchants show page", type: :feature do
     expect(page).to have_content(merchant.city)
     expect(page).to have_content(merchant.state)
     expect(page).to have_content(merchant.zip)
+  end
+
+  it "visitor can see a link to the given merchant's items page" do
+    merchant = Merchant.create!(name: "Nancy", address: "17th Blake St", city: "Denver", state: "CO", zip: 80202)
+
+    visit "/merchants/#{merchant.id}"
+
+    expect(page).to have_link("Browse all items by #{merchant.name}")
   end
 end
