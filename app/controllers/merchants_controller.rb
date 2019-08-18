@@ -26,9 +26,9 @@ class MerchantsController < ApplicationController
     redirect_to "/merchants/#{@merchant.id}"
   end
 
-  def delete
+  def destroy
     @merchant = Merchant.find(params[:id])
-    @merchant.delete
+    @merchant.destroy
 
     redirect_to "/merchants"
   end

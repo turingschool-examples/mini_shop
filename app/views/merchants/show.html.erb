@@ -6,4 +6,4 @@
 <p>Zip code: <%= @merchant.zip %></p>
 
 <p><%= link_to "Edit", "/merchants/#{@merchant.id}/edit" %></p>
-<p><%= link_to "Delete", "/merchants/#{@merchant.id}/delete" %></p>
+<p><%= link_to "Delete", "/merchants/#{@merchant.id}, method: :delete, data: { confirm: 'Are you sure?' } %></p>
