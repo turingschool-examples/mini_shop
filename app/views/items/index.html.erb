@@ -1,4 +1,9 @@
 <center><h2>Items</h2>
+<% if current_page?("/merchants/#{@merchant.id}/items")  %>
+  <%= link_to 'Add New Item', "/merchants/#{Merchant.find(@item.merchant_id)}/items/new" %>
+<% else %>
+  Regular Items Page
+<% end %>
 <% @items.each do |item| %>
   <h2><%= item.name %></h2>
   <p><%= item.description %></p>

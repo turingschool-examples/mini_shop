@@ -13,4 +13,12 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @merchant = Merchant.find(@item.merchant_id)
   end
+
+  def new
+    @merchant = Merchant.find(params[:merchant_id])
+  end
+
+  def create
+    binding.pry
+  end
 end
