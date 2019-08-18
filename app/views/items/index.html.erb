@@ -18,7 +18,7 @@
         <p>description:<%= item.description %></p>
         <p>price:<%= number_to_currency(item.price) %></p>
         <p>inventory:<%= item.inventory %></p>
-        <p>active:<%= item.active %></p>
+        <p>active:<%= item.active? %></p>
         <p><%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}", method: :get %></p>
       </div>
     </section>
