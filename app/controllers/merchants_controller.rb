@@ -28,6 +28,12 @@ class MerchantsController < ApplicationController
     redirect_to "/merchants/#{@merchant.id}"
   end
 
+  def destroy
+    Merchant.destroy(params[:id])
+    redirect_to '/merchants'
+
+  end
+
   private
   def merchant_params
     params.permit(:name, :address, :city, :zip, :state)
