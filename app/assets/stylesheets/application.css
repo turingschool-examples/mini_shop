@@ -23,10 +23,6 @@ header {
   justify-content: space-between;
 }
 
-header a:hover {
-  color: blue;
-}
-
 body {
   font-family: Arial;
 }
@@ -36,7 +32,7 @@ a:link, a:visited {
 }
 
 a:hover {
- color: purple;
+ color: #ff8000;
 }
 
 input[type=text] {
@@ -119,7 +115,8 @@ textarea {
 
 .btn:hover {
   color: snow;
-  background-color: #8000ff;
+  background-color: #2d00b3;
+  box-shadow: 2px 2px 4px #808080;
 }
 
 .margin {
@@ -160,7 +157,10 @@ textarea {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #8000ff;}
+.dropdown:hover .dropbtn {
+  background-color: #2d00b3;
+  box-shadow: 2px 2px 4px #808080;
+}
 
 #delete {
   background-color: #ff3366;
@@ -168,7 +168,7 @@ textarea {
 
 #delete:hover {
   color: snow;
-  background-color: #ff0040;
+  background-color: #cc0033;
 }
 
 #header-link {
@@ -179,7 +179,8 @@ textarea {
 }
 
 #header-link:hover {
-  color: blue;
+  color: #2d00b3;
+  text-shadow: 2px 2px 2px white;
 }
 
 #title {
@@ -198,6 +199,6 @@ textarea {
 #single-item {
   margin: 10px;
   background-color: LightBlue;
-  border: 2px solid DarkGrey;
+  border: 2px solid DarkGray;
   border-radius: 10px;
 }
