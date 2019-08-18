@@ -39,3 +39,11 @@
 .merchant-name {
   text-align: center;
 }
+
+.merchant-info {
+  line-height: 1.7;
+}
+
+.display-1 {
+  margin-bottom: 3rem;
+}
