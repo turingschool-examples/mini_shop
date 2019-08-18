@@ -1,6 +1,6 @@
 <a href="/merchants">Merchant Index</a>
 
-<h1>ID <%= @merchant.id %>: <%= @merchant.name %> </h1>
+  <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@merchant.id}"%>> <%= @merchant.name %> </a>
 <ul>
   <li>Address: <%= @merchant.address %></li>
   <li>City: <%= @merchant.city %></li>

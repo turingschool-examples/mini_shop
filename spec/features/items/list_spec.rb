@@ -11,6 +11,10 @@ RSpec.describe "merchants items page", type: :feature do
 
     expect(page).to have_link("Merchants")
     expect(page).to have_link("Items")
+    expect(page).to have_link(item_1.merchant.name)
+    expect(page).to have_link(item_1.name)
+    expect(page).to have_link(item_2.merchant.name)
+    expect(page).to have_link(item_2.name)
 
     expect(page).to have_content(item_1.merchant.name)
     expect(page).to have_content(item_1.name)

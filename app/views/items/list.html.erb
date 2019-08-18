@@ -1,8 +1,10 @@
-<h1>All <%= @merchant.name %> Items</h1>
+<h4 style="display: inline" > All Items for: </h4>
+<a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@merchant.id}"%>> <%= @merchant.name %> </a>
 <%= link_to "New Item", "/merchants/#{@merchant.id}/items/new" %>
 
 <h1> <%  @merchant.items.each do |item| %></h1>
-  <h4>Name: <%= item.name %></h4>
+  <h4 style="display: inline" > Name: </h4>
+  <a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{item.id}"%>> <%= item.name %> </a>
   <h4>Price: <%= number_to_currency(item.price) %></h4>
   <h4>Status: <%= item.status %></h4>
   <img src = <%= item.image %> ></img>

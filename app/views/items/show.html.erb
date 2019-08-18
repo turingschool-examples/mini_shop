@@ -1,4 +1,5 @@
-<h1>Product: <%= @item.name %></h1>
+<h1 style="display: inline">Product: </h1>
+<a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{@item.id}"%>> <%= @item.name %></a>
 
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
 <%= link_to "Delete Item", "/items/#{@item.id}", method: :delete %>
@@ -8,4 +9,5 @@
   <h4>Status: <%= @item.status %></h4>
   <img src = <%= @item.image %> ></img>
   <h4>Inventory: <%= @item.inventory %></h4>
-  <h4>Merchant: <%= @item.merchant.name %></h4>
+  <h4 style="display: inline" > Merchant: </h4>
+  <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@item.merchant.id}"%>> <%= @item.merchant.name %> </a>
