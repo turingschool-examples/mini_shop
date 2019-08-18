@@ -46,24 +46,5 @@ RSpec.describe "Item Show page" do
     expect(page).to have_content(item_update[:description])
     expect(page).to have_css("img[src*='#{item_update[:image]}']")
     expect(page).to have_content(item_update[:inventory])
-
   end
 end
-
-
-# User Story 11, Item Update
-#
-# As a visitor
-# When I visit an
-# Then I see a link to update that Item
-# When I click the link
-# I am taken to '' where I see a form to edit the item's data including:
-# - name
-# - price
-# - description
-# - image
-# - inventory
-# When I click the button to submit the form
-# Then a `PATCH` request is sent to '/items/:id',
-# the item's data is updated,
-# and I am redirected to the Item Show page where I see the Item's updated information
