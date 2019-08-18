@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20190816170027) do
     t.boolean "status"
     t.integer "inventory"
     t.bigint "merchant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["merchant_id"], name: "index_items_on_merchant_id"
   end
 
