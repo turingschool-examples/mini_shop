@@ -4,9 +4,13 @@
   <%= stylesheet_link_tag "main" %>
 </head>
 
+<body>
+  <div class="pageheaders">
+    <h1>All Items</h1>
+  </div>
+
 <div class="headerallitemspage">
 
-<h1>All Items</h1>
 
 </div>
 
@@ -22,5 +26,5 @@
   <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{item.merchant_id}"%>> <%= item.merchant.name %> </a>
   <p>------------------------------------</p>
 <% end %>
-
+</body>
 </html>

@@ -1,9 +1,20 @@
-<h1>All Merchants</h1>
+<html>
 
-<%= link_to "New Merchant", "/merchants/new" %>
-<br>
-<% @merchants.each do |merchant| %>
-  <br>
-  <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %> </a>
-  <br>
-<% end %>
+  <body>
+    <div>
+    <div class="pageheaders">
+      <h1>All Merchants</h1>
+    </div>
+    <div>
+
+      <%= link_to "New Merchant", "/merchants/new" %>
+      <br>
+      <% @merchants.each do |merchant| %>
+        <br>
+        <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %> </a>
+        <br>
+      <% end %>
+    </div>
+    </div>
+  </body>
+</html>

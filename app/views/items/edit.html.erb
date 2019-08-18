@@ -1,4 +1,7 @@
-<h1>Edit Item</h1>
+<div class="pageheaders">
+  <h1>Edit Item</h1>
+</div>
+
 
 <%= form_tag("/items/#{@item.id}", method: :patch) do %>
   <%= label_tag :name %>

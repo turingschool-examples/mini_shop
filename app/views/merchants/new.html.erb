@@ -13,6 +13,10 @@
   <input type='submit'/>
 </form> -->
 
+<div class="pageheaders">
+  <h1>New Merchant</h1>
+</div>
+
 <%= form_tag("/merchants", method: :post) do %>
   <p>Enter a new merchant name:</p>
   <%= text_field_tag :name %>

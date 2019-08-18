@@ -1,6 +1,7 @@
-<h1 style="display: inline">Product: </h1>
-<a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{@item.id}"%>> <%= @item.name %></a>
-
+<div class="pageheaders">
+  <h1 style="display: inline">Product: </h1>
+  <a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{@item.id}"%>> <%= @item.name %></a>
+</div>
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
 <%= link_to "Delete Item", "/items/#{@item.id}", method: :delete %>
 
