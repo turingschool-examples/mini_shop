@@ -1,7 +1,10 @@
-<h1>Merchant: <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
-<%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %>
+
 <div class="container">
+  <p class='display-3'><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></p>
+  <br>
+  <p><%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new", class: "btn btn-outline-success" %></p>
+  <br>
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-sm">
