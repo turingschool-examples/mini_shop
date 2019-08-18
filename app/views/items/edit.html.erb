@@ -1,13 +1,24 @@
-<%= form_tag "/items/#{@item.id}", method: :patch do %>
-  <p><%= label_tag :name %></p>
-  <p><%= text_field_tag :name%></p>
-  <p><%= label_tag :price %></p>
-  <p><%= text_field_tag :price%></p>
-  <p><%= label_tag :description %></p>
-  <p><%= text_field_tag :description%></p>
-  <p><%= label_tag :image %></p>
-  <p><%= text_field_tag :image %></p>
-  <p><%= label_tag :inventory %></p>
-  <p><%= text_field_tag :inventory%></p>
-  <p><%= submit_tag "Update Item"%></p>
-<% end %>
+<br />
+<br />
+<div class="container">
+  <%= form_tag "/items/#{@item.id}", method: :patch do %>
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <p class='display-4'><%= label_tag :name %></p>
+      <p class='display-4'><%= label_tag :price %></p>
+      <p class='display-4'><%= label_tag :description %></p>
+      <p class='display-4'><%= label_tag :image %></p>
+      <p class='display-4'><%= label_tag :inventory %></p>
+    </div>
+    <div class="col-6 col-md-4">
+      <p class='form-input'><%= text_field_tag :name, @item.name %></p>
+      <p class='form-input'><%= text_field_tag :price, @item.price %></p>
+      <p class='form-input'><%= text_field_tag :description, @item.description %></p>
+      <p class='form-input'><%= text_field_tag :image, @item.image %></p>
+      <p class='form-input'><%= text_field_tag :inventory, @item.inventory %></p>
+    </div>
+  </div>
+  <br />
+  <div class="s"><%= submit_tag "Update Item", class: "btn btn-primary" %></div>
+  <% end %>
+</div>
