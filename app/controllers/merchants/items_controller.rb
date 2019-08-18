@@ -11,12 +11,12 @@ class Merchants::ItemsController < ApplicationController
  def create
    merchant = Merchant.find(params[:merchant_id])
    item = merchant.items.new(item_params)
-   # item.save
-   # if item.save
-   #   redirect_to "/merchants/#{item.merchant_id}/items"
-   # else
-   #   render :new
-   # end
+   item.save
+   if item.save
+     redirect_to "/merchants/#{item.merchant_id}/items"
+   else
+     render :new
+   end
  end
 
 
