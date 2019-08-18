@@ -23,7 +23,7 @@ end
       click_on "Submit Update"
 
       expect(current_path).to eq("/merchants/#{@merchant_1.id}")
-      expect(page).to have_content("Alec")
+      expect(page).to have_content("ALEC")
       expect(page).to have_content("80204")
     end
   end

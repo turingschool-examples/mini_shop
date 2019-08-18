@@ -35,10 +35,10 @@ class MerchantsController < ApplicationController
     redirect_to "/merchants"
   end
 
-  def item_index
-    @merchant = Merchant.find(params[:id])
-    @merchant.items
-  end
+  # def item_index
+  #   @merchant = Merchant.find(params[:id])
+  #   @merchant.items
+  # end
 
   private
   def merchant_params

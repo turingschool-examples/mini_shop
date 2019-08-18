@@ -30,6 +30,7 @@ end
       expect(current_path).to eq("/merchants/#{@merchant_1.id}/items")
       expect(page).to have_content(name)
       expect(page).to have_content(price)
+      expect(page).to have_content(description)
       expect(page).to have_css("img[src*='#{image}']")
       expect(page).to have_content(inventory)
     end

@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  text-align: justify;
+    letter-spacing: 1px;
+    height: 8em;
+    padding-top: 20px;
+    background: #2c3e50;
+    color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+header h1,
+header nav {
+    display: inline-block;
+}
+
+
+h2 {
+  /* background-color: grey; */
+}
+
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.item-edit{
+  background-color: grey;
+  font-size: 22px;
+}
+
+#desc {
+  /* height: 30px; */
+  width: 50%;
+  height: 70px;
+}
+
+.item-edit input {
+  width:30%;
+}
+ .perm-links {
+   color: Grey;
+   text-decoration: none;
+   padding-left: 80px;
+   padding-right: 40px;
+   /* justify-content: space-between; */
+ }
+
+ #title {
+   color: Grey;
+   text-decoration: none;
+   padding-left: 50px;
+   font-size: 50px;
+
+ }
+
+ .merchant-index {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   background-color: #2196F3;
+   padding: 10px;
+   text-decoration: none;
+   color: black;
+
+
+ }
+
+ .boxes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ .merchant-container {
+   justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.single-box {
+  border: 1px dashed;
+}
+
+.single-merchant {
+  border: 1px dashed;
+  height: 300px;
+}
+
+#item-pic {
+  object-fit: contain;
+}
+
+#single-pic {
+  object-fit:contain;
+  max-height: 300px;
+}
+ #merchant-pic {
+   object-fit:contain;
+   max-height: 250px;
+ }
+
+ #merch-name {
+   text-decoration: none;
+   font-size: 30px;
+ }

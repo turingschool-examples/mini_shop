@@ -10,7 +10,7 @@ describe Merchant do
     it { should validate_presence_of :zip}
   end
 
-  # describe "relationships" do
-  #   it { should have_many :songs}
-  # end
+  describe "relationships" do
+    it { should have_many :items}
+  end
 end

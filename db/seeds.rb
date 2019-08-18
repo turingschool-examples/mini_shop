@@ -14,4 +14,4 @@ Item.destroy_all
 
 @item_1 = @merchant_1.items.create(name: "flylow chemical", description: "Mens ski pant", price: 325, image: "https://content.backcountry.com/images/items/1200/FLG/FLG0029/FER.jpg" , active: true, inventory: 12)
 @item_2 = @merchant_1.items.create(name: "ON3P Jeffrey", description: "Ski", price: 699, image: "https://abetterski.com/assets/lg-gallery/on3p/skis/jeffrey-114/on3p-jeffrey-114.jpg" , active: true, inventory: 9)
-# @item_2 = @merchant_2.items.create(name: "ON3P Jeffrey", description: "Big mountain ski", price: 699, image: "https://cdn.shopify.com/s/files/1/0033/4622/products/2020_Jeffrey116_Preview_165x1000x72px-01_2000x.png?v=1555779770" , active: true, inventory: 9,)
+@item_2 = @merchant_2.items.create(name: "ON3P Jeffrey", description: "Big mountain ski", price: 699, image: "https://cdn.shopify.com/s/files/1/0033/4622/products/2020_Jeffrey116_Preview_165x1000x72px-01_2000x.png?v=1555779770" , active: true, inventory: 9,)
