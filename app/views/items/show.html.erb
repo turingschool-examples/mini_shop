@@ -1,0 +1,11 @@
+<h1>Item Info</h1>
+<img src = <%= @item.image %> class="item-img" alt="...">
+<p>Name: <%= @item.name %></p>
+<p>Status: <%= @item.status %></p>
+<p>Price: <%= @item.price %></p>
+<p>Description: <%= @item.description %></p>
+<p>Inventory: <%= @item.inventory %></p>
+<p>Merchant: <%= @item.merchant.name %></p>
+
+<p><%= link_to "Update Item", "/items/#{@item.id}/edit" %></p>
+<p><%= link_to "Delete Item", "/items/#{@item.id}", method: :delete, data: { confirm: 'Are you sure?' } %></p>

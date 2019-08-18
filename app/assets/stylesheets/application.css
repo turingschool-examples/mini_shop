@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.item-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
