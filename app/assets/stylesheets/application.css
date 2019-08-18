@@ -47,3 +47,25 @@
 .display-1 {
   margin-bottom: 3rem;
 }
+
+.display-4 {
+  font-size: 32px;
+  color: #808080;
+}
+
+.form-input {
+  line-height: 2.0;
+  margin-bottom: 1.5rem;
+}
+
+.btn-outline-success {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.btn-primary {
+  display: block;
+  width: 50%;
+}
