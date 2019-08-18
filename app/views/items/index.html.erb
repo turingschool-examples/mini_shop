@@ -8,7 +8,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= link_to item.name, "/items/#{item.id}" %></h5>
             <p class="card-text"><%= item.description %></p>
-            <p class="card-text">Price: <%= item.price %></p>
+            <p class="card-text">Price: $<%= item.price %></p>
             <p class="card-text">Status: <%= item.status %></p>
             <p class="card-text">Inventory: <%= item.inventory %></p>
             <p class="card-text">Merchant: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
