@@ -284,16 +284,6 @@
         null,
         null
       ],
-      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/merchant.rb": [
-        1,
-        null,
-        null
-      ],
-      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
         null,
@@ -335,8 +325,18 @@
         1,
         1,
         null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/merchant.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1566099385
+    "timestamp": 1566099449
   }
 }
