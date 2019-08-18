@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/merchants/:id/edit", to: "merchants#edit"#{request to fetch and display merchant edit page}
   patch "/merchants/:id", to: "merchants#update" #request to change a part of a resource
   delete "/merchants/:id", to: "merchants#destroy"
+
+  get "/items", to: "items#index"
 end
