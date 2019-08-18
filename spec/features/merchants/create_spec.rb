@@ -4,7 +4,9 @@ RSpec.describe "Creating a new merchant" do
   it "has a link on the index page to a new merchant form" do
     visit '/merchants'
 
-    click_on "New Merchant"
+    expect(page).to have_link("Add New Merchant")
+
+    click_on "Add New Merchant"
 
     expect(current_path).to eq('/merchants/new')
 

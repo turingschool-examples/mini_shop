@@ -1,10 +1,23 @@
-<h1>Merchant Info</h1>
-<p>Name: <%= @merchant.name %></p>
-<p>Address: <%= @merchant.address %></p>
-<p>City: <%= @merchant.city %></p>
-<p>State: <%= @merchant.state %></p>
-<p>Zip code: <%= @merchant.zip %></p>
-<p><%= link_to "Browse all items by #{@merchant.name}", "/merchants/#{@merchant.id}/items" %></p>
+<br>
+<div class="container">
+  <h1 class="display-1"><%= @merchant.name %></h1>
 
-<p><%= link_to "Edit", "/merchants/#{@merchant.id}/edit" %></p>
-<p><%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <div class="row">
+    <div class="col">
+      <ul class="list-unstyled">
+        <ul class="merchant-info">
+          <li>Address: <%= @merchant.address %></li>
+          <li>City: <%= @merchant.city %></li>
+          <li>State: <%= @merchant.state %></li>
+          <li>Zip code: <%= @merchant.zip %></li>
+        </ul>
+      </ul>
+    </div>
+
+    <div class="col">
+      <p><%= link_to "Browse all items by #{@merchant.name}", "/merchants/#{@merchant.id}/items" %></p>
+      <p><%= link_to "Edit", "/merchants/#{@merchant.id}/edit" %></p>
+      <p><%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  </div>
+</div>

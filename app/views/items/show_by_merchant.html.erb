@@ -1,7 +1,10 @@
-<h1>Merchant: <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
-<%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %>
+
 <div class="container">
+  <p class='display-3'><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></p>
+  <br>
+  <p><%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new", class: "btn btn-outline-success" %></p>
+  <br>
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-sm">
@@ -10,7 +13,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= link_to item.name, "/items/#{item.id}" %></h5>
             <p class="card-text"><%= item.description %></p>
-            <p class="card-text">Price: <%= item.price %></p>
+            <p class="card-text">Price: $<%= item.price %></p>
             <p class="card-text">Status: <%= item.status %></p>
             <p class="card-text">Inventory: <%= item.inventory %></p>
           </div>

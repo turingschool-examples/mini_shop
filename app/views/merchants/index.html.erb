@@ -1,11 +1,23 @@
-<h1>All Merchants</h1>
-
-<%= link_to "New Merchant", "/merchants/new" %>
-
-<% @merchants.each do |merchant| %>
-  <h2><%= link_to merchant.name, "/merchants/#{merchant.id}" %></h2>
-  <p><%= merchant.address %></p>
-  <p><%= merchant.city %></p>
-  <p><%= merchant.state %></p>
-  <p><%= merchant.zip %></p>
-<% end %>
+<br />
+<p><%= link_to "Add New Merchant", "/merchants/new", class: "btn btn-outline-success" %></p>
+<br />
+<br />
+<div class="container">
+  <div class="row">
+    <% @merchants.each do |merchant| %>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 20rem;">
+          <div class="card-body">
+            <h2 class= "merchant-name"><%= link_to merchant.name, "/merchants/#{merchant.id}" %></h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Address: <%= merchant.address %></li>
+              <li class="list-group-item">City: <%= merchant.city %></li>
+              <li class="list-group-item">State: <%= merchant.state %></li>
+              <li class="list-group-item">Zip: <%= merchant.zip %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
