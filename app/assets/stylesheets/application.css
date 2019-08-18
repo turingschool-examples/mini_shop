@@ -20,3 +20,23 @@
    background-position: left top;
    background-attachment: fixed;
  }
+
+ #buy_button {
+  border-radius: 25px;
+  background-color: pink;
+  border: 2px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#buy_button:hover {
+  background-color: #3e8e41;
+  color: white;
+  border: 2px solid white;
+}
