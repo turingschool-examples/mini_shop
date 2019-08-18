@@ -15,6 +15,7 @@ describe 'User clicks View Item on items index' do
     expect(page).to have_content(brush.name)
     expect(page).to have_content(brush.description)
     expect(page).to have_content(brush.price)
+    expect(page).to have_xpath("//img[@src='http://www.asianbrushpainter.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/h/a/happiness-highland-bull-horn-brush-black-goat-hair-1_27.jpg']")
     expect(page).to have_content(brush.status)
     expect(page).to have_content(brush.inventory)
     expect(page).to have_link('Bob Ross Paints')
