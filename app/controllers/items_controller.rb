@@ -27,6 +27,13 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    @item.status = true;
+    redirect_to "/items/#{@item.id}"
+  end
+
 private
   def item_params
     params.permit(:name, :price, :description, :image, :inventory)
