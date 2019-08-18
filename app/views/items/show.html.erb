@@ -9,7 +9,7 @@ Description: <%= @item.description %><br>
 In Stock? <%= @item.in_stock_output %><br>
 Inventory: <%= @item.inventory %><br>
 
-  <%= button_to 'Buy', update_purchased_item_path(@item), :method => :patch %>
+  <%= button_to 'Buy', update_purchased_item_path(@item), :method => :patch, :id => "buy_button" %>
 <br><br><br>
 
   <a href="/items/<%= @item.id %>/edit">Edit Item</a> | <a href="/items">All Items</a> |   <a href="/items/<%= @item.id %>/delete">Delete Item</a>

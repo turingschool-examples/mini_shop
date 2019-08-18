@@ -68,3 +68,27 @@ describe "delete merchant" do
     expect(current_path).to eq("/merchants")
   end
 end
+
+describe "merchant items page" do
+  it "shows merchant items" do
+    pug_stuff = Merchant.create(name: "Pug Stuff", address: "3515 Ringsby Court", city: "Denver", state: "CO", zip: 80216)
+    leopard_leash = pug_stuff.items.create(name: "Leopard Leash", description: "50-inch leash", price: 50, image: "https://images.mattel.com/scene7/GDX05_Leopard_Leash_Set_1?$oslarge$&wid=412&hei=412", inventory: 1)
+    pug_food = pug_stuff.items.create(name: "Puggo Food", description: "Dog Food", price: 20, image: "https://www.zooplus.co.uk/magazine/CACHE_IMAGES/768/content/uploads/2018/01/fotolia_108248133.jpg", inventory: 16)
+
+      visit "/merchants/#{pug_stuff.id}/items"
+
+      expect(page).to have_content("Puggo Food")
+      expect(page).to have_content("Leopard Leash")
+
+      click_on("Available Items")
+
+      expect(page).to have_content("Puggo Food")
+      expect(page).to have_content("Leopard Leash")
+
+      visit "/items/#{leopard_leash.id}"
+      click_button("Buy")
+      visit "/merchants/#{pug_stuff.id}/items?active=false"
+
+      expect(page).to have_content("Leopard Leash")
+  end
+end
