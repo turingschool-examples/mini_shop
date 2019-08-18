@@ -1,5 +1,6 @@
 <h1>Merchant: <%= @merchant.name %></h1>
 <br />
+<%= link_to "Add New Item", "/merchants/#{@merchant.id}/items/new" %>
 <div class="container">
   <div class="row">
     <% @items.each do |item| %>
