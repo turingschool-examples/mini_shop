@@ -31,4 +31,16 @@ RSpec.describe "merchants id page", type: :feature do
 
     expect(page).not_to have_content(merchant_2.name)
   end
+
+  it "user can go to merchant items index page" do
+    merchant_2 = Merchant.create(name: "Cherry Corner", address: "456 Basket Cir", city: "Limon", state: "Colorado", zip: 80828)
+
+    visit "/merchants/#{merchant_2.id}"
+
+    expect(page).to have_link("View Items")
+
+    click_on "View Items"
+
+    expect(current_path).to eq("/merchants/#{merchant_2.id}/items")
+  end
 end
