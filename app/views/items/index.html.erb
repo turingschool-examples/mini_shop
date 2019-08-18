@@ -4,7 +4,7 @@
   <p><%= item.description %></p>
   <p>$<%= item.price %></p>
   <p><%= item.image %></p>
-  <p><%= item.status %></p>
+  <p>Active? <%= item.status %></p>
   <p>Quantity Available: <%= item.inventory %></p>
   <p>Store: <%= Merchant.find(item.merchant_id).name %></p>
 <% end %>
