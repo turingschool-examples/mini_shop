@@ -1,0 +1,7 @@
+<h1>Name: <%= @item.name %></h1>
+<h3>Price: <%= @item.price %></h3>
+<h3>Description: <%= @item.description %></h3>
+<h3>Inventory: <%= @item.inventory %></h3>
+<h3>Status: <%= @item.status%></h3>
+<h3>Merchant: <%= @item.merchant.name %></h3>
+<%= image_tag @item.image, alt: "image of @item.name" %>
