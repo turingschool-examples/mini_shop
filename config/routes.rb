@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get "/merchants/:merchant_id/items", to: "merchants/items#index"
   get "/merchants/:merchant_id/items/new", to: "merchants/items#new"
   post "/merchants/:merchant_id/items", to: "merchants/items#create"
+  get '/items/:id/delete', to: 'items#delete'
 end

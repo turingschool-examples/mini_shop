@@ -33,7 +33,6 @@ RSpec.describe "Item Update", type: :feature do
 
       expect(current_path).to eq("/items/#{@item_1.id}")
 
-      # within "#item-id-#{@item_1.id}" do
         expect(page).to have_content(new_name)
         expect(page).to have_content(new_price)
         expect(page).to have_content(new_description)
@@ -42,4 +41,4 @@ RSpec.describe "Item Update", type: :feature do
       end
     end
   end
-end 
+end
