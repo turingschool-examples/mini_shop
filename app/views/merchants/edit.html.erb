@@ -1,3 +1,5 @@
+
+
 <%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
   <%= label_tag "Name" %>
   <%= text_field_tag :name, @merchant.name %>
