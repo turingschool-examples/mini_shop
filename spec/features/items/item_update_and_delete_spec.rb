@@ -34,5 +34,13 @@ end
       expect(page).to have_css("img[src*='#{image}']")
       expect(page).to have_content(inventory)
     end
+    it "Then i see a link to delete" do
+      visit   visit "/items/#{@item_1.id}"
+        expect(page).to have_link("Delete")
+
+        click_on("Delete")
+        expect(current_path).to eq("/items")
+        expect(page).not_to have_content(@item_1.name)
+    end
   end
 end
