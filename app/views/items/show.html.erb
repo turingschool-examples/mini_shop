@@ -1,0 +1,9 @@
+<center>
+<h3><%= @item.name %></h3>
+<p><%= image_tag @item.image, alt: @item.description %></p>
+<p>Active? <%= @item.status %></p>
+<p>$<%= @item.price %></p>
+<p><%= @item.description %></p>
+<p>Quantity Available: <%= @item.inventory %></p>
+<p>Store: <%= @merchant.name %></p>
+</center>
