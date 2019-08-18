@@ -8,4 +8,4 @@
 <p>Merchant: <%= @item.merchant.name %></p>
 
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
-<%= link_to "Delete Item", "/items/#{@item.id}/delete" %>
+<%= link_to "Delete Item", "/items/#{@item.id}", method: :delete, data: { confirm: 'Are you sure?' } %>
