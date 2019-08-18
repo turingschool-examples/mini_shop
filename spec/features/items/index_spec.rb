@@ -79,6 +79,12 @@ describe 'When user visits items index page' do
       expect(page).to have_content(paint.inventory)
 
       expect(page).to have_link('Bob Ross Paints')
+
+      expect(page).to_not have_content(chips.name)
+      expect(page).to_not have_content(chips.price)
+      expect(page).to_not have_xpath("//img[@src='https://www.abdallahcandies.com/wp-content/uploads/2017/11/CHOC-COV-POTATO-CHIPS.png']")
+      expect(page).to_not have_content(chips.inventory)
+      expect(page).to_not have_link('Yum Yum Snacks')
     end
   end
 end
