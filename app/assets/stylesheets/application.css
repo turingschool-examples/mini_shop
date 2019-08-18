@@ -28,3 +28,14 @@
   margin-right: auto;
   width: 30%;
 }
+
+.btn-outline-success {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.merchant-name {
+  text-align: center;
+}
