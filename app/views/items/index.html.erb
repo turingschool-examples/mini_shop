@@ -5,31 +5,26 @@
   <h1>All Items</h1>
 <% end %>
 
-<section class="boxes container">
-  <article >1</article>
-  <article >2</article>
-  <article >3</article>
-  <article >4</article>
-  <article >5</article>
-  <article >6</article>
-  <article >7</article>
-  <article >8</article>
-  <article >9</article>
-</section>
-
-<section id="grid-container">
+<section class="boxes-container">
   <% @items.each do |item| %>
-    <section id="grid-item">
-      <p><a href="/items/<%=item.id %>"><%= item.name %></a></p>
-      <p>description:<%= item.description %></p>
-      <p>price:<%= item.price %></p>
-      <img src=<%=item.image %>>
-      <p>inventory:<%= item.inventory %></p>
-      <p>active:<%= item.active %></p>
-      <p>merchant name:<a href="/merchants/<%=item.merchant_id%>"><%= Merchant.find(item.merchant_id).name %>
+    <section class="single-box">
+      <div id="item-pic">
+        <%= link_to "/items/#{item.id}" do %>
+          <img src="<%=item.image %>" id="single-pic">
+        <% end %>
+      </div>
+      <div class="">
+        <p><%= link_to "#{item.name}", "/items/#{item.id}", method: :get %></p>
+        <p>description:<%= item.description %></p>
+        <p>price:<%= number_to_currency(item.price) %></p>
+        <p>inventory:<%= item.inventory %></p>
+        <p>active:<%= item.active %></p>
+        <p><%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}", method: :get %></p>
+      </div>
     </section>
   <% end %>
 </section>
+
 
 
 <% if @merchant %>

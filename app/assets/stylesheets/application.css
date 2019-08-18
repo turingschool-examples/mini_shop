@@ -15,18 +15,62 @@
  */
 
 header {
-  font-size: 40px;
-  background-color: Black;
-  color: white;
-  display: flex;
-  padding: 20px 30px 35px 40px;
+  text-align: justify;
+    letter-spacing: 1px;
+    height: 8em;
+    padding-top: 20px;
+    background: #2c3e50;
+    color: #fff;
+}
 
+a {
+  text-decoration: none;
+}
+
+header h1,
+header nav {
+    display: inline-block;
+}
+
+
+h2 {
+  /* background-color: grey; */
+}
+
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.item-edit{
+  background-color: grey;
+  font-size: 22px;
+}
+
+#desc {
+  /* height: 30px; */
+  width: 50%;
+  height: 70px;
+}
+
+.item-edit input {
+  width:30%;
 }
  .perm-links {
    color: Grey;
    text-decoration: none;
-   padding-left: 22%;
-   justify-content: space-between;
+   padding-left: 80px;
+   padding-right: 40px;
+   /* justify-content: space-between; */
+ }
+
+ #title {
+   color: Grey;
+   text-decoration: none;
+   padding-left: 50px;
+   font-size: 50px;
+
  }
 
  .merchant-index {
@@ -40,28 +84,40 @@ header {
 
  }
 
- .container {
+ .boxes-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
 }
 
- #grid-container {
-    /* display: grid;
-    border: 1px dashed;
-    grid-template-columns: auto auto auto;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* background-color: #2196F3;
-    /* padding: 10px; */ */ */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(3, 100px); */
+ .merchant-container {
+   justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.single-box {
+  border: 1px dashed;
+}
+
+.single-merchant {
+  border: 1px dashed;
+  height: 300px;
+}
+
+#item-pic {
+  object-fit: contain;
+}
+
+#single-pic {
+  object-fit:contain;
+  max-height: 300px;
+}
+ #merchant-pic {
+   object-fit:contain;
+   max-height: 250px;
  }
 
- #grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
+ #merch-name {
+   text-decoration: none;
+   font-size: 30px;
+ }

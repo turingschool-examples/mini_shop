@@ -1,13 +1,13 @@
-<header class="merchant-show">
-  <h1>Name: <a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name %></h1>
-  <h2><a href="/merchants/<%=@merchant.id%>/items"> All <%= @merchant.name %> Items </h2>
-</header>
-<p>address: <%= @merchant.address %></p>
-<p>city: <%= @merchant.city %></p>
-<p>state: <%= @merchant.state %></p>
-<p>zip: <%= @merchant.zip %></p>
+<center>
+  <h1><a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name.upcase%></a>  Items</h1>
+
+  <%= link_to "https://www.google.com/maps/place/#{@merchant.address}+#{@merchant.city}+#{@merchant.state}+#{@merchant.zip}", target: :_blank do%>
+    <h3>Address:  <%= @merchant.address %> <%= @merchant.city %> <%= @merchant.state %>
+    <%= @merchant.zip %></h3>
+  <% end %>
 
 
+</center>
 <a href="/merchants/<%= @merchant.id %>/edit">Update</a>
 <%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete %>
 <%= link_to "View Items", "/merchants/#{@merchant.id}/items", method: :get %>

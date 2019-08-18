@@ -1,9 +1,23 @@
-
+<center>
+<section class="merchant-container">
   <% @merchants.each do |merchant| %>
-  <div class="grid-container">
-    <div class="grid-item" ><a href="/merchants/<%=merchant.id %>"><%= merchant.name %></a></div>
-  </div>
+    <section class="single-merchant">
+      <center>
+      <div >
+        <a href="/merchants/<%=merchant.id %>" id="merch-name"><%= merchant.name %></a>
+      </div>
+      <div class="">
+        <%= link_to "/merchants/#{merchant.id}" do %>
+          <% if merchant.items.first  %>
+            <img src="<%= merchant.items.first.image %>" id="merchant-pic">
+          <% end %>
+        <% end %>
+      </div>
+      </center>
+    </section>
   <% end %>
+</section>
 
 
 <a href="/merchants/new">Create New Merchant</a>
+</center>
