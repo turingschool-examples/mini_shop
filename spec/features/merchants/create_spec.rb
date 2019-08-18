@@ -19,6 +19,6 @@ RSpec.describe "Creating a new merchant" do
     new_merchant = Merchant.last
 
     expect(current_path).to eq("/merchants")
-    expect(page).to have_content("")
+    expect(page).to have_link(new_merchant.name)
   end
 end

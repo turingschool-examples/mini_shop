@@ -14,7 +14,7 @@
             <p class="card-text">Price: <%= item.price %></p>
             <p class="card-text">Status: <%= item.status %></p>
             <p class="card-text">Inventory: <%= item.inventory %></p>
-            <p class="card-text">Merchant: <%= item.merchant.name %></p>
+            <p class="card-text">Merchant: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
           </div>
         </div>
       </div>
