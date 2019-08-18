@@ -26,7 +26,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 100%;
 }
 
 .btn-outline-success {
@@ -42,6 +42,11 @@
 
 .merchant-info {
   line-height: 1.7;
+}
+
+.item-info {
+  line-height: 2.5;
+  font-size: 18px;
 }
 
 .display-1 {
@@ -68,4 +73,8 @@
 .btn-primary {
   display: block;
   width: 50%;
+}
+
+.item-buttons {
+  margin-left: 30px;
 }
