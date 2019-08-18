@@ -14,7 +14,8 @@
       <p>Where to buy: <a href="/merchants/<%=@item.merchant_id%>"><%= Merchant.find(@item.merchant_id).name %>
     </div>
   </section>
+<div class="footer-but">
+  <%= link_to "Edit Item", "/items/#{@item.id}/edit", method: :get, :class => "bot-link" %>
+  <%= link_to "Delete", "/items/#{@item.id}", method: :delete, :class => "bot-link" %>
+</div>
 </center>
-
-<%= link_to "Edit Item", "/items/#{@item.id}/edit", method: :get %>
-<%= link_to "Delete", "/items/#{@item.id}", method: :delete %>

@@ -1,9 +1,11 @@
 <center>
-<% if @merchant %>
-  <h1><a href="/merchants/<%=@merchant.id%>"><%= @merchant.name %> Items</h1>
-<% else %>
-  <h1>All Items</h1>
-<% end %>
+  <section id="item-title">
+    <% if @merchant %>
+    <h1><a href="/merchants/<%=@merchant.id%>"><%= @merchant.name %> Items</h1>
+    <% else %>
+      <h1>All Items</h1>
+    <% end %>
+  </section>
 
 <section class="boxes-container">
   <% @items.each do |item| %>
@@ -34,7 +36,7 @@
       </div>
       <div class="">
         <p><%= link_to "#{item.name}", "/items/#{item.id}", method: :get %></p>
-        <p>description:<%= item.description %></p>
+        <p><%= item.description %></p>
         <p>price:<%= number_to_currency(item.price) %></p>
         <p>inventory:<%= item.inventory %></p>
         <p>active:<%= item.active? %></p>

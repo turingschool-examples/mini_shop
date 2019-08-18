@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+body {
+  background-color: lightgrey;
+}
 header {
+  border-radius: 5px;
+
   text-align: justify;
     letter-spacing: 1px;
     height: 8em;
@@ -23,8 +27,14 @@ header {
     color: #fff;
 }
 
+
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: hotpink;
 }
 
 header h1,
@@ -57,6 +67,16 @@ header::after {
 .item-edit input {
   width:30%;
 }
+
+.bot-link {
+  font-size: 30px;
+  padding-left: 150px;
+}
+
+.footer-but {
+  margin-bottom: 40px;
+  background: black;
+}
  .perm-links {
    color: Grey;
    text-decoration: none;
@@ -64,6 +84,7 @@ header::after {
    padding-right: 40px;
    /* justify-content: space-between; */
  }
+
 
  #title {
    color: Grey;
@@ -96,16 +117,28 @@ header::after {
 }
 
 .single-box {
-  border: 1px dashed;
+  border-radius: 5px;
+  background-color: lightgrey;
+  border: 1px solid;
+}
+
+#item-title {
+  border-radius: 5px;
+  /* border: 1px solid; */
+  background-color: lightgrey;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 .single-merchant {
-  border: 1px dashed;
+  border-radius: 5px;
+  border: 1px solid;
   height: 300px;
 }
 
 #item-pic {
   object-fit: contain;
+  margin-top: 20px;
 }
 
 #single-pic {
