@@ -23,6 +23,10 @@ class ItemsController < ApplicationController
     redirect_to "/merchants/#{@merchant.id}/items"
   end
 
+  def edit
+  end
+
+private
   def item_params
     params.permit(:name, :price, :description, :image, :inventory)
   end
