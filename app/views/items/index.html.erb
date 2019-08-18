@@ -7,6 +7,25 @@
 
 <section class="boxes-container">
   <% @items.each do |item| %>
+  <% if @merchant %>
+    <% if item.active? %>
+      <section class="single-box">
+        <div id="item-pic">
+          <%= link_to "/items/#{item.id}" do %>
+            <img src="<%=item.image %>" id="single-pic">
+          <% end %>
+        </div>
+        <div class="">
+          <p><%= link_to "#{item.name}", "/items/#{item.id}", method: :get %></p>
+          <p>description:<%= item.description %></p>
+          <p>price:<%= number_to_currency(item.price) %></p>
+          <p>inventory:<%= item.inventory %></p>
+          <p>active:<%= item.active? %></p>
+          <p><%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}", method: :get %></p>
+        </div>
+      </section>
+      <% end %>
+    <% else %>
     <section class="single-box">
       <div id="item-pic">
         <%= link_to "/items/#{item.id}" do %>
@@ -22,6 +41,7 @@
         <p><%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}", method: :get %></p>
       </div>
     </section>
+    <% end %>
   <% end %>
 </section>
 
