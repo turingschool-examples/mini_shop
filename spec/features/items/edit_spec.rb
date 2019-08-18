@@ -13,6 +13,9 @@ RSpec.describe "item edit page", type: :feature do
 
     expect(current_path).to eq("/items/#{item_1.id}/edit")
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     fill_in :name, with: "A Pineapple"
     fill_in :description, with: "very large and not ripe at all"
     fill_in :price, with: 8.78

@@ -7,6 +7,9 @@ RSpec.describe "merchants id page", type: :feature do
 
     visit "/merchants/#{merchant_1.id}"
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_1.id)
     expect(page).to have_content(merchant_1.address)

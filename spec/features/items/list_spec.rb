@@ -9,6 +9,9 @@ RSpec.describe "merchants items page", type: :feature do
 
     visit "/merchants/#{merchant_1.id}/items"
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     expect(page).to have_content(item_1.merchant.name)
     expect(page).to have_content(item_1.name)
     expect(page).to have_css("img[src*='https://images-na.ssl-images-amazon.com/images/I/81qIPbnzqCL._SY679_.jpg']")

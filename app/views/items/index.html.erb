@@ -1,4 +1,14 @@
+<html>
+
+<head>
+  <%= stylesheet_link_tag "main" %>
+</head>
+
+<div class="headerallitemspage">
+
 <h1>All Items</h1>
+
+</div>
 
 <% @items.each do |item| %>
   <h4>Name: <%= item.name %></h4>
@@ -10,3 +20,5 @@
   <h4>Merchant: <%= item.merchant.name %></h4>
   <p>------------------------------------</p>
 <% end %>
+
+</html>

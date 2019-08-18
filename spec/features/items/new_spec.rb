@@ -16,6 +16,9 @@ RSpec.describe "items creation page", type: :feature do
 
     expect(current_path).to eq("/merchants/#{merchant_1.id}/items/new")
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     fill_in :name, with: "Strawberry"
     fill_in :description, with: "delectable and scrumptious"
     fill_in :price, with: 1.77

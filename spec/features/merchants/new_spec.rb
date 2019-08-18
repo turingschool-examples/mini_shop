@@ -13,6 +13,9 @@ RSpec.describe "merchants creation page", type: :feature do
 
     expect(current_path).to eq("/merchants/new")
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     fill_in :name, with: "Mango Mall"
     fill_in :address, with: "789 Palm Tree Dr"
     fill_in :city, with: "San Diego"
