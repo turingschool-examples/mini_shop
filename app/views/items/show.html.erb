@@ -4,7 +4,7 @@
 <p>image: <img src=<%=@item.image %>></p>
 <p>inventory:<%= @item.inventory %></p>
 <p>active:<%= @item.active %></p>
-<p>merchant name:<%= Merchant.find(@item.merchant_id).name %>
+<p>merchant name: <a href="/merchants/<%=@item.merchant_id%>"><%= Merchant.find(@item.merchant_id).name %>
 
 <%= link_to "Edit Item", "/items/#{@item.id}/edit", method: :get %>
 <%= link_to "Delete", "/items/#{@item.id}", method: :delete %>
