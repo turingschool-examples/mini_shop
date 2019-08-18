@@ -21,7 +21,7 @@ RSpec.describe "Item show page" do
 
     click_on "Delete Item"
 
-    expect(current_path).to eq("/items/#{@item_1.id}")
+    expect(current_path).to eq("/items")
   end
 end
 
