@@ -1,17 +1,38 @@
+<center>
 <% if @merchant %>
   <h1><a href="/merchants/<%=@merchant.id%>"><%= @merchant.name %> Items</h1>
 <% else %>
   <h1>All Items</h1>
 <% end %>
-<% @items.each do |item| %>
-  <h2><a href="/items/<%=item.id %>"><%= item.name %></a></h2>
-  <p>description:<%= item.description %></p>
-  <p>price:<%= item.price %></p>
-  <p>image: <img src=<%=item.image %>></p>
-  <p>inventory:<%= item.inventory %></p>
-  <p>active:<%= item.active %></p>
-  <p>merchant name:<a href="/merchants/<%=item.merchant_id%>"><%= Merchant.find(item.merchant_id).name %>
-<% end %>
+
+<section class="boxes container">
+  <article >1</article>
+  <article >2</article>
+  <article >3</article>
+  <article >4</article>
+  <article >5</article>
+  <article >6</article>
+  <article >7</article>
+  <article >8</article>
+  <article >9</article>
+</section>
+
+<section id="grid-container">
+  <% @items.each do |item| %>
+    <section id="grid-item">
+      <p><a href="/items/<%=item.id %>"><%= item.name %></a></p>
+      <p>description:<%= item.description %></p>
+      <p>price:<%= item.price %></p>
+      <img src=<%=item.image %>>
+      <p>inventory:<%= item.inventory %></p>
+      <p>active:<%= item.active %></p>
+      <p>merchant name:<a href="/merchants/<%=item.merchant_id%>"><%= Merchant.find(item.merchant_id).name %>
+    </section>
+  <% end %>
+</section>
+
+
 <% if @merchant %>
   <%= link_to "Create New Item", "/merchants/#{@merchant.id}/items/new", method: :get %>
 <% end %>
+</center>

@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  font-size: 40px;
+  background-color: Black;
+  color: white;
+  display: flex;
+  padding: 20px 30px 35px 40px;
+
+}
+ .perm-links {
+   color: Grey;
+   text-decoration: none;
+   padding-left: 22%;
+   justify-content: space-between;
+ }
+
+ .merchant-index {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   background-color: #2196F3;
+   padding: 10px;
+   text-decoration: none;
+   color: black;
+
+
+ }
+
+ .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+}
+
+ #grid-container {
+    /* display: grid;
+    border: 1px dashed;
+    grid-template-columns: auto auto auto;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* background-color: #2196F3;
+    /* padding: 10px; */ */ */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 100px); */
+ }
+
+ #grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

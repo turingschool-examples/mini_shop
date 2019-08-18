@@ -1,5 +1,7 @@
-<h1>Name: <a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name %></h1>
-<h2><a href="/merchants/<%=@merchant.id%>/items"> All <%= @merchant.name %> Items </h2>
+<header class="merchant-show">
+  <h1>Name: <a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name %></h1>
+  <h2><a href="/merchants/<%=@merchant.id%>/items"> All <%= @merchant.name %> Items </h2>
+</header>
 <p>address: <%= @merchant.address %></p>
 <p>city: <%= @merchant.city %></p>
 <p>state: <%= @merchant.state %></p>
