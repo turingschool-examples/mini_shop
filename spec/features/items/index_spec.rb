@@ -17,4 +17,11 @@ end
     # expect(page).to have_link("Create New Merchant")
     end
   end
+
+  describe "when i visit '/merchants/:merchant_id/items'" do
+    it "Then i see that merchants items" do
+      visit "/merchants/#{@item_1.merchant_id}/items"
+      expect(page).to have_content(@item_1.name)
+    end
+  end
 end

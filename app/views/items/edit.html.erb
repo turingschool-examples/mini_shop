@@ -3,7 +3,7 @@
 <%= form_tag "/items/#{@item.id}", method: :patch, :class => "item-edit" do %>
   Name: <%= text_field_tag :name, @item.name %><br/><br/>
   Price : <%= text_field_tag :price, @item.price %><br/><br/>
-  <p>Description:</p> <%= text_area :description, @item.description, :id => "desc" %><br/><br/>
+  <p>Description:</p> <%= text_area_tag :description, @item.description, :id => "desc" %><br/><br/>
   Image    : <%= text_field_tag :image, @item.image %><br/><br/>
   Inventory    : <%= text_field_tag :inventory, @item.inventory %><br/><br/>
   <%= submit_tag "Submit Item Update" %>
