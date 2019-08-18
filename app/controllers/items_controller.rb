@@ -18,6 +18,11 @@ def update
   end
 end
 
+def delete
+  Item.destroy(params[:id])
+  redirect_to '/items'
+end
+
 private
 def item_params
   params.permit(:name, :price, :description, :inventory, :image, :status)
