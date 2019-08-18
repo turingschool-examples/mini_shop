@@ -1,4 +1,4 @@
-<h2>Update <%= @item.name  %></h2>
+<h2>Update <a href="/items/<%=@item.id%>"><%= @item.name  %></h2>
 <%= form_tag "/items/#{@item.id}", method: :patch do %>
   Name: <%= text_field_tag :name, @item.name %><br/><br/>
   Price : <%= text_field_tag :price, @item.price %><br/><br/>
