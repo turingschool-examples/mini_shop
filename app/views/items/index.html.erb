@@ -1,0 +1,13 @@
+<h1> Items <h1>
+<br>
+<br>
+<h2> List of Items </h2>
+<% @items.each do |item| %>
+  <h3><%= item.name %></h3>
+  <h3><%= item.description %></h3>
+  <h3><%= item.price %></h3>
+  <h3><%= item.image %></h3>
+  <h3><%= item.active %></h3>
+  <h3><%= item.inventory %></h3>
+  <h3><%= item.merchant.name %></h3>
+  <% end %>

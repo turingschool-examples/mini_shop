@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   delete "/merchants/:id", to: 'merchants#destroy'
 
+  get "/items", to: 'items#index'
+
 
 end
