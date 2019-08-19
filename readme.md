@@ -1,3 +1,5 @@
+# [Fentons Mini Shop App](https://fentons-mini-shop.herokuapp.com/)
+
 # MiniShop
 BE Mod 2 Week 1 Solo Project
 
