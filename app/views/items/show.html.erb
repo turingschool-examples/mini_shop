@@ -5,5 +5,6 @@
 <p>$<%= @item.price %></p>
 <p><%= @item.description %></p>
 <p>Quantity Available: <%= @item.inventory %></p>
-<p>Store: <%= @merchant.name %></p>
+<p><%= @merchant.name %></p>
+<p><%= link_to 'Edit', "/items/#{@item.id}/edit" %></p>
 </center>

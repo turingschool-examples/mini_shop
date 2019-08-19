@@ -21,7 +21,7 @@ RSpec.describe 'Merchant Item Creation', type: :feature do
       @ulta = Merchant.create(name: 'Ulta', address: '1150 S Ironton', city: 'Aurora', state: 'CO', zip: 80012)
     end
 
-    it 'has a link to create a new item for that merchant' do
+    xit 'has a link to create a new item for that merchant' do
         visit "/merchants/#{@ulta.id}/items"
 
         click_link 'Add New Item'
