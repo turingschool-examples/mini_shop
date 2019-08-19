@@ -7,4 +7,5 @@
 <p>Quantity Available: <%= @item.inventory %></p>
 <p><%= @merchant.name %></p>
 <p><%= link_to 'Edit', "/items/#{@item.id}/edit" %></p>
+<p><%= link_to 'Delete This Item', "/items", method: :delete %></p>
 </center>
