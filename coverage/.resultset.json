@@ -198,6 +198,31 @@
         1,
         null
       ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/spec/features/items/new_spec.rb": [
+
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/spec/features/items/show_spec.rb": [
+
+      ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/spec/features/merchants/delete_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/mackenziehalliday/turing/2module/projects/mini_shop/spec/features/merchants/edit_spec.rb": [
         1,
         null,
@@ -283,8 +308,20 @@
         null,
         null
       ],
+      "/Users/mackenziehalliday/turing/2module/projects/mini_shop/spec/features/models/merchant_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/mackenziehalliday/turing/2module/projects/mini_shop/app/models/merchant.rb": [
         1,
+        1,
+        null,
         1,
         null
       ],
@@ -359,6 +396,6 @@
         null
       ]
     },
-    "timestamp": 1566156078
+    "timestamp": 1566172555
   }
 }
