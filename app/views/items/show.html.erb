@@ -4,7 +4,7 @@
 <p>Price: $<%= @item.price %></p>
 <p>Item status: <%= @item.status %></p>
 <p>Number in stock: <%= @item.inventory %></p>
-<h3>Merchant: <a href=<%= "/merchants/#{@item.merchant.id}" %>><%= @item.merchant.name %></a></h3>
+<h3>Merchant: <%= link_to("#{@item.merchant.name}", "/merchants/#{@item.merchant.id}", class: "normal_link") %></h3>
 
-<h3><%= link_to("Update Item", "/items/#{@item.id}/edit") %></h3>
-<h3><%= link_to("Delete Item", "/items/#{@item.id}", method: :delete) %></h3>
+<h3><%= link_to("Update Item", "/items/#{@item.id}/edit", class: "button_link") %></h3>
+<h3><%= link_to("Delete Item", "/items/#{@item.id}", method: :delete, class: "button_link") %></h3>

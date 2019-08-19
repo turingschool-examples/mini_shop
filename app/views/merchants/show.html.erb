@@ -1,9 +1,6 @@
-<p><%= @merchant.name %></p>
-<p><%= @merchant.address %></p>
-<p><%= @merchant.city %></p>
-<p><%= @merchant.state %></p>
-<p><%= @merchant.zip %></p>
+<h2><%= @merchant.name %></h2>
+<p><%= "#{@merchant.address}, #{@merchant.city} #{@merchant.state} #{@merchant.zip}" %></p>
 
-<h3><%= link_to("Update Merchant", "/merchants/#{@merchant.id}/edit") %></h3>
-<h3><%= link_to("Delete Merchant", "/merchants/#{@merchant.id}", method: :delete) %></h3>
-<h3><%= link_to("View Merchant Items", "/merchants/#{@merchant.id}/items") %></h3>
+<h3><%= link_to("Update Merchant", "/merchants/#{@merchant.id}/edit", class: "button_link") %></h3>
+<h3><%= link_to("Delete Merchant", "/merchants/#{@merchant.id}", method: :delete, class: "button_link") %></h3>
+<h3><%= link_to("View Merchant Items", "/merchants/#{@merchant.id}/items", class: "button_link") %></h3>

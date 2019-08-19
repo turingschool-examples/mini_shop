@@ -4,16 +4,16 @@
 
 <% @items.each do |item| %>
   <img class="img" src=<%= "#{item.image}" %>>
-  <h2><a href=<%= "/items/#{item.id}" %>><%= item.name %></a></h2>
+  <h2><%= link_to("#{item.name}", "/items/#{item.id}", class: "normal_link") %></h2>
   <p><%= item.description %></p>
   <p>Price: $<%= item.price %></p>
   <p>Item status: <%= item.status %></p>
   <p>Number in stock: <%= item.inventory %></p>
-  <h3>Merchant: <a href=<%= "/merchants/#{item.merchant.id}" %>><%= item.merchant.name %></a></h3>
+  <h3>Merchant: <%= link_to("#{item.merchant.name}", "/merchants/#{item.merchant.id}", class: "normal_link") %>
   <br/>
   <br/>
 <% end %>
 
 <% if @merchant %>
-  <h3><%= link_to("Create New Item", "/merchants/#{params[:merchant_id]}/items/new") %></h3>
+  <h3><%= link_to("Create New Item", "/merchants/#{params[:merchant_id]}/items/new", class: "button_link") %></h3>
 <% end %>
