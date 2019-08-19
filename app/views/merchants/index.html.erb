@@ -1,20 +1,16 @@
 <html>
 
   <body>
-    <div>
     <div class="pageheaders">
       <h1>All Merchants</h1>
     </div>
-    <div>
 
       <div class="links"><%= link_to "New Merchant", "/merchants/new" %></div>
-      <br>
-      <% @merchants.each do |merchant| %>
-        <br>
-        <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %> </a>
-        <br>
-      <% end %>
-    </div>
-    </div>
+      <br><br>
+      <div class="merchantsindex"
+        <% @merchants.each do |merchant| %>
+          <br><a style="color: #000000; text-decoration: none;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %></a><br>
+        <% end %>
+      </div>
   </body>
 </html>
