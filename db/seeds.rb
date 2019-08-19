@@ -5,7 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Merchant.destroy_all
+Merchant.destroy_all
+Item.destroy_all
 #
 merchant_1 = Merchant.create(name: "Stuff n' Things", address: "123 North St", city: "Denver", zip: 80203, state: "CO")
 merchant_2 = Merchant.create(name: "The Widget Store", address: "456 East St", city: "Colorado Springs", zip: 80829, state: "CO")
