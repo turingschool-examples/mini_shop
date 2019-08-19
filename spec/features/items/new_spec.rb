@@ -30,9 +30,9 @@ RSpec.describe "items creation page", type: :feature do
     # new_merchant = Merchant.last
     expect(current_path).to eq("/merchants/#{merchant_1.id}/items")
     expect(page).to have_content("Strawberry")
-    expect(page).to have_content("Price: $1.77")
+    expect(page).to have_content("$1.77")
     expect(page).to have_css("img[src*='https://images.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500']")
     expect(page).to have_content("active")
-    expect(page).to have_content("Inventory: 8")
+    expect(page).to have_content("8")
   end
 end
