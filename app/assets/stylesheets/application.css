@@ -19,27 +19,34 @@
    margin: 0;
    padding: 0;
    overflow: hidden;
-   background-color: #333;
+   background-color: #383838;
  }
 
  li {
    float: left;
  }
 
- li a {
+ .navbar_link {
+   font-family: "Palatino Linotype", "Book Antiqua", Palatino, sans-serif;
    display: block;
    color: white;
    text-align: center;
-   padding: 14px 16px;
+   padding: 30px 20px;
    text-decoration: none;
  }
 
  .navbar_link:hover {
-   background-color: #111;
+   background-color: black;
  }
 
  #site_title {
-   font-weight: bold
+   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+   font-size: 2em;
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 20px 20px;
+   text-decoration: none;
  }
 
 .img {
@@ -55,4 +62,25 @@
 
 .primary-heading {
   padding-left: 150px
+}
+
+.normal_link:link, .normal_link:visited {
+  color: darkgreen
+}
+
+.normal_link:hover {
+  color: yellowgreen
+}
+
+.button_link:link, .button_link:visited {
+  background-color: darkgreen;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button_link:hover {
+  background-color: yellowgreen;
 }

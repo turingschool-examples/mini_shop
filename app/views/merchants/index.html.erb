@@ -1,7 +1,7 @@
 <h1 class="primary-heading">All Merchants</h1>
 
 <% @merchants.each do |merchant| %>
-  <p><a href=<%= "/merchants/#{merchant.id}" %>><%= merchant.name %></a></p>
+  <h3><%= link_to("#{merchant.name}", "/merchants/#{merchant.id}", class: "normal_link") %></h3>
 <% end %>
 
-<h3><%= link_to("Create New Merchant", "/merchants/new") %></h3>
+<h3><%= link_to("Create New Merchant", "/merchants/new", class: "button_link") %></h3>

@@ -20,5 +20,4 @@ describe "Merchant Index Page" do
 
     expect(current_path).to eq('/merchants/new')
   end
-
 end

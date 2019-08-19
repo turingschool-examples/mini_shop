@@ -22,5 +22,4 @@ describe "Merchant Creation Page" do
 
     expect(page).to have_content("Test name")
   end
-
 end
