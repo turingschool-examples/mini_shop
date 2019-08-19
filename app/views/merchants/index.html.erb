@@ -6,7 +6,7 @@
   <div class="row">
     <% @merchants.each do |merchant| %>
       <div class="col-sm">
-        <div class="card" style="width: 18rem; height: 20rem;">
+        <div class="card" style="width: 18rem; height: 20rem;" id= 'merchant-<%=merchant.id%>'>
           <div class="card-body">
             <h2 class= "merchant-name"><%= link_to merchant.name, "/merchants/#{merchant.id}" %></h2>
             <ul class="list-group list-group-flush">
