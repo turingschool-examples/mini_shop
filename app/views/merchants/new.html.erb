@@ -17,16 +17,18 @@
   <h1>New Merchant</h1>
 </div>
 
-<%= form_tag("/merchants", method: :post) do %>
-  <p>Enter a new merchant name:</p>
-  <%= text_field_tag :name %>
-  <p>Enter address:</p>
-  <%= text_field_tag :address %>
-  <p>Enter city:</p>
-  <%= text_field_tag :city %>
-  <p>Enter state:</p>
-  <%= text_field_tag :state %>
-  <p>Enter zip code:</p>
-  <%= text_field_tag :zip %><br><br>
-  <%= submit_tag "Create Merchant" %>
-<% end %>
+<div class="form">
+  <%= form_tag("/merchants", method: :post) do %>
+    <p>Enter a new merchant name:</p>
+    <%= text_field_tag :name %>
+    <p>Enter address:</p>
+    <%= text_field_tag :address %>
+    <p>Enter city:</p>
+    <%= text_field_tag :city %>
+    <p>Enter state:</p>
+    <%= text_field_tag :state %>
+    <p>Enter zip code:</p>
+    <%= text_field_tag :zip %><br><br>
+    <%= submit_tag "Create Merchant" %>
+  <% end %>
+</div>
