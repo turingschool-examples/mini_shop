@@ -1,7 +1,7 @@
 <a href="/merchants">Merchants Index</a>
 
 <h1><%= @merchant.name %></h1>
-
+<%= link_to 'Available Products', "/merchants/#{@merchant.id}/items" %>
 <p><%= @merchant.address %></p>
 <p><%= @merchant.city %></p>
 <p><%= @merchant.state %></p>
