@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+body {
+  background-color: lightgrey;
+}
 header {
+  border-radius: 5px;
+
   text-align: justify;
     letter-spacing: 1px;
     height: 8em;
@@ -23,8 +27,14 @@ header {
     color: #fff;
 }
 
+
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: hotpink;
 }
 
 header h1,
@@ -57,13 +67,48 @@ header::after {
 .item-edit input {
   width:30%;
 }
+
+.bot-link {
+  font-size: 30px;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.footer-but {
+  background: darkgrey;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+}
  .perm-links {
    color: Grey;
    text-decoration: none;
+   font-size: 20px;
    padding-left: 80px;
    padding-right: 40px;
    /* justify-content: space-between; */
  }
+
+ #item-show {
+   font-size: 25px;
+ }
+
+ #merch-foot {
+   float: right;
+   margin: 4% 3% 0% 0%;
+   font-size: 25px;
+ }
+
+ #m-name {
+   background: Grey;
+   margin: 0;
+   padding-top: 30px;
+   padding-bottom: 20px;
+   /* padding: 0 0 0 0; */
+   border-radius: 5px;
+ }
+
 
  #title {
    color: Grey;
@@ -96,16 +141,30 @@ header::after {
 }
 
 .single-box {
-  border: 1px dashed;
+  border-radius: 5px;
+  background-color: lightgrey;
+  border: 1px solid;
+}
+
+#item-title {
+  border-radius: 5px;
+  /* border: 1px solid; */
+  background-color: lightgrey;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 .single-merchant {
-  border: 1px dashed;
+  border-radius: 5px;
+  border: 1px solid;
   height: 300px;
 }
 
 #item-pic {
   object-fit: contain;
+  margin-top: 30px;
+  align-items: center;
+  /* margin-right: 10px; */
 }
 
 #single-pic {

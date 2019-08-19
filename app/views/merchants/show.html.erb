@@ -1,11 +1,9 @@
 <center>
-  <h1><a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name.upcase%></a>  Items</h1>
-
+  <h1 , id="m-name"><a href="/merchants/<%=@merchant.id%>"> <%= @merchant.name.upcase%></a>  Items</h1>
   <%= link_to "https://www.google.com/maps/place/#{@merchant.address}+#{@merchant.city}+#{@merchant.state}+#{@merchant.zip}", target: :_blank do%>
-    <h3>Address:  <%= @merchant.address %> <%= @merchant.city %> <%= @merchant.state %>
-    <%= @merchant.zip %></h3>
+    <h3>Find us at:  <br><br><%= @merchant.address %> <br><br> <%="#{@merchant.city}"+", " + "#{@merchant.state}" + "  " "#{@merchant.zip}" %>
+    </h3>
   <% end %>
-
 
 </center>
 <a href="/merchants/<%= @merchant.id %>/edit">Update</a>
