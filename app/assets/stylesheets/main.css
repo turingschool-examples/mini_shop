@@ -1,0 +1,147 @@
+.topnav {
+
+  background-color: #38daae;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+}
+
+.topnav h2 {
+  display: inline;
+  color: #25491E;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: Tahoma, Arial, Times, serif;font-weight:bold;
+  padding-left: 22px;
+
+
+}
+
+.topnav a {
+  font-family: Tahoma, Arial, Times, serif;font-weight:bold;
+  text-decoration: underline;
+  display: block;
+  float: right;
+  color: #FFFFFF;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+.pageheaders {
+  margin-top: 70px;
+  font-family: Tahoma, Arial, Times, serif;font-weight:bold;
+  font-size: 15px;
+}
+
+.pageheaders a {
+  font-size: 30px;
+}
+
+.itemstables img {
+  max-width:100%;
+  max-height:100%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+.itemstables table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+
+.itemstables th, td {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding: 15px;
+  text-align: left;
+  font-size: 20px;
+
+}
+
+.itemstables td {
+  width:175px;
+  height:175px;
+
+}
+
+.itemstables tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.itemstables tr:nth-child(odd) {
+ background-color: #fff;
+}
+.itemstables th {
+  background-color: #38daae;
+  color: white;
+}
+.links {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.merchantsindex table, th, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.merchantsindex th, td {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding: 15px;
+  text-align: left;
+  font-size: 30px;
+}
+
+.merchantsindex tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.merchantsindex tr:nth-child(odd) {
+ background-color: #eee;
+}
+
+.iteminfo {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.iteminfo img {
+  max-width:35%;
+  max-height:70%;
+  float: right;
+  position: absolute;
+  top: 150px;
+  right: 30px;
+  left: 900px
+}
+
+.iteminfo table {
+  width:100%;
+}
+.iteminfo table, th, td {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.iteminfo th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.iteminfo th {
+  background-color: #eee;
+}
+
+.form {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size: 20px;
+}

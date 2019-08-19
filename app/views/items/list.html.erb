@@ -1,11 +1,37 @@
-<h1>All <%= @merchant.name %> Items</h1>
-<%= link_to "New Item", "/merchants/#{@merchant.id}/items/new" %>
+<html>
 
-<h1> <%  @merchant.items.each do |item| %></h1>
-  <h4>Name: <%= item.name %></h4>
-  <h4>Price: <%= number_to_currency(item.price) %></h4>
-  <h4>Status: <%= item.status %></h4>
-  <img src = <%= item.image %> ></img>
-  <h4>Inventory: <%= item.inventory %></h4>
-  <p>------------------------------------</p>
-<% end %>
+<head>
+</head>
+<body>
+  <div class="pageheaders">
+    <h1 style="display: inline" > All Items for: </h1>
+    <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@merchant.id}"%>> <%= @merchant.name %> </a>
+  </div>
+
+  <br><div class="links"> <%= link_to "New Item", "/merchants/#{@merchant.id}/items/new" %> </div><br><br>
+
+  <div class="itemstables">
+
+  <table id="t01">
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Inventory</th>
+    </tr>
+      <%  @merchant.items.each do |item| %>
+    <tr>
+      <td><a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{item.id}"%>> <%= item.name %> </a></td>
+      <td><img src = <%= item.image %> ></img></td>
+      <td><%= number_to_currency(item.price) %></td>
+      <td><%= item.status %></td>
+      <td><%= item.inventory %></td>
+    </tr>
+      <% end %>
+    </table>
+
+    </div>
+  </body>
+
+  </html>

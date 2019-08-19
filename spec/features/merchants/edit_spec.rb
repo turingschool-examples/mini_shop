@@ -13,6 +13,9 @@ RSpec.describe "merchants edit page", type: :feature do
 
     expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
 
+    expect(page).to have_link("Merchants")
+    expect(page).to have_link("Items")
+
     fill_in :name, with: "The Mango Mall"
     fill_in :address, with: "110 Coconut Cir"
     fill_in :city, with: "Los Angeles"

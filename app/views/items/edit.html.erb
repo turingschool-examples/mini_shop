@@ -1,15 +1,19 @@
-<h1>Edit Item</h1>
+<div class="pageheaders">
+  <h1>Edit Item</h1>
+</div>
 
-<%= form_tag("/items/#{@item.id}", method: :patch) do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name, @item.name %>
-  <%= label_tag :description %>
-  <%= text_field_tag :description, @item.description %>
-  <%= label_tag :price %>
-  <%= text_field_tag :price, @item.price %>
-  <%= label_tag :image %>
-  <%= text_field_tag :image, @item.image %>
-  <%= label_tag :inventory %>
-  <%= text_field_tag :inventory, @item.inventory %><br><br>
-  <%= submit_tag "Update Item" %>
-<% end %>
+<div class="form">
+  <%= form_tag("/items/#{@item.id}", method: :patch) do %>
+    <p>Enter <%= label_tag :name %>: </p>
+    <%= text_field_tag :name, @item.name %>
+    <p>Enter <%= label_tag :description %>: </p>
+    <%= text_field_tag :description, @item.description %>
+    <p>Enter <%= label_tag :price %>: </p>
+    <%= text_field_tag :price, @item.price %>
+    <p>Enter <%= label_tag :image %>: </p>
+    <%= text_field_tag :image, @item.image %>
+    <p>Enter <%= label_tag :inventory %>: </p>
+    <%= text_field_tag :inventory, @item.inventory %><br><br>
+    <%= submit_tag "Update Item" %>
+  <% end %>
+<div>
