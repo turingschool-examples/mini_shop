@@ -9,9 +9,10 @@
 Merchant.destroy_all
 Item.destroy_all
 
-@merchant_1 = Merchant.create(name: "merchant_1", address: "123 Main", city: "Denver", state:"CO", zip:"80204")
-@merchant_2 = Merchant.create(name: "merchant_2", address: "789 Pacific", city: "Lakewood", state:"CO", zip:"80214")
+@rare_seed = Merchant.create(name: "Baker Creek Heirloom", address: "123 Main", city: "Denver", state:"CO", zip:"80204")
+@thai_food = Merchant.create(name: "Aloy", address: "789 Pacific", city: "Lakewood", state:"CO", zip:"80214")
 
-@item_1 = @merchant_1.items.create(name: "flylow chemical", description: "Mens ski pant", price: 325, image: "https://content.backcountry.com/images/items/1200/FLG/FLG0029/FER.jpg" , active: true, inventory: 0)
-@item_2 = @merchant_1.items.create(name: "ON3P Jeffrey", description: "Ski", price: 699, image: "https://abetterski.com/assets/lg-gallery/on3p/skis/jeffrey-114/on3p-jeffrey-114.jpg" , active: true, inventory: 9)
-@item_2 = @merchant_2.items.create(name: "ON3P Jeffrey", description: "Big mountain ski", price: 699, image: "https://cdn.shopify.com/s/files/1/0033/4622/products/2020_Jeffrey116_Preview_165x1000x72px-01_2000x.png?v=1555779770" , active: true, inventory: 9,)
+@item_1 = @rare_seed.items.create(name: "Blue Beauty", description: "Heirloom tomato with blue shoulders", price: 4, image: "https://www.rareseeds.com/assets/1/14/DimRegular/tomato-blue-beauty.jpg" , active: true, inventory: 0)
+@item_2 = @rare_seed.items.create(name: "Kellog Breakfast", description: "Large orange heirloom tomato", price: 6, image: "https://www.rareseeds.com/assets/1/14/DimRegular/Tomato-Kellogs-Breakfast-TO101-1-1057-373-DSC03804.jpg" , active: true, inventory: 9)
+@item_3 = @thai_food.items.create(name: "Stick Rice", description: "thai glutinous rice", price: 2, image: "https://thewoksoflife.com/wp-content/uploads/2019/04/how-to-make-sticky-rice-7.jpg" , active: true, inventory: 122,)
+@item_4 = @thai_food.items.create(name: "Birdseye chili", description: "Hot thai chili", price: 3, image: "https://www.chilipeppermadness.com/wp-content/uploads/2019/04/Thai-Peppers.jpg" , active: true, inventory: 40,)

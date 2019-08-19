@@ -70,19 +70,43 @@ header::after {
 
 .bot-link {
   font-size: 30px;
-  padding-left: 150px;
+  padding-right: 80px;
+  padding-left: 80px;
 }
 
 .footer-but {
+  background: darkgrey;
   margin-bottom: 40px;
-  background: black;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 4px;
 }
  .perm-links {
    color: Grey;
    text-decoration: none;
+   font-size: 20px;
    padding-left: 80px;
    padding-right: 40px;
    /* justify-content: space-between; */
+ }
+
+ #item-show {
+   font-size: 25px;
+ }
+
+ #merch-foot {
+   float: right;
+   margin: 4% 3% 0% 0%;
+   font-size: 25px;
+ }
+
+ #m-name {
+   background: Grey;
+   margin: 0;
+   padding-top: 30px;
+   padding-bottom: 20px;
+   /* padding: 0 0 0 0; */
+   border-radius: 5px;
  }
 
 
@@ -138,7 +162,9 @@ header::after {
 
 #item-pic {
   object-fit: contain;
-  margin-top: 20px;
+  margin-top: 30px;
+  align-items: center;
+  /* margin-right: 10px; */
 }
 
 #single-pic {

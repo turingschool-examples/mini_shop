@@ -1,6 +1,6 @@
 <center>
   <section>
-    <div class="">
+    <div id="item-show">
       <h1><a href="/items/<%=@item.id%>"><%= @item.name %></a></h1>
     </div>
     <div class="">
@@ -8,9 +8,9 @@
     </div>
     <div class="">
       <p><%= @item.description %></p>
-      <p>price:<%= number_to_currency(@item.price) %></p>
-      <p>Number Remaining:<%= @item.inventory %></p>
-      <p>active:<%= @item.active? %></p>
+      <p>Price: <%= number_to_currency(@item.price) %></p>
+      <p>Number Remaining: <%= @item.inventory %></p>
+      <p>Active: <%= @item.active? %></p>
       <p>Where to buy: <a href="/merchants/<%=@item.merchant_id%>"><%= Merchant.find(@item.merchant_id).name %>
     </div>
   </section>
