@@ -1,3 +1,12 @@
+<head>
+  <link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+</head>
+
+<body>
+<div id = "running-header">
+  <h1> amazonia </h1>
+</div>
+
 <h1>Name: <%= @item.name %></h1>
 <h3>Price: <%= @item.price %></h3>
 <h3>Description: <%= @item.description %></h3>
@@ -6,4 +15,4 @@
 <h3>Merchant: <%= @item.merchant.name %></h3>
 <%= image_tag @item.image, alt: "image of @item.name" %>
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
-<a href="/items/<%= @item.id %>/delete">Delete Item</a>
+ <a href="/items/<%= @item.id %>/edit">Edit Item</a> | <a href="/items">All Items</a> |   <a href="/items/<%= @item.id %>/delete">Delete Item</a>
