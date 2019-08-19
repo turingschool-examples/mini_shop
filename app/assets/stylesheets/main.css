@@ -87,3 +87,35 @@
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 35px;
 }
+
+.iteminfo {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.iteminfo img {
+  max-width:35%;
+  max-height:70%;
+  float: right;
+  position: absolute;
+  top: 150px;
+  right: 30px;
+  left: 900px
+}
+
+.iteminfo table {
+  width:100%;
+}
+.iteminfo table, th, td {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.iteminfo th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.iteminfo th {
+  background-color: #eee;
+}
