@@ -1,7 +1,22 @@
+<head>
+<link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+</head>
+
+<body>
+<div id = "running-header">
+  <h1> amazonia </h1>
+  </div>
+
+<center>
 <h1><%= @merchant.name %></h1>
-<h3><%= @merchant.address %></h3>
-<h3><%= @merchant.city %></h3>
-<h3><%= @merchant.state %></h3>
-<h3><%= @merchant.zip %></h3>
-<p><%= link_to "Edit Info", "/merchants/#{@merchant.id}/edit" %></p>
-<p><%= link_to "Delete", "/merchants/#{@merchant.id}", method: :delete %></p>
+<hr>
+<h2>
+  <a href= /merchants/<%= @merchant.id%>/items> All Items</a> | <a href="/merchants/<%= @merchant.id%>/items/new">Add Item</a></h2>
+<p>
+  <%= @merchant.address %><br>
+  <%= @merchant.city %>,
+  <%= @merchant.state %>
+  <%= @merchant.zip %>
+</p>
+  <a href="/merchants/<%= @merchant.id %>/edit">Edit Merchant</a> | <a href="/merchants">All Merchants</a> |   <a href="/merchants/<%= @merchant.id %>/delete">Delete Merchant</a>
+</center>

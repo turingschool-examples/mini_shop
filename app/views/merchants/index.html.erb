@@ -1,5 +1,24 @@
-<h1> Merchants </h1>
-<%@merchants.each do |merchant| %>
-<h2> <%= merchant.name %></h2>
-<%end %>
-<%= link_to "Add Merchant", "/merchants/new" %>
+<head>
+  <link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+</head>
+
+<body>
+  <div id = "running-header">
+    <h1> amazonia </h1>
+  </div>
+
+<hr>
+
+<div id = "middle_sec">
+  <center>
+  <h3> Merchants </h3>
+  <%@merchants.each do |merchant| %>
+    <h2> <a href="/merchants/<%= merchant.id %> "><%= merchant.name%> </a> </h2>
+  <%end %>
+  <a href="/merchants/new">Add a New Merchant</a> ||  <a href="/items"> View All Items</a>
+  </center>
+</div>
+
+<div id ="footer">
+</div>
+</body>

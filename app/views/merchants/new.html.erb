@@ -1,3 +1,5 @@
+<center>
+  <a href="/merchants/ <%= @merchant.id %>">Back to Merchant Page</a>&#x1F436;</h3>
 <%= form_tag("/merchants") do  %>
   <%= label_tag :name %>
   <%= text_field_tag :name, nil, placeholder: "Ex. Jane Doe", class: "new-input" %><br>
@@ -11,3 +13,5 @@
   <%= text_field_tag :zip, nil, placeholder: "Ex. 80202", class: "new-input" %><br>
   <%= submit_tag "Create Merchant", class: "button" %>
 <% end %>
+<a href="/merchants">Back to All Merchants</a>
+</center>
