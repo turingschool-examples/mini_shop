@@ -1,4 +1,4 @@
-<a href="/merchants">Merchants Index</a>
+<%= link_to 'Merchants Index', '/merchants' %>
 
 <h1><%= @merchant.name %></h1>
 <%= link_to 'Available Products', "/merchants/#{@merchant.id}/items" %>
