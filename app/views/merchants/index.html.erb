@@ -7,10 +7,12 @@
 
       <div class="links"><%= link_to "New Merchant", "/merchants/new" %></div>
       <br><br>
-      <div class="merchantsindex"
-        <% @merchants.each do |merchant| %>
-          <br><a style="color: #000000; text-decoration: none;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %></a><br>
-        <% end %>
+      <div class="merchantsindex">
+        <table>
+          <% @merchants.each do |merchant| %>
+            <tr><th><a style="color: #000000; text-decoration: none;" href= <%= "/merchants/#{merchant.id}"%>> <%= merchant.name %></a></th></tr>
+          <% end %>
+        </table>
       </div>
   </body>
 </html>
