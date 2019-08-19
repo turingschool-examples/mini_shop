@@ -1,20 +1,22 @@
 <head>
-<link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+  <link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
 </head>
 
-<body>
 <div id = "running-header">
-  </div>
-<div id = "middle-sec">
-<h1><%= @merchant.name %>'s Items</h1>
-<% @items.each do |item| %>
-<%= image_tag item.image, alt: "image of #{item.name}" %>
-<h2>Name: <%= item.name %></h2>
-<h3>Price: <%= item.price %></h3>
-<h3>Status: <%= item.status %></h3>
-<h3>Inventory: <%= item.inventory %></h3>
-<% end %>
-<a href="/merchants">Back to All Merchants</a> |
-<%= link_to "Add Item", "/merchants/#{@merchant.id}/items/new" %>
+  <h1> amazonia </h1>
 </div>
+
+<body>
+  <div id = "middle-sec">
+  <h1><%= @merchant.name %>'s Items</h1>
+  <% @items.each do |item| %>
+  <%= image_tag item.image, alt: "image of #{item.name}" %>
+  <h2>Name: <%= item.name %></h2>
+  <h3>Price: <%= item.price %></h3>
+  <h3>Status: <%= item.status %></h3>
+  <h3>Inventory: <%= item.inventory %></h3>
+  <% end %>
+  <a href="/merchants">Back to All Merchants</a> |
+  <%= link_to "Add Item", "/merchants/#{@merchant.id}/items/new" %>
+  </div>
 </body>

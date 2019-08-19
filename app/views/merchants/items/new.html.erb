@@ -1,3 +1,11 @@
+<head>
+  <link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+</head>
+
+<div id = "running-header">
+  <h1> amazonia </h1>
+</div>
+
 <%= form_tag("/merchants/#{@merchant_id}/items") do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %><br>

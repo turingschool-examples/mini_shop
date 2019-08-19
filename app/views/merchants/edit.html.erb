@@ -1,6 +1,14 @@
+<head>
+  <link rel = 'stylesheet' type = 'text/css' href ='scott_css.css'>
+</head>
+
+<div id = "running-header">
+  <h1> amazonia </h1>
+</div>
+
 
 <%= form_tag("/merchants/#{@merchant.id}", method: :patch) do  %>
-  <%= label_tag :name %>  <!--label for our text field --> 
+  <%= label_tag :name %>  <!--label for our text field -->
   <%= text_field_tag :name, @merchant.name %>
   <%= label_tag :address %>
   <%= text_field_tag :address, @merchant.address %>

@@ -11,8 +11,9 @@ RSpec.describe "Items Index Page", type: :feature do
     end
 
     it "I see each Item in the system and all the Item's info" do
+
       visit "/items"
-      # binding.pry
+
         expect(page).to have_content(@item_1.name)
         expect(page).to have_content(@item_1.description)
         expect(page).to have_content(@item_1.price)
@@ -20,14 +21,13 @@ RSpec.describe "Items Index Page", type: :feature do
         expect(page).to have_content(@item_1.inventory)
         expect(page).to have_content(@item_1.merchant.name)
         expect(page).to have_css("img[src*='#{@item_1.image}']")
-
-      expect(page).to have_content(@item_2.name)
-      expect(page).to have_content(@item_2.description)
-      expect(page).to have_content(@item_2.price)
-      expect(page).to have_content(@item_2.status)
-      expect(page).to have_content(@item_2.inventory)
-      expect(page).to have_content(@item_2.merchant.name)
-      expect(page).to have_css("img[src*='#{@item_2.image}']")
+        expect(page).to have_content(@item_2.name)
+        expect(page).to have_content(@item_2.description)
+        expect(page).to have_content(@item_2.price)
+        expect(page).to have_content(@item_2.status)
+        expect(page).to have_content(@item_2.inventory)
+        expect(page).to have_content(@item_2.merchant.name)
+        expect(page).to have_css("img[src*='#{@item_2.image}']")
       end
     end
   end
