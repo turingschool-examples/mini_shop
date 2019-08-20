@@ -9,7 +9,7 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
       description: "Rainier Cherries, 2 lbs",
       price: 15.99,
       image: "https://images.costcobusinessdelivery.com/ImageDelivery/imageService?profileId=12028466&itemId=53747&recipeName=680",
-      status: TRUE,
+      status: true,
       inventory: 200
     )
 
@@ -18,7 +18,7 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
       description: "White Flesh Premium Nectarines, 5 lbs",
       price: 9.99,
       image: "https://d1fywv0iz2cv2w.cloudfront.net/pimage/2925a20c743423a12f1be4f348f0013f.jpeg",
-      status: FALSE,
+      status: false,
       inventory: 500
     )
 
@@ -29,16 +29,22 @@ RSpec.describe "Merchant Items Index Page", type: :feature do
     visit "/merchants/#{@merchant_1.id}/items"
 
     expect(page).to have_content(@merchant_1.name)
-    expect(page).to have_content(@item_1.name)
-    expect(page).to have_content(@item_1.price)
-    expect(page).to have_css("img[src*='#{@item_1.image}']")
-    expect(page).to have_content(@item_1.status)
-    expect(page).to have_content(@item_1.inventory)
-    expect(page).to have_content(@item_2.name)
-    expect(page).to have_content(@item_2.price)
-    expect(page).to have_css("img[src*='#{@item_2.image}']")
-    expect(page).to have_content(@item_2.status)
-    expect(page).to have_content(@item_2.inventory)
+    
+    within "#item-#{@item_1.id}" do
+      expect(page).to have_content(@item_1.name)
+      expect(page).to have_content(@item_1.price)
+      expect(page).to have_css("img[src*='#{@item_1.image}']")
+      expect(page).to have_content(@item_1.status)
+      expect(page).to have_content(@item_1.inventory)
+    end
+
+    within "#item-#{@item_2.id}" do
+      expect(page).to have_content(@item_2.name)
+      expect(page).to have_content(@item_2.price)
+      expect(page).to have_css("img[src*='#{@item_2.image}']")
+      expect(page).to have_content(@item_2.status)
+      expect(page).to have_content(@item_2.inventory)
+    end
   end
 
   it "should show a link to add a new item that belongs to a given merchant" do
