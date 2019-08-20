@@ -41,6 +41,10 @@ class MerchantsController < ApplicationController
     #@merchant.items.delete(@items)
     Merchant.destroy(params[:id])
     redirect_to '/merchants'
+
+    #@merchant = Merchant.find(params[:id])
+    #@merchant.destroy
+    #redirect_to '/merchants'
   end
 
   private
