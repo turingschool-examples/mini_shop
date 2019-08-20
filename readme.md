@@ -1,6 +1,9 @@
 # MiniShop
 BE Mod 2 Week 1 Solo Project
 
+In this project, I created a fictitious online fruit market using a rails boilerplate and deployed it to Heroku at [here](https://enigmatic-retreat-90886.herokuapp.com/home). Currently, the project has limited functionalities, including browsing merchant/item info pages and creating/editing forms. The project will be developed further in little_shop and monster_shop repos.
+
+
 ## Learning Goals
 
 ### Rails
@@ -389,4 +392,3 @@ When I click the link
 Then a 'PATCH' request is sent to '/items/:id/activate' or 'items/:id/deactivate' (depending on the link)
 and I am redirected to the Item Show page where I see the active status has been toggled
 ```
-
