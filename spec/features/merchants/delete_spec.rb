@@ -11,5 +11,6 @@ RSpec.describe "Deleting a new merchant" do
     click_on "Delete"
 
     expect(current_path).to eq("/merchants")
+    expect(page).to_not have_css("#merchant-#{merchant_1.id}")
   end
 end

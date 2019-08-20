@@ -22,6 +22,7 @@ RSpec.describe "Item show page" do
     click_on "Delete Item"
 
     expect(current_path).to eq("/items")
+    expect(page).to_not have_css("#item-#{@item_1.id}")
   end
 end
 

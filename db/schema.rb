@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 20190816173410) do
     t.string "description"
     t.float "price"
     t.string "image"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.integer "inventory"
     t.bigint "merchant_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["merchant_id"], name: "index_items_on_merchant_id"
   end
 
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20190816173410) do
     t.string "city"
     t.string "state"
     t.integer "zip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "items", "merchants"
