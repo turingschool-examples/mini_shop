@@ -15,5 +15,25 @@ describe 'Merchant show Page' do
       expect(page).to have_content(@candy_store.state)
       expect(page).to have_content(@candy_store.zip)
     end
+
+    it 'I see a link to update the merchant' do
+      visit merchant_path(@candy_store)
+
+      click_link 'Edit Merchant'
+
+      expect(current_path).to eq("/merchants/#{@candy_store.id}/edit")
+
+      address = '821 Park Place'
+      city = 'Golden'
+
+      fill_in 'Address', with: address
+      fill_in 'City', with: city
+      click_button 'Update Merchant'
+
+      expect(current_path).to eq("/merchants/#{@candy_store.id}")
+
+      expect(page).to have_content('821 Park Place')
+      expect(page).to have_content('Golden')
+    end
   end
 end
