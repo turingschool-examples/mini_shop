@@ -20,9 +20,8 @@ ActiveRecord::Schema.define(version: 20191001011856) do
     t.string "description"
     t.integer "price"
     t.string "image"
-    t.boolean "active?"
     t.integer "inventory"
-    t.string "merchant_name"
+    t.boolean "active?", default: true
     t.bigint "merchant_id"
     t.index ["merchant_id"], name: "index_items_on_merchant_id"
   end
