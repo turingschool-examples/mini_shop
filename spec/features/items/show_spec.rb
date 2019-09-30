@@ -33,5 +33,13 @@ describe 'Item Show Page' do
       expect(page).to have_content('Better Chocolate Bar')
       expect(page).to have_content('Now 50% More Chocolate')
     end
+
+    it 'I see a link to delete the item' do
+      visit item_path(@chocolate_bar)
+      click_link 'Delete Item'
+      expect(current_path).to eq('/items')
+      expect(page).to_not have_content(@chocolate_bar.name)
+      expect(page).to_not have_content(@chocolate_bar.description)
+    end
   end
 end

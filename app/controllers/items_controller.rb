@@ -31,7 +31,12 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.update(item_params)
     redirect_to "/items/#{@item.id}"
+  end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to '/items'
   end
 
   private
