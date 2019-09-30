@@ -4,7 +4,7 @@ class Item < ApplicationRecord
                         :price,
                         :image,
                         :active?,
-                        :inventory;
+                        :inventory,
                         :merchant_name
   belongs_to :merchant
 end

@@ -1,9 +1,9 @@
 <% @items.each do |item| %>
-  <%= item.name %>
-  <%= item.description %>
-  <%= item.price %>
-  <%= item.image %>
-  <%= item.active? %>
-  <%= item.inventory %>
-  <%= item.merchant_name %>
+  <p>Name: <%= item.name %></p>
+  <p>Description: <%= item.description %></p>
+  <p>Price: <%= item.price %></p>
+  <p><img src= <%= item.image %></img></p>
+  <p>Active? <%= item.active? %></p>
+  <p>Inventory Count: <%= item.inventory %></p>
+  <p>Selling Merchant: <%= item.merchant_name %></p>
 <% end %>
