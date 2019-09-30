@@ -9,3 +9,4 @@
 <% end %>
 <p>Inventory Count: <%= @item.inventory %></p>
 <p>Selling Merchant: <%= @item.merchant.name %></p>
+<p><%= link_to 'Edit Item', "/items/#{@item.id}/edit" %></p>

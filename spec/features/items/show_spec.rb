@@ -8,12 +8,30 @@ describe 'Item Show Page' do
     end
 
     it 'I see the stats for an item with a specific id' do
-      visit "/items/#{@chocolate_bar.id}"
+      visit item_path(@chocolate_bar)
 
       expect(page).to have_content(@chocolate_bar.name)
       expect(page).to have_content(@chocolate_bar.description)
       expect(page).to have_content(@chocolate_bar.price)
       expect(page).to have_content(@chocolate_bar.inventory)
+    end
+
+    it 'I see a link to update that Item' do
+      visit item_path(@chocolate_bar)
+      click_link 'Edit Item'
+      expect(current_path).to eq("/items/#{@chocolate_bar.id}/edit")
+
+      name = 'Better Chocolate Bar'
+      description = 'Now 50% More Chocolate'
+
+      fill_in 'Name', with: name
+      fill_in 'Description', with: description
+      click_button 'Update Item'
+
+      expect(current_path).to eq("/items/#{@chocolate_bar.id}")
+
+      expect(page).to have_content('Better Chocolate Bar')
+      expect(page).to have_content('Now 50% More Chocolate')
     end
   end
 end
