@@ -16,9 +16,7 @@ describe 'Merchant Index Page' do
 
     it 'I see a link to create a new merchant' do
       visit '/merchants'
-
       click_link 'Create Merchant'
-
       expect(current_path).to eq('/merchants/new')
 
       name = 'New Shop'

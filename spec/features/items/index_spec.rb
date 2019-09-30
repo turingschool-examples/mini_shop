@@ -29,6 +29,10 @@ describe 'Item Index Page' do
       visit '/items'
       click_link 'Chocolate'
       expect(current_path).to eq("/items/#{@chocolate_bar.id}")
+
+      visit '/items'
+      click_link 'Caramel'
+      expect(current_path).to eq("/items/#{@caramel_bar.id}")
     end
   end
 end
