@@ -11,7 +11,6 @@ describe 'Merchant Index Page' do
       visit '/merchants'
 
       expect(page).to have_content(@candy_store.name)
-
       expect(page).to have_content(@food_store.name)
     end
   end
