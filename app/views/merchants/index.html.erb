@@ -2,7 +2,7 @@
 
 <ul>
   <% @merchants.each do |merchant| %>
-    <li><%= merchant.name %></li>
+    <li><a href='merchants/<%= merchant.id %>'><%= merchant.name %></a></li>
   <% end %>
 </ul>
 
