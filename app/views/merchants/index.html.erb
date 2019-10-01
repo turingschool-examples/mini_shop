@@ -1,1 +1,5 @@
-<%= @merchants %>
+<ul>
+  <% @merchants.each do |merchant| %>
+    <li><%= merchant %></li>
+  <% end %>
+</ul>
