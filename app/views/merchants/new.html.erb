@@ -1,0 +1,22 @@
+<h1>Create a New Merchant</h1>
+
+<form action="/merchants" method="post">
+  <input type="hidden" name="authenticity-token" value="<%= form_authenticity_token %>"
+
+  <p>Name:</p>
+  <input type="text" name="merchant[name]" />
+
+  <p>Address:</p>
+  <input type="text" name="merchant[address]" />
+
+  <p>City:</p>
+  <input type="text" name="merchant[city]" />
+
+  <p>State:</p>
+  <input type="text" name="merchant[state]" />
+
+  <p>Zip Code:</p>
+  <input type="text" name="merchant[zip]" /><br /><br />
+
+  <input type="submit" />
+</form>
