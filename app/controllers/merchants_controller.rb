@@ -24,4 +24,7 @@ class MerchantsController < ApplicationController
     redirect_to "/merchants/#{@merchant.id}"
   end
 
+  def edit
+  end 
+
 end
