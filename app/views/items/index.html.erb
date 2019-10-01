@@ -9,7 +9,7 @@
   <% end %>
   <p><img src= <%= item.image %></img></p>
   <p>Inventory Count: <%= item.inventory %></p>
-  <p>Selling Merchant: <%= item.merchant.name %></p>
+  <p>Selling Merchant: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
 <% end %>
 
 <% if @merchant %>

@@ -40,5 +40,11 @@ describe 'Merchant Index Page' do
 
       expect(page).to have_content(new_shop.name)
     end
+
+    it 'Every merchant name is a link to that merchant show page' do
+      visit '/merchants'
+      click_link 'The Candy Store'
+      expect(current_path).to eq("/merchants/#{@candy_store.id}")
+    end
   end
 end
