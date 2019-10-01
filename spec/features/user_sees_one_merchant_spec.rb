@@ -7,7 +7,9 @@ describe "user sees one article" do
       merchant_2 = Merchant.create!(name: "Olivia", address: "384 Spring Ave", city: "New York", state: "NY", zip: "11221" )
       merchant_3 = Merchant.create!(name: "Ava", address: "930 Sunrise Blvd", city: "San Diego", state: "CA", zip: "92103" )
 
-      visit 'merchants/1'
+      visit '/merchants'
+
+      click_link merchant_1.name
 
       expect(page).to have_content(merchant_1.name)
       expect(page).to have_content(merchant_1.address)
@@ -18,4 +20,3 @@ describe "user sees one article" do
     end
   end
 end
- 

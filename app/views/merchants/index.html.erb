@@ -3,7 +3,7 @@
 <ul id="merchants">
   <% @merchants.each do |merchant| %>
     <li>
-      <%= merchant.name %>
+      <%= link_to merchant.name, merchant_path(merchant) %> %>
     </li>
   <% end %>
 </ul>

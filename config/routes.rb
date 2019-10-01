@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/', to: 'welcome#index'
   get '/merchants', to: 'merchants#index'
-  get '/merchants/:id', to: 'merchants#show'
+  get '/merchants/:id', to: 'merchants#show', as: 'merchant'
 end
