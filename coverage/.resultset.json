@@ -1,0 +1,52 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jonpatterson/turing/mod2/projects/mini_shop/config/environment.rb": [
+        null,
+        1,
+        null,
+        null,
+        0
+      ],
+      "/Users/jonpatterson/turing/mod2/projects/mini_shop/config/application.rb": [
+        1,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/jonpatterson/turing/mod2/projects/mini_shop/config/boot.rb": [
+        1,
+        null,
+        1
+      ]
+    },
+    "timestamp": 1569963889
+  }
+}
