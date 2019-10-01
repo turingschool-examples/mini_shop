@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :merchants, except: %i[destroy]
+  resources :merchants
 end
