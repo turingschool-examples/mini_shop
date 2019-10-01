@@ -2,6 +2,10 @@
 <p>Description: <%= @item.description %></p>
 <p>Price: <%= @item.price %></p>
 <p><img src= <%= @item.image %></img></p>
-<p>Active? <%= @item.active? %></p>
+<% if @item.active? %>
+  <p>Item is Active</p>
+<% else %>
+  <p>Item is Inactive</p>
+<% end %>
 <p>Inventory Count: <%= @item.inventory %></p>
-<p>Selling Merchant: <%= @item.merchant_name %></p>
+<p>Selling Merchant: <%= @item.merchant.name %></p>

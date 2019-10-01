@@ -2,8 +2,16 @@
   <p>Name: <%= item.name %></p>
   <p>Description: <%= item.description %></p>
   <p>Price: <%= item.price %></p>
+  <% if item.active? %>
+    <p>Item is Active</p>
+  <% else %>
+    <p>Item is Inactive</p>
+  <% end %>
   <p><img src= <%= item.image %></img></p>
-  <p>Active? <%= item.active? %></p>
   <p>Inventory Count: <%= item.inventory %></p>
-  <p>Selling Merchant: <%= item.merchant_name %></p>
+  <p>Selling Merchant: <%= item.merchant.name %></p>
+<% end %>
+
+<% if @merchant %>
+  <p><%= link_to 'New Item', "/merchants/#{@merchant.id}/items/new" %></p>
 <% end %>

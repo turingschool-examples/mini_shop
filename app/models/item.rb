@@ -3,8 +3,7 @@ class Item < ApplicationRecord
                         :description,
                         :price,
                         :image,
-                        :active?,
-                        :inventory,
-                        :merchant_name
+                        :inventory
+  validates_inclusion_of :active?, in: [true, false]
   belongs_to :merchant
 end
