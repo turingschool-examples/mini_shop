@@ -17,11 +17,7 @@ describe 'user creates a new merchant' do
 
         click_on "Create Merchant"
 
-        expect(page).to have_content("Bread Pitt")
-        expect(page).to have_content("2345 Wheat Way")
-        expect(page).to have_content("Chicago")
-        expect(page).to have_content("IL")
-        expect(page).to have_content("60176")
+        expect(page).to have_link("Bread Pitt")
       end
     end
   end
