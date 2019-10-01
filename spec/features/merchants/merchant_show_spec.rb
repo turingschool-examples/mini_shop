@@ -11,8 +11,6 @@ RSpec.describe "merchants show page", type: :feature do
 
     visit "/merchants/#{merchant_1.id}"
 
-    save_and_open_page
-
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content("Address: #{merchant_1.address}")
     expect(page).to have_content("City: #{merchant_1.city}")
