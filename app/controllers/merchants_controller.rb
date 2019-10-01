@@ -4,4 +4,8 @@ class MerchantsController < ApplicationController
     @merchants = ['merchant 1', 'merchant 2', 'merchant 3']
   end
 
+  def new
+
+  end
+
 end
