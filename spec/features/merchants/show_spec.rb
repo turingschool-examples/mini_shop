@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Merchant show Page' do
+describe 'Merchant Show Page' do
   describe 'As a User' do
     before :each do
       @candy_store = Merchant.create(name: 'The Candy Store', address: '123 Main Street', city: 'Denver', state: 'CO', zip: 80_233)

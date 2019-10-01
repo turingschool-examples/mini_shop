@@ -4,4 +4,5 @@ class Merchant < ApplicationRecord
                         :city,
                         :state,
                         :zip
+  has_many :items
 end

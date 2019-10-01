@@ -181,10 +181,57 @@
       "/Users/cjkelling/turing/2.2mod/mini_shop/config/routes.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/cjkelling/turing/2.2mod/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/cjkelling/turing/2.2mod/mini_shop/spec/features/merchants/index_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/cjkelling/turing/2.2mod/mini_shop/spec/features/merchants/show_spec.rb": [
@@ -244,9 +291,34 @@
         null,
         null,
         null,
+        1,
         null
       ],
       "/Users/cjkelling/turing/2.2mod/mini_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/cjkelling/turing/2.2mod/mini_shop/app/models/item.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/cjkelling/turing/2.2mod/mini_shop/app/controllers/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/cjkelling/turing/2.2mod/mini_shop/app/controllers/application_controller.rb": [
         1,
         1,
         null
@@ -291,13 +363,8 @@
         1,
         null,
         null
-      ],
-      "/Users/cjkelling/turing/2.2mod/mini_shop/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1569891644
+    "timestamp": 1569943843
   }
 }
