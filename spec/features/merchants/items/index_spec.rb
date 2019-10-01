@@ -10,17 +10,19 @@ describe 'Merchants Items Index Page' do
     end
 
     it 'I see each Item in the system and the item information' do
-      visit "/merchants/#{@chocolate_store.id}/items"
+      visit merchant_items_path(@chocolate_store)
 
+      expect(page).to have_content(@chocolate_bar.name)
       expect(page).to have_content(@chocolate_bar.price)
       expect(page).to have_content(@chocolate_bar.inventory)
 
+      expect(page).to_not have_content(@caramel_bar.name)
       expect(page).to_not have_content(@caramel_bar.price)
       expect(page).to_not have_content(@caramel_bar.inventory)
     end
 
     it 'I see a link to add a new item for that merchant' do
-      visit "/merchants/#{@chocolate_store.id}/items"
+      visit merchant_items_path(@chocolate_store)
       click_link 'New Item'
       expect(current_path).to eq("/merchants/#{@chocolate_store.id}/items/new")
 

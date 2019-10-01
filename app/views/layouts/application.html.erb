@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <nav class = "navbar">
+      <section class="navbar-nav">
+        <%= link_to "All Items", "/items"%>
+        <%= link_to "All Merchants", "/merchants"%>
+      </section>
+    </nav>
     <%= yield %>
   </body>
 </html>

@@ -4,6 +4,8 @@ describe 'Merchant Show Page' do
   describe 'As a User' do
     before :each do
       @candy_store = Merchant.create(name: 'The Candy Store', address: '123 Main Street', city: 'Denver', state: 'CO', zip: 80_233)
+      @chocolate_bar = @candy_store.items.create!(name: 'Chocolate', description: 'It is chocolate', price: 3, image: 'https://previews.123rf.com/images/tashka2000/tashka20001104/tashka2000110400002/9286183-slices-of-chocolate-bar-isolated-on-white-background.jpg', inventory: 15)
+      @caramel_bar = @candy_store.items.create!(name: 'Caramel', description: 'It is caramel', price: 2, image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/12/11/0/VP0104H_Caramels_s4x3.jpg.rend.hgtvcom.826.620.suffix/1513028933152.jpeg', inventory: 10)
     end
 
     it 'I see the merchant stats by their id' do
@@ -43,6 +45,14 @@ describe 'Merchant Show Page' do
 
       expect(current_path).to eq('/merchants')
       expect(page).to_not have_content(@candy_store.name)
+    end
+
+    it 'I see a link to all the merchant items' do
+      visit merchant_path(@candy_store)
+      click_link "All #{@candy_store.name} Items"
+      expect(current_path).to eq("/merchants/#{@candy_store.id}/items")
+      expect(page).to have_content(@chocolate_bar.name)
+      expect(page).to have_content(@caramel_bar.name)
     end
   end
 end
