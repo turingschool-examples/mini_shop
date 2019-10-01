@@ -19,3 +19,6 @@
 .byebug_history
 
 */coverage/
+/coverage/
+/coverage/.resultset.json
+/coverage/index.html
