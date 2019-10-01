@@ -15,12 +15,11 @@ RSpec.describe "user updates a merchant" do
         fill_in "merchant[city]", with: "Philadelphia"
         fill_in "merchant[state]", with: "PA"
         fill_in "merchant[zip]", with: "19107"
-
         click_on "Submit"
 
         expect(page).to have_content("ThaiTanics")
         expect(page).to have_content("410 Bleeker Ave")
-        expect(page).to have_content("Phildelphia")
+        expect(page).to have_content("Philadelphia")
         expect(page).to have_content("PA")
         expect(page).to have_content("19107")
       end
