@@ -190,6 +190,29 @@
         1,
         null
       ],
+      "/Users/cjkelling/turing/2.2mod/mini_shop/spec/features/items/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/cjkelling/turing/2.2mod/mini_shop/spec/features/merchants/index_spec.rb": [
         1,
         null,
@@ -348,6 +371,10 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/cjkelling/turing/2.2mod/mini_shop/app/controllers/application_controller.rb": [
@@ -398,6 +425,6 @@
         null
       ]
     },
-    "timestamp": 1569950636
+    "timestamp": 1569951112
   }
 }
