@@ -29,4 +29,18 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
   end
 
+  def update
+    merchant = Merchant.find(params[:id])
+    merchant.update({
+      name: params[:merchant][:name],
+      address: params[:merchant][:address],
+      city: params[:merchant][:city],
+      state: params[:merchant][:state],
+      zip: params[:merchant][:zip]
+    })
+
+    merchant.save
+    redirect_to "/merchants/#{merchant.id}"
+  end
+
 end
