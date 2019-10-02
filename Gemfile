@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'pry'
 end
 
 group :development do
