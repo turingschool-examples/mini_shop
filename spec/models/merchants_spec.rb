@@ -9,4 +9,15 @@ describe Merchant, type: :model do
     it { should validate_presence_of :zip } 
   end
 
+  # describe "relationships" do 
+  #   it { should have_many :items }
+  # end
+
+  # describe "class methods" do 
+  #   it ".method_name" do
+  #     setup
+  #     expect(Merchant.method_name).to eq(value)
+  #   end
+  # end
+
 end

@@ -4,4 +4,6 @@ class Merchant < ApplicationRecord
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :zip
+  
+  # has_many :items
 end
