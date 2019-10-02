@@ -6,10 +6,10 @@ RSpec.describe "Navigates to a new merchant page", type: :feature do
     visit "/merchants/new"
 
     expect(page).to have_content("New Merchant")
-    expect(page).to have_field("Name")
-    expect(page).to have_field("Address")
-    expect(page).to have_field("City")
-    expect(page).to have_field("State")
-    expect(page).to have_field("Zip")
+    expect(page).to have_field("merchant[name]")
+    expect(page).to have_field("merchant[address]")
+    expect(page).to have_field("merchant[city]")
+    expect(page).to have_field("merchant[state]")
+    expect(page).to have_field("merchant[zip]")
   end
 end
