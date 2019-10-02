@@ -6,19 +6,19 @@
   <input type="hidden" name="_method" value="PATCH" />
 
   <p>Name:</p>
-  <input type="text" name="merchant[name]" class="form-control" /><br />
+  <input type="text" name="merchant[name]" class="form-control" value="<%= @merchant.name %>" /><br />
 
   <p>Address:</p>
-  <input type="text" name="merchant[address]" class="form-control" /><br />
+  <input type="text" name="merchant[address]" class="form-control" value="<%= @merchant.address %>" /><br />
 
   <p>City:</p>
-  <input type="text" name="merchant[city]" class="form-control" /><br />
+  <input type="text" name="merchant[city]" class="form-control" value="<%= @merchant.city %>" /><br />
 
   <p>State:</p>
-  <input type="text" name="merchant[state]" class="form-control" /><br />
+  <input type="text" name="merchant[state]" class="form-control" value="<%= @merchant.state %>" /><br />
 
   <p>Zip Code:</p>
-  <input type="text" name="merchant[zip]" class="form-control" /><br />
+  <input type="text" name="merchant[zip]" class="form-control" value="<%= @merchant.zip %>" /><br />
 
-  <input type="submit" name="Update Merchant" value="Update Merchant" class="btn btn-primary" />
+  <input type="submit" name="update_merchant" value="Update Merchant" class="btn btn-primary" />
 </form>

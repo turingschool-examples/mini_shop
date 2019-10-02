@@ -15,12 +15,12 @@ RSpec.describe "merchant delete", type: :feature do
   it "can see link to delete merchant from show page" do
     visit "/merchants/#{@merchant.id}"
 
-    expect(page).to have_button('Delete Merchant')
+    expect(page).to have_button('delete_merchant')
   end
 
   it "can delete merchant by clicking on link" do
     visit "/merchants/#{@merchant.id}"
-    click_button 'Delete Merchant'
+    click_button 'delete_merchant'
 
     expect(current_path).to eq('/merchants')
     expect(page).to have_no_content(@merchant.name)
