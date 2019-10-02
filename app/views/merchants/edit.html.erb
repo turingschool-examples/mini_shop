@@ -1,6 +1,6 @@
 <h1>Edit Merchant</h1>
 
-<form action="/merchants/<%= @merchant.id %>" method="post">
+<form action="/merchants/<%= @merchant.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="_method" value="PATCH" />
 
@@ -19,5 +19,5 @@
   <p>Zip Code:</p>
   <input type="text" name="merchant[zip]" /><br /><br />
 
-  <input type="submit" name="Update Merchant" />
+  <input type="submit" name="Update Merchant" value="Update Merchant" />
 </form>

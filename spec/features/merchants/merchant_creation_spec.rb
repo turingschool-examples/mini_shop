@@ -13,11 +13,11 @@ RSpec.describe "merchant creation", type: :feature do
     click_link "Create a new merchant"
 
     expect(current_path).to eq('/merchants/new')
-    expect(page).to have_content('Name')
-    expect(page).to have_content('Address')
-    expect(page).to have_content('City')
-    expect(page).to have_content('State')
-    expect(page).to have_content('Zip Code')
+    expect(page).to have_field('merchant[name]')
+    expect(page).to have_field('merchant[address]')
+    expect(page).to have_field('merchant[city]')
+    expect(page).to have_field('merchant[state]')
+    expect(page).to have_field('merchant[zip]')
     expect(page).to have_button('Create Merchant')
   end
 
