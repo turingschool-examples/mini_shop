@@ -10,5 +10,5 @@ describe Merchant, type: :model do
   end
   describe "relationships" do
     it {should have_many :items}
-  end 
+  end
 end
