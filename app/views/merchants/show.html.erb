@@ -7,3 +7,9 @@
 
 <p><a href="/merchants">All merchants</a></p>
 <p><a href="/merchants/<%= @merchant.id %>/edit">Update this merchant</a></p>
+
+<form action="/merchants/<%= @merchant.id %>", method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" name="Delete Merchant" />
+</form>
