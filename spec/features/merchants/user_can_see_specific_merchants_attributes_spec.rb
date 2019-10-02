@@ -7,8 +7,8 @@ RSpec.describe "Merchant id Page", type: :feature do
                                  city: "Mountain View",
                                 state: "CA",
                                   zip: 90001)
-
-    visit "/merchants/1"
+                                  # binding.pry
+    visit "/merchants/#{merchant_1.id}"
     save_and_open_page
 
     expect(page).to have_content(merchant_1.name)
