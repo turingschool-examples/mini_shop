@@ -7,8 +7,13 @@ describe Item, type: :model do
     it { should validate_presence_of :description }
     it { should validate_presence_of :price }
     it { should validate_presence_of :image }
-    it { should validate_presence_of :active_status }
     it { should validate_presence_of :inventory }
+
+    it { should_not allow_value(nil).for(:active_status) }
+  end
+
+  describe "relationships" do
+    it { should belong_to :merchant }
   end
 
 end
