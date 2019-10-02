@@ -1,21 +1,5 @@
 require 'rails_helper'
 
-# As a visitor
-# When I visit the Merchant Index page
-# Then I see a link to create a new merchant
-# When I click this link
-# Then I am taken to '/merchants/new' where I  see a form for a new merchant
-# When I fill out the form with a new merchant's:
-# - name
-# - address
-# - city
-# - state
-# - zip
-# And I click the button to submit the form
-# Then a `POST` request is sent to '/merchants',
-# a new merchant is created,
-# and I am redirected to the Merchant Index page where I see the new Merchant listed.
-
 RSpec.describe "merchant creation", type: :feature do
 
   it "can see link to create merchant from index" do
@@ -46,7 +30,6 @@ RSpec.describe "merchant creation", type: :feature do
     fill_in 'merchant[zip]', with: '28352'
     click_button 'Create Merchant'
 
-    # Test new merchant is created
     expect(current_path).to eq('/merchants')
     expect(page).to have_content('Once and Floral')
   end
