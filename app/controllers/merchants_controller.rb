@@ -1,7 +1,5 @@
 class MerchantsController < ApplicationController
-
   def index
-    @merchants = ['Montys Mercantile', 'CoCos Collectables', 'Georgios Goodies']
+    @merchants = Merchant.all
   end
-
 end
