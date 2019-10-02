@@ -12,8 +12,8 @@ RSpec.describe "individual merchant page", type: :feature do
                                  city: "Denver",
                                  state: "Colorado",
                                  zip: "55555")
-    
-    visit '/merchants/1'
+
+    visit "/merchants/#{merchant_1.id}"
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content("Address: #{merchant_1.address}")
@@ -21,7 +21,7 @@ RSpec.describe "individual merchant page", type: :feature do
     expect(page).to have_content("State: #{merchant_1.state}")
     expect(page).to have_content("ZIP: #{merchant_1.zip}")
 
-    visit '/merchants/2'
+    visit "/merchants/#{merchant_2.id}"
 
     expect(page).to have_content(merchant_2.name)
     expect(page).to have_content("Address: #{merchant_2.address}")
