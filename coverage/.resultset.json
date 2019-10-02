@@ -182,10 +182,47 @@
         1,
         1,
         null,
+        1,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/babslabs/turing/mod2/projects/mini_shop/spec/features/merchants/merchants_index_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/models/merchant.rb": [
@@ -199,8 +236,14 @@
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/controllers/merchants_controller.rb": [
         1,
+        null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -210,6 +253,6 @@
         null
       ]
     },
-    "timestamp": 1569975150
+    "timestamp": 1569986889
   }
 }
