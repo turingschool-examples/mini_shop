@@ -1,13 +1,13 @@
 require "rails_helper"
 
-describe "user creates a new merchant" do
-  describe "they link from the merchants index" do
-    describe "they fill in a title and body" do
-      it "creates a new merchant" do
+describe "User creates a new merchant" do
+  describe "They link from the merchants index" do
+    describe "They fill in all merchant attributes & submit" do
+      it "Creates a new merchant & returns to index page" do
         visit '/merchants'
         click_link "Create a New Merchant"
 
-        expect(current_path).to eq('merchants/new')
+        expect(current_path).to eq('/merchants/new')
 
         fill_in "merchant[name]", with: "Amazon"
         fill_in "merchant[address]",  with: "678 Greedy Ave"
