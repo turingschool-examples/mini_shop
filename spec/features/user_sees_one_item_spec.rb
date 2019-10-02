@@ -16,7 +16,7 @@ RSpec.describe "user sees one item" do
       expect(page).to have_content(item_1.image)
       expect(page).to have_content(item_1.status)
       expect(page).to have_content(item_1.inventory)
-      expect(page).to have_content(item_1.merchant_id)
+      expect(page).to have_content(merchant_1.name)
 
     end
   end
