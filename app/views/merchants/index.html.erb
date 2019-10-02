@@ -1,9 +1,12 @@
-<h1>List of Merchants</h1>
+<h1 class="mt-4">List of Merchants</h1>
+<br />
 
-<ul>
-  <% @merchants.each do |merchant| %>
-    <li><a href='merchants/<%= merchant.id %>'><%= merchant.name %></a></li>
-  <% end %>
-</ul>
+<% @merchants.each do |merchant| %>
+  <div class="card card-body bg-light">
+    <h4><a href='merchants/<%= merchant.id %>'><%= merchant.name %></a></h4>
+  </div>
+  <br />
+<% end %>
 
-<h4>Don't see a merchant you know? <a href="/merchants/new">Create a new merchant</a></h4>
+<br />
+<h5>Don't see a merchant you know? <a href="/merchants/new">Create a new merchant</a></h5>
