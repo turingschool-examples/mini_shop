@@ -10,10 +10,10 @@ merchant_2 = Merchant.create!(name: "Lord of the Rinse", address: "384 Spring Av
 merchant_3 = Merchant.create!(name: "Pita Pan", address: "930 Sunrise Blvd", city: "San Diego", state: "CA", zip: "92103" )
 
 # THAI TANIC
-item_1 = Item.create!(name: "Panang Curry", "Sweet and spicy", 12.50, 'http://www.aspicyperspective.com/wp-content/uploads/2017/09/The-Best-Thai-Panang-Chicken-Curry-11.jpg', "active", 12, merchant_1.id)
-item_2 = Item.create!(name: "Yam Talay", "Spicy Seafood Salad", 16.50, 'https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18143140/fc87mc056-01-main.jpg', "inactive", 8, merchant_1.id)
+item_1 = Item.create!(name: "Panang Curry", description: "Sweet and spicy Thai curry dish", price: 12.50, image: 'http://www.aspicyperspective.com/wp-content/uploads/2017/09/The-Best-Thai-Panang-Chicken-Curry-11.jpg', status: "active", inventory: 12, merchant_id: merchant_1.id)
+item_2 = Item.create!(name: "Yam Talay", description: "Spicy Seafood Salad", price: 16.50, image: 'https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18143140/fc87mc056-01-main.jpg', status: "inactive", inventory: 8, merchant_id: merchant_1.id)
 
 # PITA PAN
-item_3 = Item.create!(name: "Stuffed Pita", "Veggies and hummus", 12.50, 'https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/DesktopImages/12565.jpg', "inactive", 8, merchant_3.id)
-item_4 = Item.create!(name: "Pita Pizza", "Sauce and cheese", 10.50, 'https://purewows3.imgix.net/images/articles/2019_04/pita-pizzas-domestic-greek-recipe-921.jpg?auto=format,compress&cs=strip', "active", 18, merchant_3.id)
-item_5 = Item.create!(name: "Pita Chips", "Baked and salted", 6.00, 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/9c7590b4356c405ca11794c355ddac48/fb.jpg', "active", 0, merchant_3.id)
+item_3 = Item.create!(name: "Stuffed Pita",description: "Veggies and hummus in pita", price: 12.50, image: 'https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/DesktopImages/12565.jpg', status: "inactive", inventory: 8, merchant_id: merchant_3.id)
+item_4 = Item.create!(name: "Pita Pizza", description: "Sauce and cheese in pita baked in oven", price: 10.50, image: 'https://purewows3.imgix.net/images/articles/2019_04/pita-pizzas-domestic-greek-recipe-921.jpg?auto=format,compress&cs=strip', status: "active", inventory: 18, merchant_id: merchant_3.id)
+item_5 = Item.create!(name: "Pita Chips", description: "Baked and salted pita slices", price: 6.00, image: 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/9c7590b4356c405ca11794c355ddac48/fb.jpg', status: "active", inventory: 0, merchant_id: merchant_3.id)

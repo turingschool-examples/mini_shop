@@ -1,0 +1,12 @@
+<h1><%= @item.name %></h1>
+<p>Description: <%= @item.description %></p>
+<p>Price: $<%= @item.price %></p>
+<p>Image: <%= image_tag(@item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
+<p>Status: <%= @item.status %></p>
+<p>Inventory: <%= @item.inventory %></p>
+<p>Merchant: <%= (Merchant.find {|merchant| merchant.id == @item.merchant_id}).name %></p>
+<br />
+<br />
+<br />
+<br />
+<br />
