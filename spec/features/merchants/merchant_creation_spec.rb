@@ -37,9 +37,9 @@ RSpec.describe "merchant creation", type: :feature do
     expect(page).to have_button('Create Merchant')
   end
 
-  it "can fill out form and submit form" do
+  it "can fill out and submit form" do
     visit '/merchants/new'
-    fill_in 'merchant[name]', with: 'Costco'
+    fill_in 'merchant[name]', with: 'Once and Floral'
     fill_in 'merchant[address]', with: '852 Picadilly Lane'
     fill_in 'merchant[city]', with: 'Greensville'
     fill_in 'merchant[state]', with: 'SC'
@@ -48,7 +48,7 @@ RSpec.describe "merchant creation", type: :feature do
 
     # Test new merchant is created
     expect(current_path).to eq('/merchants')
-    expect(page).to have_content('Costco')
+    expect(page).to have_content('Once and Floral')
   end
 
 end
