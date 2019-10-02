@@ -8,6 +8,6 @@ RSpec.describe "individual create a merchant", type: :feature do
                                  state: "Colorado",
                                  zip: "80303")
 
-    visit "/merchants/new"
+    visit "/merchants"
   end
 end
