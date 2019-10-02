@@ -1,13 +1,5 @@
 require 'rails_helper'
 
-# As a visitor
-# When I visit a merchant show page
-# Then I see a link to delete the merchant
-# When I click the link
-# Then a 'DELETE' request is sent to '/merchants/:id',
-# the merchant is deleted,
-# and I am redirected to the merchant index page where I no longer see this merchant
-
 RSpec.describe "merchant delete", type: :feature do
 
   before :each do
@@ -31,7 +23,7 @@ RSpec.describe "merchant delete", type: :feature do
     click_button 'Delete Merchant'
 
     expect(current_path).to eq('/merchants')
-    expect(page).to have_content(@merchant.name)
+    expect(page).to have_no_content(@merchant.name)
   end
 
 end
