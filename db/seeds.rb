@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Merchant.create(name: "REI", address: "1789 28th St", city: "Boulder", state: "Colorado", zip: "80301")
 Merchant.create(name: "Moosejaw", address: "1755 29th St #1092", city: "Boulder", state: "Colorado", zip: "80301")
+Merchant.create(name: "Patagonia", address: "1431 15th St", city: "Denver", state: "Colorado", zip: "80202")
