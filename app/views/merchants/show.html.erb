@@ -1,15 +1,20 @@
-<h1><%= @merchant.name%></h1>
+<h1 class="mt-4"><%= @merchant.name%></h1>
+<br />
 
-<h3>Address: <%= @merchant.address %></h3>
-<h3>City: <%= @merchant.city %></h3>
-<h3>State: <%= @merchant.state %></h3>
-<h3>Zip Code: <%= @merchant.zip %></h3>
+<h4>  Address:    <span class="ml-2 pl-2"><%= @merchant.address %></span></h4>
+<h4>  City:       <span class="ml-5 pl-3"><%= @merchant.city %></span></h4>
+<h4>  State:      <span class="ml-5 pl-1"><%= @merchant.state %></span></h4>
+<h4>  Zip Code:   <span class="ml-1 pl-2"><%= @merchant.zip %></span></h4>
+<br />
 
-<p><a href="/merchants">All merchants</a></p>
-<p><a href="/merchants/<%= @merchant.id %>/edit">Update this merchant</a></p>
+<p><a href="/merchants/<%= @merchant.id %>/edit" class="btn btn-primary">Edit Merchant</a></p>
 
 <form action="/merchants/<%= @merchant.id %>", method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" name="Delete Merchant" value="Delete Merchant" />
+  <input type="submit" name="Delete Merchant" value="Delete Merchant" class="btn btn-danger "/>
 </form>
+
+<br />
+<br />
+<p><a href="/merchants" class="btn btn-secondary">Return to All Merchants</a></p>

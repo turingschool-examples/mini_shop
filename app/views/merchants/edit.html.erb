@@ -1,23 +1,24 @@
-<h1>Edit Merchant</h1>
+<h1 class="mt-4">Edit Merchant</h1>
+<br />
 
 <form action="/merchants/<%= @merchant.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="_method" value="PATCH" />
 
   <p>Name:</p>
-  <input type="text" name="merchant[name]" />
+  <input type="text" name="merchant[name]" class="form-control" /><br />
 
   <p>Address:</p>
-  <input type="text" name="merchant[address]" />
+  <input type="text" name="merchant[address]" class="form-control" /><br />
 
   <p>City:</p>
-  <input type="text" name="merchant[city]" />
+  <input type="text" name="merchant[city]" class="form-control" /><br />
 
   <p>State:</p>
-  <input type="text" name="merchant[state]" />
+  <input type="text" name="merchant[state]" class="form-control" /><br />
 
   <p>Zip Code:</p>
-  <input type="text" name="merchant[zip]" /><br /><br />
+  <input type="text" name="merchant[zip]" class="form-control" /><br />
 
-  <input type="submit" name="Update Merchant" value="Update Merchant" />
+  <input type="submit" name="Update Merchant" value="Update Merchant" class="btn btn-primary" />
 </form>
