@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.merchant-form {
+  display:flex;
+  flex-direction: column;
+}
+
+.merchant-form input, button {
+  width: 200px;
+}
+
+.merchant-form label, button {
+  margin-top: 10px;
+}
