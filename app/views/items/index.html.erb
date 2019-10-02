@@ -1,15 +1,20 @@
-<h1>All Items</h1>
+<% if params.has_key?(:id) %>
+  <h1> <%= (Merchant.where(id: params[:id]))[0].name %> Items </h1>
+<% end %>
 
 <ul id="items">
+
   <% @items.each do |item| %>
-    <li>
       <%= link_to item.name, "items/#{item.id}" %>
       <p>Description: <%= item.description %></p>
       <p>Price: $<%= item.price %></p>
       <p>Image: <%= image_tag(item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
       <p>Status: <%= item.status %></p>
       <p>Inventory: <%= item.inventory %></p>
-      <p>Merchant: <%= (Merchant.find {|merchant| merchant.id == item.merchant_id}).name %></p>
-    </li>
+      <% if !params.has_key?(:id) %>
+        <p>Merchant: <%= (Merchant.find {|merchant| merchant.id == item.merchant_id}).name %></p>
+      <% end %>
+      <br />
+      <br /> 
   <% end %>
 </ul>
