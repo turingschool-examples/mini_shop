@@ -43,6 +43,9 @@ group :development, :test do
   gem 'simplecov'
   gem 'pry'
   gem 'active_designer'
+  gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'autoprefixer-rails'
+
 end
 
 group :development do
