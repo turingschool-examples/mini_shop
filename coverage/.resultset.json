@@ -182,11 +182,36 @@
         1,
         1,
         null,
+        null,
         1,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/babslabs/turing/mod2/projects/mini_shop/spec/features/merchants/merchant_show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/spec/features/merchants/merchants_index_spec.rb": [
@@ -253,6 +278,6 @@
         null
       ]
     },
-    "timestamp": 1569986889
+    "timestamp": 1570045248
   }
 }
