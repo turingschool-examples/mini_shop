@@ -1,7 +1,11 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    if params.has_key?(:id)
+      @items = Item.where(merchant_id: params[:id]) 
+    else
+      @items = Item.all
+    end
   end
 
   def show
