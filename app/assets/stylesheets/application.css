@@ -53,3 +53,8 @@ img {
 .inactive {
   color: red;
 }
+
+.button-row {
+  display: inline;
+  margin-right: 10px;
+}
