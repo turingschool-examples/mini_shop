@@ -6,6 +6,9 @@
 <h1>All Merchants</h1>
 
 <% @merchants.each do |merchant| %>
-  <h2><%= merchant.name %></h2>
-  <%= button_to 'Delete', "/merchants/#{merchant.id}", method: :delete %>
+  <p>
+    <%= merchant.name %>
+    <%= button_to 'Delete', "/merchants/#{merchant.id}", method: :delete %>
+    <%= button_to 'Edit', "/merchants/#{merchant.id}/edit", method: :get %>
+  </p>
 <% end %>
