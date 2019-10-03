@@ -1,0 +1,31 @@
+<h1 class="mt-4"><%= @item.name %></h1>
+<br />
+
+<section class="card card-body bg-light item-container">
+
+  <article class="text-container">
+    <h5>Description</h5>
+    <p><%= @item.description %></p><br />
+
+    <h5>Price</h5>
+    <p>$<%= "%.2f" % @item.price %></p><br />
+
+    <h5>Product Status</h5>
+    <% if @item.active_status %>
+      <p>Active</p><br />
+    <% else %>
+      <p>Inactive</p><br />
+    <% end %>
+
+    <h5>Quantity in Stock</h5>
+    <p><%= @item.inventory %></p><br />
+
+    <h5>Merchant</h5>
+    <p><%= @item.merchant.name %></p>
+  </article>
+
+  <article class="image-container">
+    <img src="<%= @item.image %>" alt="<%= @item.name %>" />
+  </article>
+</section>
+<br />
