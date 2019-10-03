@@ -30,21 +30,21 @@ class MerchantsController < ApplicationController
 
   def update
     merchant = Merchant.find(params[:id])
-    merchant.update({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip]
-      })
-      merchant.save
-      redirect_to "/merchants/#{merchant.id}"
+    merchant.update(merchant_params)
+    merchant.save
+    redirect_to "/merchants/#{merchant.id}"
   end
 
   def destroy
     Merchant.destroy(params[:id])
 
     redirect_to '/merchants'
+  end
+
+  private
+
+  def merchant_params
+    params.require(:merchant).permit(Merchant.column_names)
   end
 
 
