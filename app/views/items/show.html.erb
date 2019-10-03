@@ -6,9 +6,9 @@
 <p>Selling Merchant: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
 <p>Inventory Count: <%= @item.inventory %></p>
 <% if @item.active? %>
-  <p>Item is Active</p>
+  <p><font color="green">Item is Active</font></p>
 <% else %>
-  <p>Item is Inactive</p>
+  <p><font color="red">Item is Inactive</font></p>
 <% end %>
 <p><%= link_to 'Edit Item', "/items/#{@item.id}/edit" %></p>
 <p><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete %></p>
