@@ -30,9 +30,9 @@
 </section>
 
 <br />
-<p><a href="/items/<%= @item.id %>/edit" class="btn btn-primary">Update Item</a></p>
+<p class="button-row"><a href="/items/<%= @item.id %>/edit" class="btn btn-primary">Update Item</a></p>
 
-<form action="/items/<%= @item.id %>", method="POST">
+<form action="/items/<%= @item.id %>", method="POST" class="button-row">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="_method" value="DELETE" />
   <input type="submit" name="delete_item" value="Delete Item" class="btn btn-danger"/>
@@ -40,4 +40,6 @@
 
 <br />
 <br />
-<p><a href="/items" class="btn btn-secondary">Return to All Items</a></p>
+<p class="button-row"><a href="/items" class="btn btn-secondary">Return to All Items</a></p>
+<br />
+<br />
