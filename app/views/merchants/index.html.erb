@@ -2,10 +2,10 @@
 
 <section>
   <% @merchants.each do |merchant| %>
-    <h2><a href="/merchants/<%=merchant.id %>"><%= merchant.name %></a></h2>
+    <%= link_to merchant.name, "/merchants/#{merchant.id}" %>
   <% end %>
 </section>
 
 <section>
-  <a href="/merchants/new">Create New Merchant</a>
+  <%= link_to "Create New Merchant", "/merchants/new" %>
 </section>
