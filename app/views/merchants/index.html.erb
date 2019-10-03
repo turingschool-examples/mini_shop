@@ -2,7 +2,7 @@
 
 <% @merchants.each do |merchant| %>
   <h2><ul>
-    <li><%= merchant.name %></li>
+    <li><%= link_to "#{merchant.name}", "merchants/#{merchant.id}" %></li>
   </ul></h2>
 <% end %>
 <br>
