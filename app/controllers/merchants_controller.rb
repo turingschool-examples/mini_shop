@@ -23,4 +23,10 @@ class MerchantsController < ApplicationController
     @merchant.save
     redirect_to '/merchants'
   end
+
+  def edit
+  end
+
+  def update
+  end
 end
