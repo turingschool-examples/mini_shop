@@ -181,14 +181,51 @@
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/config/routes.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
+      "/Users/scottregenthal/turing/mod_2/projects/mini_shop/spec/features/merchants/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/models/merchant.rb": [
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/models/application_record.rb": [
@@ -201,6 +238,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/controllers/application_controller.rb": [
@@ -209,6 +250,6 @@
         null
       ]
     },
-    "timestamp": 1570054674
+    "timestamp": 1570133156
   }
 }
