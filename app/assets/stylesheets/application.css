@@ -45,3 +45,11 @@ img {
   right: 0;
   margin: auto;
 }
+
+.active {
+  color: green;
+}
+
+.inactive {
+  color: red;
+}

@@ -1,4 +1,7 @@
-<h1 class="mt-4"><%= @merchant.name%></h1>
+<h1 class="mt-4"><%= @merchant.name %></h1>
+<br />
+
+<h4><%= link_to 'Items Sold', "/merchants/#{@merchant.id}/items" %></h4>
 <br />
 
 <h4>  Address:    <span class="ml-2 pl-2"><%= @merchant.address %></span></h4>

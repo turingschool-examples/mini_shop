@@ -1,20 +1,20 @@
-<h1 class="mt-4">Items Sold by <%= @merchant.name %></h1>
+<h1 class="mt-4">Items Sold by <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
 
 <% @items.each do |item| %>
   <section class="card card-body bg-light item-container">
 
     <article class="text-container">
-      <h3><%= item.name %></h3><br />
+      <h3><%= link_to item.name, "/items/#{item.id}" %></h3><br />
 
       <h5>Price</h5>
       <p>$<%= "%.2f" % item.price %></p><br />
 
       <h5>Product Status</h5>
       <% if item.active_status %>
-        <p>Active</p><br />
+        <p class="active">Active</p><br />
       <% else %>
-        <p>Inactive</p><br />
+        <p class="inactive">Inactive</p><br />
       <% end %>
 
       <h5>Quantity in Stock</h5>

@@ -48,4 +48,12 @@ RSpec.describe "merchant item creation" do
     expect(page).to have_content(17)
   end
 
+  it "can click on merchant name to redirect to merchant show page" do
+    visit "/merchants/#{@merchant.id}/items/new"
+    expect(page).to have_link(@merchant.name)
+
+    click_link @merchant.name
+    expect(current_path).to eq("/merchants/#{@merchant.id}")
+  end
+
 end
