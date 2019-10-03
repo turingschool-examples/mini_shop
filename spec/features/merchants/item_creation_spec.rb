@@ -59,11 +59,9 @@ RSpec.describe "merchant item creation" do
     expect(current_path).to eq("/merchants/#{@merchant.id}/items")
     expect(page).to have_content('Pink Tropical Hibiscus Tree')
     expect(page).to have_content(113.83)
-    expect(page).to have_content('Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round')
     expect(page).to have_css("img[src='https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260']")
-    expect(page).to have_content(17)
     expect(page).to have_content('Active')
-    save_and_open_page
+    expect(page).to have_content(17)
   end
 
 end
