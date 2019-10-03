@@ -9,6 +9,7 @@ class MerchantsController < ApplicationController
   end
 
   def new
+    #necessary if using a form_for in the New view.
     # @merchant = Merchant.new
   end
 
