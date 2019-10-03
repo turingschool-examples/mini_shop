@@ -21,7 +21,7 @@
     <p><%= @item.inventory %></p><br />
 
     <h5>Merchant</h5>
-    <p><%= @item.merchant.name %></p>
+    <p><%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
   </article>
 
   <article class="image-container">

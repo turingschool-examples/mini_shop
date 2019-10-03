@@ -4,6 +4,7 @@
 <% @merchants.each do |merchant| %>
   <section class="card card-body bg-light">
     <h4><%= link_to merchant.name, "merchants/#{merchant.id}" %></h4>
+    <h6><%= link_to 'Items Sold', "merchants/#{merchant.id}/items" %></h6>
   </section>
   <br />
 <% end %>

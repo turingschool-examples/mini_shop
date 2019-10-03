@@ -5,7 +5,7 @@
   <section class="card card-body bg-light item-container">
 
     <article class="text-container">
-      <h3><%= item.name %></h3><br />
+      <h3><%= link_to item.name, "/items/#{item.id}" %></h3><br />
 
       <h5>Price</h5>
       <p>$<%= "%.2f" % item.price %></p><br />
