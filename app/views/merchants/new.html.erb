@@ -1,32 +1,27 @@
 <h1>Create a Merchant</h1>
 
-<%= form_for(@merchant) do |f| %>
-  <ul>
-  <% @merchant.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-  </ul>
+<%= form_tag '/merchants' do %>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
   </p>
   <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
   </p>
   <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= label_tag :city %><br />
+    <%= text_field_tag :city %>
   </p>
   <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= label_tag :state %><br />
+    <%= text_field_tag :state %>
   </p>
   <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
+    <%= label_tag :zip %><br />
+    <%= text_field_tag :zip %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= submit_tag "Create Merchant" %>
   </p>
 <% end %>

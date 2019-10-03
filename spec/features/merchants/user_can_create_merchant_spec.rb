@@ -11,21 +11,21 @@ end
 describe "new merchant page", type: :feature do
   it "has a form to make a new merchant" do
     visit "/merchants/new"
-    expect(page).to have_field(:merchant_name)
-    expect(page).to have_field(:merchant_address)
-    expect(page).to have_field(:merchant_city)
-    expect(page).to have_field(:merchant_state)
-    expect(page).to have_field(:merchant_zip)
+    expect(page).to have_field(:name)
+    expect(page).to have_field(:address)
+    expect(page).to have_field(:city)
+    expect(page).to have_field(:state)
+    expect(page).to have_field(:zip)
   end
 
 describe "when I fill out a new merchant form", type: :feature do
   it "sents a POST request to /merchants" do
     visit "/merchants/new"
-    fill_in :merchant_name, with: "Forever More Store"
-    fill_in :merchant_address, with:"903 Whatever Dr."
-    fill_in :merchant_city, with: "Santa Fe"
-    fill_in :merchant_state, with: "NM"
-    fill_in :merchant_zip, with: "87501"
+    fill_in :name, with: "Forever More Store"
+    fill_in :address, with:"903 Whatever Dr."
+    fill_in :city, with: "Santa Fe"
+    fill_in :state, with: "NM"
+    fill_in :zip, with: "87501"
 
     click_on "Create Merchant"
     expect(current_path).to eq("/merchants")
