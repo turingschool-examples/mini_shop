@@ -39,6 +39,13 @@ class ItemsController < ApplicationController
     redirect_to '/items'
   end
 
+  def switch
+    @item = Item.find(params[:id])
+    @item.toggle(:active?)
+    @item.save
+    redirect_to "/items/#{@item.id}"
+  end
+
   private
 
   def item_params

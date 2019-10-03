@@ -1,13 +1,20 @@
-<p>Name: <%= @item.name %></p>
+<center>
+<h2><%= @item.name %></h2>
+<img src= <%= @item.image %> height="125" width="125">
 <p>Description: <%= @item.description %></p>
-<p>Price: <%= @item.price %></p>
-<p><img src= <%= @item.image %></img></p>
+<p>Price: <%= number_to_currency(@item.price) %></p>
+<p>Selling Merchant: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
+<p>Inventory Count: <%= @item.inventory %></p>
 <% if @item.active? %>
   <p>Item is Active</p>
 <% else %>
   <p>Item is Inactive</p>
 <% end %>
-<p>Inventory Count: <%= @item.inventory %></p>
-<p>Selling Merchant: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
 <p><%= link_to 'Edit Item', "/items/#{@item.id}/edit" %></p>
 <p><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete %></p>
+<% if @item.active? %>
+  <p><%= link_to 'Deactivate Item', "/items/#{@item.id}/deactivate", method: :patch %></p>
+<% else %>
+  <p><%= link_to 'Activate Item', "/items/#{@item.id}/activate", method: :patch %></p>
+<% end %>
+</center>
