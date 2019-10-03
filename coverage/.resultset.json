@@ -189,11 +189,24 @@
         null
       ],
       "/Users/davidgomez/turing/module_2/projects/mini_shop/spec/models/merchant_spec.rb": [
-
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null
       ],
       "/Users/davidgomez/turing/module_2/projects/mini_shop/app/models/merchant.rb": [
         1,
-        null,
         1,
         null
       ],
@@ -217,6 +230,6 @@
         null
       ]
     },
-    "timestamp": 1570106854
+    "timestamp": 1570126640
   }
 }
