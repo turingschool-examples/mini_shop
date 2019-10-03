@@ -1,20 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "merchants index page", type: :feature do
-  it "merchants page has link to create a new merchant" do
-
-    visit "/merchants"
-    expect(page).to have_link("Create New Merchant", href: '/merchants/new')
-  end
-    # When I click this link
   it "goes to make new merchant page" do
     visit "/merchants"
     click_link "Create New Merchant"
-    # Then I am taken to '/merchants/new'
     expect(current_path).to eq("/merchants/new")
   end
 end
-# where I  see a form for a new merchant
+
 describe "new merchant page", type: :feature do
   it "has a form to make a new merchant" do
     visit "/merchants/new"
