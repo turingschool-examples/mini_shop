@@ -10,10 +10,7 @@ RSpec.describe "merchant show page", type: :feature do
       visit "/merchants/#{@book_shop.id}"
 
       expect(page).to have_content("Flourish and Blotts")
-      expect(page).to have_content("123 Diagon Alley")
-      expect(page).to have_content("London")
-      expect(page).to have_content("UK")
-      expect(page).to have_content(25126)
+      expect(page).to have_content("123 Diagon Alley\nLondon,UK,25126")
     end
   end
 end
