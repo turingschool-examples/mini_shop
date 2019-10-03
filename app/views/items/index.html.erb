@@ -21,4 +21,4 @@
 
 <% if params.has_key?(:id) %>
   <%= link_to "Add New Item", "/merchants/#{(Merchant.where(id: params[:id]))[0].id}/items/new" %>
-<% end %> 
+<% end %>

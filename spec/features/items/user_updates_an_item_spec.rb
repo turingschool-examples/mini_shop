@@ -8,7 +8,7 @@ describe "user updates an item" do
         item_2 = Item.create!(name: "Yam Talay", description: "Spicy Seafood Salad", price: 16.50, image: 'https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18143140/fc87mc056-01-main.jpg', status: "inactive", inventory: 8, merchant_id: merchant_1.id)
 
         visit "items/#{item_2.id}"
-        click_link "Edit"
+        click_link "Update Item"
 
         expect(current_path).to eq("/items/#{item_2.id}/edit")
 
@@ -19,7 +19,7 @@ describe "user updates an item" do
         fill_in "item[status]", with: "active"
         fill_in "item[inventory]", with: 12
         click_on "Submit"
-
+        
         expect(page).to have_content("Yums Tulu")
         expect(page).to have_content("Seafood Explosion")
         expect(page).to have_content(20.00)

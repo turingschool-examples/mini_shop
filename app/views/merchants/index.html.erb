@@ -3,7 +3,9 @@
 <ul id="merchants">
   <% @merchants.each do |merchant| %>
     <li>
-      <%= link_to merchant.name, merchant_path(merchant) %> 
+      <%= link_to merchant.name, merchant_path(merchant) %>
     </li>
   <% end %>
 </ul>
+
+<li><a href="/merchants/new">New Merchant</a></li>

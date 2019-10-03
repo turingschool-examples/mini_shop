@@ -4,7 +4,7 @@ describe 'user creates a new merchant' do
   describe 'they link from merchant index' do
     describe 'they fill in name address city state zip' do
       it 'creates a new merchant' do
-        visit '/'
+        visit '/merchants/'
         click_link "New Merchant"
 
         expect(current_path).to eq(new_merchant_path)
