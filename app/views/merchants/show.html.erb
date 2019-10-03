@@ -1,13 +1,11 @@
 <a href="/merchants"Merchants></a>
 
 <h1><%= @merchant.name %></h1>
-
 <p><%= @merchant.address %></p>
 <p><%= @merchant.city %></p>
 <p><%= @merchant.state %></p>
 <p><%= @merchant.zip %></p>
 
-<a href="/merchants/<%= @merchant.id %>/edit">Edit</a>
+<%= link_to "Edit", "/merchants/#{@merchant.id}/edit" %>
 
-<%= link_to "DELETE", @merchants, :method => :delete %>
-
+<%= link_to "DELETE", "/merchants/#{@merchant.id}", :method => :delete %>

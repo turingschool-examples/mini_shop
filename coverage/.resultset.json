@@ -216,11 +216,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/spec/features/merchants/merchant_show_spec.rb": [
@@ -342,7 +337,7 @@
         1,
         null,
         1,
-        6,
+        5,
         null,
         null,
         1,
@@ -363,8 +358,6 @@
         null,
         1,
         null,
-        1,
-        null,
         null,
         1,
         1,
@@ -373,12 +366,11 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
+        1,
         1,
         1,
         null,
@@ -396,6 +388,6 @@
         null
       ]
     },
-    "timestamp": 1570076674
+    "timestamp": 1570131976
   }
 }

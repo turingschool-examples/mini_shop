@@ -12,15 +12,13 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    merchant = Merchant.new({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip]
+    Merchant.create({
+      name: params[:name],
+      address: params[:address],
+      city: params[:city],
+      state: params[:state],
+      zip: params[:zip]
       })
-
-      merchant.save
 
       redirect_to '/merchants'
   end
@@ -31,13 +29,7 @@ class MerchantsController < ApplicationController
 
   def update
     merchant = Merchant.find(params[:id])
-    merchant.update({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip]
-      })
+    merchant.update(merchant_params)
     merchant.save
     redirect_to "/merchants/#{merchant.id}"
   end
@@ -46,5 +38,10 @@ class MerchantsController < ApplicationController
     Merchant.destroy(params[:id])
     redirect_to '/merchants'
   end
+
+  private
+    def merchant_params
+      params.permit(:name, :address, :city, :state, :zip)
+    end
 
 end
