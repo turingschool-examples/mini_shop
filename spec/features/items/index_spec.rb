@@ -1,16 +1,5 @@
 require 'rails_helper'
 
-# As a visitor
-# When I visit '/items'
-# Then I see each Item in the system including the Item's:
-# - name
-# - description
-# - price
-# - image
-# - active/inactive status
-# - inventory
-# - the name of the merchant that sells the item
-
 RSpec.describe "items index page", type: :feature do
 
   it "can see all item parameters" do
