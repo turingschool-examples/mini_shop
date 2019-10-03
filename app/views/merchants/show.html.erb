@@ -1,8 +1,9 @@
-<a href='/merchants'>Merchant Index</a>
+<h2>Merchant #<%= "#{@merchant.id}" %></h2><br><hr><br>
+<p>Name: <%= @merchant.name %></p>
+<p>Address: <%= @merchant.address %></p>
+<p>City: <%= @merchant.city %></p>
+<p>State: <%= @merchant.state %></p>
+<p>Zip: <%= @merchant.zip %></p><br><hr>
 
-<h1><%= @merchant.name %></h1>
-
-<p><%= @merchant.address %></p>
-<p><%= @merchant.city %></p>
-<p><%= @merchant.state %></p>
-<p><%= @merchant.zip %></p>
+<%= link_to 'Edit Merchant', "/merchants/#{@merchant.id}/edit" %><br>
+<%= link_to 'Merchant Index', "/merchants" %>
