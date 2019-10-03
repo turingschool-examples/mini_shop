@@ -10,7 +10,10 @@ class MerchantsController < ApplicationController
   end
 
   def new
+  end
 
+  def new_item
+    @merchant = Merchant.find(params[:id])
   end
 
   def create
