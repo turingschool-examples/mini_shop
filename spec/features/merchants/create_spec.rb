@@ -1,13 +1,29 @@
 require 'rails_helper'
 
-RSpec.describe "individual create a merchant", type: :feature do
-  it "can create a new merchant on the new page" do
-    merchant_1 = Merchant.create(name: "REI",
-                                 address: "1234 Smith Street",
-                                 city: "Boulder",
-                                 state: "Colorado",
-                                 zip: "80303")
+RSpec.describe 'New Merchant' do
+  describe 'As a visitor' do
+    describe 'When I visit the new merchant form by clicking a link on the index' do
+      it 'I can create a new merchant' do
+        visit '/merchants'
 
-    visit "/merchants"
+        click_link 'New Merchant'
+
+        expect(current_path).to eq('/merchants/new')
+
+        fill_in 'Name',    with: 'REI'
+        fill_in 'Address', with: '1234 Smith Street'
+        fill_in 'City',    with: "Boulder"
+        fill_in "State",   with: "Colorado"
+        fill_in "ZIP",     with: "80303"
+        click_on 'Create Merchant'
+
+        expect(current_path).to eq("/merchants")
+        expect(page).to have_content('REI')
+        expect(page).to have_content('1234 Smith Street')
+        expect(page).to have_content("Boulder")
+        expect(page).to have_content("Colorado")
+        expect(page).to have_content("80303")
+      end
+    end
   end
 end
