@@ -18,36 +18,30 @@ end
 describe "new merchant page", type: :feature do
   it "has a form to make a new merchant" do
     visit "/merchants/new"
-    expect(page).to have_field(:name)
-    expect(page).to have_field(:address)
-    expect(page).to have_field(:city)
-    expect(page).to have_field(:state)
-    expect(page).to have_field(:zip)
+    expect(page).to have_field(:merchant_name)
+    expect(page).to have_field(:merchant_address)
+    expect(page).to have_field(:merchant_city)
+    expect(page).to have_field(:merchant_state)
+    expect(page).to have_field(:merchant_zip)
   end
 
 describe "when I fill out a new merchant form", type: :feature do
   it "sents a POST request to /merchants" do
     visit "/merchants/new"
-    fill_in "merchant[name]", with: "Forever More Store"
-    fill_in "merchant[address]", with: "903 Whatever Dr."
-    fill_in "merchant[city]", with: "Santa Fe"
-    fill_in "merchant[state]", with: "NM"
-    fill_in "merchant[zip]", with: "87501"
-    click_on "submit"
+    fill_in :merchant_name, with: "Forever More Store"
+    fill_in :merchant_address, with:"903 Whatever Dr."
+    fill_in :merchant_city, with: "Santa Fe"
+    fill_in :merchant_state, with: "NM"
+    fill_in :merchant_zip, with: "87501"
 
+    click_on "Create Merchant"
     expect(current_path).to eq("/merchants")
+    expect(page).to have_content("Forever More Store")
+    expect(Merchant.last.address).to eq("903 Whatever Dr.")
+    expect(Merchant.last.city).to eq("Santa Fe")
+    expect(Merchant.last.state).to eq("NM")
+    expect(Merchant.last.zip).to eq("87501")
+
   end
 end
-    # When I fill out the form with a new merchant's:
-    # - name
-    # - address
-    # - city
-    # - state
-    # - zip
-    # And I click the button to submit the form
-    # Then a `POST` request is sent to '/merchants',
-
-    # a new merchant is created,
-
-    # and I am redirected to the Merchant Index page where I see the new Merchant listed.
 end
