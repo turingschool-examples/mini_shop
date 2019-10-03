@@ -30,6 +30,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rake'
+  gem 'active_designer' #active_designer --create ./db/schema.rb && open active_designer/index.html
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
