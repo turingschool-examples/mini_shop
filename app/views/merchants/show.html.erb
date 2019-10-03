@@ -6,3 +6,9 @@
 <p>Zip: <%= @merchant.zip %></p>
 
 <a href="/merchants/<%= @merchant.id %>/edit">Edit</a>
+
+<form action="/merchants/<%= @merchant.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <button>Delete</button>
+</form>
