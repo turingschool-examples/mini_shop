@@ -39,6 +39,7 @@ class MerchantsController < ApplicationController
         })
 
       merchant.save
+      
       redirect_to "/merchants/#{merchant.id}"
   end
 end
