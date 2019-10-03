@@ -13,14 +13,7 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    @merchant = Merchant.new({
-    name: params[:merchant][:name],
-    address: params[:merchant][:address],
-    city: params[:merchant][:city],
-    state: params[:merchant][:state],
-    zip: params[:merchant][:zip],
-    })
-    @merchant.save
+    Merchant.create(merchant_params)
     redirect_to '/merchants'
   end
 
@@ -28,5 +21,20 @@ class MerchantsController < ApplicationController
   end
 
   def update
+    #find merchant first and assign a variable to it 'merchant'.
+
+    merchant.update(merchant_params_form)
   end
+
+  private
+    def merchant_params
+      #require isn't necessary when using a form tag. Will use permit instead.
+      #Use for traditional HTML form views || form_for
+      params.require(:merchant).permit(:name, :address, :city, :state, :zip)
+    end
+
+    def merchant_params_form
+      #Use for form tag views
+      params.permit(:name, :address, :city, :state, :zip)
+    end
 end

@@ -4,6 +4,7 @@ describe "User creates a new merchant" do
   describe "They link from the merchants index" do
     describe "They fill in all merchant attributes & submit" do
       it "Creates a new merchant & returns to index page" do
+
         visit '/merchants'
         click_link "Create a New Merchant"
 
