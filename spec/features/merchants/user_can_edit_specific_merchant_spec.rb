@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "User edits existing Merchant", type: :feature do
-  describe "User goes to Merchant's show page" do
-    describe "User clicks on link to update Merchant" do
-      describe "User fills out and submits form" do
+describe "User edits existing Merchant" do
+  describe "They go to Merchant's show page" do
+    describe "They click on link to update Merchant" do
+      describe "They fill out and submit form" do
         it "Changes Merchant based on form" do
           merchant_1 = Merchant.create(name: "Apple",
                                     address: "123 Greedy Ave",
@@ -28,11 +28,11 @@ RSpec.describe "User edits existing Merchant", type: :feature do
 
           expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
 
-          fill_in "merchant[name]", with: "Amazon Hegemony"
-          fill_in "merchant[address]",  with: "123 Everywhere ln"
-          fill_in "merchant[city]",  with: "San Francisco"
-          fill_in "merchant[state]",  with: "CA"
-          fill_in "merchant[zip]",  with: "90004"
+          fill_in "name", with: "Amazon Hegemony"
+          fill_in "address",  with: "123 Everywhere ln"
+          fill_in "city",  with: "San Francisco"
+          fill_in "state",  with: "CA"
+          fill_in "zip",  with: "90004"
 
           click_on "Submit Changes"
 

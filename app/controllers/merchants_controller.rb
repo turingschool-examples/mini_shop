@@ -14,16 +14,20 @@ class MerchantsController < ApplicationController
 
   def create
     Merchant.create(merchant_params)
+
     redirect_to '/merchants'
   end
 
   def edit
+     @merchant = Merchant.find(params[:id])
   end
 
   def update
     #find merchant first and assign a variable to it 'merchant'.
-
+    merchant = Merchant.find(params[:id])
     merchant.update(merchant_params_form)
+
+    redirect_to "/merchants/#{merchant.id}"
   end
 
   private
