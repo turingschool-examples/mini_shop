@@ -3,3 +3,4 @@
 <% @merchants.each do |merchant|%>
   <a href="merchants/<%= merchant.id %>"><%= merchant.name %></a>
 <% end %>
+<%= link_to 'New Merchant', 'merchants/new' %>
