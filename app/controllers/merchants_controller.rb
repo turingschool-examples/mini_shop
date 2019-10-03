@@ -9,11 +9,11 @@ class MerchantsController < ApplicationController
     @items = @merchant.items
   end
 
-  def new
-  end
-
-  def new_item
+  def show
     @merchant = Merchant.find(params[:id])
+  end
+  
+  def new
   end
 
   def create
@@ -27,10 +27,6 @@ class MerchantsController < ApplicationController
 
     merchant.save
     redirect_to '/merchants'
-  end
-
-  def show
-    @merchant = Merchant.find(params[:id])
   end
 
   def edit
