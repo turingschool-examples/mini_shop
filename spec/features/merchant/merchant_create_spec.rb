@@ -16,6 +16,11 @@ describe 'As a visitor' do
       expect(current_path).to eq("/merchants")
       expect(page).to have_content('Costco')
       expect(page).to_not have_content('Best Buy')
+      expect(Merchant.last.name).to eq('Costco')
+      expect(Merchant.last.address).to eq('567 Main St')
+      expect(Merchant.last.city).to eq('Littleton')
+      expect(Merchant.last.state).to eq('CO')
+      expect(Merchant.last.zip).to eq('80129')
     end
   end
 end
