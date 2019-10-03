@@ -5,19 +5,19 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="_method" value="PATCH" />
 
-  <p>Name:</p>
+  <p>Name</p>
   <input type="text" name="merchant[name]" class="form-control" value="<%= @merchant.name %>" /><br />
 
-  <p>Address:</p>
+  <p>Address</p>
   <input type="text" name="merchant[address]" class="form-control" value="<%= @merchant.address %>" /><br />
 
-  <p>City:</p>
+  <p>City</p>
   <input type="text" name="merchant[city]" class="form-control" value="<%= @merchant.city %>" /><br />
 
-  <p>State:</p>
+  <p>State</p>
   <input type="text" name="merchant[state]" class="form-control" value="<%= @merchant.state %>" /><br />
 
-  <p>Zip Code:</p>
+  <p>Zip Code</p>
   <input type="text" name="merchant[zip]" class="form-control" value="<%= @merchant.zip %>" /><br />
 
   <input type="submit" name="update_merchant" value="Update Merchant" class="btn btn-primary" />
