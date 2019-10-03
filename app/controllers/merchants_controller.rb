@@ -20,6 +20,12 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
   end
 
+  def update
+    merchant = Merchant.find(params[:id])
+    merchant.update(merchant_params)
+    redirect_to "/merchants/#{merchant.id}"
+  end
+
   private
   def merchant_params
     params.permit(:name, :address, :city, :state, :zip)
