@@ -12,12 +12,11 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    merchant = Merchant.new({name: params[:merchant][:name],
+    merchant = Merchant.create({name: params[:merchant][:name],
                              address: params[:merchant][:address],
                              city: params[:merchant][:city],
                              state: params[:merchant][:state],
                              zip: params[:merchant][:zip]})
-    merchant.save
     redirect_to '/merchants'
   end
 
@@ -38,5 +37,10 @@ class MerchantsController < ApplicationController
 
     merchant.save
     redirect_to "/merchants/#{merchant.id}"
+  end
+
+  def destroy
+    Merchant.destroy(params[:id])
+    redirect_to '/merchants'
   end
 end
