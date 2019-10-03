@@ -56,16 +56,9 @@ RSpec.describe "merchant items index page", type: :feature do
     expect(page).to have_content('Active')
     expect(page).to have_content(@plumeria.inventory)
 
-    expect(page).to have_content(@dahlia.name)
-    expect(page).to have_content(@dahlia.price)
-    expect(page).to have_css("img[src='#{@dahlia.image}']")
-    expect(page).to have_content('Inactive')
-    expect(page).to have_content(@dahlia.inventory)
-
-    expect(page).to have_no_content(@rose.name)
-    expect(page).to have_no_content(@rose.price)
-    expect(page).to have_no_css("img[src='#{@rose.image}']")
-    expect(page).to have_no_content(@rose.inventory)
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to have_css("#item-#{@dahlia.id}")
+    expect(page).to_not have_css("#item-#{@rose.id}")
   end
 
   it "can click on merchant name to redirect to merchant show page" do
