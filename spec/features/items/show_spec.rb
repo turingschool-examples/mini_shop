@@ -41,5 +41,19 @@ describe 'Item Show Page' do
       expect(page).to_not have_content(@chocolate_bar.name)
       expect(page).to_not have_content(@chocolate_bar.description)
     end
+
+    it 'I see a link to change the Items active status' do
+      visit item_path(@chocolate_bar)
+
+      expect(page).to have_content('Item is Active')
+      click_link 'Deactivate Item'
+
+      expect(current_path).to eq("/items/#{@chocolate_bar.id}")
+      expect(page).to have_content('Item is Inactive')
+      click_link 'Activate Item'
+
+      expect(current_path).to eq("/items/#{@chocolate_bar.id}")
+      expect(page).to have_content('Item is Active')
+    end
   end
 end
