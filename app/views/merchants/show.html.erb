@@ -9,3 +9,5 @@
 <p><%= @merchant.zip %></p>
 
 <a href="/merchants/<%= @merchant.id %>/edit">Edit</a>
+
+<%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>

@@ -10,9 +10,9 @@ RSpec.describe "delete merchant" do
 
     visit "/merchants/#{merchant_1.id}"
 
-    expect(page).to have_link("Delete")
+    expect(page).to have_button("Delete")
 
-    click_link "Delete"
+    click_button "Delete"
 
     expect(current_path).to eq('/merchants')
 
