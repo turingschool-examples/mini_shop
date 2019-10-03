@@ -35,7 +35,7 @@ RSpec.describe "items index page", type: :feature do
       description: 'A timeless favorite, introduced almost 60 years ago and still going strong. The big blooms measure up to 8 inches across and have striking two-tone petals that are deep burgundy and purple with brilliant white tips.',
       price: 15.40,
       image: 'https://images.pexels.com/photos/599679/pexels-photo-599679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      active_status: true,
+      active_status: false,
       inventory: 32,
       merchant_id: merchant.id
     )
@@ -45,16 +45,16 @@ RSpec.describe "items index page", type: :feature do
     expect(page).to have_content(plumeria.name)
     expect(page).to have_content(plumeria.description)
     expect(page).to have_content(plumeria.price)
-    expect(page).to have_content(plumeria.image)
-    expect(page).to have_content(plumeria.active_status)
+    expect(page).to have_css("img[src='#{plumeria.image}']")
+    expect(page).to have_content('Active')
     expect(page).to have_content(plumeria.inventory)
     expect(page).to have_content(plumeria.merchant.name)
 
     expect(page).to have_content(dahlia.name)
     expect(page).to have_content(dahlia.description)
     expect(page).to have_content(dahlia.price)
-    expect(page).to have_content(dahlia.image)
-    expect(page).to have_content(dahlia.active_status)
+    expect(page).to have_css("img[src='#{dahlia.image}']")
+    expect(page).to have_content('Inactive')
     expect(page).to have_content(dahlia.inventory)
     expect(page).to have_content(dahlia.merchant.name)
   end
