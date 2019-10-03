@@ -8,3 +8,6 @@
 <p><%= @merchant.zip %></p>
 
 <a href="/merchants/<%= @merchant.id %>/edit">Edit</a>
+
+<%= link_to "DELETE", @merchants, :method => :delete %>
+
