@@ -1,12 +1,32 @@
 <h1>Create a Merchant</h1>
 
-<form action="/merchants" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p> Enter a new merchant name:
-  <input id='name' type='text' name='merchant[name]'/> </p>
-  <p>Address: <input id='address' type='text' address='merchant[address]'/></p>
-  <p>City: <input id= 'city' type='text' city='merchant[city]'/></p>
-  <p>State: <input id= 'state' type='text' state='merchant[state]'/></p>
-  <p>Zip: <input  id= 'zip' type='text' zip='merchant[zip]'/></p>
-  <input type='submit'/>
-</form>
+<%= form_for(@merchant) do |f| %>
+  <ul>
+  <% @merchant.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
