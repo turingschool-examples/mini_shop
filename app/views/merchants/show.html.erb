@@ -2,3 +2,5 @@
 
 <p>Address: <%= @merchant.address %>, <%= @merchant.city %>,
   <%=@merchant.state %>, <%= @merchant.zip %></p>
+
+<p><%= link_to "Edit Merchant Information", "/merchants/#{@merchant.id}/edit" %> </p>

@@ -24,6 +24,8 @@ RSpec.describe "merchants show page", type: :feature do
     expect(page).to have_content(merchant_1.city)
     expect(page).to have_content(merchant_1.state)
     expect(page).to have_content(merchant_1.zip)
+    expect(page).to_not have_content(merchant_2.name)
+    expect(page).to_not have_content(merchant_3.name)
 
     visit "/merchants/#{merchant_2.id}"
     expect(page).to have_content(merchant_2.name)
@@ -31,6 +33,8 @@ RSpec.describe "merchants show page", type: :feature do
     expect(page).to have_content(merchant_2.city)
     expect(page).to have_content(merchant_2.state)
     expect(page).to have_content(merchant_2.zip)
+    expect(page).to_not have_content(merchant_1.name)
+    expect(page).to_not have_content(merchant_3.name)
 
     visit "/merchants/#{merchant_3.id}"
     expect(page).to have_content(merchant_3.name)
@@ -38,6 +42,9 @@ RSpec.describe "merchants show page", type: :feature do
     expect(page).to have_content(merchant_3.city)
     expect(page).to have_content(merchant_3.state)
     expect(page).to have_content(merchant_3.zip)
+    expect(page).to_not have_content(merchant_1.name)
+    expect(page).to_not have_content(merchant_2.name)
+
 
   end
 end
