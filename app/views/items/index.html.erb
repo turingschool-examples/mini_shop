@@ -1,4 +1,6 @@
+
 <% if params.has_key?(:id) %>
+          #items.first.merchant.name
   <h1> <%= (Merchant.where(id: params[:id]))[0].name %> Items </h1>
 <% end %>
 
@@ -12,6 +14,7 @@
       <p>Status: <%= item.status %></p>
       <p>Inventory: <%= item.inventory %></p>
       <% if !params.has_key?(:id) %>
+                               item.merchant.name
         <p>Merchant: <%= (Merchant.find {|merchant| merchant.id == item.merchant_id}).name %></p>
       <% end %>
       <br />
@@ -20,5 +23,6 @@
 </ul>
 
 <% if params.has_key?(:id) %>
+                                            items
   <%= link_to "Add New Item", "/merchants/#{(Merchant.where(id: params[:id]))[0].id}/items/new" %>
 <% end %>

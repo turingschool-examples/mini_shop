@@ -20,7 +20,7 @@ class MerchantsController < ApplicationController
     @merchant.state = params[:merchant][:state]
     @merchant.zip = params[:merchant][:zip]
     @merchant.save
-
+    #create
     redirect_to "/merchants"
   end
 

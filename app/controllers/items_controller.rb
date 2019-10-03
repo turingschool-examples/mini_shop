@@ -8,6 +8,8 @@ class ItemsController < ApplicationController
     end
   end
 
+  #merchant_items_controller
+
   def show
     @item = Item.find(params[:id])
   end
@@ -27,6 +29,7 @@ class ItemsController < ApplicationController
     merchant_id: params[:id]
     })
     item.save
+    #create
     redirect_to "/merchants/#{params[:id]}/items"
   end
 
