@@ -1,4 +1,4 @@
-<h1 class="mt-4">Create a New Item (<%= @merchant.name %>)</h1>
+<h1 class="mt-4">Create a New Item for <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
 
 <form action="/merchants/<%= @merchant.id %>/items" method="POST">

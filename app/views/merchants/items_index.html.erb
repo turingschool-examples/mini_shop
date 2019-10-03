@@ -1,4 +1,4 @@
-<h1 class="mt-4">Items Sold by <%= @merchant.name %></h1>
+<h1 class="mt-4">Items Sold by <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
 
 <% @items.each do |item| %>
