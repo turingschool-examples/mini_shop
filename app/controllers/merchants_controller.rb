@@ -30,6 +30,11 @@ class MerchantsController < ApplicationController
     redirect_to "/merchants/#{merchant.id}"
   end
 
+  def destroy
+    Merchant.destroy(params[:id])
+    redirect_to '/merchants'
+  end
+
   private
     def merchant_params
       #require isn't necessary when using a form tag. Will use permit instead.
