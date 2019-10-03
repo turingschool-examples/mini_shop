@@ -1,5 +1,11 @@
 <h1>Merchants</h1>
 
-<% @merchants.each do |merchant| %>
-  <h2><a href="/merchants/<%=merchant.id %>"><%= merchant.name %></a></h2>
-<% end %>
+<section>
+  <% @merchants.each do |merchant| %>
+    <h2><a href="/merchants/<%=merchant.id %>"><%= merchant.name %></a></h2>
+  <% end %>
+</section>
+
+<section>
+  <a href="/merchants/new">Create New Merchant</a>
+</section>
