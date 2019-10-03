@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 
 
   #------------ Merchant Items Routes ------------#
-  get '/merchants/:id/items', to: 'merchants#items_index'
+  get '/merchants/:merchant_id/items', to: 'merchants#items_index'
 
   get '/merchants/:merchant_id/items/new', to: 'items#new'
-  post '/merchants/:id/items', to: 'items#create'
+  post '/merchants/:merchant_id/items', to: 'items#create'
 
 
   #------------ Item Routes ------------#
