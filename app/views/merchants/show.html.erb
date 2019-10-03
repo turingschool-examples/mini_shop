@@ -6,5 +6,5 @@
 <p>Zip: <%= @merchant.zip %></p><br><hr>
 
 <%= link_to 'Edit Merchant', "/merchants/#{@merchant.id}/edit" %><br>
-<%= link_to 'Delete Merchant', "/merchants", method: :delete, :id @merchant.id, data: {confirm: "Really delete the merchant?"} %><br><br>
+<%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete %><br><br>
 <%= link_to '<< Back to Merchants List', "/merchants" %>
