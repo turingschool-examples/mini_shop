@@ -23,4 +23,24 @@ class ItemsController < ApplicationController
     redirect_to "/merchants/#{params[:id]}/items"
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update({
+      name: params[:item][:name],
+      description: params[:item][:description],
+      price: params[:item][:price],
+      image: params[:item][:image],
+      active_status: true,
+      inventory: params[:item][:inventory],
+      merchant_id: item.merchant_id
+    })
+
+    item.save
+    redirect_to "/items/#{item.id}"
+  end
+
 end
