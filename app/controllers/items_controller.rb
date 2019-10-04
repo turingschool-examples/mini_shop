@@ -1,11 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    if params.has_key?(:id)
-      @items = Item.where(merchant_id: params[:id])
-    else
-      @items = Item.all
-    end
+    @items = Item.all
   end
 
   #merchant_items_controller
@@ -18,18 +14,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = Item.new({
-    name: params[:item][:name],
-    description: params[:item][:description],
-    price: params[:item][:price],
-    image: params[:item][:image],
-    status: "active",
-    inventory: params[:item][:inventory],
-    name: params[:item][:name],
-    merchant_id: params[:id]
-    })
-    item.save
-    #create
+    all_params = {"merchant_id" => params[:id]}
+    all_params.merge!(item_params)
+
+
+    item = Item.create(all_params)
+
     redirect_to "/merchants/#{params[:id]}/items"
   end
 
