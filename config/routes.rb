@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   delete '/merchants/:id', to: 'merchants#destroy'
 
   get '/items', to: 'items#index'
+
+  resources :merchants, only: [:show] do
+    get '/items', to: 'merchants/items#index'
+  end
 end
