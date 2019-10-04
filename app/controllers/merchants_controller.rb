@@ -44,7 +44,7 @@ class MerchantsController < ApplicationController
     end
 
     def merchant_params_form
-      #Use for form tag views
+      #Use for form_tag views
       params.permit(:name, :address, :city, :state, :zip)
     end
 end
