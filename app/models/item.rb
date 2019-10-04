@@ -5,4 +5,6 @@ class Item < ApplicationRecord
   validates_presence_of :image
   validates_presence_of :status
   validates_presence_of :inventory
+
+  belongs_to :merchant
 end
