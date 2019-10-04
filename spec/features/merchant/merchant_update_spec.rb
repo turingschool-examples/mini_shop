@@ -13,7 +13,6 @@ describe 'As a Visitor' do
       visit "/merchants/#{merchant_1.id}"
       expect(page).to have_link('Edit')
       click_link('Edit')
-      save_and_open_page
       expect(current_path).to eq("/merchants/#{merchant_1.id}/edit")
       fill_in 'name', with: 'Sams Club'
       fill_in 'address', with: '321 Niam ts'
