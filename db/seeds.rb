@@ -20,3 +20,44 @@ merchant_3 = Merchant.create( name: "Your More Store",
                               city: "Denver",
                               state: "CO",
                               zip: "80201")
+
+
+batteries = Item.create( name: "Batteries",
+                      description: "Bunch of loose batteries of undetermined efficacy",
+                      price: 4.50,
+                      image: '/assets/batteries.jpeg',
+                      status: 'active',
+                      inventory: 10,
+                    )
+
+blanket = Item.create( name: "Blanket",
+                      description: "Soft and lightweight blanket",
+                      price: 4.50,
+                      image: '/assets/blanket.png',
+                      status: 'inactive',
+                      inventory: 4,
+                    )
+
+lightbulb = Item.create( name: "Lightbulb",
+                      description: "Let there be light",
+                      price: 4.50,
+                      image: '/assets/lightbulb.jpg',
+                      status: 'active',
+                      inventory: 12,
+                    )
+
+keys = Item.create( name: "Key duplication",
+                      description: "Let us create a duplicate key for you fast",
+                      price: 4.50,
+                      image: '/assets/keys.jpeg',
+                      status: 'active',
+                      inventory: 12,
+                    )
+
+pallet = Item.create( name: "Scrap Wood",
+                      description: "Reduce, reuse, recycle",
+                      price: 4.50,
+                      image: '/assets/pallet.jpg',
+                      status: 'active',
+                      inventory: 12,
+                    )
