@@ -4,8 +4,6 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  #merchant_items_controller
-
   def show
     @item = Item.find(params[:id])
   end
@@ -16,8 +14,6 @@ class ItemsController < ApplicationController
   def create
     all_params = {"merchant_id" => params[:id]}
     all_params.merge!(item_params)
-
-
     item = Item.create(all_params)
 
     redirect_to "/merchants/#{params[:id]}/items"

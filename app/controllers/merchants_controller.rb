@@ -13,14 +13,8 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    @merchant = Merchant.new
-    @merchant.name = params[:merchant][:name]
-    @merchant.address = params[:merchant][:address]
-    @merchant.city = params[:merchant][:city]
-    @merchant.state = params[:merchant][:state]
-    @merchant.zip = params[:merchant][:zip]
-    @merchant.save
-    #create
+    merchant = Merchant.create(merchant_params)
+
     redirect_to "/merchants"
   end
 
