@@ -49,43 +49,39 @@ RSpec.describe "Items index" do
 
         expect(page).to have_content(batteries.name)
         expect(page).to have_content(batteries.description)
+        expect(page).to have_css("img[src*='#{batteries.image}']")
         expect(page).to have_content(batteries.price)
         expect(page).to have_content(batteries.status)
         expect(page).to have_content(batteries.inventory)
-        # expect(page).to have_css("img[src*='/assetss/batteries.jpeg']")
+
         expect(page).to have_content(blanket.name)
         expect(page).to have_content(blanket.description)
+        expect(page).to have_css("img[src*='#{blanket.image}']")
         expect(page).to have_content(blanket.price)
         expect(page).to have_content(blanket.status)
         expect(page).to have_content(blanket.inventory)
 
         expect(page).to have_content(lightbulb.name)
         expect(page).to have_content(lightbulb.description)
+        expect(page).to have_css("img[src*='#{lightbulb.image}']")
         expect(page).to have_content(lightbulb.price)
         expect(page).to have_content(lightbulb.status)
         expect(page).to have_content(lightbulb.inventory)
 
         expect(page).to have_content(keys.name)
         expect(page).to have_content(keys.description)
+        expect(page).to have_css("img[src*='#{keys.image}']")
         expect(page).to have_content(keys.price)
         expect(page).to have_content(keys.status)
         expect(page).to have_content(keys.inventory)
 
-        expect(page).to have_content(batteries.name)
-        expect(page).to have_content(batteries.description)
-        expect(page).to have_content(batteries.price)
-        expect(page).to have_content(batteries.status)
-        expect(page).to have_content(batteries.inventory)
+        expect(page).to have_content(pallet.name)
+        expect(page).to have_content(pallet.description)
+        expect(page).to have_css("img[src*='#{pallet.image}']")
+        expect(page).to have_content(pallet.price)
+        expect(page).to have_content(pallet.status)
+        expect(page).to have_content(pallet.inventory)
 
     end
   end
 end
-# When I visit '/items'
-# Then I see each Item in the system including the Item's:
-# - name
-# - description
-# - price
-# - image
-# - active/inactive status
-# - inventory
-# - the name of the merchant that sells the ite
