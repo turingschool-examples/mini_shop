@@ -3,11 +3,13 @@
 <% @items.each do |item| %>
   <p>
     <%= item.name %>
-    <%= item.description %>
-    <%= item.price %>
-    <%= item.image %>
-    <%= item.active %>
-    <%= item.inventory %>
-    <%= item.merchant_id.name %>
+    <ul>
+      <li><%= item.description %></li>
+      <li><%= item.price %></li>
+      <li><%= item.image %></li>
+      <li><%= item.active %></li>
+      <li><%= item.inventory %></li>
+      <li><%= item.merchant.name %></li>
+    </ul>
   </p>
 <% end %>
