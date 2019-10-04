@@ -10,4 +10,8 @@ describe Item, type: :model do
     it { should validate_presence_of :inventory } 
     it { should validate_presence_of :merchant_id } 
   end
+
+  describe "relationships" do 
+    it { should belong_to :merchant }
+  end
 end
