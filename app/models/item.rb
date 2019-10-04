@@ -6,4 +6,6 @@ class Item < ApplicationRecord
   validates_presence_of :active
   validates_presence_of :inventory
   validates_presence_of :merchant_id
+
+  belongs_to :merchant
 end
