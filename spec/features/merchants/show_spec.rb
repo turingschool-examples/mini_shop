@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "individual merchant detail page", type: :feature do
-  it "can see the details for a specific merchant" do
+RSpec.describe "merchant show page", type: :feature do
+  it "user can see info for a merchant" do
     merchant_1 = Merchant.create(name: "Sedona", address: "123 Main Street", city: "Denver", state: "CO", zip: "80218")
     merchant_2 = Merchant.create(name: "Fun Fitness", address: "Another street", city: "Denver", state: "CO", zip: "80218")
 
