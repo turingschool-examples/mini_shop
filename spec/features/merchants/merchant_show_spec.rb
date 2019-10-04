@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "merchant show page", type: :feature do
+describe "merchant show page", type: :feature do
   it "can see that ids merchant's name, address, city, state, zip" do
 
     merchant = Merchant.create( name: "Chesters Collectables",

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "merchants index page", type: :feature do
+describe "merchants index page", type: :feature do
   it "can see all merchants" do
 
     merchant_1 = Merchant.create( name: "Chesters Collectables",
