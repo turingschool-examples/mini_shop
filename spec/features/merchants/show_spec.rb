@@ -7,11 +7,11 @@ RSpec.describe "merchants show page", type: :feature do
                                  city:    "Irvine",
                                  state:   "CA",
                                  zip:     92618)
-    # merchant_2 = Merchant.create(name:    "Kozmo",
-    #                              address: "80 Broad Street 14th Floor",
-    #                              city:    "New York",
-    #                              state:   "NY",
-    #                              zip:     10004)
+    merchant_2 = Merchant.create(name:    "Kozmo",
+                                 address: "80 Broad Street 14th Floor",
+                                 city:    "New York",
+                                 state:   "NY",
+                                 zip:     10004)
 
   visit "/merchants/#{merchant_1.id}"
 
