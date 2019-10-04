@@ -9,14 +9,14 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @artist = params[:merchant_id]
   end
 
   def create
-    all_params = {"merchant_id" => params[:id]}
-    all_params.merge!(item_params)
-    item = Item.create(all_params)
+    merchant = Merchant.find(params[:merchant_id])
+    item = merchant.items.create(item_params)
 
-    redirect_to "/merchants/#{params[:id]}/items"
+    redirect_to "/merchants/#{params[:merchant_id]}/items"
   end
 
   def edit
