@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   delete '/merchants/:id',      to: 'merchants#destroy'
 
   get '/items', to: 'items#index'
+
+  get '/welcome', to: 'welcome#index'
 end
