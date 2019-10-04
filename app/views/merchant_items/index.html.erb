@@ -1,4 +1,4 @@
-<h1> All Items </h1>
+<h1><%= @merchant.name%> Items</h1>
 
 <ul id="items">
   <% @items.each do |item| %>
@@ -8,8 +8,10 @@
       <p>Image: <%= image_tag(item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
       <p>Status: <%= item.status %></p>
       <p>Inventory: <%= item.inventory %></p>
-      <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant_id}" %></p>
       <br />
       <br />
   <% end %>
 </ul>
+
+
+<%= link_to "Add New Item", "/merchants/#{params[:id]}/items/new" %>

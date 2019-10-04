@@ -4,7 +4,7 @@
 <p>Image: <%= image_tag(@item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
 <p>Status: <%= @item.status %></p>
 <p>Inventory: <%= @item.inventory %></p>
-<p>Merchant: <%= (Merchant.find {|merchant| merchant.id == @item.merchant_id}).name %></p>
+<p>Merchant: <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant_id}" %></p>
 <br />
 <br />
 <br />
