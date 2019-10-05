@@ -1,16 +1,5 @@
 require 'rails_helper'
 
-# When I fill out the form with a new merchant's:
-# - name
-# - address
-# - city
-# - state
-# - zip
-# And I click the button to submit the form
-# Then a `POST` request is sent to '/merchants',
-# a new merchant is created,
-# and I am redirected to the Merchant Index page where I see the new Merchant listed.
-
 RSpec.describe "merchant create page" do
   describe "As a user" do
     describe "when I visit the new merchant form by clicking on a link from merchants index page" do
