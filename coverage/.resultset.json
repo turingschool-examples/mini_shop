@@ -189,10 +189,39 @@
         1,
         1,
         null,
+        1,
         null
       ],
       "/Users/jonpatterson/turing/mod2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/jonpatterson/turing/mod2/projects/mini_shop/spec/features/merchants/user_can_create_new_merchant_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/jonpatterson/turing/mod2/projects/mini_shop/spec/features/merchants/user_can_delete_merchant_spec.rb": [
@@ -441,8 +470,17 @@
         1,
         1,
         null
+      ],
+      "/Users/jonpatterson/turing/mod2/projects/mini_shop/app/controllers/items_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1570231432
+    "timestamp": 1570234548
   }
 }
