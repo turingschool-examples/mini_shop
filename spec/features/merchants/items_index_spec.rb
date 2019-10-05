@@ -82,4 +82,42 @@ RSpec.describe "merchant items index page", type: :feature do
     expect(current_path).to eq("/items/#{@dahlia.id}")
   end
 
+  it "can filter items by active status" do
+    visit "/merchants/#{@fuschia.id}/items"
+
+    click_link('All Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to have_css("#item-#{@dahlia.id}")
+
+    click_link('Active Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to_not have_css("#item-#{@dahlia.id}")
+
+    click_link('Inactive Items')
+    expect(page).to have_css("#item-#{@dahlia.id}")
+    expect(page).to_not have_css("#item-#{@plumeria.id}")
+  end
+
+
+  #---------------- Select Menu ----------------#
+
+  # it "can filter items by active status" do
+  #   visit "/merchants/#{@fuschia.id}/items"
+  #
+  #   expect(page).to have_select('status', selected: 'Any', options: ['Any', 'Active', 'Inactive'])
+  #   expect(page).to have_css("#item-#{@plumeria.id}")
+  #   expect(page).to have_css("#item-#{@rose.id}")
+  #   expect(page).to have_css("#item-#{@dahlia.id}")
+  #
+  #   select 'Active', from: 'status'
+  #   expect(page).to have_css("#item-#{@plumeria.id}")
+  #   expect(page).to have_css("#item-#{@rose.id}")
+  #   expect(page).to_not have_css("#item-#{@dahlia.id}")
+  #
+  #   select 'Inactive', from: 'status'
+  #   expect(page).to have_css("#item-#{@dahlia.id}")
+  #   expect(page).to_not have_css("#item-#{@plumeria.id}")
+  #   expect(page).to_not have_css("#item-#{@rose.id}")
+  # end
+
 end
