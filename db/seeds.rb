@@ -22,7 +22,7 @@ merchant_3 = Merchant.create( name: "Your More Store",
                               zip: "80201")
 
 
-batteries = Item.create( name: "Batteries",
+batteries = merchant_1.items.create( name: "Batteries",
                       description: "Bunch of loose batteries of undetermined efficacy",
                       price: 4.50,
                       image: '/assets/batteries.jpg',
@@ -30,7 +30,7 @@ batteries = Item.create( name: "Batteries",
                       inventory: 10,
                     )
 
-blanket = Item.create( name: "Blanket",
+blanket = merchant_1.items.create( name: "Blanket",
                       description: "Soft and lightweight blanket",
                       price: 4.50,
                       image: '/assets/blanket.png',
@@ -38,7 +38,7 @@ blanket = Item.create( name: "Blanket",
                       inventory: 4,
                     )
 
-lightbulb = Item.create( name: "Lightbulb",
+lightbulb = merchant_2.items.create( name: "Lightbulb",
                       description: "Let there be light",
                       price: 4.50,
                       image: '/assets/lightbulb.jpg',
@@ -46,7 +46,7 @@ lightbulb = Item.create( name: "Lightbulb",
                       inventory: 12,
                     )
 
-keys = Item.create( name: "Key duplication",
+keys = merchant_2.items.create( name: "Key duplication",
                       description: "Let us create a duplicate key for you fast",
                       price: 4.50,
                       image: '/assets/keys.jpg',
@@ -54,7 +54,7 @@ keys = Item.create( name: "Key duplication",
                       inventory: 12,
                     )
 
-pallet = Item.create( name: "Scrap Wood",
+pallet = merchant_3.items.create( name: "Scrap Wood",
                       description: "Reduce, reuse, recycle",
                       price: 4.50,
                       image: '/assets/pallet.jpg',

@@ -8,7 +8,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :status
       t.integer :inventory
 
-      t.timestamp
+      t.timestamps
     end
   end
 end

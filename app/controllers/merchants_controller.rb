@@ -16,6 +16,10 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
   end
 
+  def items
+    @merchant = Merchant.find(params[:id])
+  end
+
   def edit
     @merchant = Merchant.find(params[:id])
   end
@@ -23,11 +27,13 @@ class MerchantsController < ApplicationController
   def update
     merchant = Merchant.find(params[:id])
     merchant.update(merchant_params)
+
     redirect_to "/merchants/#{merchant.id}"
   end
 
   def destroy
     Merchant.destroy(params[:id])
+
     redirect_to '/merchants'
   end
 
