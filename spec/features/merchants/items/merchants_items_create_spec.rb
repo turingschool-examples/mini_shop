@@ -32,8 +32,9 @@ describe "Merchants items creation page" do
       expect(current_path).to have_content('Old Books')
       expect(current_path).to have_content('A collection of old scientific books for the scientific person')
       expect(current_path).to have_css("img[src*='https://i.imgur.com/LlHMnHG.jpg']")
-      expect(current_path).to have_content('2000')
-      expect(current_path).to have_content('3')
+      expect(current_path).to have_content(2000)
+      expect(current_path).to have_content(3)
+      expect(current_path).to have_content('Active')
 
     end
   end

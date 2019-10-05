@@ -183,7 +183,6 @@
         1,
         null,
         1,
-        null,
         1,
         1,
         null,
@@ -224,10 +223,23 @@
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/controllers/merchants/items_controller.rb": [
         1,
         1,
+        2,
+        2,
+        null,
+        null,
         1,
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         null,
@@ -255,6 +267,6 @@
         null
       ]
     },
-    "timestamp": 1570316901
+    "timestamp": 1570318921
   }
 }
