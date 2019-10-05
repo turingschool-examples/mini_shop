@@ -18,7 +18,6 @@ class MerchantsController < ApplicationController
 
   def items
     @merchant = Merchant.find(params[:id])
-    binding.pry
   end
 
   def edit
@@ -28,11 +27,13 @@ class MerchantsController < ApplicationController
   def update
     merchant = Merchant.find(params[:id])
     merchant.update(merchant_params)
+
     redirect_to "/merchants/#{merchant.id}"
   end
 
   def destroy
     Merchant.destroy(params[:id])
+
     redirect_to '/merchants'
   end
 
