@@ -8,7 +8,7 @@
     <%= item.active%>
     <%= item.in_stock%>
     <%= item.inventory%>
-    <%= item.merchant_id%>
+    <%= Merchant.find(item.merchant_id).name%>
   </p>
   <hr>
 <% end %>

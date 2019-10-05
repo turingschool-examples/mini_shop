@@ -30,7 +30,7 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).to have_content(item_1.image)
       expect(page).to have_content("In stock")
       expect(page).to have_content(item_1.inventory)
-      expect(page).to have_content(item_1.merchant_id)
+      expect(page).to have_content(merchant_1.name)
 
       expect(page).to have_content(item_2.name)
       expect(page).to have_content(item_2.description)
@@ -38,7 +38,7 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).to have_content(item_2.image)
       expect(page).to have_content("Out of stock")
       expect(page).to have_content(item_2.inventory)
-      expect(page).to have_content(item_2.merchant_id)
+      expect(page).to have_content(merchant_1.name)
 
     end
   end
