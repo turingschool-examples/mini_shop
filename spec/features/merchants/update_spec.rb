@@ -22,7 +22,11 @@ RSpec.describe "Update merchant" do
   describe "as a visitor" do
     describe "when visting merchant show page" do
       it "can update a merchant" do
-        merchant = Merchant.create(name: "Beenz")
+        merchant = Merchant.create!(name:    "Beenz",
+                                    address: "300 West Main Street",
+                                    city:    "Avon",
+                                    state:   "CT",
+                                    zip:     06001)
 
         visit "/merchants/#{merchant.id}"
 
