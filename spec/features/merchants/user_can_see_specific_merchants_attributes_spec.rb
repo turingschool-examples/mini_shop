@@ -9,7 +9,7 @@ RSpec.describe "Merchant id Page", type: :feature do
                                   zip: 90001)
                                   # binding.pry
     visit "/merchants/#{merchant_1.id}"
-    save_and_open_page
+    # save_and_open_page
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_1.address)

@@ -1,4 +1,7 @@
 require 'rails_helper'
+# As a visitor
+# When I visit '/merchants'
+# Then I see the name of each merchant in the system
 
 RSpec.describe "Merchant Index Page", type: :feature do
   it "Can see all Merchants names" do
@@ -19,7 +22,7 @@ RSpec.describe "Merchant Index Page", type: :feature do
                                     zip: 90003)
 
     visit "/merchants"
-    save_and_open_page
+    # save_and_open_page
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_2.name)

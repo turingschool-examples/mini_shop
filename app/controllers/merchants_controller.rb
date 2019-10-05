@@ -9,6 +9,7 @@ class MerchantsController < ApplicationController
   end
 
   def new
+    #necessary if using a form_for in the New view.
     # @merchant = Merchant.new
   end
 
@@ -43,7 +44,7 @@ class MerchantsController < ApplicationController
     end
 
     def merchant_params_form
-      #Use for form tag views
+      #Use for form_tag views
       params.permit(:name, :address, :city, :state, :zip)
     end
 end
