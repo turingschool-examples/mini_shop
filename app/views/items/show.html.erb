@@ -1,0 +1,13 @@
+<img src="<%= @item.image %>" style="width:142px;height:142px;">
+
+<h1><%= @item.name %></h1>
+
+<p>Description: <%= @item.description %></p>
+
+<p>Price: $<%= @item.price %></p>
+
+<p>Status: <%= @item.status %></p>
+
+<p>Stock: <%= @item.inventory %></p>
+
+<p>Seller: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>

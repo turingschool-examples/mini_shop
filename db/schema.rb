@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20191004182435) do
     t.text "description"
     t.decimal "price"
     t.string "image"
-    t.string "status"
+    t.string "status", default: "Active"
     t.integer "inventory"
     t.bigint "merchant_id"
     t.index ["merchant_id"], name: "index_items_on_merchant_id"
