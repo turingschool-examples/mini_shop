@@ -8,3 +8,4 @@
 <p><%= @merchant.zip %></p>
 
 <h3><%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %></h3>
+<h3><%= link_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %></h3>
