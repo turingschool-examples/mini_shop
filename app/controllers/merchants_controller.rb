@@ -43,4 +43,9 @@ class MerchantsController < ApplicationController
     Merchant.destroy(params[:id])
     redirect_to '/merchants'
   end
+
+  def items
+    @merchant = Merchant.find(params[:id])
+    @items = @merchant.items
+  end
 end
