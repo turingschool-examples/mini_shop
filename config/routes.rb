@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/merchants/:merchant_id', to: 'merchants#show'
   get '/merchants/:merchant_id/edit', to: 'merchants#edit'
   get 'merchants/:merchant_id/items', to: 'merchants#items'
+  get '/merchants/:merchant_id/items/new', to: 'items#new'
 
   get '/items', to: 'items#index'
   get '/items/:item_id', to: 'items#show'

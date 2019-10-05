@@ -21,22 +21,17 @@ RSpec.describe "As a visitor" do
 
       click_link "Add Item"
 
-      expect(current_url).to eq("/merchants/#{merchant_3.merchant_id}/items/new")
+      expect(current_path).to eq("/merchants/#{merchant_3.id}/items/new")
+      save_and_open_page
+      fill_in "Name", with: "Safety Goggles"
+      fill_in "Price", with: 4.7
+      fill_in "Description", with: "Keep your eyeballs safe."
+      fill_in "Image URL", with: "https://cdn.pixabay.com/photo/2015/07/28/17/10/safety-glasses-864648_1280.jpg"
+      page.select('Active', from: 'Status')
+      fill_in "Inventory", with: 100
+      click_button "Create New Item"
 
-    end
-  end
-
-  describe "On '/merchants/:merchant_id/items/new'" do
-    describe "I can create a new item" do
-      it "has a form to fill in with the items #
-        - name
-        - price
-        - description
-        - image
-        - inventory" do
-
-
-      end
+      expect(current_url).to eq("/merchants/#{merchant_3.id}/items")
     end
   end
 end
