@@ -41,4 +41,20 @@ RSpec.describe "item show page", type: :feature do
     expect(current_path).to eq("/merchants/#{@plumeria.merchant.id}")
   end
 
+  it "can toggle the active status of an item" do
+    visit "/items/#{@plumeria.id}"
+
+    expect(page).to_not have_link('Activate')
+    click_link 'Deactivate'
+    expect(current_path).to eq("/items/#{@plumeria.id}")
+    expect(page).to have_css('p.inactive')
+    expect(page).to_not have_css('p.active')
+
+    expect(page).to_not have_link('Deactivate')
+    click_link 'Activate'
+    expect(current_path).to eq("/items/#{@plumeria.id}")
+    expect(page).to_not have_css('p.inactive')
+    expect(page).to have_css('p.active')
+  end
+
 end
