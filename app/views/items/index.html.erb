@@ -12,19 +12,19 @@ Then I see each Item in the system including the Item's:
 
 <% @items.each do |item| %>
 
-<h3><%= item.name %></h3><br>
+<h3><%= item.name %></h3>
 <ul>
   <li>Description: <%= item.description %></li>
-  <li>Price $: <%= item.price %></li>
+  <li>Price: $<%= item.price %></li>
   <li>Status: <% if item.status == true %>
-              <%= puts "Available" %>
+              <%= "Available" %>
               <% else %>
-              <%= puts "Unavailable" %>
+              <%= "Unavailable" %>
               <% end %></li>
   <li>Quantity: <%= item.inventory %></li>
   <li>Selling Merchant: <%= item.merchant.name %></li>
 </ul><br>
 
-<img src="<%= item.image %>" alt="<%= item.name %>" height="30" width="30">
+<img src="<%= item.image %>" alt="<%= item.name %>" height="60" width="60">
 
 <% end %>
