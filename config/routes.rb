@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get '/merchants/:merchant_id/items/new', to: 'merchants#item_new'
   get '/items', to: 'items#index'
   get '/items/:id', to: 'items#show'
+  get '/items/:id/edit', to: 'items#edit'
   post '/merchants/:id/items', to: 'merchants#item_create'
   post '/merchants', to: 'merchants#create'
   patch '/merchants/:id', to: 'merchants#update'
+  patch '/items/:id', to: 'items#update'
   delete '/merchants/:id', to: 'merchants#destroy'
 end

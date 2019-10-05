@@ -7,3 +7,5 @@
 <p>Status: <%= @item.status %></p>
 <p>Inventory: <%= @item.inventory %></p>
 <p>Merchant: <%= @item.merchant.name %></p>
+
+<%= link_to 'Edit', "/items/#{@item.id}/edit" %>
