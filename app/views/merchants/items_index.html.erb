@@ -1,3 +1,4 @@
+<%= link_to 'Create New Item', "/merchants/#{@merchant.id}/items/new" %>
 <% @items.each do |item| %>
   <h3><%= item.name %></h3>
   <h3><%= item.description %></h3>
@@ -5,5 +6,4 @@
   <%= image_tag(item.image) %>
   <h3><%= item.status %></h3>
   <h3><%= item.inventory %></h3>
-
 <% end %>
