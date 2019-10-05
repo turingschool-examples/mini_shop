@@ -4,10 +4,6 @@ describe "merchants create", type: :feature do
   it "can create a new merchant" do
     visit '/merchants/new'
 
-    # expect(page).to have_link("Add new Merchant")
-
-    # click_link 'Add new Merchant'
-
     fill_in 'Name', with: 'Pauls Breakfast Shop'
     fill_in 'Address', with: '123 Cheddar Lane'
     fill_in 'City', with: 'Denver'
@@ -17,5 +13,6 @@ describe "merchants create", type: :feature do
     click_button 'Create'
 
     expect(current_path).to eq ('/merchants')
+    expect(page).to have_content("Pauls Breakfast Shop")
   end
 end
