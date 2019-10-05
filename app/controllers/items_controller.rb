@@ -9,4 +9,13 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
+private
+  def item_params
+    #Use for form_tag views
+    params.permit(:name, :description, :price, :image, :status, :inventory, :merchant_id)
+  end
 end
