@@ -21,4 +21,9 @@ class ItemsController < ApplicationController
     item.save
     redirect_to "/items/#{item.id}"
   end
+
+  def destroy
+    Item.destroy(params[:id])
+    redirect_to '/items'
+  end
 end
