@@ -14,7 +14,7 @@ describe "As a visitor", type: :feature do
     item = merchant.items.create!( name: "Solid Gold Playing Cards",
                         description: "One set of 52 solid gold playing cards.",
                         price: 1200,
-                        image: "./app/assets/images/gold_playing_cards.jpeg",
+                        image: "https://i.imgur.com/LlHMnHG.jpg",
                         status: "Active",
                         inventory: 2,
     )
