@@ -14,6 +14,6 @@ describe "merchant delete page", type: :feature do
     click_link('DELETE')
 
     expect(page).to_not have_content("Chesters Collectables")
-  end
 
+  end
 end
