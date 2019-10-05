@@ -7,7 +7,7 @@ RSpec.describe "merchants index page", type: :feature do
 
   visit "/merchants"
 
-  expect(page).to have_link(merchant_1.name)
-  expect(page).to have_link(merchant_2.name)
+  expect(page).to have_link("Sedona")
+  expect(page).to have_link("Fun Fitness")
   end
 end
