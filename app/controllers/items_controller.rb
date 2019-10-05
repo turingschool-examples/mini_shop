@@ -8,4 +8,10 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def new
+  end
+
+  def create
+  end
+
 end
