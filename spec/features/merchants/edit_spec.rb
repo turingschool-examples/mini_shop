@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe "merchant update page" do
+RSpec.describe "merchant update page" do
   describe "as a user" do
     describe "when I visit the merchant show page and click on link to update merchant" do
       it "I can edit a merchant's information through an edit form" do
