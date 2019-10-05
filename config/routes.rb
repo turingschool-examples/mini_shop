@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/items', to: 'items#index'
 
-  resources :merchants, only: [:show] do
-    get '/items', to: 'merchants/items#index'
-  end
+
+  get '/merchants/:id/items', to: 'merchants/items#index'
+  
 end

@@ -12,13 +12,7 @@ class MerchantsController < ApplicationController
   end
 
   def create
-    Merchant.create({
-      name: params[:name],
-      address: params[:address],
-      city: params[:city],
-      state: params[:state],
-      zip: params[:zip]
-      })
+    Merchant.create(merchant_params)
 
       redirect_to '/merchants'
   end
