@@ -9,3 +9,4 @@
   <%= @item.inventory%>
   <%= Merchant.find(@item.merchant_id).name%>
 </p>
+<%= link_to 'Edit item', "/items/#{@item.id}/edit"%>
