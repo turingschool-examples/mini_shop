@@ -1,4 +1,4 @@
-<h1> <%= @merchant.name %> </h1>
+<h1> <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %> </h1>
 <% @merchant.items.each do |item|%>
   <h3> <%= item.name %> </h3>
   <p>
@@ -8,7 +8,6 @@
     <%= item.active%>
     <%= item.in_stock%>
     <%= item.inventory%>
-    <%= @merchant.name%>
   </p>
   <hr>
 <% end %>

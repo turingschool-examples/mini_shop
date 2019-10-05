@@ -7,7 +7,7 @@
   <%= @item.active%>
   <%= @item.in_stock%>
   <%= @item.inventory%>
-  <%= Merchant.find(@item.merchant_id).name%>
+  <%= link_to "#{Merchant.find(@item.merchant_id).name}", "/merchants/#{@item.merchant_id}"%>
 </p>
 <%= link_to 'Edit item', "/items/#{@item.id}/edit"%>
 <%= link_to 'Delete item', "/items/#{@item.id}", method: :delete%>
