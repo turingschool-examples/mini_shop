@@ -37,7 +37,6 @@ describe "When at merchants/:merchant_id/items" do
 
 
     visit "/merchants/#{item_1.merchant_id}/items"
-    save_and_open_page
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(item_1.name)
