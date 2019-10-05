@@ -34,6 +34,11 @@ class MerchantsController < ApplicationController
     redirect_to '/merchants'
   end
 
+  def items_index
+    merchant = Merchant.find(params[:id])
+    @items = merchant.items
+  end
+
   private
   def merchant_params
     params.permit(:name, :address, :city, :state, :zip)
