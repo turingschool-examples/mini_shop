@@ -10,6 +10,12 @@
 <br />
 <br />
 <br />
+<% if @item.status == "active" %>
+  <%= link_to "Deactivate", "/items/#{@item.id}/deactivate" %>
+<% else %>
+  <%= link_to "Activate", "items/#{@item.id}/activate" %>
+<% end %>
+<br />
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
 <br />
 <%= link_to "Delete", "/items/#{@item.id}", method: :delete %>
