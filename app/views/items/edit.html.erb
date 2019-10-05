@@ -1,24 +1,35 @@
 <h1 class="mt-4">Edit Item</h1>
 <br />
 
-<form action="/items/<%= @item.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <input type="hidden" name="_method" value="PATCH" />
+<%= form_tag "/items/#{@item.id}", method: :patch do %>
 
-  <p>Name</p>
-  <input type="text" name="item[name]" class="form-control" value="<%= @item.name %>" /><br />
+  <p>
+    <%= label_tag :name %>
+    <%= text_field_tag 'item[name]', @item.name, minlength: 5, required: true, class: 'form-control' %>
+  </p>
 
-  <p>Price</p>
-  <input type="number" step="0.01" min="0" name="item[price]" class="form-control" value="<%= @item.price %>" /><br />
+  <p>
+    <%= label_tag :price %>
+    <%= number_field_tag 'item[price]', @item.price, min: 0, step: 0.01, required: true, class: 'form-control' %>
+  </p>
 
-  <p>Description</p>
-  <textarea name="item[description]" class="form-control"><%= @item.description %></textarea><br />
+  <p>
+    <%= label_tag :description %>
+    <%= text_area_tag 'item[description]', @item.description, minlength: 10, required: true, class: 'form-control' %>
+  </p>
 
-  <p>Image (URL)</p>
-  <input type="text" name="item[image]" class="form-control" value="<%= @item.image %>" /><br />
+  <p>
+    <%= label_tag 'Image (URL)' %>
+    <%= text_field_tag 'item[image]', @item.image, minlength: 5, required: true, class: 'form-control' %>
+  </p>
 
-  <p>Quantity in Stock</p>
-  <input type="number" step="1" min="0" name="item[inventory]" class="form-control" value="<%= @item.inventory %>" /><br />
+  <p>
+    <%= label_tag 'Quantity in Stock' %>
+    <%= number_field_tag 'item[inventory]', @item.inventory, min: 0, step: 1, required: true, class: 'form-control' %>
+  </p>
+  <br />
+  <p>
+    <%= submit_tag 'Update Item', class: 'btn btn-primary' %>
+  </p>
 
-  <input type="submit" name="update_item" value="Update Item" class="btn btn-primary"/>
-</form>
+<% end %>

@@ -28,7 +28,7 @@ RSpec.describe "merchant item creation" do
     expect(page).to have_field('item[description]')
     expect(page).to have_field('item[image]')
     expect(page).to have_field('item[inventory]')
-    expect(page).to have_button('create_item')
+    expect(page).to have_button('Create Item')
   end
 
   it "can fill out and submit form" do
@@ -38,7 +38,7 @@ RSpec.describe "merchant item creation" do
     fill_in 'item[description]', with: 'Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round'
     fill_in 'item[image]', with: 'https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
     fill_in 'item[inventory]', with: 17
-    click_button 'create_item'
+    click_button 'Create Item'
 
     expect(current_path).to eq("/merchants/#{@merchant.id}/items")
     expect(page).to have_content('Pink Tropical Hibiscus Tree')
