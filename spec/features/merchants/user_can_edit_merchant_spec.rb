@@ -26,17 +26,17 @@ RSpec.describe "merchant update", type: :feature do
 
     visit "/merchants/#{merchant_1.id}/edit"
 
-    expect(page).to have_field("merchant[name]")
-    expect(page).to have_field("merchant[address]")
-    expect(page).to have_field("merchant[city]")
-    expect(page).to have_field("merchant[state]")
-    expect(page).to have_field("merchant[zip]")
+    expect(page).to have_field("Name")
+    expect(page).to have_field("Address")
+    expect(page).to have_field("City")
+    expect(page).to have_field("State")
+    expect(page).to have_field("Zip")
 
-    fill_in 'merchant[name]', with: "Eddy's Stuff"
-    fill_in 'merchant[address]', with: "1134 Washington St"
-    fill_in 'merchant[city]', with: "Denver"
-    fill_in 'merchant[state]', with: "Colorado"
-    fill_in 'merchant[zip]', with: "83490"
+    fill_in 'Name', with: "Eddy's Stuff"
+    fill_in 'Address', with: "1134 Washington St"
+    fill_in 'City', with: "Denver"
+    fill_in 'State', with: "Colorado"
+    fill_in 'Zip', with: "83490"
 
     click_button 'Submit'
 

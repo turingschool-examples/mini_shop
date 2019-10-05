@@ -1,17 +1,19 @@
-<form action="/merchants/<%= @merchant.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <h1>Edit</h1>
-  <label for="name">Name</label>
-  <input type="text" name="merchant[name]" id="name" value="<%= @merchant.name %>">
-  <label for="address">Address</label>
-  <input type="text" name="merchant[address]" id="address" value="<%= @merchant.address %>">
-  <label for="city">City</label>
-  <input type="text" name="merchant[city]" id="city" value="<%= @merchant.city %>">
-  <label for="state">State</label>
-  <input type="text" name="merchant[state]" id="state" value="<%= @merchant.state %>">
-  <label for="zip">Zip</label>
-  <input type="text" name="merchant[zip]" id="zip" value="<%= @merchant.zip %>">
-  <button>Submit</button>
 
-</form>
+<%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag :address %>
+  <%= text_field_tag :address %>
+
+  <%= label_tag :city %>
+  <%= text_field_tag :city %>
+
+  <%= label_tag :state %>
+  <%= text_field_tag :state %>
+
+  <%= label_tag :zip %>
+  <%= text_field_tag :zip %>
+
+  <%= submit_tag 'Submit' %>
+<% end %>
