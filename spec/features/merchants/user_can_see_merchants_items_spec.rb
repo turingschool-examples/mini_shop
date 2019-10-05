@@ -1,7 +1,8 @@
 require 'rails_helper'
 
-describe "Item index page" do
-  it "Can show all items and their attributes" do
+describe "When at merchants/:merchant_id/items" do
+  it "Displays all items sold by that merchant" do
+
     merchant_1 = Merchant.create(name: "Apple",
                               address: "123 Greedy Ave",
                                  city: "Mountain View",
@@ -18,23 +19,20 @@ describe "Item index page" do
                   description: "Mens wrist watch",
                         price: 110,
                         image: "https://i.imgur.com/owpKw1E.jpg",
-                       status: false,
+                       status: true,
                     inventory: 50,
                     merchant_id: merchant_1.id )
 
-    visit '/items'
-    save_and_open_page
+    visit "/merchants/#{item_1.merchant_id}/items"
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(item_1.name)
-    expect(page).to have_content(item_1.description)
     expect(page).to have_content(item_1.price)
     expect(page).to have_css("img[src*='https://www.newtimes.co.rw/sites/default/files/styles/mystyle/public/main/articles/2019/07/02/ballpoint-pen.jpg']")
     expect(page).to have_content("Available")
     expect(page).to have_content(item_1.inventory)
 
     expect(page).to have_content(item_2.name)
-    expect(page).to have_content(item_2.description)
     expect(page).to have_content(item_2.price)
     expect(page).to have_css("img[src*='https://i.imgur.com/owpKw1E.jpg']")
     expect(page).to have_content("Unavailable")
