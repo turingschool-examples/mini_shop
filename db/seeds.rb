@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-zac_shop = Merchant.create([{name: "Zac's shop", address: "1234 Broadway St", city: "Denver", state: "Colorado", zip: "80203" }])
+pizza_shop = Merchant.create({name: "Paul's Pizza", address: "1234 Broadway St", city: "Denver", state: "Colorado", zip: "80203" })
+pizza_shop.items.create!({name: "Pepperoni Pizza", description: "Fresh pepperoni with all the cheese", price: 19.99, image: "https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/ck/gluten-free-cookbook/pepperoni-pizza-ck-x.jpg?itok=NWreajsZ", status: "active", inventory: 10, merchant_name: "Paul's Pizza"})
