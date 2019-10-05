@@ -34,7 +34,7 @@ RSpec.describe "On the merchants/:merchant_id/items page" do
 
         visit "/merchants/#{merchant_1.id}/items"
 
-        expect(page).to have_content("Key duplication")
+        expect(page).to have_content("Key Duplication") 
         expect(page).to have_content("Let us create a duplicate key for you fast")
         expect(page).to have_content("Price: $4.50")
         expect(page).to have_content("Status: active")
