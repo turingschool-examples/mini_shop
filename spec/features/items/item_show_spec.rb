@@ -62,4 +62,37 @@ RSpec.describe "Item show page", type: :feature do
     expect(page).to have_content(24.99)
     expect(page).to have_content(22)
   end
+
+  it "can delete an item" do
+    merchant_2 = Merchant.create(name: "Kitten Market",
+                                 address: "818 Catastic Avenue",
+                                 city: "Orlando",
+                                 state: "FL",
+                                 zip: 32810)
+
+    item_1 = merchant_2.items.create(name: "Cat Carrier",
+                           description: "Spacious carrier for your feline friend. It will feel like a hotel for your cat! Three zippable flaps.",
+                           price: 27.42,
+                           image: "https://i.imgur.com/1tX0wB0.jpg",
+                           status: "active",
+                           inventory: 3)
+
+    item_2 = merchant_2.items.create(name: "Cat Post",
+                           description: "Scratching and resting post combo, two for one! 27\" tall.",
+                           price: 25,
+                           image: "https://i.imgur.com/vim9kYM.jpg",
+                           status: "active",
+                           inventory: 9)
+
+    visit "/items/#{item_1.id}"
+
+    click_button 'Delete'
+
+    expect(current_path).to eq('/items')
+
+    expect(page).to_not have_content(item_1.name)
+    expect(page).to_not have_content(item_1.description)
+    expect(page).to_not have_content(item_1.price)
+    expect(page).to_not have_content(item_1.inventory)
+  end
 end
