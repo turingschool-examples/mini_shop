@@ -29,6 +29,6 @@
 <% end %>
 
 <br />
-<h5>Don't see an item this merchant sells? <a href="/merchants/<%= @merchant.id %>/items/new">Create a new item</a></h5>
+<h5>Don't see an item this merchant sells? <%= link_to 'Create a new item', "/merchants/#{@merchant.id}/items/new" %></h5>
 <br />
 <br />

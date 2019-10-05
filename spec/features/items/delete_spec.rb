@@ -24,12 +24,12 @@ RSpec.describe "item delete" do
   it "can see link to delete item from item show page" do
     visit "/items/#{@dahlia.id}"
 
-    expect(page).to have_button('delete_item')
+    expect(page).to have_link('Delete Item')
   end
 
   it "can delete item by clicking on the link" do
     visit "items/#{@dahlia.id}"
-    click_button 'delete_item'
+    click_link 'Delete Item'
 
     expect(current_path).to eq('/items')
     expect(page).to have_no_content('Contraste Dahlia Bulbs')
