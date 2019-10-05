@@ -8,7 +8,7 @@
     <p><%= @item.description %></p><br />
 
     <h5>Price</h5>
-    <p>$<%= "%.2f" % @item.price %></p><br />
+    <p><%= number_to_currency(@item.price) %></p><br />
 
     <h5>Product Status</h5>
     <% if @item.active_status %>
@@ -30,16 +30,8 @@
 </section>
 
 <br />
-<p class="button-row"><a href="/items/<%= @item.id %>/edit" class="btn btn-primary">Update Item</a></p>
-
-<form action="/items/<%= @item.id %>", method="POST" class="button-row">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" name="delete_item" value="Delete Item" class="btn btn-danger"/>
-</form>
-
-<br />
-<br />
-<p class="button-row"><a href="/items" class="btn btn-secondary">Return to All Items</a></p>
+<p class="button-row"><%= link_to 'Update Item', "/items/#{@item.id}/edit", class: "btn btn-primary" %></p>
+<p class="button-row"><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete, class: "btn btn-danger" %></p>
+<p class="button-row"><%= link_to 'Return to All Items', '/items', class: 'btn btn-secondary' %></p>
 <br />
 <br />

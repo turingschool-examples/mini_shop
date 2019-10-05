@@ -28,7 +28,7 @@ RSpec.describe "merchant update", type: :feature do
     expect(page).to have_field('merchant[city]')
     expect(page).to have_field('merchant[state]')
     expect(page).to have_field('merchant[zip]')
-    expect(page).to have_button('update_merchant')
+    expect(page).to have_button('Update Merchant')
   end
 
   it "can fill out and submit form" do
@@ -38,7 +38,7 @@ RSpec.describe "merchant update", type: :feature do
     fill_in 'merchant[city]', with: 'Greensville'
     fill_in 'merchant[state]', with: 'SC'
     fill_in 'merchant[zip]', with: '28352'
-    click_button 'update_merchant'
+    click_button 'Update Merchant'
 
     expect(current_path).to eq("/merchants/#{@merchant.id}")
     expect(page).to have_content('Once and Floral')

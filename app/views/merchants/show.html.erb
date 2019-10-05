@@ -8,16 +8,10 @@
 <h4>  City:       <span class="ml-5 pl-3"><%= @merchant.city %></span></h4>
 <h4>  State:      <span class="ml-5 pl-1"><%= @merchant.state %></span></h4>
 <h4>  Zip Code:   <span class="ml-1 pl-2"><%= @merchant.zip %></span></h4>
-<br />
-
-<p class="button-row"><a href="/merchants/<%= @merchant.id %>/edit" class="btn btn-primary">Update Merchant</a></p>
-
-<form action="/merchants/<%= @merchant.id %>" method="POST" class="button-row">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" name="delete_merchant" value="Delete Merchant" class="btn btn-danger"/>
-</form>
 
 <br />
+<p class="button-row"><%= link_to 'Update Merchant', "/merchants/#{@merchant.id}/edit", class: 'btn btn-primary' %></p>
+<p class="button-row"><%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete, class: 'btn btn-danger' %></p>
+<p class="button-row"><%= link_to 'Return to All Merchants', '/merchants', class: 'btn btn-secondary' %></p>
 <br />
-<p class="button-row"><a href="/merchants" class="btn btn-secondary">Return to All Merchants</a></p>
+<br />

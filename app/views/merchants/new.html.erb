@@ -1,23 +1,35 @@
 <h1 class="mt-4">Create a New Merchant</h1>
 <br />
 
-<form action="/merchants" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+<%= form_tag '/merchants' do %>
 
-  <p>Name</p>
-  <input type="text" name="merchant[name]" class="form-control" /><br />
+  <p>
+    <%= label_tag :name %>
+    <%= text_field_tag('merchant[name]', nil, minlength: 5, required: true, class: 'form-control') %>
+  </p>
 
-  <p>Address</p>
-  <input type="text" name="merchant[address]" class="form-control" /><br />
+  <p>
+    <%= label_tag :address %>
+    <%= text_field_tag 'merchant[address]', nil, minlength: 5, required: true, class: 'form-control' %>
+  </p>
 
-  <p>City</p>
-  <input type="text" name="merchant[city]" class="form-control" /><br />
+  <p>
+    <%= label_tag :city %>
+    <%= text_field_tag 'merchant[city]', nil, minlength: 1, required: true, class: 'form-control' %>
+  </p>
 
-  <p>State</p>
-  <input type="text" name="merchant[state]" class="form-control" /><br />
+  <p>
+    <%= label_tag :state %>
+    <%= text_field_tag 'merchant[state]', nil, minlength: 2, maxlength: 2, required: true, class: 'form-control' %>
+  </p>
 
-  <p>Zip Code</p>
-  <input type="text" name="merchant[zip]" class="form-control" /><br />
+  <p>
+    <%= label_tag :zip_code %>
+    <%= text_field_tag 'merchant[zip]', nil, minlength: 5, maxlength: 5, required: true, class: 'form-control' %>
+  </p>
+  <br />
+  <p>
+    <%= submit_tag('Create Merchant', class: 'btn btn-primary') %>
+  </p>
 
-  <input type="submit" name="create_merchant" value="Create Merchant" class="btn btn-primary"/>
-</form>
+<% end %>

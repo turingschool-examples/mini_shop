@@ -2,13 +2,13 @@
 <br />
 
 <% @items.each do |item| %>
-  <section class="card card-body bg-light item-container">
+  <section class="card card-body bg-light item-container" id="item-<%= item.id %>">
 
     <article class="text-container">
       <h3><%= link_to item.name, "/items/#{item.id}" %></h3><br />
 
       <h5>Price</h5>
-      <p>$<%= "%.2f" % item.price %></p><br />
+      <p><%= number_to_currency(item.price) %></p><br />
 
       <h5>Product Status</h5>
       <% if item.active_status %>
@@ -29,6 +29,6 @@
 <% end %>
 
 <br />
-<h5>Don't see an item this merchant sells? <a href="/merchants/<%= @merchant.id %>/items/new">Create a new item</a></h5>
+<h5>Don't see an item this merchant sells? <%= link_to 'Create a new item', "/merchants/#{@merchant.id}/items/new" %></h5>
 <br />
 <br />

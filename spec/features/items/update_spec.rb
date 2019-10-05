@@ -37,7 +37,7 @@ RSpec.describe "item update" do
     expect(page).to have_field('item[description]')
     expect(page).to have_field('item[image]')
     expect(page).to have_field('item[inventory]')
-    expect(page).to have_button('update_item')
+    expect(page).to have_button('Update Item')
   end
 
   it "can fill out and submit form to update item" do
@@ -47,14 +47,14 @@ RSpec.describe "item update" do
     fill_in 'item[description]', with: 'Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round'
     fill_in 'item[image]', with: 'https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
     fill_in 'item[inventory]', with: 17
-    click_button 'update_item'
+    click_button 'Update Item'
 
     expect(current_path).to eq("/items/#{@dahlia.id}")
     expect(page).to have_content('Pink Tropical Hibiscus Tree')
     expect(page).to have_content('Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round')
     expect(page).to have_content('$113.83')
     expect(page).to have_css("img[src='https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260']")
-    expect(page).to have_content('Active')
+    expect(page).to have_content('Inactive')
     expect(page).to have_content(17)
   end
 
