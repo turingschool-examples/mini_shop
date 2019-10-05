@@ -13,3 +13,5 @@
 <p><%= @item.merchant_name %></p>
 
 <%= link_to 'Edit Item', "/items/#{@item.id}/edit" %>
+
+<%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
