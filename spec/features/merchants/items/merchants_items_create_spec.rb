@@ -19,7 +19,7 @@ describe "Merchants items creation page" do
 
       click_link('Add Item')
 
-      expect(current_path).to eq("/merchant/#{merchant.id}/items/new")
+      expect(current_path).to eq("/merchants/#{merchant.id}/items/new")
 
       fill_in('Name', with: 'Old Books')
       fill_in('Description', with: 'A collection of old scientific books for the scientific person')
