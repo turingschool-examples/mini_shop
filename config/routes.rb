@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   patch '/merchants/:id', to: 'merchants#update'
   patch '/items/:id', to: 'items#update'
   delete '/merchants/:id', to: 'merchants#delete'
+  delete '/items/:id', to: 'items#delete'
 end
