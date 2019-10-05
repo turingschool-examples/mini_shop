@@ -1,8 +1,19 @@
 require 'rails_helper'
 
+# When I fill out the form with a new merchant's:
+# - name
+# - address
+# - city
+# - state
+# - zip
+# And I click the button to submit the form
+# Then a `POST` request is sent to '/merchants',
+# a new merchant is created,
+# and I am redirected to the Merchant Index page where I see the new Merchant listed.
+
 RSpec.describe "merchant create page" do
   describe "As a user" do
-    describe "when I visit the new merchant form by clicking new merchant" do
+    describe "when I visit the new merchant form by clicking on a link from merchants index page" do
       it "creates a new merchant" do
         visit '/merchants'
 
@@ -10,7 +21,11 @@ RSpec.describe "merchant create page" do
 
         expect(current_path).to eq('/merchants/new')
 
-        fill_in 'Merchant', with: "Broomstix"
+        fill_in :name, with: "Broomstix"
+        fill_in :address, with: "583 Diagon Alley"
+        fill_in :city, with: "London"
+        fill_in :state, with: "UK"
+        fill_in :zip, with: 25126
         click_on 'Create Merchant'
 
         expect(current_path).to eq('/merchants')
