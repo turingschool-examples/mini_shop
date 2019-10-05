@@ -24,7 +24,7 @@ describe "merchants index page", type: :feature do
                                   zip: 37010,
     )
 
-    visit "merchants"
+    visit('/merchants/')
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(merchant_2.name)
