@@ -48,4 +48,19 @@ class MerchantsController < ApplicationController
     @merchant = Merchant.find(params[:id])
     @items = @merchant.items
   end
+
+  def item_new
+    @merchant_id = Merchant.find(params[:merchant_id]).id
+  end
+
+  def item_create
+    merchant = Merchant.find(params[:id])
+    item = merchant.items.create({name: params[:name],
+                                  description: params[:description],
+                                  image: params[:image_url],
+                                  price: params[:price],
+                                  inventory: params[:inventory],
+                                  status: 'active'})
+    redirect_to "/merchants/#{merchant.id}/items"
+  end
 end

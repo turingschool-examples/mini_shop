@@ -53,4 +53,42 @@ RSpec.describe "Merchant item index page", type: :feature do
     expect(page).not_to have_content(item_3.name)
     expect(page).not_to have_content(item_4.name)
   end
+
+  it "can add a new item for that merchant" do
+    merchant_1 = Merchant.create(name: "Puppers R Us",
+                                 address: "425 Dog Day Street",
+                                 city: "Denver",
+                                 state: "CO",
+                                 zip: 80210)
+
+    item_1 = merchant_1.items.create(name: "Dog Bowl",
+                           description: "5\" stainless steel dog bowl",
+                           price: 35.99,
+                           image: "https://i.imgur.com/3H1e3k7.jpg",
+                           status: "active",
+                           inventory: 5)
+
+    visit "/merchants/#{merchant_1.id}/items"
+
+    click_link "Create New Item"
+
+    expect(current_path).to eq("/merchants/#{merchant_1.id}/items/new")
+
+    fill_in 'Name', with: 'Dog Brush'
+    fill_in 'Description', with: 'Premium dog brush to keep your pupper clean and well-groomed. Made with exotic horse hair bristles and rich mahogany.'
+    fill_in 'image_url', with: 'https://i.imgur.com/ZISd7fm.jpg'
+    fill_in 'Price', with: 24.99
+    fill_in 'Inventory', with: 22
+
+    click_button 'Submit'
+
+    expect(current_path).to eq("/merchants/#{merchant_1.id}/items")
+
+    expect(page).to have_content('Dog Brush')
+    expect(page).to have_css("img[src*='ZISd7fm']")
+    expect(page).to have_content('Premium dog brush to keep your pupper clean and well-groomed. Made with exotic horse hair bristles and rich mahogany.')
+    expect(page).to have_content(24.99)
+    expect(page).to have_content(22)
+    expect(page).to have_content('active', count: 2)
+  end
 end
