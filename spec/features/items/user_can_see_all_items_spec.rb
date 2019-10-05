@@ -23,7 +23,7 @@ describe "Item index page" do
                     merchant_id: merchant_1.id )
 
     visit '/items'
-    save_and_open_page
+
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(item_1.name)

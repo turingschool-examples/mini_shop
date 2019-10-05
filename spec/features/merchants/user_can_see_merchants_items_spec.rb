@@ -37,6 +37,7 @@ describe "When at merchants/:merchant_id/items" do
 
 
     visit "/merchants/#{item_1.merchant_id}/items"
+    save_and_open_page
 
     expect(page).to have_content(merchant_1.name)
     expect(page).to have_content(item_1.name)
@@ -56,6 +57,9 @@ describe "When at merchants/:merchant_id/items" do
     expect(page).to_not have_content(item_3.price)
     expect(page).to_not have_css("img[src*='https://i.imgur.com/vNI9ncq.jpg']")
     expect(page).to_not have_content(item_3.inventory)
+    expect(page).to_not have_content(item_1.description)
+    expect(page).to_not have_content(item_2.description)
+
 
   end
 end
