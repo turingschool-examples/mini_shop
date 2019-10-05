@@ -10,3 +10,4 @@
   <%= Merchant.find(@item.merchant_id).name%>
 </p>
 <%= link_to 'Edit item', "/items/#{@item.id}/edit"%>
+<%= link_to 'Delete item', "/items/#{@item.id}", method: :delete%>
