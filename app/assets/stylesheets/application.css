@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.merchant-form {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  width: 200px;
+}
+
+.merchant-form label,
+button {
+  margin-top: 10px;
+}
+
+.merchant-form button {
+  cursor: pointer;
+}
+
+.merchant-form input {
+  border: transparent;
+  border-bottom: 2px solid tomato;
+  height: 30px;
+  font-size: 25px;
+}
