@@ -8,3 +8,5 @@
   <p>Status: <%= item.status %></p>
   <p>Inventory: <%= item.inventory %></p>
 <% end %>
+
+<%= link_to 'Create New Item', "/merchants/#{@merchant.id}/items/new" %>
