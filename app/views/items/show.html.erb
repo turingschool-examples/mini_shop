@@ -1,0 +1,11 @@
+<h1><%= @item.name %></h1>
+<h3> <%= @item.name %> </h3>
+<p>
+  <%= @item.image%>
+  <%= @item.price%>
+  <%= @item.description%>
+  <%= @item.active%>
+  <%= @item.in_stock%>
+  <%= @item.inventory%>
+  <%= Merchant.find(@item.merchant_id).name%>
+</p>
