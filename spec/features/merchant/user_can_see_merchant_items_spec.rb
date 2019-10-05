@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor", type: :feature do
-  describe "I visit the item index page" do
-    it "I see all items" do
+  describe "I visit a merchant's item index page" do
+    it "I see all items belonging to that merchant" do
       merchant_1 = Merchant.create(name: "Sam's Sports")
       item_1 = Item.create( name: "Basketball",
                             description: "Regulation size basketball",
