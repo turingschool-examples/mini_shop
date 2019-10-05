@@ -12,11 +12,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    all_params = {"merchant_id" => params[:id]}
-    all_params.merge!(item_params)
-    item = Item.create(all_params)
-
-    redirect_to "/merchants/#{params[:id]}/items"
+    merchant = Merchant.find(params[:merchant_id])
+    item = merchant.items.create(item_params)
+    redirect_to "/merchants/#{merchant.id}/items"
   end
 
   def edit
@@ -26,8 +24,8 @@ class ItemsController < ApplicationController
   def update
     item = Item.find(params[:id])
     item.update(item_params)
-    item.save
-    redirect_to "/items/#{params[:id]}"
+
+    redirect_to "/items/#{item.id}"
   end
 
   def destroy

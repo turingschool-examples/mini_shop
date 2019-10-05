@@ -1,6 +1,6 @@
 <h1>Create a New Item</h1>
 
-<form action="/merchants/<%= params[:id] %>/items", method="post" id="form1">
+<form action="/merchants/<%= params[:merchant_id] %>/items", method="post" id="form1">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="POST" />
   <p>Name:</p><input type='text' name='item[name]'><br/>
