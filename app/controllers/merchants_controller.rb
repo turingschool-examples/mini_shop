@@ -32,6 +32,10 @@ class MerchantsController < ApplicationController
     redirect_to '/merchants'
   end
 
+  def merchant_item
+    @merchant = Merchant.find(params[:id])
+    @items = Item.where(merchant_id: params[:id])
+  end
   private
       def merchant_params
         params.permit(
