@@ -9,14 +9,12 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @artist = params[:merchant_id]
   end
 
   def create
     merchant = Merchant.find(params[:merchant_id])
     item = merchant.items.create(item_params)
-
-    redirect_to "/merchants/#{params[:merchant_id]}/items"
+    redirect_to "/merchants/#{merchant.id}/items"
   end
 
   def edit
@@ -26,8 +24,8 @@ class ItemsController < ApplicationController
   def update
     item = Item.find(params[:id])
     item.update(item_params)
-    item.save
-    redirect_to "/items/#{params[:id]}"
+
+    redirect_to "/items/#{item.id}"
   end
 
   def destroy

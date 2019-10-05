@@ -13,8 +13,8 @@
   <% end %>
 </ul>
 
-<%# <%= link_to "Active Items", "/merchants/#{params[:id]}/items"(:status =>'active') %>
+<%= link_to "Active Items", "/merchants/#{params[:merchant_id]}/items?status=active" %>
 <br />
-<%# <%= link_to "Inactive Items", "/merchants/#{params[:id]}/items"(:status=>'inactive') %> %> %>
+<%= link_to "Inactive Items", "/merchants/#{params[:merchant_id]}/items?status=inactive" %>
 <br />
 <%= link_to "Add New Item", "/merchants/#{params[:merchant_id]}/items/new" %>
