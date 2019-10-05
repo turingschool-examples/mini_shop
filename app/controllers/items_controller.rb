@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
 
   def create
     @merchant = Merchant.find(params[:id])
-    redirect_to "/merchants/#{@merchant.id}/items"
 
     Item.create(name: item_params[:name],
                 description: item_params[:description],
@@ -24,6 +23,20 @@ class ItemsController < ApplicationController
                 active: true,
                 merchant_id: @merchant.id,
               )
+
+    redirect_to "/merchants/#{@merchant.id}/items"
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+
+    item.update(item_params)
+
+    redirect_to "/items/#{item.id}"
   end
 
   private
