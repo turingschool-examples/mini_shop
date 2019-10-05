@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   get '/merchants/:merchant_id/items/new', to: 'items#new'
   post '/merchants', to: 'merchants#create'
   get 'merchants/:merchant_id/items/:id', to: 'items#show'
+  get 'items/:item_id/activate', to: 'items#toggle'
+  get 'items/:item_id/deactivate', to: 'items#toggle'
 end

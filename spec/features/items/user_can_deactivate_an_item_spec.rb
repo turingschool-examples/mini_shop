@@ -6,7 +6,7 @@ describe 'user can deactivate an item' do
       merchant_1 = Merchant.create!(name: "Thai Tanic", address: "410 Bleeker Street", city: "Philadelphia", state: "PA", zip: "19107" )
       item_1 = Item.create!(name: "Panang Curry", description: "Sweet and spicy Thai curry dish", price: 12.50, image: 'http://www.aspicyperspective.com/wp-content/uploads/2017/09/The-Best-Thai-Panang-Chicken-Curry-11.jpg', status: "active", inventory: 12, merchant_id: merchant_1.id)
 
-      visit "items/#{item_1.id}"
+      visit "/items/#{item_1.id}"
 
       click_link "Deactivate"
 

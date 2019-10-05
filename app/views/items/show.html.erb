@@ -11,9 +11,9 @@
 <br />
 <br />
 <% if @item.status == "active" %>
-  <%= link_to "Deactivate", "/items/#{@item.id}/deactivate" %>
+  <%= link_to "Deactivate", "/items/#{@item.id}/deactivate", data: {toggle: 'status' } %>
 <% else %>
-  <%= link_to "Activate", "items/#{@item.id}/activate" %>
+  <%= link_to "Activate", "/items/#{@item.id}/activate", data: {toggle: 'status' } %>
 <% end %>
 <br />
 <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
