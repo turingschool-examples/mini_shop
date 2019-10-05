@@ -35,6 +35,20 @@ class ItemsController < ApplicationController
     redirect_to '/items'
   end
 
+  def deactivate
+    item = Item.find(params[:id])
+    item.update(active_status: false)
+
+    redirect_to "/items/#{item.id}"
+  end
+
+  def activate
+    item = Item.find(params[:id])
+    item.update(active_status: true)
+
+    redirect_to "/items/#{item.id}"
+  end
+
   private
   def item_params
     params

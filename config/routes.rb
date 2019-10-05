@@ -32,4 +32,7 @@ Rails.application.routes.draw do
 
   delete '/items/:id', to: 'items#destroy'
 
+  patch '/items/:id/deactivate', to: 'items#deactivate'
+  patch '/items/:id/activate', to: 'items#activate'
+
 end

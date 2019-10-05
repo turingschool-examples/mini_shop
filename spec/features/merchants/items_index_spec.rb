@@ -82,4 +82,20 @@ RSpec.describe "merchant items index page", type: :feature do
     expect(current_path).to eq("/items/#{@dahlia.id}")
   end
 
+  it "can filter items by active status" do
+    visit "/merchants/#{@fuschia.id}/items"
+
+    click_link('All Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to have_css("#item-#{@dahlia.id}")
+
+    click_link('Active Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to_not have_css("#item-#{@dahlia.id}")
+
+    click_link('Inactive Items')
+    expect(page).to have_css("#item-#{@dahlia.id}")
+    expect(page).to_not have_css("#item-#{@plumeria.id}")
+  end
+
 end

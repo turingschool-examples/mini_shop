@@ -6,7 +6,12 @@ class MerchantsController < ApplicationController
 
   def items_index
     @merchant = Merchant.find(params[:merchant_id])
-    @items = @merchant.items
+    
+    if !params[:active]
+      @items = @merchant.items
+    else
+      @items = Item.where("merchant_id = #{params[:merchant_id]} AND active_status = #{params[:active]}")
+    end
   end
 
   def show
