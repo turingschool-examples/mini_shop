@@ -30,8 +30,15 @@
 </section>
 
 <br />
-<p class="button-row"><%= link_to 'Update Item', "/items/#{@item.id}/edit", class: "btn btn-primary" %></p>
-<p class="button-row"><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete, class: "btn btn-danger" %></p>
+
+<% if @item.active_status %>
+  <p class="button-row"><%= link_to 'Deactivate Item', "/items/#{@item.id}/deactivate", method: :patch, class: 'btn btn-warning' %></p>
+<% else %>
+  <p class="button-row"><%= link_to 'Activate Item', "/items/#{@item.id}/activate", method: :patch, class: 'btn btn-success' %></p>
+<% end %>
+
+<p class="button-row"><%= link_to 'Update Item', "/items/#{@item.id}/edit", class: 'btn btn-primary' %></p>
+<p class="button-row"><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete, class: 'btn btn-danger' %></p>
 <p class="button-row"><%= link_to 'Return to All Items', '/items', class: 'btn btn-secondary' %></p>
 <br />
 <br />
