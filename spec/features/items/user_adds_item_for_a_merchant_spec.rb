@@ -13,12 +13,12 @@ describe "user creates new item for merchant" do
         fill_in "item[name]", with: "Pad Thai"
         fill_in "item[description]", with: "Thai style fried noodles"
         fill_in "item[price]", with: 13.50
-        fill_in "item[image]", with: "http://static.asiawebdirect.com/m/.imaging/1356x904/website/bangkok/portals/bangkok-com/homepage/food-top10/allParagraphs/01/top10Set/00/image.jpg"
-        fill_in "item[status]", with: "active"
+        fill_in "item[image_url]", with: "http://static.asiawebdirect.com/m/.imaging/1356x904/website/bangkok/portals/bangkok-com/homepage/food-top10/allParagraphs/01/top10Set/00/image.jpg"
+        fill_in "item[status]", with: true
         fill_in "item[inventory]", with: 23
 
         click_on "Submit"
-        
+
         expect(page).to have_content("Pad Thai")
         expect(page).to have_content("Thai style fried noodles")
         expect(page).to have_content(13.50)

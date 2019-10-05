@@ -5,8 +5,12 @@
       <%= link_to item.name, "items/#{item.id}" %>
       <p>Description: <%= item.description %></p>
       <p>Price: $<%= item.price %></p>
-      <p>Image: <%= image_tag(item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
-      <p>Status: <%= item.status %></p>
+      <p>Image: <%= image_tag(item.image_url, {:style =>'max-width:250px;max-height:250px'}) %></p>
+      <% if item.status == true %>
+        <p>Status: active</p>
+      <% elsif item.status == false %>
+        <p>Status: inactive</p>
+      <% end %>
       <p>Inventory: <%= item.inventory %></p>
       <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant_id}" %></p>
       <br />

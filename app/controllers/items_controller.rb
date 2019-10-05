@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
 
   def toggle
     item = Item.find(params[:item_id])
-    item.toggle(:status)
+    item.toggle(:status).save
 
     redirect_to "/items/#{item.id}"
   end
