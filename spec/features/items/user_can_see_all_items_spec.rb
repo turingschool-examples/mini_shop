@@ -61,7 +61,7 @@ RSpec.describe "Items index" do
 
         expect(page).to have_content(batteries.name)
         expect(page).to have_content(batteries.description)
-        # expect(page).to have_css("img[src*='#{batteries.image}']")
+        expect(page).to have_css("img[src*='batteries']")
         expect(page).to have_content(batteries.price)
         expect(page).to have_content(batteries.status)
         expect(page).to have_content(batteries.inventory)
