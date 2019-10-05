@@ -226,6 +226,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/babslabs/turing/mod2/projects/mini_shop/app/controllers/application_controller.rb": [
@@ -250,6 +254,6 @@
         null
       ]
     },
-    "timestamp": 1570316619
+    "timestamp": 1570316692
   }
 }
