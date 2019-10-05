@@ -1,0 +1,9 @@
+<%= link_to "Items", '/items' %>
+
+<h1><%= @item.name %></h1>
+<p>Description: <%= @item.description %></p>
+<%= image_tag @item.image, style: 'height:33%;width:33%;' %>
+<p>Price: <%= @item.price %></p>
+<p>Status: <%= @item.status %></p>
+<p>Inventory: <%= @item.inventory %></p>
+<p>Merchant: <%= @item.merchant.name %></p>

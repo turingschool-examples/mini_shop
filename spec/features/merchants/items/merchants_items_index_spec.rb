@@ -1,24 +1,17 @@
 require 'rails_helper'
 
 describe "Merchants items index page" do
-  describe "As a visitor" do
+  describe "As a visitor", type: feature do
     it "can see see each Item that belongs to the Merchant including Item's params" do
 
-      merchant_1 = Merchant.create( name: "Chesters Collectables",
+      merchant = Merchant.create( name: "Chesters Collectables",
                                         address: "123 Fake St",
                                         city: "Awesomeville",
                                         state: "Montana",
                                         zip: 59001,
       )
 
-      merchant_2 = Merchant.create( name: "Monty's Merchant",
-                                        address: "555 Real Ave",
-                                        city: "Cityton",
-                                        state: "Colorado",
-                                        zip: 80333,
-      )
-
-      item = merchant_1.items.create!( name: "Solid Gold Playing Cards",
+      item = merchant.items.create!( name: "Solid Gold Playing Cards",
                               description: "One set of 52 solid gold playing cards.",
                               price: 1200,
                               image: "https://i.imgur.com/LlHMnHG.jpg",
@@ -26,14 +19,14 @@ describe "Merchants items index page" do
                               inventory: 2,
           )
 
-      visit "/merchants/#{merchant_1.id}/items"
+      visit "/merchants/#{merchant.id}/items"
 
-      expect(page).to have_content "Solid Gold Playing Cards"
-      expect(page).to have_content "One set of 52 solid gold playing cards."
-      expect(page).to have_content "1200"
-      expect(page).to have_css "img[src*='https://i.imgur.com/LlHMnHG.jpg']"
-      expect(page).to have_content "Active"
-      expect(page).to have_content "2"
+      expect(page).to have_content("Solid Gold Playing Cards")
+      expect(page).to have_content("One set of 52 solid gold playing cards.")
+      expect(page).to have_content("1200")
+      expect(page).to have_css("img[src*='https://i.imgur.com/LlHMnHG.jpg']")
+      expect(page).to have_content("Active")
+      expect(page).to have_content("2")
 
     end
   end
