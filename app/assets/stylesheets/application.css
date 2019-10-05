@@ -14,23 +14,22 @@
  *= require_self
  */
 
-.merchant-form {
+form {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
   width: 200px;
 }
 
-.merchant-form label,
-button {
+form label, button {
   margin-top: 10px;
 }
 
-.merchant-form button {
+form button {
   cursor: pointer;
 }
 
-.merchant-form input {
+form input {
   border: transparent;
   border-bottom: 2px solid tomato;
   height: 30px;
