@@ -5,12 +5,18 @@
   <h3 class="link"> <%= link_to "#{item.name}", "/items/#{item.id}" %> </h3>
   <p>
     <%= item.image%>
-    <%= item.price%>
+    <br>
+    Price: $<%= item.price%>
+    <hr>
+    <b>Item Description</b>
+    <br> <br>
     <%= item.description%>
-    <%= item.active%>
+    <hr>
     <%= item.in_stock%>
-    <%= item.inventory%>
-    <%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}"%>
+    <br>
+    Amount in stock: <%= item.inventory%>
+    <br>
+    Sold by: <%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}"%>
   </p>
 </section>
 <% end %>

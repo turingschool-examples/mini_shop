@@ -36,9 +36,11 @@ header {
 .index_item {
   margin: 10px;
   padding: 5px;
-  border-style: dashed;
+  border-style: solid;
   border-width: 2px;
   border-color: #720E07;
+  display: inline-block;
+  width: 40%;
 }
 
 a:visited {
@@ -62,10 +64,6 @@ a:link {
   margin: 5px;
   padding: 5px;
   display: inline-block;
-}
-
-.merchant_items {
-
 }
 
 .single_item {
