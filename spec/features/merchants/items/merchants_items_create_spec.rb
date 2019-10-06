@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 # a new item is created for that merchant,
-# that item has a status of 'active',
-# and I am redirected to the Merchant Items Index page where I see the new item
 
 describe "Merchants items creation page" do
   describe "As a visitor" do
@@ -28,13 +26,13 @@ describe "Merchants items creation page" do
       fill_in('Inventory', with: 3)
       click_button('submit')
 
-      expect(current_path).to eq("/merchants/#{merchant.id}/items")
-      expect(current_path).to have_content('Old Books')
-      expect(current_path).to have_content('A collection of old scientific books for the scientific person')
-      expect(current_path).to have_css("img[src*='https://i.imgur.com/LlHMnHG.jpg']")
-      expect(current_path).to have_content(2000)
-      expect(current_path).to have_content(3)
-      expect(current_path).to have_content('Active')
+      expect(page).to have_current_path("/merchants/#{merchant.id}/items")
+      expect(page).to have_link('Old Books')
+      expect(page).to have_content('A collection of old scientific books for the scientific person')
+      expect(page).to have_css("img[src*='https://i.imgur.com/gV6wYt8.jpg']")
+      expect(page).to have_content(2000)
+      expect(page).to have_content(3)
+      expect(page).to have_content('Active')
 
     end
   end

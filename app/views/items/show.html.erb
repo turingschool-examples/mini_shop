@@ -1,4 +1,5 @@
 <%= link_to "Items", '/items' %>
+<%= link_to "Merchants Items", "/merchants/#{@item.merchant.id}/items" %>
 
 <h1><%= @item.name %></h1>
 <p>Description: <%= @item.description %></p>

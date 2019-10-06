@@ -4,7 +4,7 @@
  <%= link_to item.name, "/items/#{item.id}" %>
  <p><%= item.description %></p>
  <p><%= item.price %></p>
- <p><%= item.image %></p>
+  <%= image_tag item.image, style: 'height:33%;width:33%;' %>
  <p><%= item.status %></p>
  <p><%= item.inventory %></p>
  <p><%= item.merchant_name %></p>
