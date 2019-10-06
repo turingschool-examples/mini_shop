@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get '/items', to: 'items#index'
   get '/items/:id/edit', to: 'items#edit'
   get '/items/:id', to: 'items#show'
-  post '/items/:id', to: 'items#update'
+  post '/items/:id', to: 'items#edit'
+  patch '/items/:id', to: 'items#update'
+  delete '/items/:id', to: 'items#destroy'
 end
