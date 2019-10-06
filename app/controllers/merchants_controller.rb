@@ -5,41 +5,39 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    @merchant = Merchant.find(params[:id])
+    @merchant = Merchant.find(params[:merchant_id])
   end
 
   def new
   end
 
   def create
-    merchant = Merchant.new({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip]
-      })
+    Merchant.create(merchant_params)
 
-      merchant.save
-
-      redirect_to '/merchants'
+    redirect_to '/merchants'
   end
 
   def edit
-    @merchant = Merchant.find(params[:id])
+    @merchant = Merchant.find(params[:merchant_id])
   end
 
   def update
-    merchant = Merchant.find(params[:id])
-    merchant.update({
-      name: params[:merchant][:name],
-      address: params[:merchant][:address],
-      city: params[:merchant][:city],
-      state: params[:merchant][:state],
-      zip: params[:merchant][:zip]
-      })
+    merchant = Merchant.find(params[:merchant_id])
+    merchant.update(merchant_params)
     merchant.save
+
     redirect_to "/merchants/#{merchant.id}"
   end
+
+  def destroy
+    Merchant.destroy(params[:merchant_id])
+    
+    redirect_to('/merchants')
+  end
+
+  private
+    def merchant_params
+      params.permit(:name, :address, :city, :state, :zip)
+    end
 
 end

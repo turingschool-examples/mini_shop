@@ -1,11 +1,18 @@
-<form action="/merchants/<%= @merchant.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Edit</p>
-  <input type="text" name="merchant[name]" value="<%= @merchant.name %>" /> <br/>
-  <input type="text" name="merchant[address]" value="<%= @merchant.address %>" /> <br/>
-  <input type="text" name="merchant[city]" value="<%= @merchant.city %>" /> <br/>
-  <input type="text" name="merchant[state]" value="<%= @merchant.state %>" /> <br/>
-  <input type="text" name="merchant[zip]" value="<%= @merchant.zip %>" /> <br/>
-  <input type="submit" name="submit"/>
-</form>
+<%= link_to 'Item Index', '/items' %>
+<%= link_to "Merchant Index", '/merchants' %>
+
+<h2>Edit <%= link_to  @merchant.name, "/merchants/#{@merchant.id}" %></h2>
+
+<%= form_tag "/merchants/#{@merchant.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @merchant.name %>
+  <%= label_tag :address %>
+  <%= text_field_tag :address, @merchant.address %>
+  <%= label_tag :city %>
+  <%= text_field_tag :city, @merchant.city %>
+  <%= label_tag :state %>
+  <%= text_field_tag :state, @merchant.state %>
+  <%= label_tag :zip %>
+  <%= text_field_tag :zip, @merchant.zip %>
+  <%= submit_tag("submit")%>
+<% end %>
