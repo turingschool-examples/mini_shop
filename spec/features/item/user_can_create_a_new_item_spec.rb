@@ -33,7 +33,7 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content(item_1.description)
       expect(page).to have_content(item_1.price)
       expect(page).to have_content(item_1.image)
-      expect(page).to have_content("In stock")
+      expect(page).to have_content("Active")
       expect(page).to have_content(item_1.inventory)
       expect(page).to have_content(merchant_1.name)
     end
