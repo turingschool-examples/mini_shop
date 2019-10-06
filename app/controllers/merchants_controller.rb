@@ -39,7 +39,9 @@ class MerchantsController < ApplicationController
   end
 
   def delete
-    Merchant.delete(params[:id])
+    merchant = Merchant.find(params[:id])
+    merchant.items.destroy_all
+    merchant.destroy
 
     redirect_to '/merchants'
   end
