@@ -1,7 +1,21 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    @active = params[:active]
+
+    if @active == nil
+      @items = Item.all
+    else
+      @items = Item.where("active_status = #{@active}")
+    end
+
+    if params[:sort] == 'alpha'
+      @items = @items.sort_by { |item| item.name }
+    elsif params[:sort] == 'price_asc'
+      @items = @items.sort_by { |item| item.price }
+    elsif params[:sort] == 'price_desc'
+      @items = @items.sort_by { |item| item.price }.reverse
+    end
   end
 
   def show

@@ -1,6 +1,27 @@
 <h1 class="mt-4">Items for Sale</h1>
 <br />
 
+<h6 class="filter">Filter By:</h6>
+<%= link_to 'All Items', "/items", class: 'btn btn-outline-primary filter ml-3' %>
+<%= link_to 'Active Items', "/items?active=true", class: 'btn btn-outline-success filter ml-3' %>
+<%= link_to 'Inactive Items', "/items?active=false", class: 'btn btn-outline-danger filter ml-3' %>
+
+<br /><br />
+
+<h6 class="filter">Sort By:</h6>
+<% if @active != nil %>
+  <%= link_to 'Item Name (alphabetical)', "/items?active=#{@active}&sort=alpha", class: 'btn btn-outline-secondary filter ml-4' %>
+  <%= link_to 'Price (low to high)', "/items?active=#{@active}&sort=price_asc", class: 'btn btn-outline-secondary filter ml-3' %>
+  <%= link_to 'Price (high to low)', "/items?active=#{@active}&sort=price_desc", class: 'btn btn-outline-secondary filter ml-3' %>
+<% else %>
+  <%= link_to 'Item Name (alphabetical)', "/items?sort=alpha", class: 'btn btn-outline-secondary filter ml-4' %>
+  <%= link_to 'Price (low to high)', "/items?sort=price_asc", class: 'btn btn-outline-secondary filter ml-3' %>
+  <%= link_to 'Price (high to low)', "/items?sort=price_desc", class: 'btn btn-outline-secondary filter ml-3' %>
+<% end %>
+
+<br />
+<br />
+
 <% @items.each do |item| %>
   <section class="card card-body bg-light item-container">
 
