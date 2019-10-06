@@ -19,12 +19,12 @@ describe "merchant update page", type: :feature do
   it "can update a new merchant with a name, address, city, state, zip" do
     visit "/merchants/#{@merchant_1.id}"
     click_link 'Edit'
-    fill_in 'Name', with: '@merchant_2.name'
-    fill_in 'Address', :with => '@merchant_2.address'
-    fill_in 'City', with: '@merchant_2.city'
-    fill_in 'State', with: '@merchant_2.state'
-    fill_in 'Zip', with: @merchant_2.zip
-    click_on 'submit'
+    fill_in('Name', with: '@merchant_2.name')
+    fill_in('Address', :with => '@merchant_2.address')
+    fill_in('City', with: '@merchant_2.city')
+    fill_in('State', with: '@merchant_2.state')
+    fill_in('Zip', with: @merchant_2.zip)
+    click_on('submit')
   end
 
   it "shows the updated merchant on the index page after creation" do

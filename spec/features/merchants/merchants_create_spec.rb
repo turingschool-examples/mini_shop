@@ -8,11 +8,11 @@ describe "merchant create page", type: :feature do
 
     expect(current_path).to eql('/merchants/new')
 
-    fill_in 'Name', with: 'Chesters Place'
-    fill_in('Address', :with => '123 fake st')
-    fill_in 'City', with: 'denver'
-    fill_in 'State', with: 'co'
-    fill_in 'Zip', with: 80111
+    fill_in('Name', with: 'Chesters Place')
+    fill_in('Address', with: '123 fake st')
+    fill_in('City', with: 'denver')
+    fill_in('State', with: 'co')
+    fill_in('Zip', with: 80111)
     click_on('submit')
 
     expect(current_path).to eql('/merchants')
