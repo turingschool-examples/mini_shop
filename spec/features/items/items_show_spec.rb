@@ -21,6 +21,9 @@ describe "Item show page" do
 
       visit "/items/#{item.id}"
 
+      expect(page).to have_link('Item Index')
+      expect(page).to have_link('Merchant Index')
+
       expect(page).to have_content("Solid Gold Playing Cards")
       expect(page).to have_content("One set of 52 solid gold playing cards.")
       expect(page).to have_content(1200)

@@ -11,6 +11,10 @@ describe "merchant delete page", type: :feature do
     )
 
     visit "/merchants/#{merchant.id}"
+
+    expect(page).to have_link('Item Index')
+    expect(page).to have_link('Merchant Index')
+
     click_link('DELETE')
 
     expect(current_path).to eq('/merchants')

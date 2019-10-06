@@ -21,6 +21,9 @@ describe "Item index page" do
 
       visit '/items'
 
+      expect(page).to have_link('Item Index')
+      expect(page).to have_link('Merchant Index')
+
       expect(page).to have_content(item.name)
       expect(page).to have_content(item.description)
       expect(page).to have_content(item.price)
