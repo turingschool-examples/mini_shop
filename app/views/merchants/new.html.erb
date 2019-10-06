@@ -1,4 +1,7 @@
+<%= link_to 'Item Index', '/items' %>
+
 <h2>Enter info for a new merchant</h2>
+
 <%= form_tag "/merchants", method: :post do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %>
