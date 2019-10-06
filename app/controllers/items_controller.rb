@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
       inventory: params[:inventory],
       status: "active",
       merchant_name: merchant.name
-    })
+      })
 
     redirect_to "/merchants/#{merchant.id}/items"
   end
@@ -32,11 +32,11 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
-      item.update(item_params)
+    item.update(item_params)
 
-      item.save
+    item.save
 
-      redirect_to "/items/#{item.id}"
+    redirect_to "/items/#{item.id}"
   end
 
   def destroy
