@@ -1,44 +1,32 @@
 require 'rails_helper'
 
 describe "merchant update page", type: :feature do
-  before :each do
-    @merchant_1 = Merchant.create( name: "Chesters Collectables",
+  it "can update a new merchant with a name, address, city, state, zip" do
+
+    merchant = Merchant.create( name: "Chesters Collectables",
                                   address: "123 Fake St",
                                   city: "Awesomeville",
                                   state: "Montana",
                                   zip: 59001,
     )
-    @merchant_2 = Merchant.create( name: "Spots Spot",
-                                  address: "8888 Underwater Blvd",
-                                  city: "Atlanta",
-                                  state: "Atlantis",
-                                  zip: 11111,
-    )
-  end
 
-  it "can update a new merchant with a name, address, city, state, zip" do
-    visit "/merchants/#{@merchant_1.id}"
-    click_link 'Edit'
-    fill_in('Name', with: '@merchant_2.name')
-    fill_in('Address', :with => '@merchant_2.address')
-    fill_in('City', with: '@merchant_2.city')
-    fill_in('State', with: '@merchant_2.state')
-    fill_in('Zip', with: @merchant_2.zip)
+    visit "/merchants/#{merchant.id}"
+
+    click_link('Edit')
+    fill_in('Name', with: 'Chesters Collection')
+    fill_in('Address', :with => '456 Real St')
+    fill_in('City', with: 'Denverton')
+    fill_in('State', with: 'Statestate')
+    fill_in('Zip', with: 11111)
     click_on('submit')
-  end
 
-  it "shows the updated merchant on the index page after creation" do
-    visit "merchants"
-    expect(page).to have_content(@merchant_2.name)
-  end
+    expect(current_path).to eq("/merchants/#{merchant.id}")
 
-  it "shows the merchants info on the merchants page after creation" do
-    visit "merchants/#{@merchant_2.id}"
-    expect(page).to have_content(@merchant_2.name)
-    expect(page).to have_content(@merchant_2.address)
-    expect(page).to have_content(@merchant_2.city)
-    expect(page).to have_content(@merchant_2.state)
-    expect(page).to have_content(@merchant_2.zip)
+    expect(page).to have_content('Chesters Collection')
+    expect(page).to have_content('456 Real St')
+    expect(page).to have_content('Denverton')
+    expect(page).to have_content('Statestate')
+    expect(page).to have_content(11111)
   end
 
 end

@@ -25,11 +25,13 @@ class MerchantsController < ApplicationController
     merchant = Merchant.find(params[:merchant_id])
     merchant.update(merchant_params)
     merchant.save
+
     redirect_to "/merchants/#{merchant.id}"
   end
 
   def destroy
     Merchant.destroy(params[:merchant_id])
+    
     redirect_to('/merchants')
   end
 
