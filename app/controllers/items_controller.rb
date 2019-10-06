@@ -35,6 +35,12 @@ class ItemsController < ApplicationController
     redirect_to "/items/#{item.id}"
   end
 
+  def destroy
+    Item.destroy(params[:id])
+
+    redirect_to '/items'
+  end
+
 private
   def item_params
     #Use for form_tag views
