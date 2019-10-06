@@ -14,12 +14,6 @@ RSpec.describe "As a visitor" do
         state: "Colorado",
         zip: "80303"
       )
-      merchant_2 = Merchant.create(name: "Moosejaw",
-        address: "4321 Bob Street",
-        city: "Denver",
-        state: "Colorado",
-        zip: "55555"
-      )
       item_1 = Item.create(
         name: "Beanie",
         description: "It's a hat",
@@ -29,26 +23,7 @@ RSpec.describe "As a visitor" do
         inventory: 50,
         merchant_id: merchant_1.id
       )
-      item_2 = Item.create(
-        name: "Boots",
-        description: "They're boots",
-        price: 42,
-        image: 'https://images.app.goo.gl/fscn8iVUD56gpZraA',
-        active: true,
-        inventory: 400,
-        merchant_id: merchant_1.id
-      )
-      item_3 = Item.create(
-        name: "Shoe",
-        description: "Just one show",
-        price: 5000,
-        image: 'https://images.app.goo.gl/fscn8iVUD56gpZraA',
-        active: false,
-        inventory: 3,
-        merchant_id: merchant_2.id
-      )
       visit '/merchants'
-      binding.pry
       page.first(:link, "REI").click
       expect(current_path).to eq("/merchants/#{merchant_1.id}")
 
@@ -57,6 +32,10 @@ RSpec.describe "As a visitor" do
       expect(current_path).to eq("/merchants/#{merchant_1.id}")
 
       visit "/items/#{item_1.id}"
+      page.first(:link, "REI").click
+      expect(current_path).to eq("/merchants/#{merchant_1.id}")
+
+      visit "/merchants/#{merchant_1.id}/items"
       page.first(:link, "REI").click
       expect(current_path).to eq("/merchants/#{merchant_1.id}")
     end
