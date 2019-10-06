@@ -48,3 +48,25 @@ a:visited {
 a:link {
   color: #45050C;
 }
+
+.action_links {
+  margin: 5px;
+  padding: 5px;
+  border-style: dashed;
+  border-width: 2px;
+  display: inline-block;
+}
+
+#inventory_link {
+  margin: 5px;
+  padding: 5px;
+  border-style: dashed;
+  border-width: 2px;
+  display: inline-block;
+}
+
+.show_info {
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+}
