@@ -30,7 +30,7 @@ RSpec.describe "As a visitor" do
       fill_in "Inventory", with: 100
       click_button "Create New Item"
 
-      expected_item = merchant_2.items.all.last
+      expected_item = merchant_3.items.all.last
 
       expect(current_path).to eq("/merchants/#{merchant_3.id}/items")
       expect(page).to have_content("Safety Goggles")
