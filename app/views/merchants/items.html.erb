@@ -1,24 +1,23 @@
 <h1> <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %> </h1>
 <hr>
-<section class="merchant_items">
 <% @merchant.items.each do |item|%>
-  <section class="single_item">
+  <section class="index_item">
     <h3> <%= link_to "#{item.name}", "/items/#{item.id}" %> </h3>
     <p>
       <%= item.image%>
       <br>
       <%= item.price%>
-      <br>
+      <hr>
+      <b>Item Description</b>
+      <br> <br>
       <%= item.description%>
-      <br>
+      <hr>
       <%= item.in_stock%>
       <br>
       <%= item.inventory%>
     </p>
-    <br>
   </section>
 <% end %>
-</section>
 <br>
 <section class="page_links">
   <%= link_to 'Add an item', "/merchants/#{@merchant.id}/items/new" %>
