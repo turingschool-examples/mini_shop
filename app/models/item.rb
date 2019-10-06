@@ -3,6 +3,6 @@ class Item < ApplicationRecord
                         :description,
                         :price,
                         :image,
-                        :active?,
                         :inventory
+  validates_inclusion_of :active?, :in => [true, false]
 end
