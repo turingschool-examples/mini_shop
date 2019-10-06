@@ -7,5 +7,5 @@
   <%= image_tag("#{item.image}") %>
   <p>Status: <%= item.status %></p>
   <p>Inventory: <%= item.inventory %></p>
-  <p>Merchant: <%= item.merchant.name %></p>
+  <p>Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}" %></p>
 <% end %>
