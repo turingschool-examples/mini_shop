@@ -13,8 +13,19 @@ class ItemsController < ApplicationController
 
   def create
     merchant = Merchant.find(params[:merchant_id])
-    @item = merchant.items.create(params_for_new_item)
+    @item = merchant.items.create(params_as_item_hash)
     redirect_to "/merchants/#{merchant.id}/items"
+  end
+
+  def edit
+    @item_id = params[:item_id]
+  end
+
+  def update
+    item = Item.find(params[:item_id])
+    item.update(params_as_item_hash)
+
+    redirect_to "/items/#{item.id}"
   end
 
   private
@@ -27,7 +38,7 @@ class ItemsController < ApplicationController
                   )
   end
 
-  def params_for_new_item
+  def params_as_item_hash
     item_hash = item_params.to_h
     item_hash[:price] = item_hash[:price].to_f
     item_hash[:image] = item_hash[:image][:url]

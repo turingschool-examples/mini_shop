@@ -1,0 +1,27 @@
+<h1>Edit Item</h1>
+
+<%= form_tag "/items/#{@item_id}/", method: :patch do %>
+  <p>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </p>
+  <p>
+    <%= label_tag(:price_amount, "Price") %><br />
+    <%= number_field(:price, :amount, in: 0.01..500_000.0, step: 0.01) %>
+  </p>
+  <p>
+    <%= label_tag :description %><br />
+    <%= text_area_tag :description %>
+  </p>
+  <p>
+    <%= label_tag(:image_url, "Image URL") %><br />
+    <%= url_field(:image, :url) %>
+  </p>
+  <p>
+    <%= label_tag :item_inventory, "Inventory" %><br />
+    <%= number_field(:item, :inventory, in: 0..20_000, step: 1) %>
+  </p>
+  <p>
+    <%= submit_tag "Submit" %>
+  </p>
+<% end %>
