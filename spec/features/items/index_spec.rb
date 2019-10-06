@@ -14,11 +14,11 @@ RSpec.describe "item index page" do
 
       expect(page).to have_content(book_1.name)
       expect(page).to have_content(book_1.description)
-      expect(page).to have_content("Price: #{book_1.price}")
+      expect(page).to have_content("Price: $#{book_1.price}")
       expect(page).to have_content("Inventory: #{book_1.inventory}")
       expect(page).to have_content(book_2.name)
       expect(page).to have_content(book_2.description)
-      expect(page).to have_content("Price: #{book_2.price}")
+      expect(page).to have_content("Price: $#{book_2.price}")
       expect(page).to have_content("Inventory: #{book_2.inventory}")
     end
   end
