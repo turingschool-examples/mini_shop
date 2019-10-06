@@ -17,6 +17,9 @@ describe "Merchants items creation page" do
 
       click_link('Add Item')
 
+      expect(page).to have_link('Item Index')
+      expect(page).to have_link('Merchant Index')
+      
       expect(page).to have_current_path("/merchants/#{merchant.id}/items/new")
 
       fill_in('Name', with: 'Old Books')

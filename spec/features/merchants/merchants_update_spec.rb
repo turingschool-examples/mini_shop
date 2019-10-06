@@ -13,6 +13,10 @@ describe "merchant update page", type: :feature do
     visit "/merchants/#{merchant.id}"
 
     click_link('Edit')
+
+    expect(page).to have_link('Item Index')
+    expect(page).to have_link('Merchant Index')
+
     fill_in('Name', with: 'Chesters Collection')
     fill_in('Address', :with => '456 Real St')
     fill_in('City', with: 'Denverton')

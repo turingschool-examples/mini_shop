@@ -4,9 +4,12 @@ describe "merchant create page", type: :feature do
   it "can create a new merchant with a name, address, city, state, zip" do
 
     visit '/merchants'
+
     click_link('Create New Merchant')
 
     expect(current_path).to eql('/merchants/new')
+    expect(page).to have_link('Item Index')
+    expect(page).to have_link('Merchant Index')
 
     fill_in('Name', with: 'Chesters Place')
     fill_in('Address', with: '123 fake st')

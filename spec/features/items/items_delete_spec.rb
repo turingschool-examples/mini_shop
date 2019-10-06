@@ -22,6 +22,9 @@ describe "Item delete page" do
 
       visit "/items/#{item.id}"
 
+      expect(page).to have_link('Item Index')
+      expect(page).to have_link('Merchant Index')
+
       click_link('DELETE ITEM')
 
       expect(page).to have_current_path("/items")

@@ -25,6 +25,9 @@ describe "Item edit page" do
 
       click_link("Update Item")
 
+      expect(page).to have_link('Item Index')
+      expect(page).to have_link('Merchant Index')
+      
       expect(page).to have_current_path("/items/#{item.id}/edit")
 
       fill_in(:name, with: 'Globe')
