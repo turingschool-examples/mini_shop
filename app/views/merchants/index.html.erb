@@ -1,7 +1,8 @@
 <h1>All Merchants</h1>
 
-<% @merchants.each do |merchant| %>
-  <h3><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></h3>
-<% end %>
-
-<a href="/merchants/new">Create New Merchant</a>
+<section class="merchant-items">
+  <% @merchants.each do |merchant| %>
+    <h3><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></h3>
+  <% end %>
+  <%= link_to 'Create New Merchant', '/merchants/new' %>
+</section>
