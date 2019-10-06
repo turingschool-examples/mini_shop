@@ -10,7 +10,7 @@ Then I see each Item in the system including the Item's:
 - the name of the merchant that sells the item -->
 <% if @merchant %>
 <h1><%= @merchant.name %></h1>
-<p><%= link_to "Add New Item", "merchants/#{@merchant.id}/items/new" %></p><br>
+<p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>
 <% else %>
 <h1>All Items</h1>
 <% end %>
