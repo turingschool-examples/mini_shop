@@ -32,12 +32,12 @@ RSpec.describe "item delete" do
     click_link 'Delete Item'
 
     expect(current_path).to eq('/items')
-    expect(page).to have_no_content('Contraste Dahlia Bulbs')
-    expect(page).to have_no_content('A timeless favorite, introduced almost 60 years ago and still going strong. The big blooms measure up to 8 inches across and have striking two-tone petals that are deep burgundy and purple with brilliant white tips.')
-    expect(page).to have_no_content('$15.40')
-    expect(page).to have_no_css("img[src='https://images.pexels.com/photos/599679/pexels-photo-599679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260']")
-    expect(page).to have_no_content('Inactive')
-    expect(page).to have_no_content(32)
+    expect(page).to_not have_content('Contraste Dahlia Bulbs')
+    expect(page).to_not have_content('A timeless favorite, introduced almost 60 years ago and still going strong. The big blooms measure up to 8 inches across and have striking two-tone petals that are deep burgundy and purple with brilliant white tips.')
+    expect(page).to_not have_content('$15.40')
+    expect(page).to_not have_css("img[src='https://images.pexels.com/photos/599679/pexels-photo-599679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260']")
+    expect(page).to_not have_css('.inactive')
+    expect(page).to_not have_content(32)
   end
 
 end
