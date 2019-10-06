@@ -2,7 +2,7 @@
 
 <% @items.each do |item| %>
   <img src="<%= item.image %>" style="width:142px;height:142px;">
-  <h3><%= item.name %></h3>
+  <h3><%= link_to item.name, "/items/#{item.id}" %></h3>
   <p>Description: <%= item.description %></p>
   <p>Price: $<%= item.price %></p>
   <p>Status: <%= item.status %></p>
