@@ -6,9 +6,9 @@ Then I see the name of each merchant in the system -->
 
 <% @merchants.each do |merchant| %>
   <h2><ul>
-    <li><%= link_to "#{merchant.name}", "merchants/#{merchant.id}" %></li>
+    <li><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></li>
   </ul></h2>
 <% end %>
 <br>
 <br>
-<p><%= link_to "Create a New Merchant", 'merchants/new' %></p>
+<p><%= link_to "Create a New Merchant", '/merchants/new' %></p>

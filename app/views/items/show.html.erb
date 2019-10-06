@@ -1,5 +1,6 @@
 
-<h1><%= @item.name %></h1>
+<h1><%= link_to "#{@item.name}", "/items/#{@item.id}" %>
+</h1>
 <p>Description:<%= @item.description %></p>
 <p>Price: <%= @item.price %></p>
 <p>Quantity: <%= @item.inventory %></p>
@@ -8,7 +9,7 @@
            <% else %>
            <%= "Unavailable" %>
            <% end %></p>
-<p>Selling Merchant: <%= link_to "#{@item.merchant.name}", "merchants/#{@item.merchant.id}" %></p>
+<p>Selling Merchant: <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant.id}" %></p>
 <img src="<%= @item.image %>" alt="<%= @item.name %>" height="60" width="60"><br>
 <%= link_to 'Edit Item', "/items/#{@item.id}/edit" %><br>
 <%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete %><br>
