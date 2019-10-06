@@ -8,13 +8,17 @@ Then I see each Item in the system including the Item's:
 - active/inactive status
 - inventory
 - the name of the merchant that sells the item -->
+
+<% if @merchant %>
+<h1><%= @merchant.name %></h1>
+<% else %>
 <h1>All Items</h1>
-
+<% end %>
+<ol>
 <% @items.each do |item| %>
-
-<h3><%= item.name %></h3>
+<li><h3><%= item.name %></h3></li>
 <ul>
-  <li>Description: <%= item.description %></li>
+  <li>Description: <%= item.description unless @merchant %></li>
   <li>Price: $<%= item.price %></li>
   <li>Status: <% if item.status == true %>
               <%= "Available" %>
@@ -26,5 +30,5 @@ Then I see each Item in the system including the Item's:
 </ul><br>
 
 <img src="<%= item.image %>" alt="<%= item.name %>" height="60" width="60">
-
 <% end %>
+</ol><hr>
