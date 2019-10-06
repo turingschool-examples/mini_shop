@@ -29,7 +29,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    #find merchant first and assign a variable to it 'merchant'.
     item = Item.find(params[:id])
     item.update(item_params)
 
