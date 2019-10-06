@@ -34,6 +34,13 @@ class ItemsController < ApplicationController
     redirect_to '/items'
   end
 
+  def toggle
+    item = Item.find(params[:item_id])
+    item.toggle(:status)
+
+    redirect_to "/items/#{item.id}"
+  end
+
   private
 
   def item_params
