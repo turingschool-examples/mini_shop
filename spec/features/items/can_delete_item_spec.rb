@@ -28,16 +28,16 @@ describe "When visiting /items/:id" do
      expect(page).to have_content("Unavailable")
      expect(page).to have_content(item_1.inventory)
 
-     click_on 'Delete Item'
+     click_link 'Delete Item'
 
-     expect(path).to eq('/items')
+     expect(current_path).to eq('/items')
      expect(page).to_not have_content(item_1.name)
      expect(page).to_not have_content(item_1.description)
      expect(page).to_not have_content(item_1.price)
      expect(page).to_not have_css("img[src*='https://i.imgur.com/owpKw1E.jpg']")
      expect(page).to_not have_content("Unavailable")
      expect(page).to_not have_content(item_1.inventory)
-     
+
     end
   end
 end
