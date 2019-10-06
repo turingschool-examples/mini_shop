@@ -1,9 +1,5 @@
 require 'rails_helper'
 
-# Then a 'DELETE' request is sent to '/merchants/:id',
-# the merchant is deleted,
-# and I am redirected to the merchant index page where I no longer see this merchant
-
 RSpec.describe "merchant delete page" do
   describe "As a user" do
     describe "when I visit a merchant show page and see link to delete the merchant" do
