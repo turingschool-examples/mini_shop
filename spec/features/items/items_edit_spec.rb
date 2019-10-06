@@ -35,7 +35,7 @@ describe "Item edit page" do
       click_button('submit')
 
       expect(current_path).to eq("/items/#{item.id}")
-      # expect(page).to have_link('Globe')
+      expect(page).to have_content('Globe')
       expect(page).to have_content('A globe to see the world!')
       expect(page).to have_css("img[src*='https://i.imgur.com/Fdypyzd.jpg']")
       expect(page).to have_content(999)
