@@ -17,9 +17,14 @@ class ItemsController < ApplicationController
     @merchant = Merchant.find(params[:merchant_id])
   end
 
+  def create
+    merchant = Merchant.find(params[:merchant_id])
+    binding.pry
+  end
+
 private
   def item_params
     #Use for form_tag views
-    params.permit(:name, :description, :price, :image, :status, :inventory, :merchant_id)
+    params.permit(:name, :description, :price, :image, :inventory)
   end
 end
