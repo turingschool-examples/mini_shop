@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  get '/', to: 'pages#show'
   get '/merchants', to: 'merchants#index'
   get '/merchants/new', to: 'merchants#new'
   get '/merchants/:id', to: 'merchants#show'
@@ -16,4 +17,5 @@ Rails.application.routes.draw do
   patch '/items/:id', to: 'items#update'
   delete '/merchants/:id', to: 'merchants#destroy'
   delete '/items/:id', to: 'items#destroy'
+
 end

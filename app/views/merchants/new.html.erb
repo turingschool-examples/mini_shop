@@ -1,3 +1,4 @@
+<<h3>New Merchant</h3>
 <%= form_tag '/merchants' do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %>
@@ -14,5 +15,5 @@
   <%= label_tag :zip %>
   <%= text_field_tag :zip %>
 
-  <%= submit_tag 'Submit' %>
+  <%= submit_tag 'Submit',class: :form_submit %>
 <% end %>

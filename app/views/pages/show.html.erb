@@ -5,17 +5,13 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header>
-    <h1 class="name-header">Outdoor Optimism</h1>
-    <nav>
+    <h1 class="welcome-name">Outdoor Optimism</h1>
+    <section class="welcome-links">
       <%= link_to 'Merchants', "/merchants" %>
       <%= link_to 'All Items', "/items" %>
-    </nav>
-    </header>
-    <%= yield %>
+    </section>
   </body>
 </html>

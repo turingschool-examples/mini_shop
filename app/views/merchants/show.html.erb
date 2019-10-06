@@ -1,15 +1,13 @@
+<section class="merchant-show">
 <h1><%= @merchant.name %></h1>
 
-<p><%= @merchant.address %></p>
+<p class="merchant-address"><%= @merchant.address %></p>
 
-<p><%= @merchant.city %></p>
-
-<p><%= @merchant.state %></p>
-
-<p><%= @merchant.zip %></p>
+<p class="merchant-state"><%= @merchant.city %>, <%= @merchant.state %> <%= @merchant.zip %></p>
 
 <%= link_to "Items", "/merchants/#{@merchant.id}/items" %>
 
 <%= link_to "Edit", "/merchants/#{@merchant.id}/edit" %>
 
 <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
+</section>
