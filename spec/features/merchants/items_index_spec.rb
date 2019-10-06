@@ -36,7 +36,7 @@ RSpec.describe "merchant items index page", type: :feature do
       inventory: 32,
       merchant_id: @fuschia.id
     )
-    @rose = Item.create(
+    @hibiscus = Item.create(
       name: 'Pink Tropical Hibiscus Tree',
       description: 'Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round',
       price: 108.65,
@@ -58,15 +58,15 @@ RSpec.describe "merchant items index page", type: :feature do
 
     expect(page).to have_css("#item-#{@plumeria.id}")
     expect(page).to have_css("#item-#{@dahlia.id}")
-    expect(page).to_not have_css("#item-#{@rose.id}")
+    expect(page).to_not have_css("#item-#{@hibiscus.id}")
   end
 
   it "can click on merchant name to redirect to merchant show page" do
     visit "/merchants/#{@florist.id}/items"
-    expect(page).to have_link(@rose.merchant.name)
+    expect(page).to have_link(@hibiscus.merchant.name)
 
-    click_link @rose.merchant.name
-    expect(current_path).to eq("/merchants/#{@rose.merchant.id}")
+    click_link @hibiscus.merchant.name
+    expect(current_path).to eq("/merchants/#{@hibiscus.merchant.id}")
   end
 
   it "can click on item name to redirect to item show page" do
@@ -96,6 +96,35 @@ RSpec.describe "merchant items index page", type: :feature do
     click_link('Inactive Items')
     expect(page).to have_css("#item-#{@dahlia.id}")
     expect(page).to_not have_css("#item-#{@plumeria.id}")
+  end
+
+  it "can sort items alphabetically and by price" do
+    @rose = Item.create(
+      name: 'Clementine Rose Bush',
+      description: 'This rose bush grows long, pointed buds that open to classically shaped, four-inch blooms that have an artistic feel to their color - a rich apricot-blush, over-layed with copper tones toward the edge of the petals. The striking blooms are plentifully produced against bright-green, glossy leaves.',
+      price: 45.63,
+      image: 'https://images.pexels.com/photos/53007/rose-rose-family-rosaceae-composites-53007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: false,
+      inventory: 8,
+      merchant_id: @fuschia.id
+    )
+
+    visit "/merchants/#{@fuschia.id}/items"
+
+    click_link('Item Name (alphabetical)')
+    expect(page.find_all('section.card')[0]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[1]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (low to high)')
+    expect(page.find_all('section.card')[0]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (high to low)')
+    expect(page.find_all('section.card')[0]).to have_content('Plumeria Plant')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Contraste Dahlia Bulbs')
   end
 
 end
