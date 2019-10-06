@@ -1,7 +1,10 @@
-<h1>Merchants</h1>
+  <h2 class="merchants-header">Merchants</h2>
+  <section class="merchants-section">
 
-<% @merchants.each do |merchant| %>
-  <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %><br/><br/>
-<% end %><br/><br/>
 
-<%= link_to 'Create New Merchant', "/merchants/new" %>
+  <% @merchants.each do |merchant| %>
+    <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}", class: :merchant_link %>
+  <% end %>
+
+  <%= link_to 'Create New Merchant', "/merchants/new", class: :merchant_new_link %>
+</section>

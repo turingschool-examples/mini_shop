@@ -1,17 +1,21 @@
-<h1><%= @item.name %></h1>
+<section class="item-show">
+  <h1><%= @item.name %></h1>
 
-<%= image_tag(@item.image) %>
+  <%= image_tag(@item.image) %>
 
-<p><%= @item.description %></p>
+  <p><%= @item.description %></p>
 
-<p>Price: $<%= @item.price %></p>
+  <p>Price: $<%= @item.price %></p>
 
-<p>Status: <%= @item.status %></p>
+  <p>Status: <%= @item.status %></p>
 
-<p>Inventory: <%= @item.inventory %></p>
+  <p>Inventory: <%= @item.inventory %></p>
 
-<%= link_to "#{@item.merchant_name}", "/merchants/#{@item.merchant.id}" %>
+  <section class="item-show-links">
+    <%= link_to "#{@item.merchant_name}", "/merchants/#{@item.merchant.id}" %>
 
-<%= link_to 'Edit Item', "/items/#{@item.id}/edit" %>
+    <%= link_to 'Edit Item', "/items/#{@item.id}/edit" %>
+  </section>
 
-<%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
+    <%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
+</section>

@@ -1,4 +1,7 @@
 class MerchantsController < ApplicationController
+  def welcome
+  end
+  
   def index
     @merchants = Merchant.all
   end
