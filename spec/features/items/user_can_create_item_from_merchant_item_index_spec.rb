@@ -22,32 +22,19 @@ RSpec.describe "As a visitor" do
       click_link "Add Item"
 
       expect(current_path).to eq("/merchants/#{merchant_3.id}/items/new")
-      save_and_open_page
+      # save_and_open_page
       fill_in "Name", with: "Safety Goggles"
       fill_in "Price", with: 4.7
       fill_in "Description", with: "Keep your eyeballs safe."
       fill_in "Image URL", with: "https://cdn.pixabay.com/photo/2015/07/28/17/10/safety-glasses-864648_1280.jpg"
-      page.select('Active', from: 'Status')
       fill_in "Inventory", with: 100
       click_button "Create New Item"
 
-      expect(current_url).to eq("/merchants/#{merchant_3.id}/items")
+      expected_item = merchant_2.items.all.last
+
+      expect(current_path).to eq("/merchants/#{merchant_3.id}/items")
+      expect(page).to have_content("Safety Goggles")
+      expect(expected_item.status).to eq("Active")
     end
   end
 end
-#
-# As a visitor
-# When I visit a Merchant Items Index page
-# Then I see a link to add a new item for that merchant
-# When I click the link
-# I am taken to '/merchants/:merchant_id/items/new' where I see a form to add a new item
-# When I fill in the form with the item's:
-# - name
-# - price
-# - description
-# - image
-# - inventory
-# Then a `POST` request is sent to '/merchants/:merchant_id/items',
-# a new item is created for that merchant,
-# that item has a status of 'active',
-# and I am redirected to the Merchant Items Index page where I see the new item
