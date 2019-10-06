@@ -1,0 +1,16 @@
+<h1><%= @merchant.name %></h1>
+<%= button_to 'New Item', "/merchants/#{@merchant.id}/items/new", method: :get %>
+
+<% @items.each do |item| %>
+  <p>
+    <%= item.name %>
+    <ul>
+      <li><%= item.description %></li>
+      <li><%= item.price %></li>
+      <li><%= item.image %></li>
+      <li><%= item.active %></li>
+      <li><%= item.inventory %></li>
+      <li><%= item.merchant.name %></li>
+    </ul>
+  </p>
+<% end %>

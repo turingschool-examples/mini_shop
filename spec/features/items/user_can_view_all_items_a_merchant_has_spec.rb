@@ -20,6 +20,11 @@ RSpec.describe "Merchant Items Index" do
           state: "Colorado",
           zip: "80303"
         )
+        merchant_2 = Merchant.create(name: "Moosejaw",
+          address: "4321 Bob Street",
+          city: "Denver",
+          state: "Colorado",
+          zip: "55555")
 
         item_1 = Item.create(
           name: "Beanie",
@@ -39,8 +44,18 @@ RSpec.describe "Merchant Items Index" do
           inventory: 400,
           merchant_id: merchant_1.id
         )
+        item_3 = Item.create(
+          name: "Shoe",
+          description: "Just one show",
+          price: 5000,
+          image: 'https://images.app.goo.gl/fscn8iVUD56gpZraA',
+          active: false,
+          inventory: 3,
+          merchant_id: merchant_2.id
+        )
 
         visit "/merchants/#{merchant_1.id}/items"
+
 
         expect(page).to have_content("REI")
         expect(page).to have_content(item_1.name)
