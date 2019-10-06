@@ -10,3 +10,5 @@
 <p>Merchant: <%= @item.merchant.name %></p>
 
 <%= link_to 'Update Item', "/items/#{@item.id}/edit" %>
+
+<%= link_to 'DELETE ITEM', "/items/#{@item.id}", :method => :delete %>
