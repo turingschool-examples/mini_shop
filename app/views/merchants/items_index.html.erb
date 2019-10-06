@@ -1,9 +1,23 @@
 <h1 class="mt-4">Items Sold by <%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
 <br />
 
-<%= link_to 'All Items', "/merchants/#{@merchant.id}/items", class: 'btn btn-outline-primary status' %>
-<%= link_to 'Active Items', "/merchants/#{@merchant.id}/items?active=true", class: 'btn btn-outline-success status ml-3' %>
-<%= link_to 'Inactive Items', "/merchants/#{@merchant.id}/items?active=false", class: 'btn btn-outline-danger status ml-3' %>
+<h6 class="filter">Filter By:</h6>
+<%= link_to 'All Items', "/merchants/#{@merchant.id}/items", class: 'btn btn-outline-primary filter ml-3' %>
+<%= link_to 'Active Items', "/merchants/#{@merchant.id}/items?active=true", class: 'btn btn-outline-success filter ml-3' %>
+<%= link_to 'Inactive Items', "/merchants/#{@merchant.id}/items?active=false", class: 'btn btn-outline-danger filter ml-3' %>
+
+<br /><br />
+
+<h6 class="filter">Sort By:</h6>
+<% if @active != nil %>
+  <%= link_to 'Item Name (alphabetical)', "/merchants/#{@merchant.id}/items?active=#{@active}&sort=alpha", class: 'btn btn-outline-secondary filter ml-4' %>
+  <%= link_to 'Price (low to high)', "/merchants/#{@merchant.id}/items?active=#{@active}&sort=price_asc", class: 'btn btn-outline-secondary filter ml-3' %>
+  <%= link_to 'Price (high to low)', "/merchants/#{@merchant.id}/items?active=#{@active}&sort=price_desc", class: 'btn btn-outline-secondary filter ml-3' %>
+<% else %>
+  <%= link_to 'Item Name (alphabetical)', "/merchants/#{@merchant.id}/items?sort=alpha", class: 'btn btn-outline-secondary filter ml-4' %>
+  <%= link_to 'Price (low to high)', "/merchants/#{@merchant.id}/items?sort=price_asc", class: 'btn btn-outline-secondary filter ml-3' %>
+  <%= link_to 'Price (high to low)', "/merchants/#{@merchant.id}/items?sort=price_desc", class: 'btn btn-outline-secondary filter ml-3' %>
+<% end %>
 
 <br />
 <br />

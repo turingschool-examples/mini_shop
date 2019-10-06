@@ -2,13 +2,13 @@
 <br />
 <section class="card card-body bg-light">
 
-  <h4><%= link_to 'Items Sold', "/merchants/#{@merchant.id}/items" %></h4>
-  <br />
-
   <h4>  Address:    <span class="ml-2 pl-2"><%= @merchant.address %></span></h4>
   <h4>  City:       <span class="ml-5 pl-3"><%= @merchant.city %></span></h4>
   <h4>  State:      <span class="ml-5 pl-1"><%= @merchant.state %></span></h4>
   <h4>  Zip Code:   <span class="ml-1 pl-2"><%= @merchant.zip %></span></h4>
+
+  <br />
+  <h4><%= link_to 'Items Sold', "/merchants/#{@merchant.id}/items", class: 'btn btn-outline-primary' %></h4>
 
 </section>
 

@@ -6,11 +6,20 @@ class MerchantsController < ApplicationController
 
   def items_index
     @merchant = Merchant.find(params[:merchant_id])
-    
-    if !params[:active]
+    @active = params[:active]
+
+    if @active == nil
       @items = @merchant.items
     else
-      @items = Item.where("merchant_id = #{params[:merchant_id]} AND active_status = #{params[:active]}")
+      @items = Item.where("merchant_id = #{@merchant.id} AND active_status = #{@active}")
+    end
+
+    if params[:sort] == 'alpha'
+      @items = @items.sort_by { |item| item.name }
+    elsif params[:sort] == 'price_asc'
+      @items = @items.sort_by { |item| item.price }
+    elsif params[:sort] == 'price_desc'
+      @items = @items.sort_by { |item| item.price }.reverse
     end
   end
 

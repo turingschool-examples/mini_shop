@@ -1,10 +1,10 @@
-<h1 class="mt-4">List of Merchants</h1>
+<h1 class="mt-4">Merchants</h1>
 <br />
 
 <% @merchants.each do |merchant| %>
   <section class="card card-body bg-light">
-    <h4><%= link_to merchant.name, "merchants/#{merchant.id}" %></h4>
-    <h6><%= link_to 'Items Sold', "merchants/#{merchant.id}/items" %></h6>
+    <h4 class="mb-3"><%= link_to merchant.name, "merchants/#{merchant.id}" %></h4>
+    <h6><%= link_to 'Items Sold', "merchants/#{merchant.id}/items", class: 'btn btn-outline-primary' %></h6>
   </section>
   <br />
 <% end %>
