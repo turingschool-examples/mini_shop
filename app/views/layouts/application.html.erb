@@ -10,8 +10,9 @@
 
   <body>
     <header>
-      <a href="/merchants">Merchants</a>
-      <a href="/items"style='padding:10px'>Items</a>
+      <%= link_to 'Home', '/' %>
+      <%= link_to 'Merchants', '/merchants' %>
+      <%= link_to 'Items', '/items' %>
     </header>
     <%= yield %>
   </body>
