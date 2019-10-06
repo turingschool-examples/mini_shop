@@ -47,5 +47,10 @@ class ItemsController < ApplicationController
     )
     redirect_to "/items/#{item.id}"
   end
+
+  def destroy
+    item = Item.destroy(params[:id])
+    redirect_to "/items"
+  end
 end
 
