@@ -5,6 +5,8 @@
   <%= @merchant.city %> , <%= @merchant.state %> <%= @merchant.zip %>
 </p>
 <br>
+<%= link_to "#{@merchant.name}'s Inventory", "/merchants/#{@merchant.id}/items"%>
+<br>
 <%= link_to 'Update Merchant', "/merchants/#{@merchant.id}/update"%>
 <br>
 <%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete%>
