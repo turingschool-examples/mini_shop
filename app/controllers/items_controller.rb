@@ -13,6 +13,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def new
+  end
+
 private
   def item_params
     #Use for form_tag views
