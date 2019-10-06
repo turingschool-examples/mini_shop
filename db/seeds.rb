@@ -14,6 +14,6 @@ item_1 = Item.create!(name: "Panang Curry", description: "Sweet and spicy Thai c
 item_2 = Item.create!(name: "Yam Talay", description: "Spicy Seafood Salad", price: 16.50, image_url: 'https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18143140/fc87mc056-01-main.jpg', status: false, inventory: 8, merchant_id: merchant_1.id)
 
 # PITA PAN
-item_3 = Item.create!(name: "Stuffed Pita",description: "Veggies and hummus in pita", price: 12.50, image_url: 'https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/DesktopImages/12565.jpg', status: false, inventory: 8, merchant_id: merchant_3.id)
+item_3 = Item.create!(name: "Stuffed Pita",description: "Veggies and hummus in pita", price: 12.50, image_url: 'https://happykitchen.rocks/wp-content/uploads/2017/08/Vegan-Pita-Pockets-with-Roasted-Veggies-and-Hummus-in-a-Tray-Macro.jpg', status: false, inventory: 8, merchant_id: merchant_3.id)
 item_4 = Item.create!(name: "Pita Pizza", description: "Sauce and cheese in pita baked in oven", price: 10.50, image_url: 'https://purewows3.imgix.net/images/articles/2019_04/pita-pizzas-domestic-greek-recipe-921.jpg?auto=format,compress&cs=strip', status: true, inventory: 18, merchant_id: merchant_3.id)
 item_5 = Item.create!(name: "Pita Chips", description: "Baked and salted pita slices", price: 6.00, image_url: 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/9c7590b4356c405ca11794c355ddac48/fb.jpg', status: true, inventory: 0, merchant_id: merchant_3.id)

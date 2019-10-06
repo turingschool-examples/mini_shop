@@ -3,12 +3,12 @@
 <form action="/merchants/<%= params[:merchant_id] %>/items", method="post" id="form1">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="POST" />
-  <p>Name:</p><input type='text' name='item[name]'><br/>
-  <p>Description:</p><input type='text' name='item[description]'><br/>
-  <p>Price:</p><input type='text' name='item[price]' ><br/>
-  <p>Image URL:</p><input type='text' name='item[image_url]'><br/>
-  <p>Status:</p><input type='text' name='item[status]' value='active'><br/>
-  <p>Inventory:</p><input type='text' name='item[inventory]'><br/>
+  <p>Name:</p><input type='text' name='item[name]' class='form-control'><br/>
+  <p>Description:</p><input type='text' name='item[description]' class='form-control'><br/>
+  <p>Price:</p><input type='text' name='item[price]' class='form-control'><br/>
+  <p>Image URL:</p><input type='text' name='item[image_url]' class='form-control'><br/>
+  <p>Status:</p><input type='text' name='item[status]' value='active' class='form-control'><br/>
+  <p>Inventory:</p><input type='text' name='item[inventory]' class='form-control'><br/>
 
 </form>
-<button type="submit" form="form1" value="Submit">Submit</button>
+<button type="submit" form="form1" value="Submit" class='btn btn-primary'>Submit</button>

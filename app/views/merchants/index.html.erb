@@ -2,10 +2,11 @@
 
 <ul id="merchants">
   <% @merchants.each do |merchant| %>
-    <li>
-      <%= link_to merchant.name, merchant_path(merchant) %>
-    </li>
+
+    <p>  <%= link_to merchant.name, merchant_path(merchant) %> </p>
+    <br />
   <% end %>
 </ul>
 
-<li><a href="/merchants/new">New Merchant</a></li>
+<br />
+<a href="/merchants/new">New Merchant</a>

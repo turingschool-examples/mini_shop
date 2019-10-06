@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-05.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1, p {
+  color: rgb(31, 95, 148)
+}
+
+nav {
+  background-image: url("https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+}
+
+a {
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 40px;
+}
