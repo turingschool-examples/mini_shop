@@ -71,4 +71,49 @@ RSpec.describe "items index page", type: :feature do
     expect(current_path).to eq("/merchants/#{@dahlia.merchant.id}")
   end
 
+  it "can filter items by active status" do
+    visit "/items"
+
+    click_link('All Items')
+    expect(page).to have_content('Plumeria Plant')
+    expect(page).to have_content('Contraste Dahlia Bulbs')
+
+    click_link('Active Items')
+    expect(page).to have_content('Plumeria Plant')
+    expect(page).to_not have_content('Contraste Dahlia Bulbs')
+
+    click_link('Inactive Items')
+    expect(page).to have_content('Contraste Dahlia Bulbs')
+    expect(page).to_not have_content('Plumeria Plant')
+  end
+
+  it "can sort items alphabetically and by price" do
+    @rose = Item.create(
+      name: 'Clementine Rose Bush',
+      description: 'This rose bush grows long, pointed buds that open to classically shaped, four-inch blooms that have an artistic feel to their color - a rich apricot-blush, over-layed with copper tones toward the edge of the petals. The striking blooms are plentifully produced against bright-green, glossy leaves.',
+      price: 45.63,
+      image: 'https://images.pexels.com/photos/53007/rose-rose-family-rosaceae-composites-53007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: false,
+      inventory: 8,
+      merchant_id: @merchant.id
+    )
+
+    visit "/items"
+
+    click_link('Item Name (alphabetical)')
+    expect(page.find_all('section.card')[0]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[1]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (low to high)')
+    expect(page.find_all('section.card')[0]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (high to low)')
+    expect(page.find_all('section.card')[0]).to have_content('Plumeria Plant')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Contraste Dahlia Bulbs')
+  end
+
 end
