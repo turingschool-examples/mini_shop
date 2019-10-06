@@ -10,16 +10,21 @@ merchants = Merchant.create([{ name: 'Valeo', address: '123 Main Street', city: 
                              { name: 'Spri', address: '346 Hope Ave', city: 'San Antonio', state: 'TX', zip: 78240 },
                              { name: 'Mobilitas', address: '75 Springride Meadows', city: 'Los Angeles', state: 'CA', zip: 90040}])
 
-item_1 = merchants.first.items.create(name: 'Medicine Ball',
-                                    description: 'This mb is awesome!',
-                                    price: 45,
-                                    image_url: 'https://i.imgur.com/pLRfskZ.jpg',
-                                    active: true,
-                                    inventory: 34)
-
-item_2 = merchants[1].items.create(name: 'Kettlebell',
-                                  description: 'This kb is awesome!',
-                                  price: 33.40,
-                                  image_url: 'https://i.imgur.com/BVEkfc7.jpg',
-                                  active: true,
-                                  inventory: 10)
+valeo_1 = merchants.first.items.create(name: 'Medicine Ball',
+                            description: 'This mb is awesome!',
+                            price: 45,
+                            image_url: 'https://i.imgur.com/pLRfskZ.jpg',
+                            active: true,
+                            inventory: 34)
+valeo_2 = merchants.first.items.create(name: 'Kettlebell',
+                            description: 'This valeo kb is the best!',
+                            price: 28,
+                            image_url: 'https://i.imgur.com/gP8UXpU.jpg',
+                            active: true,
+                            inventory: 60)
+spri_1 = merchants[1].items.create(name: 'Purple Kettlebell',
+                            description: 'This kb is awesome!',
+                            price: 33.40,
+                            image_url: 'https://i.imgur.com/BVEkfc7.jpg',
+                            active: true,
+                            inventory: 10,)
