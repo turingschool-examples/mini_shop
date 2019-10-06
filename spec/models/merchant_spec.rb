@@ -9,7 +9,6 @@ describe Merchant, type: :model do
 
   describe "validations" do
     it { should validate_presence_of :name }
-    binding.pry
     # Merchant.create(name:"scott", address:"4942 willow", city:"denver", state: "co", zip:"90210")
   end
 end
