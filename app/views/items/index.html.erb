@@ -9,7 +9,7 @@
       <li><%= item.image %></li>
       <li><%= item.active %></li>
       <li><%= item.inventory %></li>
-      <li><%= item.merchant.name %></li>
+      <li><%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}" %></li>
     </ul>
   </p>
 <% end %>
