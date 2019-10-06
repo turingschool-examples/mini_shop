@@ -11,6 +11,6 @@ describe Item, type: :model do
   end
 
   describe "relationships" do
-    it { should have_one :merchant }
+    it { should belong_to :merchant }
   end
 end
