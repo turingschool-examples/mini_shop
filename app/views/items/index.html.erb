@@ -8,15 +8,18 @@ Then I see each Item in the system including the Item's:
 - active/inactive status
 - inventory
 - the name of the merchant that sells the item -->
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %><br><hr>
+
 <% if @merchant %>
-<h1><%= @merchant.name %></h1>
+<h1><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h1>
 <p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>
 <% else %>
 <h1>All Items</h1>
 <% end %>
 <ol>
 <% @items.each do |item| %>
-<li><h3><%= item.name %></h3></li>
+<li><h3><%= link_to "#{item.name}", "/items/#{item.id}" %></h3></li>
 <ul>
   <li>Description: <%= item.description unless @merchant %></li>
   <li>Price: $<%= item.price %></li>
@@ -26,7 +29,7 @@ Then I see each Item in the system including the Item's:
               <%= "Unavailable" %>
               <% end %></li>
   <li>Quantity: <%= item.inventory %></li>
-  <li>Selling Merchant: <%= item.merchant.name %></li>
+  <li>Selling Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}" %></li>
 </ul><br>
 
 <img src="<%= item.image %>" alt="<%= item.name %>" height="60" width="60">

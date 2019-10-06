@@ -1,3 +1,5 @@
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %><br><hr>
 
 <%= form_tag "/items/#{@item.id}", method: :patch do %>
   <%= label_tag :name %>
