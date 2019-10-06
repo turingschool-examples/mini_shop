@@ -8,9 +8,9 @@ Then I see each Item in the system including the Item's:
 - active/inactive status
 - inventory
 - the name of the merchant that sells the item -->
-
 <% if @merchant %>
 <h1><%= @merchant.name %></h1>
+<p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>
 <% else %>
 <h1>All Items</h1>
 <% end %>
@@ -31,4 +31,4 @@ Then I see each Item in the system including the Item's:
 
 <img src="<%= item.image %>" alt="<%= item.name %>" height="60" width="60">
 <% end %>
-</ol><hr>
+</ol><br><hr>

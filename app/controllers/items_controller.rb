@@ -13,9 +13,20 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def new
+    @merchant = Merchant.find(params[:merchant_id])
+  end
+
+  def create
+    merchant = Merchant.find(params[:merchant_id])
+    merchant.items.create(item_params)
+
+    redirect_to "/merchants/#{merchant.id}/items"
+  end
+
 private
   def item_params
     #Use for form_tag views
-    params.permit(:name, :description, :price, :image, :status, :inventory, :merchant_id)
+    params.permit(:name, :description, :price, :image, :inventory)
   end
 end
