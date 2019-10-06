@@ -8,15 +8,15 @@ RSpec.describe 'items index page', type: :feature do
                                   state:   'CA',
                                   zip:     92618)
     item_1 = Item.create!(name:        'Firefly',
-                          description: 'a soft-bodied beetle related to the glowworm',
+                          description: 'soft-bodied beetle related to the glowworm whose bioluminescence attracts mates or prey',
                           price:       52.80,
                           image:       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Leuchtk%C3%A4fer_-_Firefly.JPG/440px-Leuchtk%C3%A4fer_-_Firefly.JPG',
                           status:      'active',
                           inventory:   7,
                           merchant_id: merchant_1.id)
     item_2 = Item.create!(name:        'Foxfire',
-                          description: 'phosphorescent light emitted by certain fungi in decaying wood',
-                          price:       609.34,
+                          description: 'fungi found in decaying wood that emits phosphorescent light',
+                          price:       16.09,
                           image:       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/PanellusStipticusAug12_2009.jpg/440px-PanellusStipticusAug12_2009.jpg',
                           status:      'active',
                           inventory:   12,
