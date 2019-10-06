@@ -5,6 +5,7 @@
   <p><%= "City:    #{@merchant.city}" %></p>
   <p><%= "State:   #{@merchant.state}" %></p>
   <p><%= "ZIP:     #{@merchant.zip}" %></p>
+  <p><%= button_to 'View Items', "/merchants/#{@merchant.id}/items", method: :get %>
   <%= button_to 'Edit', "/merchants/#{@merchant.id}/edit", method: :get %>
   <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
 </section>
