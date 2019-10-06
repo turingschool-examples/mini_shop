@@ -48,12 +48,15 @@ describe "When visiting merchants/:merchant_id/items" do
 
         expect(current_path).to eq("/merchants/#{item_1.merchant_id}/items")
 
+        save_and_open_page
+
         expect(page).to have_content("Apple")
         expect(page).to have_content("Watch")
-        expect(page).to have_css("https://i.imgur.com/owpKw1E.jpg")
+        expect(page).to have_css("img[src*='https://i.imgur.com/owpKw1E.jpg']")
         expect(page).to have_content("Available")
         expect(page).to have_content(110)
         expect(page).to have_content(50)
+
 
       end
     end
