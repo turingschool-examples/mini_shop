@@ -6,7 +6,7 @@ RSpec.describe "To delete a merchant" do
               a merchant" do
       it "a 'DELETE' request is sent to '/merchants/:id' and I am redirected
           to the merchant index page where I no longer see the merchant" do
-                
+
         merchant_1 = Merchant.create( name: "Corner Store",
                                       address: "234 Yarp Dr.",
                                       city: "Denver",
@@ -15,7 +15,6 @@ RSpec.describe "To delete a merchant" do
 
         visit "/merchants/#{merchant_1.id}"
 
-        expect(page).to have_button("Delete Merchant")
         click_on "Delete Merchant"
 
         expect(current_path).to eq('/merchants')
