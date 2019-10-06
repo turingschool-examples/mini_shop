@@ -1,11 +1,12 @@
 <h1>Items</h1>
 
 <% @items.each do |item| %>
- <%= link_to item.name, "/items/#{item.id}" %>
+ <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
  <p><%= item.description %></p>
  <p><%= item.price %></p>
   <%= image_tag item.image, style: 'height:33%;width:33%;' %>
  <p><%= item.status %></p>
  <p><%= item.inventory %></p>
- <p><%= item.merchant_name %></p>
+ <%= link_to item.merchant_name, "/merchants/#{item.merchant.id}" %>
+ <hr>
 <% end %>
