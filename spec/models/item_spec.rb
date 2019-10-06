@@ -9,4 +9,8 @@ describe Item, type: :model do
     it { should validate_inclusion_of(:active?).in_array([true,false]) }
     it { should validate_presence_of :inventory }
   end
+
+  describe "relationships" do
+    it { should have_one :merchant }
+  end
 end
