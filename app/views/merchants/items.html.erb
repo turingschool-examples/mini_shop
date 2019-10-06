@@ -1,7 +1,8 @@
 <h1> <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %> </h1>
 <hr>
+<section class="merchant_items">
 <% @merchant.items.each do |item|%>
-  <section class="show_info"
+  <section class="single_item">
     <h3> <%= link_to "#{item.name}", "/items/#{item.id}" %> </h3>
     <p>
       <%= item.image%>
@@ -17,7 +18,8 @@
     <br>
   </section>
 <% end %>
+</section>
 <br>
-<section class="action_links">
+<section class="page_links">
   <%= link_to 'Add an item', "/merchants/#{@merchant.id}/items/new" %>
 </section>
