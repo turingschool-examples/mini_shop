@@ -1,12 +1,15 @@
-<h1> <%= @merchant.name %> </h1>
-<p>
+<section class="show_info">
+  <h1> <%= @merchant.name %> </h1>
   <%= @merchant.address%>
   <br>
-  <%= @merchant.city %> , <%= @merchant.state %> <%= @merchant.zip %>
-</p>
+  <%= @merchant.city %>, <%= @merchant.state %> <%= @merchant.zip %>
+  <br> <br>
+</section>
 <br>
-<%= link_to "#{@merchant.name}'s Inventory", "/merchants/#{@merchant.id}/items"%>
-<br>
-<%= link_to 'Update Merchant', "/merchants/#{@merchant.id}/update"%>
-<br>
-<%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete%>
+<section class="page_links">
+  <%= link_to "#{@merchant.name}'s Inventory", "/merchants/#{@merchant.id}/items"%>
+  <hr>
+  <%= link_to 'Update Merchant', "/merchants/#{@merchant.id}/update"%>
+  | |
+  <%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete%>
+</section>

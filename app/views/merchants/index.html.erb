@@ -1,12 +1,16 @@
 <h1>Merchants</h1>
+<hr>
 <% @merchants.each do |merchant| %>
-  <h3> <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %> </h3>
+<section class="index_item">
+  <h3 class="link"> <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %> </h3>
   <p>
     <%= merchant.address%>
     <br>
     <%= merchant.city %> , <%= merchant.state %> <%= merchant.zip %>
   </p>
-  <hr>
+</section>
 <% end %>
-<br>
-<%= link_to 'New Merchant', '/merchants/new' %>
+<hr>
+<section class="page_links">
+  <%= link_to 'New Merchant', '/merchants/new' %>
+</section>

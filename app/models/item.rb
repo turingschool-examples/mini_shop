@@ -5,9 +5,9 @@ class Item < ApplicationRecord
 
   def in_stock
     if active == true
-      "In stock"
+      "Active"
     else
-      "Out of stock"
+      "Inactive"
     end
   end
 end

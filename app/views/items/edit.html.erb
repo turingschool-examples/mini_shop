@@ -1,19 +1,25 @@
 <h1>Edit <%= link_to "#{@item.name}", "/items/#{@item.id}" %></h1>
+<hr>
 <%= form_tag "/items/#{@item.id}", method: :patch do %>
   <%= label_tag :name%>
+  <br>
   <%= text_field_tag :name, value = @item.name%>
-
+  <br>
   <%= label_tag :description%>
+  <br>
   <%= text_field_tag :description, value = @item.description%>
-
+  <br>
   <%= label_tag :image%>
+  <br>
   <%= text_field_tag :image, value = @item.image%>
-
+  <br>
   <%= label_tag :price%>
+  <br>
   <%= text_field_tag :price, value = @item.price%>
-
+  <br>
   <%= label_tag :inventory%>
+  <br>
   <%= text_field_tag :inventory, value = @item.inventory%>
-
+  <br>
   <%= submit_tag 'Update Item'%>
 <% end %>
