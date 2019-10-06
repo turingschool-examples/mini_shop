@@ -5,16 +5,20 @@
       <%= link_to item.name, "items/#{item.id}" %>
       <p>Description: <%= item.description %></p>
       <p>Price: $<%= item.price %></p>
-      <p>Image: <%= image_tag(item.image, {:style =>'max-width:250px;max-height:250px'}) %></p>
-      <p>Status: <%= item.status %></p>
+      <p>Image: <%= image_tag(item.image_url, {:style =>'max-width:250px;max-height:250px'}) %></p>
+      <% if item.status == true %>
+        <p>Status: active</p>
+      <% elsif item.status == false %>
+        <p>Status: inactive</p>
+      <% end %>
       <p>Inventory: <%= item.inventory %></p>
       <br />
       <br />
   <% end %>
 </ul>
 
-<%= link_to "Active Items", "/merchants/#{params[:merchant_id]}/items?status=active" %>
+<%= link_to "Active Items", "/merchants/#{params[:merchant_id]}/items?status=true" %>
 <br />
-<%= link_to "Inactive Items", "/merchants/#{params[:merchant_id]}/items?status=inactive" %>
+<%= link_to "Inactive Items", "/merchants/#{params[:merchant_id]}/items?status=false" %>
 <br />
 <%= link_to "Add New Item", "/merchants/#{params[:merchant_id]}/items/new" %>

@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20191002143632) do
     t.string "name"
     t.string "description"
     t.float "price"
-    t.string "image"
-    t.string "status"
+    t.string "image_url"
+    t.boolean "status"
     t.integer "inventory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
