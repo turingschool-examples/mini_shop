@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "merchants index page", type: :feature do
   it "can see all merchant names" do
-    merchant_1 = Merchant.create(name: "Zac's shop",
+    merchant_1 = Merchant.create(name: "David's shop",
                                   address: "1234 Broadway St",
                                   city: "Denver",
                                   state: "Colorado",

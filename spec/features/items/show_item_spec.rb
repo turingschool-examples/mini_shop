@@ -1,18 +1,6 @@
-#
-# As a visitor
-# When I visit '/items/:id'
-# Then I see the item with that id including the item's:
-# - name
-# - active/inactive status
-# - price
-# - description
-# - image
-# - inventory
-# - the name of the merchant that sells the item
-
 require 'rails_helper'
 
-RSpec.describe "item show page" do
+RSpec.describe "item show page", type: :feature do
   it "can see item by id" do
     merchant_1 = Merchant.create(name: "Zac's shop",
                                   address: "1234 Broadway St",
@@ -20,14 +8,13 @@ RSpec.describe "item show page" do
                                   state: "Colorado",
                                   zip: "80203")
 
-    item_1 = merchant_1.items.create!({name: "Pepperoni Pizza",
+    item_1 = merchant_1.items.create!(name: "Pepperoni Pizza",
                                         description: "Fresh pepperoni with all the cheese",
                                         price: 19.99,
                                         image: "https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/ck/gluten-free-cookbook/pepperoni-pizza-ck-x.jpg?itok=NWreajsZ",
                                         status: "active",
                                         inventory: 10,
-                                        merchant_name: "Zac's shop"})
-
+                                        merchant_name: "Zac's shop")
 
     visit "/items/#{item_1.id}"
 

@@ -8,7 +8,6 @@ class MerchantsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -23,18 +22,18 @@ class MerchantsController < ApplicationController
 
   def update
     merchant = Merchant.find(params[:id])
-      merchant.update(merchant_params)
+    merchant.update(merchant_params)
 
-      merchant.save
+    merchant.save
 
-      redirect_to "/merchants/#{merchant.id}"
+    redirect_to "/merchants/#{merchant.id}"
   end
 
   def destroy
     merchant = Merchant.find(params[:id])
     merchant.items.destroy_all
     merchant.destroy
-    
+
     redirect_to '/merchants'
   end
 
@@ -44,6 +43,7 @@ class MerchantsController < ApplicationController
   end
 
   private
+
   def merchant_params
     params.permit(:name, :address, :city, :state, :zip)
   end

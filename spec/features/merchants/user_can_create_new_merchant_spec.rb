@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "create new merchant" do
-    it "can create new merchant link" do
+RSpec.describe "create new merchant", type: :feature do
+  it "can create new merchant link" do
 
-      visit "/merchants"
+    visit "/merchants"
 
-      expect(page).to have_link("Create New Merchant")
+    expect(page).to have_link("Create New Merchant")
 
-      click_link "Create New Merchant"
+    click_link "Create New Merchant"
 
-      expect(current_path).to eq('/merchants/new')
+    expect(current_path).to eq('/merchants/new')
   end
 
   it "can create a new merchant" do
@@ -29,6 +29,5 @@ RSpec.describe "create new merchant" do
     expect(page).to have_content("Paul's Pizza")
     expect(Merchant.last.name).to eq("Paul's Pizza")
     expect(Merchant.last.address).to eq("789 Washington St")
-
   end
 end

@@ -14,21 +14,21 @@ RSpec.describe "items index page", type: :feature do
                                   state: "Colorado",
                                   zip: "87342")
 
-    item_1 = merchant_1.items.create!({name: "Pepperoni Pizza",
+    item_1 = merchant_1.items.create!(name: "Pepperoni Pizza",
                                         description: "Fresh pepperoni with all the cheese",
                                         price: 19.99,
                                         image: "https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/ck/gluten-free-cookbook/pepperoni-pizza-ck-x.jpg?itok=NWreajsZ",
                                         status: "active",
                                         inventory: 10,
-                                        merchant_name: "Zac's shop"})
+                                        merchant_name: "Zac's shop")
 
-    item_2 = merchant_2.items.create!({name: "Cheese Pizza",
+    item_2 = merchant_2.items.create!(name: "Cheese Pizza",
                                         description: "Cheesiest pizza ever!",
                                         price: 17.99,
                                         image: "https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg",
                                         status: "active",
                                         inventory: 20,
-                                        merchant_name: "Billy's shop"})
+                                        merchant_name: "Billy's shop")
 
     visit "/items"
 

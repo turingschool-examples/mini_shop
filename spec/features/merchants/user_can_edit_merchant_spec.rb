@@ -47,6 +47,5 @@ RSpec.describe "merchant update", type: :feature do
     expect(page).to have_content("Denver")
     expect(page).to have_content("Colorado")
     expect(page).to have_content("83490")
-
   end
 end

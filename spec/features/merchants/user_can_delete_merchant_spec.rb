@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "delete merchant" do
+RSpec.describe "delete merchant", type: :feature do
   it "can click delete" do
     merchant_1 = Merchant.create(name: "David's shop",
                                   address: "1234 Broadway St",
