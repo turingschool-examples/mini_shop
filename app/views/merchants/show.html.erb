@@ -3,13 +3,12 @@
   <%= @merchant.address%>
   <br>
   <%= @merchant.city %>, <%= @merchant.state %> <%= @merchant.zip %>
+  <br> <br>
 </section>
 <br>
-<section id="inventory_link">
+<section class="page_links">
   <%= link_to "#{@merchant.name}'s Inventory", "/merchants/#{@merchant.id}/items"%>
-</section>
-<br>
-<section class="action_links">
+  <hr>
   <%= link_to 'Update Merchant', "/merchants/#{@merchant.id}/update"%>
   | |
   <%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete%>
