@@ -5,4 +5,6 @@
   <p><%= "City:    #{@merchant.city}" %></p>
   <p><%= "State:   #{@merchant.state}" %></p>
   <p><%= "ZIP:     #{@merchant.zip}" %></p>
+  <%= button_to 'Edit', "/merchants/#{@merchant.id}/edit", method: :get %>
+  <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
 </section>

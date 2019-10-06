@@ -7,4 +7,6 @@
   Active Status: <%= @item.active %>
   Inventory: <%= @item.inventory %>
   Merchant: <%= @item.merchant.name %>
+  <%= button_to 'Edit', "/items/#{@item.id}/edit", method: :get %>
+  <%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
 </p>
