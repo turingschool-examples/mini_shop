@@ -20,22 +20,22 @@ RSpec.describe "From items index page", type: :feature do
                             inventory: 10
                           )
 
-  visit "/items"
+    visit "/items"
 
-  expect(page).to have_content("Medicine Ball")
-  expect(page).to have_content("Description: This mb is great!")
-  expect(page).to have_content("Price: $45")
-  expect(page).to have_selector("img[src*='https://i.imgur.com/pLRfskZ.jpg']")
-  expect(page).to have_content("Active status: true")
-  expect(page).to have_content("Inventory: 23")
-  expect(page).to have_content("Merchant: Valeo")
+    expect(page).to have_content("Medicine Ball")
+    expect(page).to have_content("Description: This mb is great!")
+    expect(page).to have_content("Price: $45")
+    expect(page).to have_selector("img[src*='https://i.imgur.com/pLRfskZ.jpg']")
+    expect(page).to have_content("Active status: true")
+    expect(page).to have_content("Inventory: 23")
+    expect(page).to have_content("Merchant: Valeo")
 
-  expect(page).to have_content("Kettlebell")
-  expect(page).to have_content("Description: This kb is awesome!")
-  expect(page).to have_content("Price: $33")
-  expect(page).to have_selector("img[src*='https://i.imgur.com/BVEkfc7.jpg']")
-  expect(page).to have_content("Active status: true")
-  expect(page).to have_content("Inventory: 10")
-  expect(page).to have_content("Merchant: Spri")
+    expect(page).to have_content("Kettlebell")
+    expect(page).to have_content("Description: This kb is awesome!")
+    expect(page).to have_content("Price: $33")
+    expect(page).to have_selector("img[src*='https://i.imgur.com/BVEkfc7.jpg']")
+    expect(page).to have_content("Active status: true")
+    expect(page).to have_content("Inventory: 10")
+    expect(page).to have_content("Merchant: Spri")
   end
 end
