@@ -22,10 +22,10 @@ describe "Item delete page" do
 
       visit "/items/#{item.id}"
 
-      click_link'DELETE ITEM'
+      click_link('DELETE ITEM')
 
       expect(page).to have_current_path("/items")
-      expect(page).to not_have_content('Solid Gold Playing Cards')
+      expect(page).to have_no_content('Solid Gold Playing Cards')
     end
   end
 end
