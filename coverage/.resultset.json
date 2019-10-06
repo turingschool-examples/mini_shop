@@ -185,17 +185,49 @@
         1,
         1,
         1,
-        1,
         null,
         1,
         null,
         1,
         null,
+        1,
+        null,
+        1,
         1,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/scottregenthal/turing/mod_2/projects/mini_shop/spec/features/items/show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/spec/features/merchants/create_spec.rb": [
@@ -457,6 +489,10 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/app/controllers/application_controller.rb": [
@@ -510,6 +546,6 @@
         null
       ]
     },
-    "timestamp": 1570386908
+    "timestamp": 1570388204
   }
 }
