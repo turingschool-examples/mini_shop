@@ -1,4 +1,4 @@
-<h2><%= @merchant.name %></h2>
+<h2><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h2>
 
 <p><%= @merchant.address %></p>
 
@@ -8,5 +8,8 @@
 
 <p><%= @merchant.zip %></p>
 
-<p><%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %><p>
-<p><%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %><p>
+<%= link_to 'Items', "/merchants/#{@merchant.id}/items" %>
+
+<%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %>
+
+<%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete %>
