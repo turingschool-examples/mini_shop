@@ -14,6 +14,7 @@ describe "merchant show page", type: :feature do
 
     expect(page).to have_link('Item Index')
     expect(page).to have_link('Merchant Index')
+    expect(page).to have_link('Merchants Items')
 
     expect(page).to have_content(merchant.name)
     expect(page).to have_content(merchant.address)
