@@ -9,7 +9,7 @@ RSpec.describe "As a visitor" do
       item_1 = Item.new( name: "Basketball",
                             description: "Regulation size basketball",
                             price: 12.99,
-                            image: "image path",
+                            image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7-MQPSRPxq_qe1X60XAIye4U207uA2-WZq7_frdrGxSnvwiblkg&usqp=CAc.jpg",
                             active: false,
                             inventory:15,
                             merchant_id: merchant_1.id
@@ -23,7 +23,7 @@ RSpec.describe "As a visitor" do
 
       fill_in :name, with: 'Basketball'
       fill_in :description, with: 'Regulation size basketball'
-      fill_in :image, with: 'image path'
+      fill_in :image, with: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7-MQPSRPxq_qe1X60XAIye4U207uA2-WZq7_frdrGxSnvwiblkg&usqp=CAc.jpg"
       fill_in :price, with: 12.99
       fill_in :inventory, with: 15
       click_on 'Create Item'
@@ -32,7 +32,7 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content(item_1.name)
       expect(page).to have_content(item_1.description)
       expect(page).to have_content(item_1.price)
-      expect(page).to have_content(item_1.image)
+      expect(page).to have_css("img[src*='encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7-MQPSRPxq_qe1X60XAIye4U207uA2-WZq7_frdrGxSnvwiblkg&usqp=CAc.jpg']")
       expect(page).to have_content("Active")
       expect(page).to have_content(item_1.inventory)
       expect(page).to have_content(merchant_1.name)

@@ -7,7 +7,7 @@ RSpec.describe "As a visitor", type: :feature do
       item_1 = Item.create( name: "Basketball",
                             description: "Regulation size basketball",
                             price: 12.99,
-                            image: "image path",
+                            image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT7-MQPSRPxq_qe1X60XAIye4U207uA2-WZq7_frdrGxSnvwiblkg&usqp=CAc.jpg",
                             active: true,
                             inventory:15,
                             merchant_id: merchant_1.id
@@ -18,7 +18,6 @@ RSpec.describe "As a visitor", type: :feature do
     expect(page).to have_content(item_1.name)
     expect(page).to have_content(item_1.description)
     expect(page).to have_content(item_1.price)
-    expect(page).to have_content(item_1.image)
     expect(page).to have_content("Active")
     expect(page).to have_content(item_1.inventory)
     expect(page).to have_content(merchant_1.name)
