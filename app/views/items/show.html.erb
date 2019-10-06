@@ -8,7 +8,7 @@
            <% else %>
            <%= "Unavailable" %>
            <% end %></p>
-<p>Selling Merchant: <%= @item.merchant.name %></p>
+<p>Selling Merchant: <%= link_to "#{@item.merchant.name}", "merchants/#{@item.merchant.id}" %></p>
 <img src="<%= @item.image %>" alt="<%= @item.name %>" height="60" width="60"><br>
 <%= link_to 'Edit Item', "/items/#{@item.id}/edit" %><br>
 <%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete %><br>

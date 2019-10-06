@@ -9,7 +9,7 @@ Then I see each Item in the system including the Item's:
 - inventory
 - the name of the merchant that sells the item -->
 <% if @merchant %>
-<h1><%= @merchant.name %></h1>
+<h1><%= link_to "#{@merchant.name}", "merchants/#{@merchant.id}" %></h1>
 <p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>
 <% else %>
 <h1>All Items</h1>
@@ -26,7 +26,7 @@ Then I see each Item in the system including the Item's:
               <%= "Unavailable" %>
               <% end %></li>
   <li>Quantity: <%= item.inventory %></li>
-  <li>Selling Merchant: <%= item.merchant.name %></li>
+  <li>Selling Merchant: <%= link_to "#{item.merchant.name}", "merchants/#{item.merchant.id}" %></li>
 </ul><br>
 
 <img src="<%= item.image %>" alt="<%= item.name %>" height="60" width="60">
