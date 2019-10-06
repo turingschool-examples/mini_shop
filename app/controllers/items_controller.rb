@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
     redirect_to("/items/#{item.id}")
   end
 
+  def destroy
+    Item.destroy(params[:item_id])
+    redirect_to('/items')
+  end
+
   private
     def item_params
       params.permit(:name, :description, :image, :inventory, :price, :status)
