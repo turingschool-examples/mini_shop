@@ -9,6 +9,8 @@ RSpec.describe "merchant update page" do
         visit "/merchants/#{wand_shop.id}"
         click_on "Update Merchant"
 
+        expect(current_path).to eq("/merchants/#{wand_shop.id}/edit")
+
         fill_in :name, with: "Wandgardium Leviosa"
         fill_in :address, with: "126 Horizont Alley"
         fill_in :city, with: "Hogsmeade"
