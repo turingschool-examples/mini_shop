@@ -15,18 +15,36 @@
  */
 
 body {
-  background-color: bisque;
+  background-color: #8B6220;
+  color: #45050C;
 }
 
 header {
-  background-color: cornflowerblue;
+  background-color: #7DAA92;
   padding: 5px;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  color: #45050C;
 }
 
 #sitename {
   font-size: 150%;
   font-weight: bold;
+}
+
+.index_item {
+  margin: 10px;
+  padding: 5px;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #720E07;
+}
+
+a:visited {
+  color: #45050C;
+}
+
+a:link {
+  color: #45050C;
 }

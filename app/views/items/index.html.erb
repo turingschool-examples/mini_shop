@@ -1,6 +1,8 @@
 <h1>Items</h1>
+<hr>
 <% @items.each do |item| %>
-  <h3> <%= link_to "#{item.name}", "/items/#{item.id}" %> </h3>
+<section class="index_item">
+  <h3 class="link"> <%= link_to "#{item.name}", "/items/#{item.id}" %> </h3>
   <p>
     <%= item.image%>
     <%= item.price%>
@@ -10,5 +12,6 @@
     <%= item.inventory%>
     <%= link_to "#{Merchant.find(item.merchant_id).name}", "/merchants/#{item.merchant_id}"%>
   </p>
-  <hr>
+</section>
 <% end %>
+<hr>
