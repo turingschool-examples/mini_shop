@@ -4,7 +4,7 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    @merchant = Merchant.find(params[:merchant_id])
+    @merchant = Merchant.find(params[:id])
   end
 
   def new
@@ -16,21 +16,21 @@ class MerchantsController < ApplicationController
   end
 
   def edit
-    @merchant = Merchant.find(params[:merchant_id])
+    @merchant = Merchant.find(params[:id])
   end
 
   def update
-    merchant = Merchant.find(params[:merchant_id])
+    merchant = Merchant.find(params[:id])
 
     if merchant.update(merchant_params)
       redirect_to "/merchants/#{merchant.id}"
     else
-      redirect_to "/merchants/#{params[:merchant_id]}/edit"
+      redirect_to "/merchants/#{params[:id]}/edit"
     end
   end
 
   def destroy
-    Merchant.destroy(params[:merchant_id])
+    Merchant.destroy(params[:id])
     redirect_to '/merchants'
   end
 
