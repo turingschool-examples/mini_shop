@@ -1,4 +1,4 @@
-<%= link_to "Items", '/items' %>
+<%= link_to "Items Index", '/items' %>
 <%= link_to "Merchants Items", "/merchants/#{@item.merchant.id}/items" %>
 
 <h1><%= @item.name %></h1>
@@ -8,3 +8,5 @@
 <p>Status: <%= @item.status %></p>
 <p>Inventory: <%= @item.inventory %></p>
 <p>Merchant: <%= @item.merchant.name %></p>
+
+<%= link_to 'Update Item', "/items/#{@item.id}/edit" %>

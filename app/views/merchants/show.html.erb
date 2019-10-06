@@ -1,4 +1,5 @@
-<%= link_to "Merchants", '/merchants' %>
+<%= link_to "Merchants Index", '/merchants' %>
+<%= link_to "Merchants Items", "/merchants/#{@merchant.id}/items" %>
 
 <h1><%= @merchant.name %></h1>
 <p><%= @merchant.address %></p>
