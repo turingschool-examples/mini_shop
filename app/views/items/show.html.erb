@@ -4,6 +4,6 @@
 <p><%= @item.price %></p>
 <%= image_tag(@item.image) %>
 <p><%= @item.inventory %></p>
-<p><%= @item.merchant_name %></p>
+<%= link_to "#{@item.merchant_name}", "/merchants/#{@item.merchant.id}" %>
 <%= link_to 'Edit Item', "/items/#{@item.id}/edit" %>
 <%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
