@@ -1,3 +1,6 @@
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %><br><hr>
+
 <h2>Merchant #<%= "#{@merchant.id}" %></h2><br><hr><br>
 <p>Name: <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></p>
 <p>Address: <%= @merchant.address %></p>
@@ -7,4 +10,3 @@
 
 <%= link_to 'Edit Merchant', "/merchants/#{@merchant.id}/edit" %><br>
 <%= link_to 'Delete Merchant', "/merchants/#{@merchant.id}", method: :delete %><br><br>
-<%= link_to '<< Back to Merchants List', "/merchants" %>

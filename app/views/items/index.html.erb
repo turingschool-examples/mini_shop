@@ -8,6 +8,9 @@ Then I see each Item in the system including the Item's:
 - active/inactive status
 - inventory
 - the name of the merchant that sells the item -->
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %><br><hr>
+
 <% if @merchant %>
 <h1><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h1>
 <p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>

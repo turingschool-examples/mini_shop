@@ -1,3 +1,5 @@
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %><br><hr>
 
 <form action="/merchants" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -9,5 +11,3 @@
   Zip:<input type="text" name="merchant[zip]"></input><br/>
   <input type='submit' value='Create Merchant'/>
 </form><br><hr>
-
-<%= link_to '<< Back to Merchants List', "/merchants" %>
