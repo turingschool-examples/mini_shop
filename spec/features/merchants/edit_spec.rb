@@ -9,7 +9,7 @@ RSpec.describe 'Update Merchant' do
                                      city: "Denver",
                                      state: "Colorado",
                                      zip: "55555")
-        visit '/merchants'
+        visit "/merchants/#{merchant_1.id}"
 
         click_button 'Edit'
 
