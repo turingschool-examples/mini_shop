@@ -19,7 +19,6 @@ describe "Item create page" do
     fill_in 'inventory', with: '730'
     click_button 'Create'
     expect(current_path).to eq("/merchants/#{merchant_1.id}/items")
-    save_and_open_page
     expect(Item.last.name).to eq('Goldfish')
     expect(Item.last.description).to eq('24 count of snack goldfish packs')
     expect(Item.last.price).to eq(10.99)

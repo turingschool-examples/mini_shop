@@ -11,3 +11,5 @@
 <p>Stock: <%= @item.inventory %></p>
 
 <p>Seller: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
+<%= link_to 'Edit', "/items/#{@item.id}/edit" %>
+<%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
