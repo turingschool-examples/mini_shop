@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-05T22:20:18-06:00">2019-10-05T22:20:18-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-06T00:37:57-06:00">2019-10-06T00:37:57-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>32</b> files in total.
-    <b>272</b> relevant lines. 
-    <span class="green"><b>272</b> lines covered</span> and
+    <b>279</b> relevant lines. 
+    <span class="green"><b>279</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#9fff2af9cb8365826d5de56e76b368e97cbafc50" class="src_link" title="app/controllers/items_controller.rb">app/controllers/items_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>25</td>
         <td>14</td>
-        <td>7</td>
-        <td>7</td>
+        <td>14</td>
         <td>0</td>
         <td>1.1</td>
       </tr>
@@ -428,8 +428,8 @@
     <h3>app/controllers/items_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -473,10 +473,10 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
-          <code class="ruby">    @item = Item.find(params[:id])</code>
+          <code class="ruby">    @item = Item.find(params[:item_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -500,7 +500,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    @item = Item.find(params[:id])</code>
+          <code class="ruby">    @item = Item.find(params[:item_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -515,7 +515,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    item = Item.find(params[:item_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    item.update(item_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    redirect_to(&quot;/items/#{item.id}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def item_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      params.permit(:name, :description, :image, :inventory, :price, :status)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -555,7 +621,7 @@
         <li class="covered" data-hits="3" data-linenumber="3">
           <span class="hits">3</span>
           
-          <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    @merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="4">
@@ -585,7 +651,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    @merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -609,7 +675,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    @merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
@@ -742,7 +808,7 @@
         <li class="covered" data-hits="6" data-linenumber="8">
           <span class="hits">6</span>
           
-          <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    @merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -820,7 +886,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    @merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    @merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -844,7 +910,7 @@
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    merchant = Merchant.find(params[:id])</code>
+          <code class="ruby">    merchant = Merchant.find(params[:merchant_id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
@@ -886,7 +952,7 @@
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">    Merchant.destroy(params[:id])</code>
+          <code class="ruby">    Merchant.destroy(params[:merchant_id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
@@ -2397,25 +2463,25 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/merchants/:id&#39;, to: &#39;merchants#show&#39;</code>
+          <code class="ruby">  get &#39;/merchants/:merchant_id&#39;, to: &#39;merchants#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/merchants/:id/edit&#39;, to: &#39;merchants#edit&#39;</code>
+          <code class="ruby">  get &#39;/merchants/:merchant_id/edit&#39;, to: &#39;merchants#edit&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  patch &#39;/merchants/:id&#39;, to: &#39;merchants#update&#39;</code>
+          <code class="ruby">  patch &#39;/merchants/:merchant_id&#39;, to: &#39;merchants#update&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  delete &#39;/merchants/:id&#39;, to: &#39;merchants#destroy&#39;</code>
+          <code class="ruby">  delete &#39;/merchants/:merchant_id&#39;, to: &#39;merchants#destroy&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -2439,19 +2505,19 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/items/:id&#39;, to: &#39;items#show&#39;</code>
+          <code class="ruby">  get &#39;/items/:item_id&#39;, to: &#39;items#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/items/:id/edit&#39;, to: &#39;items#edit&#39;</code>
+          <code class="ruby">  get &#39;/items/:item_id/edit&#39;, to: &#39;items#edit&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  patch &#39;/items/:id&#39;, to: &#39;items#update&#39;</code>
+          <code class="ruby">  patch &#39;/items/:item_id&#39;, to: &#39;items#update&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -2463,19 +2529,19 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/merchants/:id/items&#39;, to: &#39;merchants/items#index&#39;</code>
+          <code class="ruby">  get &#39;/merchants/:merchant_id/items&#39;, to: &#39;merchants/items#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;/merchants/:id/items/new&#39;, to: &#39;merchants/items#new&#39;</code>
+          <code class="ruby">  get &#39;/merchants/:merchant_id/items/new&#39;, to: &#39;merchants/items#new&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  post &#39;/merchants/:id/items&#39;, to: &#39;merchants/items#create&#39;</code>
+          <code class="ruby">  post &#39;/merchants/:merchant_id/items&#39;, to: &#39;merchants/items#create&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">

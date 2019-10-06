@@ -1,15 +1,15 @@
-<h2>Edit the <%= @item %></h2>
+<h2>Edit the <%= @item.name %></h2>
 
 <%= form_tag "/items/#{@item.id}", method: :patch do %>
-  <p><%= label_tag :name %></p>
+  <%= label_tag :name %>
   <%= text_field_tag :name %>
-  <p><%= label_tag :description %></p>
+  <%= label_tag :description %>
   <%= text_field_tag :description %>
-  <p><%= label_tag :image %></p>
+  <%= label_tag :image %>
   <%= text_field_tag :image %>
-  <p><%= label_tag :price %></p>
+  <%= label_tag :price %>
   <%= text_field_tag :price %>
-  <p><%= label_tag :inventory %></p>
+  <%= label_tag :inventory %>
   <%= text_field_tag :inventory %>
   <%= submit_tag('submit') %>
 <% end %>

@@ -5,19 +5,19 @@ Rails.application.routes.draw do
   get '/merchants/new', to: 'merchants#new'
   post '/merchants', to: 'merchants#create'
 
-  get '/merchants/:id', to: 'merchants#show'
-  get '/merchants/:id/edit', to: 'merchants#edit'
-  patch '/merchants/:id', to: 'merchants#update'
-  delete '/merchants/:id', to: 'merchants#destroy'
+  get '/merchants/:merchant_id', to: 'merchants#show'
+  get '/merchants/:merchant_id/edit', to: 'merchants#edit'
+  patch '/merchants/:merchant_id', to: 'merchants#update'
+  delete '/merchants/:merchant_id', to: 'merchants#destroy'
 
   get '/items', to: 'items#index'
 
-  get '/items/:id', to: 'items#show'
-  get '/items/:id/edit', to: 'items#edit'
-  patch '/items/:id', to: 'items#update'
+  get '/items/:item_id', to: 'items#show'
+  get '/items/:item_id/edit', to: 'items#edit'
+  patch '/items/:item_id', to: 'items#update'
 
-  get '/merchants/:id/items', to: 'merchants/items#index'
-  get '/merchants/:id/items/new', to: 'merchants/items#new'
-  post '/merchants/:id/items', to: 'merchants/items#create'
+  get '/merchants/:merchant_id/items', to: 'merchants/items#index'
+  get '/merchants/:merchant_id/items/new', to: 'merchants/items#new'
+  post '/merchants/:merchant_id/items', to: 'merchants/items#create'
 
 end
