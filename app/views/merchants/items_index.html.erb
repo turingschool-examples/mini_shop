@@ -1,7 +1,7 @@
 <%= link_to 'Add Item', "/merchants/#{@merchant.id}/items/new" %>
 
 <% @items.each do |item| %>
-  <h3><%= item.name %></h3>
+  <%= link_to "#{item.name}", "/items/#{item.id}" %>
   <p><%= item.description %></p>
   <p><%= item.price %></p>
   <%= image_tag(item.image) %> 
