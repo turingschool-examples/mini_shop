@@ -10,7 +10,7 @@ merchant_2 = Merchant.create!(name: "Lord of the Rinse", address: "384 Spring Av
 merchant_3 = Merchant.create!(name: "Pita Pan", address: "930 Sunrise Blvd", city: "San Diego", state: "CA", zip: "92103" )
 
 # THAI TANIC
-item_1 = Item.create!(name: "Panang Curry", description: "Sweet and spicy Thai curry dish", price: 12.50, image_url: 'http://www.aspicyperspective.com/wp-content/uploads/2017/09/The-Best-Thai-Panang-Chicken-Curry-11.jpg', status: true, inventory: 12, merchant_id: merchant_1.id)
+item_1 = Item.create!(name: "Panang Curry", description: "Sweet and spicy Thai curry dish", price: 12.50, image_url: 'https://cdn.shopify.com/s/files/1/0076/4339/8233/files/thai-panang-curry-recipe-744x547-min.png?v=1542712351', status: true, inventory: 12, merchant_id: merchant_1.id)
 item_2 = Item.create!(name: "Yam Talay", description: "Spicy Seafood Salad", price: 16.50, image_url: 'https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18143140/fc87mc056-01-main.jpg', status: false, inventory: 8, merchant_id: merchant_1.id)
 
 # PITA PAN
