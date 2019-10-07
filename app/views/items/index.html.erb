@@ -1,0 +1,23 @@
+<% @items.each do |item| %>
+  <br><center>
+  <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
+  <img src= <%= item.image %> height="125" width="125">
+  <p>Description: <%= item.description %></p>
+  <p>Price: <%= number_to_currency(item.price) %></p>
+  <p>Selling Merchant: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
+  <p>Inventory Count: <%= item.inventory %></p>
+  <% if item.active? %>
+    <p><font color="green">Item is Active</font></p>
+  <% else %>
+    <p><font color="red">Item is Inactive</font></p>
+  <% end %>
+  <br></center>
+<% end %>
+
+<% if @merchant %>
+  <center>
+  <p><%= link_to 'New Item', "/merchants/#{@merchant.id}/items/new" %></p>
+  <p><%= link_to 'Active Items', "/merchants/#{@merchant.id}/items?active=true" %></p>
+  <p><%= link_to 'Inactive Items', "/merchants/#{@merchant.id}/items?active=false" %></p>
+  </center>
+<% end %>

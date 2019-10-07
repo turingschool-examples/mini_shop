@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :merchants do
+    resources :items, only: %i[index new create]
+  end
+
+  resources :items, except: %i[new create]
+
+  patch '/items/:id/activate', to: 'items#switch'
+  patch '/items/:id/deactivate', to: 'items#switch'
 end
