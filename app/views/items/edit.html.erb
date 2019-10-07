@@ -1,18 +1,30 @@
-<%= link_to 'Item Index', '/items' %>
-<%= link_to "Merchant Index", '/merchants' %>
+<div class="category_image" id="merchants_create_image">
+  <div class="navbar">
+    <span class="logo"><a href="/">MiniShop</a></span>
 
-<h2>Edit the <%= link_to @item.name, "/items/#{@item.id}" %></h2>
+    <div class="nav_links">
+      <%= link_to 'Item Index', '/items' %>
+      <%= link_to "Merchant Index", '/merchants' %>
+    </div>
+  </div>
 
-<%= form_tag "/items/#{@item.id}", method: :patch do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name, @item.name %>
-  <%= label_tag :description %>
-  <%= text_field_tag :description, @item.description %>
-  <%= label_tag :image %>
-  <%= text_field_tag :image, @item.image %>
-  <%= label_tag :price %>
-  <%= text_field_tag :price, @item.price %>
-  <%= label_tag :inventory %>
-  <%= text_field_tag :inventory, @item.inventory %>
-  <%= submit_tag('submit') %>
-<% end %>
+  <div class="category">
+    <h1>Edit the <%= link_to @item.name, "/items/#{@item.id}" %></h1>
+  </div>
+</div>
+
+<div class="display">
+  <%= form_tag "/items/#{@item.id}", class: 'form', method: :patch do %>
+    <p><%= label_tag :name %></p>
+    <p><%= text_field_tag :name, @item.name %></p>
+    <p><%= label_tag :description %></p>
+    <p><%= text_field_tag :description, @item.description %></p>
+    <p><%= label_tag :image %></p>
+    <p><%= text_field_tag :image, @item.image %></p>
+    <p><%= label_tag :price %></p>
+    <p><%= text_field_tag :price, @item.price %></p>
+    <p><%= label_tag :inventory %></p>
+    <p><%= text_field_tag :inventory, @item.inventory %></p>
+    <%= submit_tag('submit', class: 'button_2') %>
+  <% end %>
+</div>

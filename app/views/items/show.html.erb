@@ -1,15 +1,29 @@
-<%= link_to 'Item Index', '/items' %>
-<%= link_to "Merchant Index", '/merchants' %>
-<%= link_to "Merchants Items", "/merchants/#{@item.merchant.id}/items" %>
+<div class="category_image" id="merchants_index_image">
+  <div class="navbar">
+    <span class="logo"><a href="/">MiniShop</a></span>
 
-<h1><%= @item.name %></h1>
-<p>Description: <%= @item.description %></p>
-<%= image_tag @item.image, style: 'height:33%;width:33%;' %>
-<p>Price: <%= @item.price %></p>
-<p>Status: <%= @item.status %></p>
-<p>Inventory: <%= @item.inventory %></p>
-<p>Merchant: <%= link_to @item.merchant_name, "/merchants/#{@item.merchant.id}" %></p>
+    <div class="nav_links">
+      <%= link_to 'Item Index', '/items' %>
+      <%= link_to "Merchant Index", '/merchants' %>
+      <%= link_to "Merchants Items", "/merchants/#{@item.merchant.id}/items" %>
+    </div>
+  </div>
 
-<%= link_to 'Update Item', "/items/#{@item.id}/edit" %>
+  <div class="category">
+    <h1><%= @item.name %></h1>
+  </div>
+</div>
 
-<%= link_to 'DELETE ITEM', "/items/#{@item.id}", :method => :delete %>
+<div class="display">
+    <p>Description: <%= @item.description %></p>
+    <%= image_tag @item.image, style: 'height:33%;width:33%;' %>
+    <p>Price: <%= @item.price %></p>
+    <p>Status: <%= @item.status %></p>
+    <p>Inventory: <%= @item.inventory %></p>
+    <p>Merchant: <%= link_to @item.merchant_name, "/merchants/#{@item.merchant.id}" %></p>
+
+<%= link_to 'Update Item', "/items/#{@item.id}/edit", class: 'edit'  %>
+
+<%= link_to 'DELETE ITEM', "/items/#{@item.id}", :method => :delete, class: 'delete'  %>
+
+</div>

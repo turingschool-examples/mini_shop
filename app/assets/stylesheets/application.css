@@ -13,15 +13,284 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville|Open+Sans|Open+Sans+Condensed:300&display=swap');
+/*
+font-family: 'Libre Baskerville', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Abril Fatface', cursive; */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-font-color: honeydew;
+  --second-font-color: #181818;
+  --hover-light-font-color: rgba(216,	232, 207, 1);
+  --hover-light-background-color: rgba(216,	232, 207, 0.3);
+}
+
 body {
-  font-family: cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-  color: DodgerBlue;
-  border-bottom: 2px dashed DodgerBlue;
+  color: var(--main-font-color);
 }
 
 h2 {
-  color: tomato;
+  color: black;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/* START OF WELCOME STYLES */
+#welcome_body {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/g70AD5N.jpg);
+                     background-size: cover;
+                     background-position: center;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome_body h1 {
+  font-size: 3rem;
+}
+
+#welcome_logo {
+  font-family: 'Abril Fatface', cursive;
+}
+
+#welcome_body li {
+  padding: 1rem;
+}
+
+.button {
+  margin: .25em;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--main-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--main-font-color);
+}
+
+.button:hover {
+  color: 	var(--hover-light-font-color);
+  background-color: var(--hover-light-background-color);
+}
+
+.button_2 {
+  margin: .25em;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.button_2:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* START OF BODY STYLES */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: .5em 1em;
+  display: inline;
+  color: var(--main-font-color);
+  font-size: 1.25rem;
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: .25em;
+}
+
+.nav_links {
+  display: inline;
+  position: fixed;
+  right: 0;
+  padding: .5em 1em;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: var(--main-font-color);
+    margin-left: 1em;
+    display: inline-block;
+    padding: .5em;
+    border: 1.25px solid var(--main-font-color);
+}
+
+.nav_links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.category_image {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#merchants_index_image {
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/aU5nHTN.jpg);
+                     background-size: cover;
+                     background-position: center;
+}
+
+.category {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.category a {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.display h2, p {
+  padding: .25rem;
+}
+
+.display a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.create {
+  margin: .25em;
+  display: block;
+  background-color: rgba(85, 107, 47, 0.5);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.create a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.create:hover {
+  background-color: rgba(85, 107, 47, 0.6);
+}
+
+.edit {
+  margin: .25em;
+  display: block;
+  background-color: rgba(183, 65, 14, 0.8);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.edit a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.edit:hover {
+  background-color: rgba(183, 65, 14, 0.9);
+}
+
+.delete {
+  margin: .25em;
+  display: block;
+  background-color: rgba(100, 149, 237, 0.8);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.delete a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.delete:hover {
+  background-color: rgba(100, 149, 237, 0.9);
+}
+
+#merchants_create_image {
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/ZAPJaKm.jpg);
+                     background-size: cover;
+                     background-position: center;
+}
+
+.form {
+  text-align: center;
+}
+
+.name {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.name:hover {
+  color: 	#d8e8cf;
+}
+
+.item_diver {
+  margin: 1rem;
+  padding: .5px;
+  width: 20rem;
+  background-color: var(--second-font-color);
+  width: 100%;
 }
