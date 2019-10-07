@@ -8,17 +8,13 @@ RSpec.describe "From items index page", type: :feature do
                          description: 'This mb is great!',
                          price: 45,
                          image_url: 'https://i.imgur.com/pLRfskZ.jpg',
-                         active: true,
-                         inventory: 23,
-                      )
+                         inventory: 23)
 
-    merchants.last.items.create(name: 'Kettlebell',
+    merchants[1].items.create(name: 'Kettlebell',
                             description: 'This kb is awesome!',
                             price: 33,
                             image_url: 'https://i.imgur.com/BVEkfc7.jpg',
-                            active: true,
-                            inventory: 10
-                          )
+                            inventory: 10)
 
     visit "/items"
 
@@ -26,7 +22,7 @@ RSpec.describe "From items index page", type: :feature do
     expect(page).to have_content("Description: This mb is great!")
     expect(page).to have_content("Price: $45")
     expect(page).to have_selector("img[src*='https://i.imgur.com/pLRfskZ.jpg']")
-    expect(page).to have_content("Active status: true")
+    expect(page).to have_content("Status: true")
     expect(page).to have_content("Inventory: 23")
     expect(page).to have_content("Merchant: Valeo")
 
@@ -34,7 +30,7 @@ RSpec.describe "From items index page", type: :feature do
     expect(page).to have_content("Description: This kb is awesome!")
     expect(page).to have_content("Price: $33")
     expect(page).to have_selector("img[src*='https://i.imgur.com/BVEkfc7.jpg']")
-    expect(page).to have_content("Active status: true")
+    expect(page).to have_content("Status: true")
     expect(page).to have_content("Inventory: 10")
     expect(page).to have_content("Merchant: Spri")
   end
