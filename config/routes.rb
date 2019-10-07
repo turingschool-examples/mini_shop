@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # get '/', to: 'welcome#index'
   resources :merchants do
     resources :items
   end
@@ -16,7 +15,4 @@ Rails.application.routes.draw do
   get    '/items/:id/edit', to: 'items#edit'
   patch  '/items/:id',      to: 'items#update'
   delete '/items/:id',      to: 'items#destroy'
-
-
-  get '/welcome', to: 'welcome#index'
 end
