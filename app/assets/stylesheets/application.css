@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+ input[type=text], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+
+ label{
+   font: 15px arial, sans-serif;
+ }
+
+ input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+ }
+
+ input[type=submit]:hover {
+   background-color: #4CAF00;
+ }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.side-by-side {
+  width: 100%;
+  border: 1px solid black;
+  display: inline;
+
+}
+
+a:link.links {
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:visited.links {
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover.links {
+  width: 100%;
+  background-color: red;
+}
+
+a:active.links {
+  width: 100%;
+  background-color: red;
+}
+
+div{
+  padding: 35px;
+}
