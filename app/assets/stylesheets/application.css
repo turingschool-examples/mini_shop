@@ -291,6 +291,6 @@ p {
   margin: 1rem;
   padding: .5px;
   width: 20rem;
-  background-color: var(--second-font-color);\
+  background-color: var(--second-font-color);
   width: 100%;
 }
