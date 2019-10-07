@@ -1,5 +1,8 @@
+
+<header>
 <%= link_to '<< Merchants List', "/merchants" %><br>
-<%= link_to '<< Items List', "/items" %><br><hr>
+<%= link_to '<< Items List', "/items" %>
+</header><hr>
 
 <form action="/merchants" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

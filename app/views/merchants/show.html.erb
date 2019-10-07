@@ -1,5 +1,8 @@
+
+<header>
 <%= link_to '<< Merchants List', "/merchants" %><br>
 <%= link_to '<< Items List', "/items" %><br><hr>
+</header>
 
 <h2>Merchant #<%= "#{@merchant.id}" %></h2><hr><br>
 <p>Name: <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></p>

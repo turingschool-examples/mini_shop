@@ -1,15 +1,8 @@
-<!-- As a visitor
-When I visit '/items'
-Then I see each Item in the system including the Item's:
-- name
-- description
-- price
-- image
-- active/inactive status
-- inventory
-- the name of the merchant that sells the item -->
+
+<header>
 <%= link_to '<< Merchants List', "/merchants" %><br>
-<%= link_to '<< Items List', "/items" %><br><hr>
+<%= link_to '<< Items List', "/items" %>
+</header><hr>
 
 <% if @merchant %>
 <h1><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h1>
