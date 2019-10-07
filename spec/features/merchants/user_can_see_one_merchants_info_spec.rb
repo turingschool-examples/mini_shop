@@ -47,4 +47,32 @@ RSpec.describe "merchants show page", type: :feature do
 
 
   end
+
+  it "has a link to take the user to that merchant's items page ( '/merchants/:id/items')" do
+    merchant_3 = Merchant.create( name: "Your More Store",
+                                  address: "890 Aardvark Dr.",
+                                  city: "Denver",
+                                  state: "CO",
+                                  zip: "80201")
+
+    batteries = merchant_3.items.create( name: "Batteries",
+                          description: "Bunch of loose batteries of undetermined efficacy",
+                          price: 4.50,
+                          image: 'batteries.jpeg',
+                          status: 'active',
+                          inventory: 10,
+                        )
+
+    blanket = merchant_3.items.create( name: "Blanket",
+                          description: "Soft and lightweight blanket",
+                          price: 4.50,
+                          image: '/assets/blanket.png',
+                          status: 'inactive',
+                          inventory: 4,
+                        )
+
+    visit "/merchants/#{merchant_3.id}"
+    click_link "See all items at Your More Store"
+    expect(current_path).to eq("/merchants/#{merchant_3.id}/items")
+  end
 end
