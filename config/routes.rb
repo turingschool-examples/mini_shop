@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/items', to:'items#index'
   get '/items/:id', to: 'items#show'
   get '/merchants/:merchant_id/items', to:'merchant_items#index'
+  get '/merchants/:merchant_id/items/new', to:'merchant_items#new'
+  post '/merchants/:merchant_id/items', to:'merchant_items#create'
 
   post '/merchants', to: 'merchants#create'
   patch '/merchants/:id', to: 'merchants#update'
