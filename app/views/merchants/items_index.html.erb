@@ -1,11 +1,16 @@
 <%= link_to 'Add Item', "/merchants/#{@merchant.id}/items/new" %>
-
-<% @items.each do |item| %>
-  <%= link_to "#{item.name}", "/items/#{item.id}" %>
-  <p><%= item.description %></p>
-  <p><%= item.price %></p>
-  <%= image_tag(item.image) %> 
-  <p><%= item.status %></p>
-  <p><%= item.inventory %></p>
-  <p><%= item.merchant_name %></p>
-<% end %>
+<section class="item-cards"></section>
+  <% @items.each do |item| %>
+    <section class="item-card">
+      <%= image_tag(item.image) %>
+      <section class="item-info">
+        <%= link_to "#{item.name}", "/items/#{item.id}" %>
+        <p class="item-price">$<%= item.price %></p>
+        <p><strong>About:</strong> <%= item.description %></p>
+        <p><strong>Status:</strong> <%= item.status %></p>
+        <p><strong>Inventory:</strong> <%= item.inventory %></p>
+        <p><strong>Merchant:</strong> <%= link_to "#{item.merchant_name}", "/merchants/#{item.merchant.id}" %></p>
+      </section>
+    </section>
+  <% end %>
+</section>
