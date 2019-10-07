@@ -25,6 +25,9 @@
  }
 
  body {
+   flex-grow: 250px;
+   align-self: flex-start;
+   margin-left: 2%;
  }
 
 
@@ -88,6 +91,5 @@
 
  img {
    width: 250px;
-   align-self: flex-end;
    flex-wrap: wrap;
  }
