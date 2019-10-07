@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
     if @active == nil
       @items = Item.all
     else
-      @items = Item.where("active_status = #{@active}")
+      @items = Item.where(active_status: @active)
     end
 
     if params[:sort] == 'alpha'
@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
   def create
     merchant = Merchant.find(params[:merchant_id])
-    merchant.items.create!(item_params)
+    merchant.items.create(item_params)
 
     redirect_to "/merchants/#{merchant.id}/items"
   end

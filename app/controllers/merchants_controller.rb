@@ -11,7 +11,7 @@ class MerchantsController < ApplicationController
     if @active == nil
       @items = @merchant.items
     else
-      @items = Item.where("merchant_id = #{@merchant.id} AND active_status = #{@active}")
+      @items = Item.where(merchant_id: @merchant.id, active_status: @active)
     end
 
     if params[:sort] == 'alpha'
