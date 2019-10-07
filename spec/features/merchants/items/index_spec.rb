@@ -47,7 +47,7 @@ describe 'Merchants Items Index Page' do
       expect(page).to have_content(new_bar.inventory)
     end
 
-    it 'I see a link to show only active items' do
+    xit 'I see a link to show only active items' do
       visit merchant_items_path(@chocolate_store)
       click_link 'Active Items'
       expect(current_path).to eq("/merchants/#{@chocolate_store.id}/items?active=true")
@@ -55,7 +55,7 @@ describe 'Merchants Items Index Page' do
       expect(page).to_not have_content(@chocolate_bar2.name)
     end
 
-    it 'I see a link to show only inactive items' do
+    xit 'I see a link to show only inactive items' do
       visit merchant_items_path(@chocolate_store)
       click_link 'Inactive Items'
       expect(current_path).to eq("/merchants/#{@chocolate_store.id}/items?active=false")
