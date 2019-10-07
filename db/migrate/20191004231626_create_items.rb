@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :description
       t.integer :price
       t.string :image
-      t.boolean :status
+      t.boolean :status, default: true
       t.integer :inventory
     end
   end
