@@ -8,6 +8,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="crumbs">
+      <ol>
+          <li><%= link_to "All Merchants", "/merchants", :class => "crumb"%></li>
+          <li><%= link_to "All Items", "/items", :class => "crumb"%></li>
+      </ol>
+  </nav>
+
   <body>
     <%= yield %>
   </body>
