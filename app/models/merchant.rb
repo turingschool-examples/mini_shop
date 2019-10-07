@@ -1,5 +1,5 @@
 class Merchant < ApplicationRecord
-  has_many :items
+  has_many :items, dependent: :delete_all
 
   validates_presence_of :name
   validates_presence_of :address
