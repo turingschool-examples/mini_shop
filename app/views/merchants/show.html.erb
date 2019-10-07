@@ -1,0 +1,16 @@
+<section class="item-cards">
+  <section class="item-card">
+    <section class="merchant-show-card">
+    <h2><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h2>
+    <h2><%= link_to "Items", "/merchants/#{@merchant.id}/items" %></h2>
+
+    <p><strong>Address:</strong> <%= @merchant.address %></p>
+    <p><strong>City:</strong> <%= @merchant.city %></p>
+    <p><strong>State:</strong> <%= @merchant.state %></p>
+    <p><strong>Zip:</strong> <%= @merchant.zip %></p>
+
+    <%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %>
+    <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete, class: :button %>
+    </section>
+  </section>
+</section>

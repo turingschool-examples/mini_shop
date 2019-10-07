@@ -1,0 +1,16 @@
+
+<section class="item-cards">
+  <section class="item-card">
+    <%= image_tag("#{@item.image}") %>
+    <h2><%= link_to "#{@item.name}", "/items/#{@item.id}" %></h2>
+
+    <p><strong>Description:</strong> <%= @item.description %></p>
+    <p><strong>Price:</strong> $<%= @item.price %></p>
+    <p><strong>Status:</strong> <%= @item.status %></p>
+    <p><strong>Inventory:</strong> <%= @item.inventory %></p>
+    <p><strong>Merchant:</strong> <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant.id}" %></p>
+
+    <%= link_to 'Edit', "/items/#{@item.id}/edit" %>
+    <%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>
+  </section>
+</section>
