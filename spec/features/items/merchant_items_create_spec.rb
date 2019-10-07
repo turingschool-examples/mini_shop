@@ -5,10 +5,11 @@ RSpec.describe "merchant item create page" do
     describe "when I visit a merchant items index page" do
       it "I can click a link that takes me to a form to create a new item" do
         wand_shop = Merchant.create(name: "Ollivanders", address: "125 Diagon Alley", city: "London", state: "UK", zip: 25126)
-        visit "/merchants/#{wand_shop.id}/items/new"
+        visit "/merchants/#{wand_shop.id}/items"
 
         click_link "Create New Item"
 
+        expect(page).to have_link(wand_shop.name)
         expect(current_path).to eq("/merchants/#{wand_shop.id}/items/new")
 
         fill_in :name, with: "Elder Wand"
