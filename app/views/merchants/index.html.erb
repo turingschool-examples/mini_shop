@@ -15,9 +15,9 @@
 
 <div class="display">
   <% @merchants.each do |merchant| %>
-    <h2><a href="/merchants/<%= merchant.id %>" class="button_2"><%= merchant.name %></a></h2>
+    <h2 class='name'><a href="/merchants/<%= merchant.id %>" class="button_2"><%= merchant.name %></a></h2>
   <% end %>
 
 
 <%= link_to "Create New Merchant", "/merchants/new", class: 'create'%>
-</div>
+<div class="display">

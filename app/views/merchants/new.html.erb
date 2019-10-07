@@ -15,21 +15,16 @@
 
 <div class="display">
   <%= form_tag "/merchants", method: :post, class: 'form' do %>
-    <%= label_tag :name %>
-    <%= text_field_tag :name %>
-    <br>
-    <%= label_tag :address %>
-    <%= text_field_tag :address %>
-    <br>
-    <%= label_tag :city %>
-    <%= text_field_tag :city %>
-    <br>
-    <%= label_tag :state %>
-    <%= text_field_tag :state %>
-    <br>
-    <%= label_tag :zip %>
-    <%= text_field_tag :zip %>
-    <br>
-    <%= submit_tag("submit", class: "button_2")%>
+    <p><%= label_tag :name %></p>
+    <p><%= text_field_tag :name %></p>
+    <p><%= label_tag :address %></p>
+    <p><%= text_field_tag :address %></p>
+    <p><%= label_tag :city %></p>
+    <p><%= text_field_tag :city %></p>
+    <p><%= label_tag :state %></p>
+    <p><%= text_field_tag :state %></p>
+    <p><%= label_tag :zip %></p>
+    <p><%= text_field_tag :zip %></p>
+    <p><%= submit_tag("submit", class: "button_2")%></p>
   <% end %>
 </div>
