@@ -1,0 +1,24 @@
+<section class="show_info">
+  <h1><%= @item.name %></h1>
+  <p>
+    <%= image_tag "#{@item.image}"%>
+    <br>
+    Price: $<%= @item.price%>
+    <hr>
+    <b>Item Description</b>
+    <br> <br>
+    <%= @item.description%>
+    <hr>
+    <%= @item.in_stock%>
+    <br>
+    Amount in stock: <%= @item.inventory%>
+    <br>
+    Sold by: <%= link_to "#{Merchant.find(@item.merchant_id).name}", "/merchants/#{@item.merchant_id}"%>
+  </p>
+</section>
+<br>
+<section class="page_links">
+  <%= link_to 'Edit item', "/items/#{@item.id}/edit"%>
+  | |
+  <%= link_to 'Delete item', "/items/#{@item.id}", method: :delete%>
+</section>
