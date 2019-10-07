@@ -23,7 +23,7 @@ class MerchantsController < ApplicationController
     merchant = Merchant.find(params[:id])
 
     if merchant.update(merchant_params)
-      redirect_to "/merchants/#{merchant.id}"
+      redirect_to "/merchants/#{params[:id]}"
     else
       redirect_to "/merchants/#{params[:id]}/edit"
     end

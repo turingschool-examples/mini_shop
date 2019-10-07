@@ -5,7 +5,7 @@ class Item < ApplicationRecord
                       :description,
                       :price,
                       :image_url,
-                      :active,
+                      :status,
                       :inventory,
                       :merchant_id
 
