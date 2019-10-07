@@ -1,9 +1,9 @@
 
 <h1><%= link_to "#{@item.name}", "/items/#{@item.id}" %></h1>
+<%= image_tag "#{@item.image}", size: "120x120" %>
 <section>
   <p>Description: <%= @item.description %></p>
   <p>Price: <%= @item.price %></p>
-  <p>Image: <%= @item.image %></p>
   <p>Active Status: <%= @item.active %></p>
   <p>Inventory: <%= @item.inventory %></p>
   <p>Merchant: <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant.id}" %></p>

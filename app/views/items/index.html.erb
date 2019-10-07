@@ -3,10 +3,10 @@
 <% @items.each do |item| %>
   <p>
     <%= link_to "#{item.name}", "/items/#{item.id}" %>
+    <%= image_tag "#{item.image}", size: "120x120" %>
     <ul>
       <li><%= item.description %></li>
       <li><%= item.price %></li>
-      <li><%= item.image %></li>
       <li><%= item.active %></li>
       <li><%= item.inventory %></li>
       <li><%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}" %></li>
