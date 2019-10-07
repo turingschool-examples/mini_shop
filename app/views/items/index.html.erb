@@ -1,0 +1,16 @@
+<h1>All Items</h1>
+
+<% @items.each do |item| %>
+  <h2><%= item.name %></h2>
+  <% unless current_page?('/merchants/:merchant_id/items') %>
+  <p> <%= item.description%> </p>
+  <% end %>
+  <p>Price: $<%= item.price %></p>
+  <img src= <%= item.image %>>
+  <% if item.active? %>
+    <p>Active</p>
+    <% else %>
+    <p>Inactive</p>
+    <% end %>
+  <p>Inventory: <%= item.inventory %></p>
+<% end %>
