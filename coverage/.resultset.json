@@ -278,6 +278,23 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/spec/features/items/update_spec.rb": [
@@ -655,6 +672,7 @@
         null,
         1,
         1,
+
         null,
         null,
         1,
@@ -672,5 +690,6 @@
       ]
     },
     "timestamp": 1570416117
+
   }
 }
