@@ -1,0 +1,13 @@
+<h1><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %></h1>
+
+<h2>Items</h2>
+<% @merchant.items.each do |item| %>
+  <%= image_tag item.image %>
+  <h3><%= link_to item.name, "/items/#{item.id}" %></h3>
+  <p><%= item.description %></p>
+  <p>Price: <%= number_to_currency(item.price) %></p>
+  <p>Status: <%= item.status %></p>
+  <p>Inventory: <%= item.inventory %></p>
+<% end %>
+
+<%= link_to "Add Item", "/merchants/#{@merchant.id}/items/new" %>

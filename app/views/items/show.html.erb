@@ -1,0 +1,15 @@
+<h1><%= @item.name %> </h1>
+<article>
+  <section>
+    <p><%= @item.description %></p>
+    <%= image_tag(@item.image) %>
+    <p>Price: <%= number_to_currency(@item.price)  %></p>
+    <p>Inventory: <%= @item.inventory %></p>
+    <p>Status: <%= @item.status %></p>
+    <p>Sold by: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %> </p>
+  </section>
+  <section>
+    <%= link_to "Update Item", "/items/#{@item.id}/edit" %>
+    <%= link_to "Delete Item", "/items/#{@item.id}", method: :delete, id: :delete %>
+  </section>
+</article>
