@@ -1,15 +1,23 @@
+<nav class="crumbs">
+    <ol>
+        <li><%= link_to "Merchants", "/merchants", :class => "crumb"%></li>
+    </ol>
+</nav>
+
 <h1>All Items</h1>
 
 <ul>
   <% @items.each do |item| %>
     <ul>
       <li><%= link_to item.name, "/items/#{item.id}"%></li>
+      <li><%= image_tag item.image %></li>
       <li><%= item.description %></li>
       <li>Price: <%= item.price %></li>
-      <li><%= image_tag item.image %></li>
       <li><%= item.status %></li>
       <li><%= item.inventory %></li>
       <li><%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></li>
+      <br>
+      <hr>
     </ul>
   <% end %>
 </ul>
