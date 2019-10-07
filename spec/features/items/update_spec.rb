@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'update item' do
   describe 'as a visitor' do
-    describe 'when visiting item show page' do
+    describe 'when visiting an item show page' do
       it 'can update the item' do
         merchant = Merchant.create!(name:    'Oomba',
                                     address: '9840 Irvine Center Drive',

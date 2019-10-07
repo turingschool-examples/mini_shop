@@ -20,6 +20,7 @@ RSpec.describe 'Delete merchant' do
         click_link 'Delete merchant'
 
         expect(current_path).to eq('/merchants')
+
         expect(page).to_not have_content('Beenz')
         expect(page).to have_content('Kozmo')
       end
