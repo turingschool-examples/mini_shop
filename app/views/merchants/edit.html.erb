@@ -5,8 +5,8 @@
   <input type='text' name='merchant[name]' value="<%= @merchant.name %>"/><br/>
   <input type='text' name='merchant[address]' value="<%= @merchant.address %>"/><br/>
   <input type='text' name='merchant[city]' value="<%= @merchant.city %>"/><br/>
-  <input type='text' name='merchant[state]' value="<%= @merchant.state %>"/><br/>
-  <input type='text' name='merchant[zip]' value="<%= @merchant.zip %>"/><br/>
+  <input type='text' name='merchant[state]' value="<%= @merchant.state %>" pattern="[A-Z]{2}"/><br/>
+  <input type='text' name='merchant[zip]' value="<%= @merchant.zip %>" minlength="5" pattern="[0-9]{5}" /><br/>
 
 </form>
 <button type="submit" form="form1" value="Submit">Submit</button>

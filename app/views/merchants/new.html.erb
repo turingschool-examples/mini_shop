@@ -20,11 +20,11 @@
   </p>
   <p>
     <%= f.label :state %><br />
-    <%= f.text_field(:state, {:class => 'form-control'}) %>
+    <%= f.text_field(:state, {:class => 'form-control', pattern: "[A-Z]{2}"}) %>
   </p>
   <p>
     <%= f.label :zip %><br />
-    <%= f.text_field(:zip, {:class => 'form-control'}) %>
+    <%= f.text_field(:zip, {:class => 'form-control', pattern: "[0-9]{5}"}) %>
   </p>
   <p>
 <%= f.submit({:class => 'btn btn-primary'}) %>
