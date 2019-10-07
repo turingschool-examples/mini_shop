@@ -1,15 +1,27 @@
-<%= link_to 'Item Index', '/items' %>
-<%= link_to "Merchant Index", '/merchants' %>
+<div class="category_image" id="merchants_index_image">
+  <div class="navbar">
+    <span class="logo"><a href="/">MiniShop</a></span>
 
-<h1>Items</h1>
+    <div class="nav_links">
+      <%= link_to 'Item Index', '/items' %>
+      <%= link_to "Merchant Index", '/merchants' %>
+    </div>
+  </div>
 
-<% @items.each do |item| %>
- <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
- <p><%= item.description %></p>
- <p><%= item.price %></p>
-  <%= image_tag item.image, style: 'height:33%;width:33%;' %>
- <p><%= item.status %></p>
- <p><%= item.inventory %></p>
- <%= link_to item.merchant_name, "/merchants/#{item.merchant.id}" %>
- <hr>
-<% end %>
+  <div class="category">
+    <h1>Items</h1>
+  </div>
+</div>
+
+<div class="display">
+  <% @items.each do |item| %>
+   <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
+   <p><%= item.description %></p>
+   <p><%= item.price %></p>
+    <%= image_tag item.image, style: 'height:33%;width:33%;' %>
+   <p><%= item.status %></p>
+   <p><%= item.inventory %></p>
+   <%= link_to item.merchant_name, "/merchants/#{item.merchant.id}" %>
+   <hr class="item_diver">
+  <% end %>
+</div>
