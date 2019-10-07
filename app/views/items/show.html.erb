@@ -6,3 +6,5 @@
 <p> Status: <%= @item.status %></p>
 <p> In stock: <%= @item.inventory %></p>
 <p> Seller: <%= @item.merchant.name %></p>
+
+<%= link_to 'Update item', "/items/#{@item.id}/edit" %>
