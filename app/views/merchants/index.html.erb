@@ -1,0 +1,12 @@
+<h1>All Merchants</h1>
+<br /> 
+<ul id="merchants">
+  <% @merchants.each do |merchant| %>
+
+    <p>  <%= link_to merchant.name, merchant_path(merchant) %> </p>
+    <br />
+  <% end %>
+</ul>
+
+<br />
+<a href="/merchants/new">New Merchant</a>

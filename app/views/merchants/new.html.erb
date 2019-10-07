@@ -1,0 +1,32 @@
+<h1>Create a New Merchant</h1>
+
+<%= form_for(@merchant) do |f| %>
+  <ul>
+  <% @merchant.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field(:name, {:class => 'form-control'})  %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_area(:address, {:class => 'form-control'})  %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field(:city, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field(:state, {:class => 'form-control', pattern: "[A-Z]{2}"}) %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field(:zip, {:class => 'form-control', pattern: "[0-9]{5}"}) %>
+  </p>
+  <p>
+<%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

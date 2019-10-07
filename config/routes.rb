@@ -1,3 +1,23 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'welcome#index'
+  get '/', to: 'welcome#index'
+  get '/merchants/:id/edit', to: 'merchants#edit'
+  patch '/merchants/:id', to: 'merchants#update'
+  get '/merchants/new', to: 'merchants#new', as: 'new_merchant'
+  post '/merchants/:merchant_id/items', to: 'items#create'
+  delete '/merchants/:id', to: 'merchants#destroy'
+  get '/merchants', to: 'merchants#index'
+  get '/merchants/:id', to: 'merchants#show', as: 'merchant'
+  get 'items/:id', to: 'items#show'
+  patch '/items/:id', to: 'items#update'
+  get '/items/:id/edit', to: 'items#edit'
+  get '/items', to: 'items#index'
+  delete '/items/:id', to: 'items#destroy'
+  get '/merchants/:merchant_id/items', to: 'merchant_items#index'
+  get '/merchants/:merchant_id/items/new', to: 'items#new'
+  post '/merchants', to: 'merchants#create'
+  get 'merchants/:merchant_id/items/:id', to: 'items#show'
+  get 'items/:item_id/activate', to: 'items#toggle'
+  get 'items/:item_id/deactivate', to: 'items#toggle'
 end

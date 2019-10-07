@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-05.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  color: rgb(8, 156, 138)
+}
+
+
+p {
+  color: rgb(31, 95, 148)
+}
+
+nav {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0qAL2VR1hbGsS-XGYVR7OzU9qsxr87sMONK1AsNBtLuuq64xQ");
+  background-size: cover;
+}
+
+a {
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 40px;
+}

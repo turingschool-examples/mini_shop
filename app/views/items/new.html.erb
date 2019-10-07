@@ -1,0 +1,15 @@
+<h1><%= @merchant.name %></h1>
+<h2>Create a New Item</h2>
+
+<form action="/merchants/<%= params[:merchant_id] %>/items", method="post" id="form1">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="POST" />
+  <p>Name:</p><input type='text' name='item[name]' class='form-control'><br/>
+  <p>Description:</p><input type='text' name='item[description]' class='form-control'><br/>
+  <p>Price:</p><input type='number' name='item[price]' class='form-control' max=999999999 min=0  step=0.01 ><br/>
+  <p>Image URL:</p><input type='url' name='item[image_url]' class='form-control' ><br/>
+  <p>Status:</p><input type='text' name='item[status]' value='active' class='form-control'><br/>
+  <p>Inventory:</p><input type='number' name='item[inventory]' class='form-control' max=999999999 min=0 ><br/>
+
+</form>
+<button type="submit" form="form1" value="Submit" class='btn btn-primary'>Submit</button>

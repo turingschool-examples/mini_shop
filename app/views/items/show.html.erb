@@ -1,0 +1,25 @@
+<h1><%= @item.name %></h1>
+<p>Description: <%= @item.description %></p>
+<p >Price: $<%= '%.2f' % @item.price %></p>
+<p>Image: <%= image_tag(@item.image_url, {:style =>'width:250px;height:250px'}) %></p>
+<% if @item.status == true %>
+  <p>Status: active</p>
+<% elsif @item.status == false %>
+  <p>Status: inactive</p>
+<% end %>
+<p>Inventory: <%= @item.inventory %></p>
+<p>Merchant: <%= link_to "#{@item.merchant.name}", "/merchants/#{@item.merchant_id}" %></p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<% if @item.status == true %>
+  <%= link_to "Deactivate", "/items/#{@item.id}/deactivate", data: {toggle: 'status' } %>
+<% else %>
+  <%= link_to "Activate", "/items/#{@item.id}/activate", data: {toggle: 'status' } %>
+<% end %>
+<br />
+<%= link_to "Update Item", "/items/#{@item.id}/edit" %>
+<br />
+<%= link_to "Delete", "/items/#{@item.id}", method: :delete %>
