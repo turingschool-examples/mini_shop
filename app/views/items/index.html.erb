@@ -9,6 +9,7 @@
       <li><%= image_tag item.image %></li>
       <li><%= item.status %></li>
       <li><%= item.inventory %></li>
+      <li><%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></li>
     </ul>
   <% end %>
 </ul>
