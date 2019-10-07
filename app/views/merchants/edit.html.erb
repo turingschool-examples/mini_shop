@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <div class="pageheaders">
+      <h1>Edit Merchant</h1>
+    </div>
+
+    <div class="form">
+      <%= form_tag("/merchants/#{@merchant.id}", method: :patch) do %>
+        <p>Enter merchant name:</p>
+        <%= text_field_tag :name, @merchant.name %>
+        <p>Enter address:</p>
+        <%= text_field_tag :address, @merchant.address %>
+        <p>Enter city:</p>
+        <%= text_field_tag :city, @merchant.city %>
+        <p>Enter state:</p>
+        <%= text_field_tag :state, @merchant.state %>
+        <p>Enter zip code:</p>
+        <%= text_field_tag :zip, @merchant.zip %><br><br>
+        <%= submit_tag "Update Merchant" %>
+      <% end %>
+    <div>
+  </body>
+</html>
