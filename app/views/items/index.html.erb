@@ -7,5 +7,5 @@
   <img src="<%= item.image %>"<br>
   <p> Status: <%= item.status %></p>
   <p> In stock: <%= item.inventory %></p>
-  <p> Seller: <%= item.merchant.name %></p>
+  <p> Seller: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
 <% end %>
