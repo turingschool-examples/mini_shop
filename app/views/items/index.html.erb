@@ -1,0 +1,13 @@
+<h1>All Items</h1>
+
+<% @items.each do |item| %>
+    <div style="display: inline-block">
+      <img src="<%= item.image %>" style="width:142px;height:142px;">
+      <h3><%= link_to item.name, "/items/#{item.id}" %></h3>
+      <p>Description: <%= item.description %></p>
+      <p>Price: $<%= item.price %></p>
+      <p>Status: <%= item.status %></p>
+      <p>Stock: <%= item.inventory %></p>
+      <p>Seller: <%= link_to item.merchant.name, "/merchants/#{item.merchant.id}" %></p>
+    </div>
+<% end %>

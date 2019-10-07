@@ -1,0 +1,13 @@
+<h1><%= link_to @merchant.name, "/merchants/#{@merchant.id}" %> Items</h1>
+<p><%= link_to 'New Item', "/merchants/#{@merchant.id}/items/new", :class=> "links" %></p>
+
+<% @items.each do |item| %>
+  <div style="display: inline-block">
+    <img src="<%= item.image %>" style="width:142px;height:142px;">
+    <h3><%= link_to item.name, "/items/#{item.id}" %></h3>
+    <p>Description: <%= item.description %></p>
+    <p>Price: $<%= item.price %></p>
+    <p>Status: <%= item.status %></p>
+    <p>Stock: <%= item.inventory %></p>
+  </div>
+<% end %>
