@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <div class="pageheaders">
+      <h1 style="display: inline">Product: </h1>
+      <a style="color: #000000; text-decoration: underline;" href= <%= "/items/#{@item.id}"%>> <%= @item.name %></a>
+    </div>
+    <br>
+    <div class="links"><%= link_to "Update Item", "/items/#{@item.id}/edit" %></div><br>
+
+    <div class="iteminfo">
+
+      <table style="width:50%">
+        <tr>
+          <th>Description:</th>
+          <td><%= @item.description %></td>
+        </tr>
+        <tr>
+          <th>Price:</th>
+          <td><%= number_to_currency(@item.price) %></td>
+        </tr>
+        <tr>
+          <th>Status:</th>
+          <td><%= @item.status %></td>
+        </tr>
+        <tr>
+          <th>Inventory:</th>
+          <td><%= @item.inventory %></td>
+        </tr>
+        <tr>
+          <th>Merchant:</th>
+          <td><a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@item.merchant.id}"%>> <%= @item.merchant.name %> </a></td>
+        </tr>
+      </table>
+
+      <img src = <%= @item.image %> ></img>
+    </div>
+
+    <br><br><br><div class="links"><%= link_to "Delete Item", "/items/#{@item.id}", method: :delete %></div><br>
+  </body>
+</html>

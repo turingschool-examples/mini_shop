@@ -1,7 +1,35 @@
-<h1>Merchant Show Page</h1>
+<html>
+  <body>
+    <div class="pageheaders">
+      <h1 style="display: inline" > Name: </h1>
+        <a style="color: #000000; text-decoration: underline;" href= <%= "/merchants/#{@merchant.id}"%>> <%= @merchant.name %> </a>
+    </div>
 
-<%= "Name: #{@merchant.name}" %> 
-<%= "Address: #{@merchant.address}" %>
-<%= "City: #{@merchant.city}" %>
-<%= "State: #{@merchant.state}" %>
-<%= "Zip Code: #{@merchant.zip}" %>
+    <br><div class="links"><%= link_to "View Items", "/merchants/#{@merchant.id}/items" %><br><br></div>
+
+    <div class="iteminfo">
+
+      <table style="width:50%">
+        <tr>
+          <th>Address:</th>
+          <td><%= @merchant.address %></td>
+        </tr>
+        <tr>
+          <th>City:</th>
+          <td><%= @merchant.city %></td>
+        </tr>
+        <tr>
+          <th>State:</th>
+          <td><%= @merchant.state %></td>
+        </tr>
+        <tr>
+          <th>Zip Code:</th>
+          <td><%= @merchant.zip %></td>
+        </tr>
+      </table>
+    </div>
+    
+      <br><div class="links"><%= link_to "Update Merchant", "/merchants/#{@merchant.id}/edit" %><br><br><br>
+      <%= link_to "Delete Merchant", "/merchants/#{@merchant.id}", method: :delete %></div>
+  </body>
+</html>

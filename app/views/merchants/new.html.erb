@@ -1,0 +1,37 @@
+<!-- <form action="/merchants" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new merchant name:</p>
+  <input type='text' name='merchant[name]'/><br/>
+  <p>Enter address:</p>
+  <textarea name='merchant[address]'></textarea><br/>
+  <p>Enter city:</p>
+  <textarea name='merchant[city]'></textarea><br/>
+  <p>Enter state:</p>
+  <textarea name='merchant[state]'></textarea><br/>
+  <p>Enter zip code:</p>
+  <textarea name='merchant[zip]'></textarea><br/>
+  <input type='submit'/>
+</form> -->
+<html>
+  <body>
+    <div class="pageheaders">
+      <h1>New Merchant</h1>
+    </div>
+
+    <div class="form">
+      <%= form_tag("/merchants", method: :post) do %>
+        <p>Enter a new merchant name:</p>
+        <%= text_field_tag :name %>
+        <p>Enter address:</p>
+        <%= text_field_tag :address %>
+        <p>Enter city:</p>
+        <%= text_field_tag :city %>
+        <p>Enter state:</p>
+        <%= text_field_tag :state %>
+        <p>Enter zip code:</p>
+        <%= text_field_tag :zip %><br><br>
+        <%= submit_tag "Create Merchant" %>
+      <% end %>
+    </div>
+  </body>
+</html>
