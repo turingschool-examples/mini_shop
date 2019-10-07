@@ -1,0 +1,30 @@
+
+<header>
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %>
+</header><hr>
+
+<% if @merchant %>
+<h1><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h1>
+<p><%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %></p><br>
+<% else %>
+<h1>All Items</h1>
+<% end %>
+<ol>
+<% @items.each do |item| %>
+<li><h3><%= link_to "#{item.name}", "/items/#{item.id}" %></h3></li>
+<ul>
+  <li>Description: <%= item.description unless @merchant %></li>
+  <li>Price: $<%= item.price %></li>
+  <li>Status: <% if item.status == true %>
+              <%= "Available" %>
+              <% else %>
+              <%= "Unavailable" %>
+              <% end %></li>
+  <li>Quantity: <%= item.inventory %></li>
+  <li>Selling Merchant: <%= link_to "#{item.merchant.name}", "/merchants/#{item.merchant.id}" %></li>
+</ul><br>
+
+<img src="<%= item.image %>" alt="<%= item.name %>" height="130" width="130">
+<% end %>
+</ol><br><hr>

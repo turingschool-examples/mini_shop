@@ -1,0 +1,16 @@
+
+<header>
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %>
+</header><hr>
+
+<h1>All Merchants</h1>
+
+<% @merchants.each do |merchant| %>
+  <h2><ul>
+    <li><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></li>
+  </ul></h2>
+<% end %>
+<br>
+<br>
+<p><%= link_to "Create a New Merchant", '/merchants/new' %></p>
