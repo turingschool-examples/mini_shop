@@ -1,0 +1,9 @@
+<h2><%= @item.name %></h2>
+<p><%= @item.status %></p>
+<p><%= @item.description %></p>
+<p><%= @item.price %></p>
+<%= image_tag(@item.image) %>
+<p><%= @item.inventory %></p>
+<%= link_to "#{@item.merchant_name}", "/merchants/#{@item.merchant.id}" %>
+<%= link_to 'Edit Item', "/items/#{@item.id}/edit" %>
+<%= button_to 'Delete', "/items/#{@item.id}", method: :delete %>

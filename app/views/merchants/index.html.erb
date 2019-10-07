@@ -1,0 +1,7 @@
+<h1>All Merchants</h1>
+<a href="/merchants/new">Add new Merchant</a>
+<section class="merchants-index">
+  <% @merchants.each do |merchant| %>
+    <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %>
+  <% end %>
+</section>
