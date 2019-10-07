@@ -1,24 +1,24 @@
 <section class="item-cards">
-<section class="item-card">
-<h2 class="center-headings">Edit Item</h2>
+  <section class="item-card">
+    <h2 class="center-headings">Edit Item</h2>
 
-<%= form_tag "/items/#{@item.id}", method: :patch, class: "form-item" do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %>
+    <%= form_tag "/items/#{@item.id}", method: :patch, class: "form-item" do %>
+      <%= label_tag :name %>
+      <%= text_field_tag :name %>
 
-  <%= label_tag :description %>
-  <%= text_field_tag :description %>
+      <%= label_tag :description %>
+      <%= text_field_tag :description %>
 
-  <%= label_tag :image_url %>
-  <%= text_field_tag :image_url %>
+      <%= label_tag :image_url %>
+      <%= text_field_tag :image_url %>
 
-  <%= label_tag :price %>
-  <%= text_field_tag :price %>
+      <%= label_tag :price %>
+      <%= text_field_tag :price %>
 
-  <%= label_tag :inventory %>
-  <%= text_field_tag :inventory %>
+      <%= label_tag :inventory %>
+      <%= text_field_tag :inventory %>
 
-  <%= submit_tag 'Submit', class: :button %>
-<% end %>
-</section>
+      <%= submit_tag 'Submit', class: :button %>
+    <% end %>
+  </section>
 </section>

@@ -1,8 +1,10 @@
 <h1>All Merchants</h1>
 
-<section class="merchant-items">
+<section class="item-cards">
   <% @merchants.each do |merchant| %>
-    <h3><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></h3>
+    <section class="item-card-single">
+    <h2><%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %></h2>
+    </section>
   <% end %>
   <%= link_to 'Create New Merchant', '/merchants/new' %>
 </section>
