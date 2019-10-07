@@ -1,0 +1,35 @@
+<h1 class="mt-4">Create a New Merchant</h1>
+<br />
+
+<%= form_tag '/merchants' do %>
+
+  <p>
+    <%= label_tag :name %>
+    <%= text_field_tag('merchant[name]', nil, minlength: 5, required: true, class: 'form-control') %>
+  </p>
+
+  <p>
+    <%= label_tag :address %>
+    <%= text_field_tag 'merchant[address]', nil, minlength: 5, required: true, class: 'form-control' %>
+  </p>
+
+  <p>
+    <%= label_tag :city %>
+    <%= text_field_tag 'merchant[city]', nil, minlength: 1, required: true, class: 'form-control' %>
+  </p>
+
+  <p>
+    <%= label_tag :state %>
+    <%= text_field_tag 'merchant[state]', nil, minlength: 2, maxlength: 2, required: true, class: 'form-control' %>
+  </p>
+
+  <p>
+    <%= label_tag :zip_code %>
+    <%= text_field_tag 'merchant[zip]', nil, minlength: 5, maxlength: 5, required: true, class: 'form-control' %>
+  </p>
+  <br />
+  <p>
+    <%= submit_tag('Create Merchant', class: 'btn btn-primary') %>
+  </p>
+
+<% end %>

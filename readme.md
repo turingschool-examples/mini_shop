@@ -82,7 +82,7 @@ BE Mod 2 Week 1 Solo Project
 ## User Stories
 
 ```
-[ ] done
+[x] done
 
 User Story 1, Deploy your application to Heroku
 
@@ -110,7 +110,7 @@ the application must be hosted on Heroku.
 Merchants are organizations/companies who sell items on our site (as opposed to individual people/users)
 
 ```
-[ ] done
+[x] done
 
 User Story 2, Merchant Index
 
@@ -120,7 +120,7 @@ Then I see the name of each merchant in the system
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 3, Merchant Show
 
@@ -135,7 +135,7 @@ Then I see the merchant with that id including the merchant's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 4, Merchant Creation
 
@@ -157,7 +157,7 @@ and I am redirected to the Merchant Index page where I see the new Merchant list
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 5, Merchant Update
 
@@ -179,7 +179,7 @@ and I am redirected to the Merchant's Show page where I see the merchant's updat
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 6, Merchant Delete
 
@@ -198,7 +198,7 @@ and I am redirected to the merchant index page where I no longer see this mercha
 Items are sold on the site. They belong to a merchant.
 
 ```
-[ ] done
+[x] done
 
 User Story 7, Item Index
 
@@ -215,7 +215,7 @@ Then I see each Item in the system including the Item's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 8, Merchant Items Index
 
@@ -230,7 +230,7 @@ Then I see each Item that belongs to the Merchant with that merchant_id includin
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 9, Item Show
 
@@ -247,7 +247,7 @@ Then I see the item with that id including the item's:
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 10, Merchant Item Creation
 
@@ -269,7 +269,7 @@ and I am redirected to the Merchant Items Index page where I see the new item
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 11, Item Update
 
@@ -290,7 +290,7 @@ and I am redirected to the Item Show page where I see the Item's updated informa
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 12, Item Delete
 
@@ -309,7 +309,7 @@ and I am redirected to the item index page where I no longer see this item
 Users should be able to use the site easily. This means making sure there are links/buttons to reach all parts of the site and the styling/layout is sensible.
 
 ```
-[ ] done
+[x] done
 
 User Story 13, Merchant Links
 
@@ -319,7 +319,7 @@ Then that link takes me to that Merchant's show page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 14, Item Links
 
@@ -329,7 +329,7 @@ Then that link takes me to that Item's show page
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 15, Item Index Link
 
@@ -339,7 +339,7 @@ Then I see a link at the top of the page that takes me to the Item Index
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 16, Merchant Index Link
 
@@ -349,7 +349,7 @@ Then I see a link at the top of the page that takes me to the Merchant Index
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 17, Merchant Item Index Link
 
@@ -359,7 +359,7 @@ Then I see a link to take me to that merchant's items page ('/merchants/:id/item
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 18, Styling
 
@@ -373,7 +373,7 @@ Then I should see a reasonably well styled page
 ## Extensions
 
 ```
-[ ] done
+[x] done
 
 User Story 19, Item Filter by Active Status
 
@@ -387,7 +387,7 @@ And I see only the Items sold by the merchant that are active/inactive.
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 20, Change Item's Active Status
 
@@ -400,4 +400,3 @@ When I click the link
 Then a 'PATCH' request is sent to '/items/:id/activate' or 'items/:id/deactivate' (depending on the link)
 and I am redirected to the Item Show page where I see the active status has been toggled
 ```
-

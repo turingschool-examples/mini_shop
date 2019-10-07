@@ -1,0 +1,130 @@
+require 'rails_helper'
+
+RSpec.describe "merchant items index page", type: :feature do
+
+  before :each do
+    @fuschia = Merchant.create(
+      name: 'Back to the Fuschia',
+      address: '943 Burberry Drive',
+      city: 'Kirksville',
+      state: 'NC',
+      zip: 30846
+    )
+    @florist = Merchant.create(
+      name: 'Florist Gump',
+      address: '1523 N Main Street',
+      city: 'Plaintree',
+      state: 'MN',
+      zip: 49155
+    )
+
+    @plumeria = Item.create(
+      name: 'Plumeria Plant',
+      description: 'The PlumeriaTree, also known as the "Scent of Hawaii", is like no other plant. It has electric hues of yellow, pink, and white blossoms that bloom from April until November. It also has a slender, geometric shape, and soft foliage that will branch and produce up to 60 flowers and over 100 blossoms gradually each year.',
+      price: 93.20,
+      image: 'https://images.pexels.com/photos/63609/plumeria-flower-frangipani-plant-63609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: true,
+      inventory: 14,
+      merchant_id: @fuschia.id
+    )
+    @dahlia = Item.create(
+      name: 'Contraste Dahlia Bulbs',
+      description: 'A timeless favorite, introduced almost 60 years ago and still going strong. The big blooms measure up to 8 inches across and have striking two-tone petals that are deep burgundy and purple with brilliant white tips.',
+      price: 15.40,
+      image: 'https://images.pexels.com/photos/599679/pexels-photo-599679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: false,
+      inventory: 32,
+      merchant_id: @fuschia.id
+    )
+    @hibiscus = Item.create(
+      name: 'Pink Tropical Hibiscus Tree',
+      description: 'Adding a tropical feel to your garden or landscape has never been easier. The pink tropical hibiscus tree is a low-maintenance dwarf tree, reaching only 6-8 feet in height. Its breathtaking blooms occur year-round',
+      price: 108.65,
+      image: 'https://images.pexels.com/photos/244796/pexels-photo-244796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: true,
+      inventory: 6,
+      merchant_id: @florist.id
+    )
+  end
+
+  it "can see name price image status inventory" do
+    visit "/merchants/#{@fuschia.id}/items"
+
+    expect(page).to have_content(@plumeria.name)
+    expect(page).to have_content(@plumeria.price)
+    expect(page).to have_css("img[src='#{@plumeria.image}']")
+    expect(page).to have_content('Active')
+    expect(page).to have_content(@plumeria.inventory)
+
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to have_css("#item-#{@dahlia.id}")
+    expect(page).to_not have_css("#item-#{@hibiscus.id}")
+  end
+
+  it "can click on merchant name to redirect to merchant show page" do
+    visit "/merchants/#{@florist.id}/items"
+    expect(page).to have_link(@hibiscus.merchant.name)
+
+    click_link @hibiscus.merchant.name
+    expect(current_path).to eq("/merchants/#{@hibiscus.merchant.id}")
+  end
+
+  it "can click on item name to redirect to item show page" do
+    visit "/merchants/#{@fuschia.id}/items"
+    expect(page).to have_link(@plumeria.name)
+    expect(page).to have_link(@dahlia.name)
+
+    click_link @plumeria.name
+    expect(current_path).to eq("/items/#{@plumeria.id}")
+
+    visit "/merchants/#{@fuschia.id}/items"
+    click_link @dahlia.name
+    expect(current_path).to eq("/items/#{@dahlia.id}")
+  end
+
+  it "can filter items by active status" do
+    visit "/merchants/#{@fuschia.id}/items"
+
+    click_link('All Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to have_css("#item-#{@dahlia.id}")
+
+    click_link('Active Items')
+    expect(page).to have_css("#item-#{@plumeria.id}")
+    expect(page).to_not have_css("#item-#{@dahlia.id}")
+
+    click_link('Inactive Items')
+    expect(page).to have_css("#item-#{@dahlia.id}")
+    expect(page).to_not have_css("#item-#{@plumeria.id}")
+  end
+
+  it "can sort items alphabetically and by price" do
+    @rose = Item.create(
+      name: 'Clementine Rose Bush',
+      description: 'This rose bush grows long, pointed buds that open to classically shaped, four-inch blooms that have an artistic feel to their color - a rich apricot-blush, over-layed with copper tones toward the edge of the petals. The striking blooms are plentifully produced against bright-green, glossy leaves.',
+      price: 45.63,
+      image: 'https://images.pexels.com/photos/53007/rose-rose-family-rosaceae-composites-53007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      active_status: false,
+      inventory: 8,
+      merchant_id: @fuschia.id
+    )
+
+    visit "/merchants/#{@fuschia.id}/items"
+
+    click_link('Item Name (alphabetical)')
+    expect(page.find_all('section.card')[0]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[1]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (low to high)')
+    expect(page.find_all('section.card')[0]).to have_content('Contraste Dahlia Bulbs')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Plumeria Plant')
+
+    click_link('Price (high to low)')
+    expect(page.find_all('section.card')[0]).to have_content('Plumeria Plant')
+    expect(page.find_all('section.card')[1]).to have_content('Clementine Rose Bush')
+    expect(page.find_all('section.card')[2]).to have_content('Contraste Dahlia Bulbs')
+  end
+
+end

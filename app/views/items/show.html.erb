@@ -1,0 +1,44 @@
+<h1 class="mt-4"><%= @item.name %></h1>
+<br />
+
+<section class="card card-body bg-light item-container">
+
+  <article class="text-container">
+    <h5>Description</h5>
+    <p><%= @item.description %></p><br />
+
+    <h5>Price</h5>
+    <p><%= number_to_currency(@item.price) %></p><br />
+
+    <h5>Product Status</h5>
+    <% if @item.active_status %>
+      <p class="active">Active</p><br />
+    <% else %>
+      <p class="inactive">Inactive</p><br />
+    <% end %>
+
+    <h5>Quantity in Stock</h5>
+    <p><%= @item.inventory %></p><br />
+
+    <h5>Merchant</h5>
+    <p><%= link_to @item.merchant.name, "/merchants/#{@item.merchant.id}" %></p>
+  </article>
+
+  <article class="image-container">
+    <img src="<%= @item.image %>" alt="<%= @item.name %>" />
+  </article>
+</section>
+
+<br />
+
+<% if @item.active_status %>
+  <p class="button-row"><%= link_to 'Deactivate Item', "/items/#{@item.id}/deactivate", method: :patch, class: 'btn btn-warning' %></p>
+<% else %>
+  <p class="button-row"><%= link_to 'Activate Item', "/items/#{@item.id}/activate", method: :patch, class: 'btn btn-success' %></p>
+<% end %>
+
+<p class="button-row"><%= link_to 'Update Item', "/items/#{@item.id}/edit", class: 'btn btn-primary' %></p>
+<p class="button-row"><%= link_to 'Delete Item', "/items/#{@item.id}", method: :delete, class: 'btn btn-danger' %></p>
+<p class="button-row"><%= link_to 'Return to All Items', '/items', class: 'btn btn-secondary' %></p>
+<br />
+<br />
