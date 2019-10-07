@@ -1,0 +1,16 @@
+
+<header>
+<%= link_to '<< Merchants List', "/merchants" %><br>
+<%= link_to '<< Items List', "/items" %>
+</header><hr>
+
+<form action="/merchants" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h2>Enter a New Merchant:</h2>
+  Name:<input type="text" name='merchant[name]'/><br/>
+  Address:<input type="text" name="merchant[address]"></input><br/>
+  City:<input type="text" name="merchant[city]"></input><br/>
+  State:<input type="text" name="merchant[state]"></input><br/>
+  Zip:<input type="text" name="merchant[zip]"></input><br/>
+  <input type='submit' value='Create Merchant'/>
+</form><br><hr>

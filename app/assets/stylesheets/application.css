@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background-color: lightblue;
+ }
+
+h1{
+  text-align: center;
+  color: hotpink;
+}
+
+h2{
+  color: hotpink;
+}
+
+header{
+  text-align: center;
+  background-color: cornflowerblue;
+  color: tomato;
+}
+
+form{
+  text-align: justify;
+  color: tomato;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: sandybrown;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
