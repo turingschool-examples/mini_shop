@@ -275,6 +275,23 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/scottregenthal/turing/mod_2/projects/mini_shop/spec/features/merchants/create_spec.rb": [
@@ -537,8 +554,8 @@
         null,
         null,
         1,
-        2,
-        2,
+        3,
+        3,
         null,
         null,
         1,
@@ -598,7 +615,7 @@
         1,
         1,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -609,6 +626,6 @@
         null
       ]
     },
-    "timestamp": 1570398595
+    "timestamp": 1570408150
   }
 }
