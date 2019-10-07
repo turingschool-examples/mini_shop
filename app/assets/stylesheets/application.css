@@ -36,7 +36,12 @@ h1 {
 }
 
 h2 {
-  color: tomato;
+  color: black;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
 }
 
 /* START OF WELCOME STYLES */
@@ -78,7 +83,7 @@ h2 {
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
-  border: 1px solid var(--main-font-color);
+  border: 1.25px solid var(--main-font-color);
 }
 
 .button:hover {
@@ -94,7 +99,8 @@ h2 {
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
-  border: 1px solid var(--second-font-color);
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
 }
 
 .button_2:hover {
@@ -136,7 +142,7 @@ h2 {
     margin-left: 1em;
     display: inline-block;
     padding: .5em;
-    border: 1px solid var(--main-font-color);
+    border: 1.25px solid var(--main-font-color);
 }
 
 .nav_links a:hover {
@@ -159,6 +165,18 @@ h2 {
                      background-position: center;
 }
 
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.display h2, p {
+  padding: .25rem;
+}
+
 .display a {
   text-decoration: none;
   color: var(--second-font-color);
@@ -173,7 +191,8 @@ h2 {
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
-  border: 1px solid var(--second-font-color);
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
 }
 
 .create a {
@@ -183,5 +202,49 @@ h2 {
 
 .create:hover {
   background-color: rgba(85, 107, 47, 0.6);
+}
+
+.edit {
+  margin: .25em;
+  display: block;
+  background-color: rgba(183, 65, 14, 0.8);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.edit a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.edit:hover {
+  background-color: rgba(183, 65, 14, 0.9);
+}
+
+.delete {
+  margin: .25em;
+  display: block;
+  background-color: rgba(100, 149, 237, 0.8);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1.25px solid var(--second-font-color);
+  width: 100vh;
+}
+
+.delete a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.delete:hover {
+  background-color: rgba(100, 149, 237, 0.9);
 }
 
