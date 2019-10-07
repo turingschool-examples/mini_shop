@@ -1,10 +1,24 @@
-<%= link_to 'Item Index', '/items' %>
-<%= link_to "Merchant Index", '/merchants' %>
+<div class="category_image" id="merchants">
+  <div class="navbar">
+    <span class="logo"><a href="/">MiniShop</a></span>
 
-<h1>Merchants</h1>
+    <div class="nav_links">
+      <%= link_to 'Item Index', '/items' %>
+      <%= link_to "Merchant Index", '/merchants' %>
+    </div>
+  </div>
 
-<% @merchants.each do |merchant| %>
-  <h2><a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a></h2>
-<% end %>
+  <div class="category">
+    <h1>Merchants</h1>
+  </div>
+</div>
 
-<%= link_to "Create New Merchant", "/merchants/new" %>
+<div class="display">
+  <% @merchants.each do |merchant| %>
+    <h2><a href="/merchants/<%= merchant.id %>" class="button_2"><%= merchant.name %></a></h2>
+  <% end %>
+</div>
+
+<div class="create">
+  <%= link_to "Create New Merchant", "/merchants/new" %>
+</div>

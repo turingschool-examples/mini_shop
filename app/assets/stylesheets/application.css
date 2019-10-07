@@ -13,15 +13,175 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap');
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+ :root {
+  --main-font-color: honeydew;
+  --second-font-color: #181818;
+}
+
 body {
-  font-family: cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-  color: DodgerBlue;
-  border-bottom: 2px dashed DodgerBlue;
+  color: var(--main-font-color);
 }
 
 h2 {
   color: tomato;
 }
+
+/* START OF WELCOME STYLES */
+#welcome_body {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/g70AD5N.jpg);
+                     background-size: cover;
+                     background-position: center;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome_body h1 {
+  font-size: 3rem;
+}
+
+#welcome_logo {
+  font-family: 'Abril Fatface', cursive;
+}
+
+#welcome_body li {
+  padding: 1rem;
+}
+
+.button {
+  margin: .25em;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--main-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1px solid var(--main-font-color);
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button_2 {
+  margin: .25em;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1px solid var(--second-font-color);
+}
+
+.button_2:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* START OF BODY STYLES */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: .5em 1em;
+  display: inline;
+  color: var(--main-font-color);
+  font-size: 1.25rem;
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: .25em;
+}
+
+.nav_links {
+  display: inline;
+  position: fixed;
+  right: 0;
+  padding: .5em 1em;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: var(--main-font-color);
+    margin-left: 1em;
+    display: inline-block;
+    padding: .5em;
+    border: 1px solid var(--main-font-color);
+}
+
+.nav_links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.category_image {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#merchants {
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/aU5nHTN.jpg);
+                     background-size: cover;
+                     background-position: center;
+}
+
+.display a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.create {
+  margin: .25em;
+  display: block;
+  background-color: rgba(85, 107, 47, 0.5);
+  color: var(--second-font-color);
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1px solid var(--second-font-color);
+}
+
+.create a {
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.create:hover {
+  background-color: rgba(85, 107, 47, 0.6);
+}
+
