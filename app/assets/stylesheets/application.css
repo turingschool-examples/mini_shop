@@ -156,7 +156,7 @@ p {
   align-items: center;
 }
 
-#merchants {
+#merchants_index_image {
   background: linear-gradient(
                      rgba(20,20,20, .9),
                      rgba(20,20,20, .9)),
@@ -248,3 +248,15 @@ p {
   background-color: rgba(100, 149, 237, 0.9);
 }
 
+#merchants_create_image {
+  background: linear-gradient(
+                     rgba(20,20,20, .9),
+                     rgba(20,20,20, .9)),
+                     url(https://i.imgur.com/ZAPJaKm.jpg);
+                     background-size: cover;
+                     background-position: center;
+}
+
+.form {
+  text-align: center;
+}
