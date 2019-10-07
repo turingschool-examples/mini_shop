@@ -25,6 +25,7 @@ RSpec.describe 'Update merchant' do
         click_button 'Update merchant'
 
         expect(current_path).to eq("/merchants/#{merchant.id}")
+
         expect(page).to have_content('Cool Beenz')
       end
     end
