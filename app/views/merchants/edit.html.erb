@@ -6,7 +6,7 @@
   <input type='text' name='merchant[address]' value="<%= @merchant.address %>"/><br/>
   <input type='text' name='merchant[city]' value="<%= @merchant.city %>"/><br/>
   <input type='text' name='merchant[state]' value="<%= @merchant.state %>"/><br/>
-  <input type='text' name='merchant[zip]' value="<%= @merchant.zip %>"/><br/>
+  <input type='text' name='merchant[zip]' value="<%= @merchant.zip %>" maxlength="5"/><br/>
 
 </form>
 <button type="submit" form="form1" value="Submit">Submit</button>

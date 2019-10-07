@@ -4,10 +4,10 @@
   <p>Edit</p>
   <input type='text' name='item[name]' value="<%= @item.name %>" class='form-control'/><br/>
   <input type='text' name='item[description]' value="<%= @item.description %>" class='form-control' /><br/>
-  <input type='text' name='item[price]' value="<%= @item.price %>" class='form-control' /><br/>
-  <input type='text' name='item[image_url]' value="<%= @item.image_url %>" class='form-control'/><br/>
+  <input type='number' name='item[price]' value="<%= @item.price %>" class='form-control' max=999999999 min=0 /><br/>
+  <input type='url' name='item[image_url]' value="<%= @item.image_url %>" class='form-control' /><br/>
   <input type='text' name='item[status]' value="<%= @item.status %>" class='form-control'/><br/>
-  <input type='text' name='item[inventory]' value="<%= @item.inventory %>" class='form-control'/><br/>
+  <input type='number' name='item[inventory]' value="<%= @item.inventory %>" class='form-control' max=999999999 min=0 /><br/>
 
 </form>
 <button type="submit" form="form1" value="Submit">Submit</button>

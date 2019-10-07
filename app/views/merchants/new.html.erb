@@ -24,7 +24,7 @@
   </p>
   <p>
     <%= f.label :zip %><br />
-    <%= f.text_field(:zip, {:class => 'form-control'}) %>
+    <%= f.text_field(:zip, {:class => 'form-control', maxlength: 5}) %>
   </p>
   <p>
 <%= f.submit({:class => 'btn btn-primary'}) %>
