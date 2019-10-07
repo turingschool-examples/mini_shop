@@ -2,9 +2,11 @@
 
 <% @items.each do |item| %>
   <h2><%= item.name %></h2>
-  <p><%= item.description %></p>
+  <% unless current_page?('/merchants/:merchant_id/items') %>
+  <p> <%= item.description%> </p>
+  <% end %>
   <p>Price: $<%= item.price %></p>
-  <p><%= item.image %></p>
+  <img src= <%= item.image %>>
   <% if item.active? %>
     <p>Active</p>
     <% else %>
