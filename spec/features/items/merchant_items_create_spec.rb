@@ -17,6 +17,8 @@ RSpec.describe "merchant item create page" do
         fill_in :image, with: "https://vignette.wikia.nocookie.net/harrypotter/images/5/59/Elder_Wand.png/revision/latest?cb=20161128051519"
         fill_in :inventory, with: 1
 
+        click_button "Create Item"
+
         expect(current_path).to eq("/merchants/#{wand_shop.id}/items")
         expect(page).to have_content("Elder Wand")
         expect(page).to have_content("Price: $500")
