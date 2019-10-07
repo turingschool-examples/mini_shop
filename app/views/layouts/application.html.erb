@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiniShopGh</title>
+    <title>Plant Market</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to 'All Items', "/items" %>
-    <%= link_to 'All Merchants', "/merchants" %>
-
-    <%= yield %>
+    <header>
+      <h1 class="app-header">Plant Parenthood</h1>
+      <nav>
+        <%= link_to 'All Items', "/items" %>
+        <%= link_to 'All Merchants', "/merchants" %>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
