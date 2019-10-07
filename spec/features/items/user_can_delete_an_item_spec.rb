@@ -39,7 +39,7 @@ RSpec.describe 'As a Visitor' do
           expect(page).to_not have_content(item_1.name)
           expect(page).to_not have_content(item_1.description)
           expect(page).to_not have_content(item_1.price)
-          expect(page).to_not have_content(item_1.image)
+          # expect(page).to_not have_content(item_1.image)
           expect(page).to_not have_content(item_1.inventory)
         end
       end
