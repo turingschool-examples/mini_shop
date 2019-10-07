@@ -1,0 +1,14 @@
+<h2 class="merchant-name-index"><%= @merchant.name %></h2>
+<section class="merchant-items-index">
+  <%= link_to 'Create New Item', "/merchants/#{@merchant.id}/items/new" %>
+  <% @items.each do |item| %>
+    <section class="merchant-item-index">
+      <h3><%= link_to "#{item.name}", "/items/#{item.id}" %></h3>
+      <%= image_tag(item.image) %>
+      <p><%= item.description %></p>
+      <p>Price: $<%= item.price %></p>
+      <p>Status: <%= item.status %></p>
+      <p>Inventory: <%= item.inventory %></p>
+    </section>
+  <% end %>
+</section>
