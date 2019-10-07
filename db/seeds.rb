@@ -6,62 +6,62 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-merchant_1 = Merchant.create(name: "Puppers R Us",
-                             address: "425 Dog Day Street",
+merchant_1 = Merchant.create(name: "Ready, Set, Hike!",
+                             address: "425 Lincoln Street",
                              city: "Denver",
                              state: "CO",
-                             zip: 80210)
+                             zip: 80128)
 
-merchant_2 = Merchant.create(name: "Kitten Market",
-                             address: "818 Catastic Avenue",
+merchant_2 = Merchant.create(name: "Crosscheck",
+                             address: "818 Minnesota Avenue",
                              city: "Orlando",
                              state: "FL",
                              zip: 32810)
 
-merchant_3 = Merchant.create(name: "Owl City",
-                             address: "739 Hoot Boulevard",
+merchant_3 = Merchant.create(name: "Tip Off",
+                             address: "739 Hoosier Boulevard",
                              city: "New Orleans",
                              state: "LA",
                              zip: 70010)
 
-merchant_1.items.create(name: "Dog Bowl",
-                        description: "5\" stainless steel dog bowl",
+merchant_1.items.create(name: "Football",
+                        description: "Genuine leather football. League official size and weight. Perfect for easy-going or professional games.",
                         price: 35.99,
-                        image: "https://i.imgur.com/3H1e3k7.jpg",
+                        image: "https://i.imgur.com/Q7UnMeW.jpg",
                         status: "active",
                         inventory: 5)
 
-merchant_1.items.create(name: "Dog Bed",
-                        description: "Luxury memory foam dog bed for your pupper (dog not included!)",
-                        price: 80,
-                        image: "https://i.imgur.com/D8a4HLN.jpg",
+merchant_1.items.create(name: "Helmet",
+                        description: "Polymer based football helmet with comfortable foam pads inside. Be competitve and play safely with this stress-tested helmet.",
+                        price: 64.75,
+                        image: "https://i.imgur.com/ctAyPyB.jpg",
                         status: "active",
                         inventory: 7)
 
-merchant_2.items.create(name: "Cat Carrier",
-                        description: "Spacious carrier for your feline friend. It will feel like a hotel for your cat! Three zippable flaps.",
-                        price: 27.42,
-                        image: "https://i.imgur.com/1tX0wB0.jpg",
+merchant_2.items.create(name: "Hockey Stick",
+                        description: "Made from solid cherry wood and sporting a perfect grip, this hockey stick meets all official regulation requirements and will put you over the competition.",
+                        price: 89.23,
+                        image: "https://i.imgur.com/IaXLwhF.jpg",
                         status: "active",
                         inventory: 3)
 
-merchant_2.items.create(name: "Cat Post",
-                        description: "Scratching and resting post combo, two for one! 27\" tall.",
-                        price: 25,
-                        image: "https://i.imgur.com/vim9kYM.jpg",
+merchant_2.items.create(name: "Hockey Puck",
+                        description: "Every hockey puck is made of rubber, but not every puck uses the same rubber as Formula 1 tires. For those that are serious about the game.",
+                        price: 14.99,
+                        image: "https://i.imgur.com/7Vkjbaj.jpg",
                         status: "active",
                         inventory: 9)
 
-merchant_3.items.create(name: "Leather Falconry Gloves",
-                        description: "Pristine leather falconry gloves, one size fits all. Superior quality and build. Lifetime warranty.",
-                        price: 149.99,
-                        image: "https://i.imgur.com/hz844Rg.jpg",
+merchant_3.items.create(name: "Basketball",
+                        description: "Official regulation basketball with molecular optimized grip.",
+                        price: 33.67,
+                        image: "https://i.imgur.com/oozv6Nc.jpg",
                         status: "active",
                         inventory: 2)
 
-merchant_3.items.create(name: "Toy Mouse",
-                        description: "Plush 3\" mouse for your owl to play with. Instant fun!",
-                        price: 17.99,
-                        image: "https://i.imgur.com/I5rCHxZ.jpg",
+merchant_3.items.create(name: "Basketball Shoes",
+                        description: "Our shoes may not make you a better player, but when you're the best, you don't need to play better. You need to make a statement. Made with genuine leather.",
+                        price: 145.99,
+                        image: "https://i.imgur.com/Iob3M7M.jpg",
                         status: "active",
                         inventory: 11)

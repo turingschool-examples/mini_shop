@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiniShopGh</title>
+    <title>Cosmic Sports</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to 'All Items', '/items' %>
-    <%= link_to 'All Merchants', '/merchants'%>
+    <h1>Cosmic Sports</h1>
+    <nav class="nav-bar">
+      <%= link_to 'All Merchants', '/merchants', class: "link-item" %>
+      <%= link_to 'All Items', '/items', class: "link-item" %>
+    </nav>
     <%= yield %>
   </body>
 </html>

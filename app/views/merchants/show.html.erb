@@ -1,15 +1,16 @@
-<h1><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h1>
-<h1><%= link_to "Items", "/merchants/#{@merchant.id}/items" %></h1>
+<section class="item-cards">
+  <section class="item-card">
+    <section class="merchant-show-card">
+    <h2><%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %></h2>
+    <h2><%= link_to "Items", "/merchants/#{@merchant.id}/items" %></h2>
 
-<p>Address: <%= @merchant.address %></p>
-<p>City: <%= @merchant.city %></p>
-<p>State: <%= @merchant.state %></p>
-<p>Zip: <%= @merchant.zip %></p>
+    <p><strong>Address:</strong> <%= @merchant.address %></p>
+    <p><strong>City:</strong> <%= @merchant.city %></p>
+    <p><strong>State:</strong> <%= @merchant.state %></p>
+    <p><strong>Zip:</strong> <%= @merchant.zip %></p>
 
-<a href="/merchants/<%= @merchant.id %>/edit">Edit</a>
-
-<form action="/merchants/<%= @merchant.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <button>Delete</button>
-</form>
+    <%= link_to 'Edit', "/merchants/#{@merchant.id}/edit" %>
+    <%= button_to 'Delete', "/merchants/#{@merchant.id}", method: :delete, class: :button %>
+    </section>
+  </section>
+</section>
