@@ -13,6 +13,7 @@ RSpec.describe "item show page" do
         expect(page).to have_content("Active")
         expect(page).to have_content("Price: $#{book_1.price}")
         expect(page).to have_content(book_1.description)
+        expect(page).to have_css("img[src*='#{book_1.image}']")
         expect(page).to have_content("Inventory: #{book_1.inventory}")
         expect(page).to have_content("Seller: #{book_shop.name}")
       end
