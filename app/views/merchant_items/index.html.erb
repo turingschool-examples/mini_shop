@@ -3,7 +3,7 @@
 <ul id="items">
   <% @items.each do |item| %>
       <%= link_to item.name, "items/#{item.id}" %>
-      <p>Price: $<%= item.price %></p>
+      <p>Price: $<%= '%.2f' % item.price %></p>
       <p>Image: <%= image_tag(item.image_url, {:style =>'max-width:250px;max-height:250px'}) %></p>
       <% if item.status == true %>
         <p>Status: active</p>
