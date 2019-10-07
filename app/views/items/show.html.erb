@@ -1,0 +1,10 @@
+<h1><%= @item.name %></h1>
+<% if @item.active? %>
+  <p>Active</p>
+  <% else %>
+  <p>Inactive</p>
+  <% end %>
+<p>Price: $<%= @item.price %></p>
+<p><%= @item.description %></p>
+<p>Inventory: <%= @item.inventory %></p>
+<p>Seller: <%= @item.merchant.name %></p>
